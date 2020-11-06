@@ -1,11 +1,18 @@
 <?php
 
-if(array_key_exists('Username', $_POST) && array_key_exists('Password', $_POST)) {
-    
-}
+if (isset($_POST["submit"])) {
 
-function Login(){
-    //Login and stuff
+    $Email = $_POST["EML"];
+    $Password = $_POST["PSWD"];
+
+    require_once 'DatabaseHandler.php';
+    require_once 'LoginFunctions.php';
+
+    loginUser($conn, $Email, $Password);
+} 
+else {
+    header("location: LoginPage.php");
+    exit();
 }
 
 ?>
