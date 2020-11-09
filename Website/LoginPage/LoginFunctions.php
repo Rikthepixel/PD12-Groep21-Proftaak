@@ -3,7 +3,7 @@
 function loginUser($conn, $Email, $Password){
     $SuccesLocation = "location: ./succes.php";
 
-    $query = "SELECT * FROM user WHERE Email = '$Email' AND Password = '$Password'";
+    $query = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $result = $conn -> query($query);
 
     if (!$result) {

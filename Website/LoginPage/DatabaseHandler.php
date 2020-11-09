@@ -1,6 +1,6 @@
 <?php
     $dbservername = "192.168.44.186";
-    $dbname = "users";
+    $dbname = "Users";
     $dbusername = "Login";
     $dbpassword = "LoginUser";
 
