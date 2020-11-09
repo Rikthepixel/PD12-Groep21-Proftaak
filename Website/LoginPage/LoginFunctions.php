@@ -1,18 +1,50 @@
 <?php
 
 function loginUser($conn, $Email, $Password){
-    $query = "SELECT * FROM users WHERE Email=$Email AND Password=$Password";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $query)) {
-        header("location: LoginPage.php");
+    $SuccesLocation = "location: ./succes.php";
+
+    $query = "SELECT * FROM user WHERE Email = '$Email' AND Password = '$Password'";
+    $result = $conn -> query($query);
+
+    if (!$result) {
+        trigger_error('Invalid query: ' . $conn->error);
     }
 
-    mysqli_stmt_bind_param($stmt, "ss", $Email, $Password);
-    mysqli_stmt_execute($stmt);
+    if($result->num_rows == 1){
+       header("$SuccesLocation?Loggedin=true");
+    } else {
+        $returnpage = "location: LoginPage.php?error=invaliddetails";
+        header($returnpage);
+        exit();
+    }
+}
 
-    $resultData = mysqli_stmt_get_result($stmt);
+function emptyLogin($Email, $Password) {
+    $result;
+    if(empty($_POST['EML']) || empty($_POST['PSWD'])){
+        $result = true;
+    } else {
+        $result = false;
+    }
 
-    $row = mysqli_fetch_assoc($resultData);  
+    return $result;
+}
+
+function ErrorMessage($Error){
+    $result;
+    if ($Error == "emptylogin"){
+        $result = "Please enter login details";
+    }
+    if ($Error == "invaliddetails"){
+        $result = "Please enter the correct login details";
+    }
+    if ($Error == "badsubmit"){
+        $result = "Submittion to Login was bad, please try again";
+    }
+    if ($Error == "invalidsession"){
+        $result = "Session was invalid or has expired. Please Login again";
+    }
+    return $result;
 }
 
 ?>
