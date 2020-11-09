@@ -3,23 +3,28 @@
 if (isset($_POST['Login'])) {
     if($_POST['Login'] == "AUserWantsToLogin"){
 
-        $returnpage = "location: ./index.php";
+        $returnpage = "location: ../index.php";
+        
+        include_once '../Database/DatabaseHandler.php';
 
-        $Email = $_POST['EML'];     
+
+        
+
+        $Email = mysqli_real_escape_string($conn, $_POST['EML']);     
         $Email = stripslashes($Email);
         
-        $Pass = $_POST['PSWD'];
+        $Pass = mysqli_real_escape_string($conn, $_POST['PSWD']);
         $Pass = stripslashes($Pass);
         //$Pass = md5($Pass);
-        
-        include_once 'DatabaseHandler.php';
+
         include_once 'LoginFunctions.php';
         
+        //If the login details are empty send the user back to the starting page
         if(emptyLogin($Email, $Pass)){
             header("$returnpage?error=emptylogin");
             exit();
         } 
-
+        
         loginUser($conn, $Email, $Pass);
 
     } else {
