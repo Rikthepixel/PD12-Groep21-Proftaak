@@ -2,6 +2,7 @@
 
 function loginUser($conn, $Email, $Password){
     $SuccesLocation = "location: ./succes.php";
+    $returnpage = "location: ./index.php";
 
     $query = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $result = $conn -> query($query);
@@ -13,8 +14,7 @@ function loginUser($conn, $Email, $Password){
     if($result->num_rows == 1){
        header("$SuccesLocation?Loggedin=true");
     } else {
-        $returnpage = "location: LoginPage.php?error=invaliddetails";
-        header($returnpage);
+        header("$returnpage?error=invaliddetails");
         exit();
     }
 }
