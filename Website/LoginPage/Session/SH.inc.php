@@ -11,4 +11,9 @@ function StoreSessionVariable($VariableName, $VariableValue){
 function ReadSessionVariable($VariableName){
     return $_SESSION["$VariableName"];
 }
+
+//Deletes all the stored variables and ends the session
+function EndSession(){
+    session_destroy();
+}
 ?>
