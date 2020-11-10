@@ -14,7 +14,7 @@
 </Header>
 
 <!--invoer-->
-<form action="./Login/LoginMain.php" method="post" id="LoginForm">
+<form action="./Users/Login/LoginMain.php" method="post" id="LoginForm">
 
     <!--Email-->
     <label>Email</label>

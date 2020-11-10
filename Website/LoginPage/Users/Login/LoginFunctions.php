@@ -1,8 +1,8 @@
 <?php
 
 function loginUser($conn, $Email, $Password){
-    $SuccesLocation = "location: ../Succes.php";
-    $returnpage = "location: ../index.php";
+    $SuccesLocation = "location: ../../Succes.php";
+    $returnpage = "location: ../../index.php";
     
     $query = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $result = $conn -> query($query);
