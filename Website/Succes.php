@@ -1,10 +1,14 @@
 <?php
 include './Session/SH.inc.php';
+VerifySession();
 ?>
+
+
 
 <?php
 if(isset($_GET['Loggedin'])){
     if($_GET['Loggedin'] != "true"){
+
         header("location: index.php?error=invalidsession");
         exit();  
     }

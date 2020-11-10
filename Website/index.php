@@ -1,6 +1,7 @@
 <?php
 include './Session/SH.inc.php';
 ?>
+
 <!--Rik werkt aan dit document-->
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +42,9 @@ include './Session/SH.inc.php';
     <?php
         //if the error variable is set, then get the appropriate ErrorMessage
 
-        if(isset($_GET['error'])) {
+        if(isset($_SESSION['error'])) {
             include_once 'LoginFunctions.php';
-            echo ErrorMessage($_GET['error']);
+            echo ErrorMessage(($_SESSION['error']);
         }
     ?>
 </p>

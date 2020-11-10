@@ -1,4 +1,5 @@
 <?php
+include '../../Session/SH.inc.php';
 
 function loginUser($conn, $Email, $Password){
     $SuccesLocation = "location: ../../Succes.php";
@@ -8,13 +9,15 @@ function loginUser($conn, $Email, $Password){
     $LoginResult = $conn -> query($LoginQuery);
 
     if($LoginResult->num_rows == 1){
-        $IdentityQuery = "SELECT Voornaam AND Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityQuery = "SELECT Voornaam AND Achternaam AND Email FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
         $IdentityResult = $conn -> query($IdentityQuery);
 
         $row = mysqli_fetch_assoc($IdentityResult);
         
         StoreSessionVariable('Voornaam', $row['Voornaam']);
         StoreSessionVariable('Achternaam', $row['Achternaam']);
+        StoreSessionVariable('Email', $row['Email']);
+        StoreSessionVariable('Loggedin', true);
 
         header("$SuccesLocation?Loggedin=true");
     } else {
@@ -50,5 +53,3 @@ function ErrorMessage($Error){
     }
     return $result;
 }
-
-?>
