@@ -4,7 +4,7 @@ if (isset($_POST['Login'])) {
     if($_POST['Login'] == "AUserWantsToLogin"){
 
         $returnpage = "location: ../index.php";
-        
+
         include_once '../Database/DatabaseHandler.php';
 
 

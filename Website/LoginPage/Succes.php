@@ -1,11 +1,11 @@
 <?php
 if(isset($_GET['Loggedin'])){
     if($_GET['Loggedin'] != "true"){
-        header("location: LoginPage.php?error=invalidsession");
+        header("location: index.php?error=invalidsession");
         exit();  
     }
 } else{
-    header("location: LoginPage.php?error=invalidsession");
+    header("location: index.php?error=invalidsession");
     exit();
 }
 ?>
