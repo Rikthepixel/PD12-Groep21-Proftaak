@@ -1,4 +1,5 @@
 <?php
+include '../../Session/SH.inc.php';
 
 if (isset($_POST['Login'])) {
     if($_POST['Login'] == "AUserWantsToLogin"){
@@ -6,9 +7,6 @@ if (isset($_POST['Login'])) {
         $returnpage = "location: ../../index.php";
 
         include_once '../../Database/DatabaseHandler.php';
-
-
-        
 
         $Email = mysqli_real_escape_string($conn, $_POST['EML']);     
         $Email = stripslashes($Email);
@@ -25,6 +23,7 @@ if (isset($_POST['Login'])) {
             exit();
         } 
         
+        //Log the user in
         loginUser($conn, $Email, $Pass);
 
     } else {

@@ -16,4 +16,6 @@ function ReadSessionVariable($VariableName){
 function EndSession(){
     session_destroy();
 }
+
+
 ?>

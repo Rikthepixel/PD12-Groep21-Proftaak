@@ -4,12 +4,19 @@ function loginUser($conn, $Email, $Password){
     $SuccesLocation = "location: ../../Succes.php";
     $returnpage = "location: ../../index.php";
     
-    $query = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
-    $result = $conn -> query($query);
+    $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+    $LoginResult = $conn -> query($LoginQuery);
 
+    if($LoginResult->num_rows == 1){
+        $IdentityQuery = "SELECT Voornaam AND Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityResult = $conn -> query($IdentityQuery);
 
-    if($result->num_rows == 1){
-       header("$SuccesLocation?Loggedin=true");
+        $row = mysqli_fetch_assoc($IdentityResult);
+        
+        StoreSessionVariable('Voornaam', $row['Voornaam']);
+        StoreSessionVariable('Achternaam', $row['Achternaam']);
+
+        header("$SuccesLocation?Loggedin=true");
     } else {
         header("$returnpage?error=invaliddetails");
         exit();

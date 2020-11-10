@@ -1,4 +1,8 @@
 <?php
+include './Session/SH.inc.php';
+?>
+
+<?php
 if(isset($_GET['Loggedin'])){
     if($_GET['Loggedin'] != "true"){
         header("location: index.php?error=invalidsession");
@@ -18,6 +22,6 @@ if(isset($_GET['Loggedin'])){
     <title>Document</title>
 </head>
 <body>
-    <p> SUCCES</p>
+    <p> <?php echo ReadSessionVariable('Voornaam');?></p>
 </body>
 </html>
