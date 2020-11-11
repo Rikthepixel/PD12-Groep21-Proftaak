@@ -1,10 +1,11 @@
 <?php
-    $dbservername = "192.168.44.186";
+
+    $Logindbservername = "192.168.44.186";
     $logindbname = "Users";
     $logindbusername = "Login";
     $logindbpassword = "LoginUser";
 
-    $Loginconn = mysqli_connect($dbservername, $logindbusername, $logindbpassword, $logindbname);
+    $Loginconn = mysqli_connect($Logindbservername, $logindbusername, $logindbpassword, $logindbname);
     if (!$Loginconn){
         die("Connection failed: " . mysqli_connect_error());
     }

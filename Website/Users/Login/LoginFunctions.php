@@ -1,27 +1,33 @@
 <?php
-include '../../Session/SH.inc.php';
 
 function loginUser($conn, $Email, $Password){
+
     $SuccesLocation = "location: ../../Succes.php";
     $returnpage = "location: ../../index.php";
-    
+
+    StoreSessionVariable('Email', $Email);
+    StoreSessionVariable('Password', $Password);
+
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
 
     if($LoginResult->num_rows == 1){
-        $IdentityQuery = "SELECT Voornaam AND Achternaam AND Email FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityQuery = "SELECT Voornaam AND Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
         $IdentityResult = $conn -> query($IdentityQuery);
 
-        $row = mysqli_fetch_assoc($IdentityResult);
+        $row = $IdentityResult -> fetch_assoc();
         
-        StoreSessionVariable('Voornaam', $row['Voornaam']);
-        StoreSessionVariable('Achternaam', $row['Achternaam']);
-        StoreSessionVariable('Email', $row['Email']);
-        StoreSessionVariable('Loggedin', true);
+        $_SESSION['Row'] = $row;
+        $_SESSION['Voornaam'] = $row['Voornaam'];
+        $_SESSION['Achternaam'] = $row['Achternaam'];
+        $_SESSION['Loggedin'] = true;
+        
+        Unset($_SESSION['error']);
 
-        header("$SuccesLocation?Loggedin=true");
+        header("$SuccesLocation");
     } else {
-        header("$returnpage?error=invaliddetails");
+        StoreSessionVariable('error', "invaliddetails"); 
+        header("$returnpage");
         exit();
     }
 }

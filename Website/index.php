@@ -1,5 +1,5 @@
 <?php
-include './Session/SH.inc.php';
+include_once './Session/SH.inc.php';
 ?>
 
 <!--Rik werkt aan dit document-->
@@ -43,11 +43,13 @@ include './Session/SH.inc.php';
         //if the error variable is set, then get the appropriate ErrorMessage
 
         if(isset($_SESSION['error'])) {
-            include_once 'LoginFunctions.php';
+            include_once './Users/Login/LoginFunctions.php';
             echo ErrorMessage($_SESSION['error']);
         }
     ?>
 </p>
+
+
 </html>
 
 

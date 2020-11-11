@@ -1,19 +1,20 @@
 <?php
-include './Session/SH.inc.php';
-VerifySession();
+include_once './Session/SH.inc.php';
+
 ?>
 
 
 
 <?php
-if(isset($_GET['Loggedin'])){
-    if($_GET['Loggedin'] != "true"){
-
-        header("location: index.php?error=invalidsession");
+if(!VerifySession()){
+    if(ReadSessionVariable('Loggedin') != "true"){
+        StoreSessionVariable('error', 'invalidsession');
+        header("location: index.php");
         exit();  
     }
 } else{
-    header("location: index.php?error=invalidsession");
+    StoreSessionVariable('error', 'invalidsession');
+    header("location: index.php");
     exit();
 }
 ?>
@@ -26,6 +27,36 @@ if(isset($_GET['Loggedin'])){
     <title>Document</title>
 </head>
 <body>
-    <p> <?php echo ReadSessionVariable('Voornaam');?></p>
+    <p> 
+        <?php 
+
+        if(isset($_SESSION['Voornaam'])) {
+            echo ($_SESSION['Voornaam']);
+        }
+        ?>
+    </p>
+
+    <p> 
+        <?php 
+
+        if(isset($_SESSION['Achternaam'])) {
+            echo ($_SESSION['Achternaam']);
+        }
+        ?>
+    </p>
+
+    <p> 
+        <?php 
+
+        if(isset($_SESSION['Row'])) {
+            foreach ($_SESSION['Row'] as $Temp){
+                echo ($Temp);
+            }
+
+        }
+        ?>
+    </p>
+
+
 </body>
 </html>

@@ -5,6 +5,7 @@ session_start(); // Starts a session
 
 function VerifySession(){
 $result = true;
+
     if(!isset($_SESSION['Voornaam'])){
         $_SESSION['error'] = "invalidsession";
         $result = false;

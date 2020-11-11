@@ -1,18 +1,19 @@
 <?php
-include '../../Session/SH.inc.php';
+include_once '..\..\Session\SH.inc.php';
+
+$returnpage = "location: ../../index.php";
 
 if (isset($_POST['Login'])) {
+
     if($_POST['Login'] == "AUserWantsToLogin"){
 
         include_once '../../Database/DatabaseHandler.php';
-        include_once 'LoginFunctions.php';
+        include_once './LoginFunctions.php';
 
-        $returnpage = "location: ../../index.php";
-
-        $Email = mysqli_real_escape_string($conn, $_POST['EML']);     
+        $Email = mysqli_real_escape_string($Loginconn, $_POST['EML']);     
         $Email = stripslashes($Email);
         
-        $Pass = mysqli_real_escape_string($conn, $_POST['PSWD']);
+        $Pass = mysqli_real_escape_string($Loginconn, $_POST['PSWD']);
         $Pass = stripslashes($Pass);
         //$Pass = md5($Pass);
         
