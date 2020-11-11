@@ -44,7 +44,7 @@ include './Session/SH.inc.php';
 
         if(isset($_SESSION['error'])) {
             include_once 'LoginFunctions.php';
-            echo ErrorMessage(($_SESSION['error']);
+            echo ErrorMessage($_SESSION['error']);
         }
     ?>
 </p>

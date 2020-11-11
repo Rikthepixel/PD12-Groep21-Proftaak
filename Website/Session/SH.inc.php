@@ -7,25 +7,25 @@ function VerifySession(){
 $result = true;
     if(!isset($_SESSION['Voornaam'])){
         $_SESSION['error'] = "invalidsession";
-        $result false;
+        $result = false;
     }
     if(!isset($_SESSION['Achternaam'])){
         $_SESSION['error'] = "invalidsession";
-        $result false;
+        $result = false;
     }
     if(!isset($_SESSION['Email'])){
         $_SESSION['error'] = "invalidsession";
-        $result false;
+        $result = false;
     }
 
     if(!isset($_SESSION['Loggedin'])){
         $_SESSION['error'] = "invalidsession";
-        $result false;
-    } else if (isset($_SESSION['Loggedin']){
+        $result = false;
+    } else if (isset($_SESSION['Loggedin'])){
 
         if($_SESSION['Loggedin'] == false){
             $_SESSION['error'] = "invalidsession";
-            $result false;
+            $result = false;
         }
     }
 return $result;
