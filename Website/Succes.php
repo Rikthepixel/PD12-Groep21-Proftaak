@@ -45,18 +45,6 @@ if(!VerifySession()){
         ?>
     </p>
 
-    <p> 
-        <?php 
-
-        if(isset($_SESSION['Row'])) {
-            foreach ($_SESSION['Row'] as $Temp){
-                echo ($Temp);
-            }
-
-        }
-        ?>
-    </p>
-
 
 </body>
 </html>

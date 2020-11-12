@@ -12,7 +12,7 @@ function loginUser($conn, $Email, $Password){
     $LoginResult = $conn -> query($LoginQuery);
 
     if($LoginResult->num_rows == 1){
-        $IdentityQuery = "SELECT Voornaam AND Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityQuery = "SELECT Voornaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
         $IdentityResult = $conn -> query($IdentityQuery);
 
         $row = $IdentityResult -> fetch_assoc();
