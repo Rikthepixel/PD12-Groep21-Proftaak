@@ -17,7 +17,7 @@ include_once './Database/DatabaseHandler.php';
 <body>
 
 <div class="header">
-  <a href="#default" class="logo"><img scr="./Styles/App-Otheek_logo_full_(no background).png" alt="App-otheek"></a>
+  <a href="#default" class="logo"><img scr="./Styles/App-Otheeklogofullnobackground.png" alt="App-otheek"></a>
   <div class="header-right">
     <a class="active" href="#./Producten/">Product Overzicht</a>
     <a href="./Producten/Zoekfunctie.php">Zoeken</a>
