@@ -13,7 +13,7 @@
 
 
     $Prodsdbservername = "192.168.44.186";
-    $prodsdbname = "Users";
+    $prodsdbname = "Medical";
     $prodsdbusername = "producten";
     $prodsdbpassword = "Doemaarwat1";
 
