@@ -10,6 +10,18 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
+
+
+    $Prodsdbservername = "192.168.44.186";
+    $prodsdbname = "Users";
+    $prodsdbusername = "producten";
+    $prodsdbpassword = "Doemaarwat1";
+
+    $Prodsconn = mysqli_connect($Prodsdbservername, $prodsdbusername, $prodsdbpassword, $prodsdbname);
+    if (!$Prodsconn){
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     //$dbservername = "192.168.44.186"; <-- de server
     //$dbname = "Users"; <- De database die je wilt zien
     //$dbusername = "Login"; <-- De database user zijn username
