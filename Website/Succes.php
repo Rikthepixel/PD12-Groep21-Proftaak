@@ -1,13 +1,7 @@
 <?php
-include_once './Session/SH.inc.php';
+include_once './Header.inc.php';
 
-if(!VerifySession()){
-    if(ReadSessionVariable('Loggedin') != "true"){
-        StoreSessionVariable('error', 'invalidsession');
-        header("location: index.php");
-        exit();  
-    }
-}
+
 
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-include_once './Session/SH.inc.php';
+include_once './Header.Inc.php';
 ?>
 
 <!--Rik werkt aan dit document-->

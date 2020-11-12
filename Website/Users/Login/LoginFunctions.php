@@ -6,7 +6,6 @@ function loginUser($conn, $Email, $Password){
     $returnpage = "location: ../../index.php";
 
     StoreSessionVariable('Email', $Email);
-    StoreSessionVariable('Password', $Password);
 
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);

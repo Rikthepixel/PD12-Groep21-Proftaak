@@ -30,8 +30,14 @@ $result = true;
             $result = false;
         }
     }
-    
-return $result;
+
+    if($result == false){
+        StoreSessionVariable('error', 'invalidsession');
+        header("location: ../index.php");
+        exit();  
+    } else {
+        return $result;
+    }
 }
 
 //Gives the ability to carry over variables to other pages with a session
