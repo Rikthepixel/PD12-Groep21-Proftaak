@@ -14,11 +14,14 @@ function loginUser($conn, $Email, $Password){
     if($LoginResult->num_rows == 1){
         $IdentityQuery = "SELECT Voornaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
         $IdentityResult = $conn -> query($IdentityQuery);
-
         $row = $IdentityResult -> fetch_assoc();
         
-        $_SESSION['Row'] = $row;
         $_SESSION['Voornaam'] = $row['Voornaam'];
+
+        $IdentityQuery = "SELECT Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityResult = $conn -> query($IdentityQuery);
+        $row = $IdentityResult -> fetch_assoc();
+        
         $_SESSION['Achternaam'] = $row['Achternaam'];
         $_SESSION['Loggedin'] = true;
         

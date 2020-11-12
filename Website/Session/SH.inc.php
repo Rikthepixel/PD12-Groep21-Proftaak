@@ -22,13 +22,15 @@ $result = true;
     if(!isset($_SESSION['Loggedin'])){
         $_SESSION['error'] = "invalidsession";
         $result = false;
-    } else if (isset($_SESSION['Loggedin'])){
+    }
+    else if (isset($_SESSION['Loggedin'])){
 
         if($_SESSION['Loggedin'] == false){
             $_SESSION['error'] = "invalidsession";
             $result = false;
         }
     }
+    
 return $result;
 }
 
