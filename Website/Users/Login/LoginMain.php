@@ -1,6 +1,5 @@
 <?php
-include_once '..\..\Database\DatabaseHandler.php';
-include_once '..\..\Session\SH.inc.php';
+include_once '../../Header.inc.php';
 
 $returnpage = "location: ../../index.php";
 
@@ -8,7 +7,7 @@ if (isset($_POST['Login'])) {
 
     if($_POST['Login'] == "AUserWantsToLogin"){
 
-        include_once './LoginFunctions.php';
+        include_once 'LoginFunctions.php';
 
         $Email = mysqli_real_escape_string($Loginconn, $_POST['EML']);     
         $Email = stripslashes($Email);

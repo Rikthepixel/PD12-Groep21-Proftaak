@@ -6,28 +6,7 @@
   * {
     box-sizing: border-box;
     }
-  .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
 
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
   #myInput {
     background-position: 10px 10px;
     background-repeat: no-repeat;
@@ -74,6 +53,7 @@
     </tr>
       <?php include_once 'Fetchprodinfo.php';?>
   </table>
+
 
   <script src="./Zoekfunctie.js"></script> 
 

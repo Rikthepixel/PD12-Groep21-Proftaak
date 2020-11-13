@@ -5,7 +5,7 @@ function loginUser($conn, $Email, $Password){
     $SuccesLocation = "location: ../../Succes.php";
     $returnpage = "location: ../../index.php";
 
-    StoreSessionVariable('Email', $Email);
+    $_SESSION['Email'] = $Email;
 
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
@@ -28,7 +28,7 @@ function loginUser($conn, $Email, $Password){
 
         header("$SuccesLocation");
     } else {
-        StoreSessionVariable('error', "invaliddetails"); 
+        $_SESSION['error'] = "invaliddetails";
         header("$returnpage");
         exit();
     }
