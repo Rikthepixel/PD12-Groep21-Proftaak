@@ -41,20 +41,13 @@ include_once 'Header.inc.php';
         if(isset($_SESSION['error'])) {
             include_once './Users/Login/LoginFunctions.php';
             echo ErrorMessage($_SESSION['error']);
+
+            if($_SESSION['error'] == "LoginRequired" || $_SESSION['error'] == "SuccesLogout" || $_SESSION['error'] == "invalidsession"){
+                $_SESSION['error'] = "A";
+            }
         }
     ?>
 </p>
-
-<p>
-    <?php
-        //if the error variable is set, then get the appropriate ErrorMessage
-
-        if(isset($_SESSION['error'])) {
-            echo $_SESSION['error'];
-        }
-    ?>
-</p>
-
 
 </html>
 

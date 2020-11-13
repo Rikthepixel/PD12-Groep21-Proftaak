@@ -5,6 +5,12 @@ include_once 'Database/DatabaseHandler.php';
 if(!VerifySession()){
     $LoginOrLogoutDirectory = './index.php';
     $LoginOrLogout = "Login";
+    $Currentfilename = basename($_SERVER['PHP_SELF']);
+    if($Currentfilename != "index.php" && $Currentfilename != "LoginMain.php" && $Currentfilename != "LoginFunctions.php"){
+        $_SESSION['error'] = "LoginRequired";
+        header("Location: index.php");
+        exit();
+    }
 }
 
 if(VerifySession()){

@@ -5,7 +5,78 @@ session_start(); // Starts a session
 function VerifySessionReturn($ReturnLocation, $Logout){
 $result = true;
     
+    if($_SESSION['error'] != "LoginRequired" && $_SESSION['error'] != "invaliddetails"){
+        if ($result == true){
+            if(!isset($_SESSION['Voornaam'])){
+                $_SESSION['error'] = "invalidsession";
+                $result = false;
+            }
+        }
+    
+        if ($result == true){
+            if(!isset($_SESSION['Achternaam'])){
+                $_SESSION['error'] = "invalidsession";
+                $result = false;
+            }
+        }
+    
+        if ($result == true){
+            if(!isset($_SESSION['Email'])){
+                $_SESSION['error'] = "invalidsession";
+                $result = false;
+            }
+        }
+    
+            
+        if ($result == true){
+            if(!isset($_SESSION['Loggedin'])){
+                $_SESSION['error'] = "invalidsession";
+                $result = false;
+            }
+            else if (isset($_SESSION['Loggedin'])){
+            
+                if($_SESSION['Loggedin'] == false){
+                    $_SESSION['error'] = "invalidsession";
+                    $result = false;
+                }
+            }  
+        }
+    
+    
+        if (isset($Logout)){
+            if ($Logout == true){
+                $_SESSION['error'] = "SuccesLogout";
+                $result = false;
+            }
+        } 
+    } else{
+        $result == false;
+    }
 
+
+    if($result == false){
+        header("location: $ReturnLocation"); // ../index.php
+        exit();  
+    } else {
+        return $result;
+    }
+}
+
+function VerifySession(){
+    $result = true;
+
+    if (isset($_SESSION['error'])){
+        if ($_SESSION['error'] == "SuccesLogout"){
+            $result = false;
+        }
+
+        if ($_SESSION['error'] == "LoginRequired"){
+            $result = false;
+        }
+        if ($_SESSION['error'] == "A"){
+            $result = false;
+        }
+    }
 
     if ($result == true){
         if(!isset($_SESSION['Voornaam'])){
@@ -28,82 +99,21 @@ $result = true;
         }
     }
 
-        
+    
     if ($result == true){
         if(!isset($_SESSION['Loggedin'])){
             $_SESSION['error'] = "invalidsession";
             $result = false;
         }
         else if (isset($_SESSION['Loggedin'])){
-        
+    
             if($_SESSION['Loggedin'] == false){
                 $_SESSION['error'] = "invalidsession";
                 $result = false;
             }
         }  
     }
-    if (isset($Logout)){
-        if (SuccesLogout == true){
-            $_SESSION['error'] = "SuccesLogout";
-            $result = false;
-        }
-    } 
-    if($result == false){
-        StoreSessionVariable('error', 'invalidsession');
-        header("location: $ReturnLocation"); // ../index.php
-        exit();  
-    } else {
-        return $result;
-    }
-}
-
-function VerifySession(){
-    $result = true;
-    
-        if (isset($_SESSION['error'])){
-            if ($_SESSION['error'] == "SuccesLogout"){
-                $result = false;
-            }
-        }
-        
-
-            if ($result == true){
-                if(!isset($_SESSION['Voornaam'])){
-                    $_SESSION['error'] = "invalidsession";
-                    $result = false;
-                }
-            }
-    
-            if ($result == true){
-                if(!isset($_SESSION['Achternaam'])){
-                    $_SESSION['error'] = "invalidsession";
-                    $result = false;
-                }
-            }
-    
-            if ($result == true){
-                if(!isset($_SESSION['Email'])){
-                    $_SESSION['error'] = "invalidsession";
-                    $result = false;
-                }
-            }
-    
-            
-            if ($result == true){
-                if(!isset($_SESSION['Loggedin'])){
-                    $_SESSION['error'] = "invalidsession";
-                    $result = false;
-                }
-                else if (isset($_SESSION['Loggedin'])){
-            
-                    if($_SESSION['Loggedin'] == false){
-                        $_SESSION['error'] = "invalidsession";
-                        $result = false;
-                    }
-                }  
-            }
-    
-        return $result;
+    return $result;
     }
     
 

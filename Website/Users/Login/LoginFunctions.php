@@ -62,6 +62,11 @@ function ErrorMessage($Error){
     if ($Error == "SuccesLogout"){
         $result = "You were succesfully logged out";
     }
-
+    if ($Error == "LoginRequired"){
+        $result = "This page requires you to be logged in, please login";
+    }
+    if ($Error == "A"){
+        $result = "";
+    }
     return $result;
 }

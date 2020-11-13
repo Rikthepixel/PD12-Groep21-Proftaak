@@ -18,7 +18,7 @@
     font-size: 15px;
     }
 
-    .active, .collapsible:hover {
+    .activeA, .collapsible:hover {
         background-color: #555;
     }
 
@@ -36,7 +36,7 @@
     margin-left: 5px;
     }
 
-    .active:after {
+    .activeA:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
     }
     </style>
@@ -44,8 +44,6 @@
 <tbody>
 
     <?php
-        include_once '../Database/DatabaseHandler.php';
-
         $QueryTables = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
         $Tableresults = $Prodsconn -> query($QueryTables);
 

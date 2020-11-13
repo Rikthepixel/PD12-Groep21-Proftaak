@@ -2,7 +2,7 @@
 include_once '../../Header.inc.php';
 
 $returnpage = "location: ../../index.php";
-
+$_SESSION['error'] = 'A';
 if (isset($_POST['Login'])) {
 
     if($_POST['Login'] == "AUserWantsToLogin"){
