@@ -1,20 +1,20 @@
+<?php
+include_once '../Header.inc.php';
+?>
+
 <!--Rik werkt aan dit document-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/LoginStyle.css">
+    <link rel="stylesheet" href="../Styles/LoginStyle.css">
 
     <title>App-otheek</title>
 </head>
 
-<Header id="Main-header">
-    <h1>App-Otheek</h1>
-</Header>
-
 <!--invoer-->
-<form action="./Login/LoginMain.php" method="post" id="LoginForm">
+<form action="./Users/Login/LoginMain.php" method="post" id="LoginForm">
 
     <!--Email-->
     <label>Email</label>
@@ -38,12 +38,24 @@
     <?php
         //if the error variable is set, then get the appropriate ErrorMessage
 
-        if(isset($_GET['error'])) {
-            include_once 'LoginFunctions.php';
-            echo ErrorMessage($_GET['error']);
+        if(isset($_SESSION['error'])) {
+            include_once './Users/Login/LoginFunctions.php';
+            echo ErrorMessage($_SESSION['error']);
         }
     ?>
 </p>
+
+<p>
+    <?php
+        //if the error variable is set, then get the appropriate ErrorMessage
+
+        if(isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
+        }
+    ?>
+</p>
+
+
 </html>
 
 
