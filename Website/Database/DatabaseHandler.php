@@ -1,24 +1,24 @@
 <?php
 
-    $Logindbservername = "192.168.162.186";
+    $Logindbservername = "192.168.162.187";
     $logindbname = "Users";
     $logindbusername = "Login";
     $logindbpassword = "LoginUser";
 
     $Loginconn = mysqli_connect($Logindbservername, $logindbusername, $logindbpassword, $logindbname);
-    if (!$Loginconn){
+    if (!$Loginconn) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
 
 
-    $Prodsdbservername = "192.168.162.186";
+    $Prodsdbservername = "192.168.162.187";
     $prodsdbname = "Medical";
     $prodsdbusername = "producten";
     $prodsdbpassword = "Doemaarwat1";
 
     $Prodsconn = mysqli_connect($Prodsdbservername, $prodsdbusername, $prodsdbpassword, $prodsdbname);
-    if (!$Prodsconn){
+    if (!$Prodsconn) {
         die("Connection failed: " . mysqli_connect_error());
     }
 

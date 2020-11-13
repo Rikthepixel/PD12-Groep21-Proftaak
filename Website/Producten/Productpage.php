@@ -1,5 +1,6 @@
 <?php
 include_once '../Header.inc.php';
+include_once 'productOverzicht.php';
 ?>
 
 <!--Rik werkt aan dit document-->
@@ -12,49 +13,6 @@ include_once '../Header.inc.php';
 
     <title>App-otheek</title>
 </head>
-
-<!--invoer-->
-<form action="./Users/Login/LoginMain.php" method="post" id="LoginForm">
-
-    <!--Email-->
-    <label>Email</label>
-    <input placeholder="Email" type="text" name="EML" required>
-
-    <br><br>
-
-    <!--Password-->
-    <label>Password</label>
-    <input placeholder="Password" type="password" name="PSWD" required>
-
-    <br><br>
-
-    <!--Login button-->
-    <button type="submit" value="AUserWantsToLogin" name="Login">Login</button>
-
-</form>
-
-<!--ErrorMessage-->
-<p>
-    <?php
-        //if the error variable is set, then get the appropriate ErrorMessage
-
-        if(isset($_SESSION['error'])) {
-            include_once './Users/Login/LoginFunctions.php';
-            echo ErrorMessage($_SESSION['error']);
-        }
-    ?>
-</p>
-
-<p>
-    <?php
-        //if the error variable is set, then get the appropriate ErrorMessage
-
-        if(isset($_SESSION['error'])) {
-            echo $_SESSION['error'];
-        }
-    ?>
-</p>
-
 
 </html>
 

@@ -1,49 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DatabaseMedicijnen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * {
+    box-sizing: border-box;
+    }
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  #myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+
+  #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+</style>
 </head>
 <body>
-<table>
-<thead>
-            <tr>
-                <td>ID</td>
-                <td>Aantal</td>
-                <td>Gewicht</td>
-                <td>Datum_ontvangen</td>
-                <td>Uiterste_datum</td>
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-          
-            include_once '../Database/DatabaseHandler.php';
-            $QueryTables = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
-            $Tableresults = $Prodsconn -> query($QueryTables);
-            while($row2 = $Tableresults -> fetch_array())
-            { 
-                $Query = "SELECT * FROM $row2[0]";
-                $Prodresults = $Prodsconn -> query($Query);   
-                while($row = $Prodresults -> fetch_assoc()) {
-                    $ID = $row['ID'];
-                    $Aantal = $row['Aantal'];
-                    $Gewicht = $row['Gewicht'];
-                    $DatumO = $row['Datum_ontvangen'];
-                    $DatumU = $row['Uiterste_datum'];
-                    echo "<tr>";
-                    echo "<td> $ID </td>";
-                    echo "<td> $Aantal </td>";
-                    echo "<td> $Gewicht </td>";
-                    echo "<td> $DatumO </td>";
-                    echo "<td> $DatumU </td>";
-                    echo "</tr>";
-            }
-        }
-            
-        ?>
-            </tbody>
-            </table>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:20%;">Barcode</th>
+      <th style="width:20;"> Naam</th>
+      <th style="width:15%;">Aantal</th>
+      <th style="width:15%;">Gewicht</th>
+      <th style="width:15%;">Datum ontvangen</th>
+      <th style="width:15%;">Uiterste gebruiksdatum</th>
+    </tr>
+      <?php include_once 'Fetchprodinfo.php';?>
+  </table>
+
+  <script src="./Zoekfunctie.js"></script> 
+
 </body>
 </html>
