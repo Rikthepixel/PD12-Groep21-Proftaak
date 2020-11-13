@@ -1,14 +1,5 @@
 <?php
-include_once './Session/SH.inc.php';
-
-if(!VerifySession()){
-    if(ReadSessionVariable('Loggedin') != "true"){
-        StoreSessionVariable('error', 'invalidsession');
-        header("location: index.php");
-        exit();  
-    }
-}
-
+include_once './Header.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,24 +10,6 @@ if(!VerifySession()){
     <title>Document</title>
 </head>
 <body>
-    <p> 
-        <?php 
-
-        if(isset($_SESSION['Voornaam'])) {
-            echo ($_SESSION['Voornaam']);
-        }
-        ?>
-    </p>
-
-    <p> 
-        <?php 
-
-        if(isset($_SESSION['Achternaam'])) {
-            echo ($_SESSION['Achternaam']);
-        }
-        ?>
-    </p>
-
 
 </body>
 </html>

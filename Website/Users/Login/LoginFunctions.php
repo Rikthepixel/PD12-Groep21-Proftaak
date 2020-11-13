@@ -6,7 +6,6 @@ function loginUser($conn, $Email, $Password){
     $returnpage = "location: ../../index.php";
 
     StoreSessionVariable('Email', $Email);
-    StoreSessionVariable('Password', $Password);
 
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
@@ -60,5 +59,9 @@ function ErrorMessage($Error){
     if ($Error == "invalidsession"){
         $result = "Session was invalid or has expired. Please Login again";
     }
+    if ($Error == "SuccesLogout"){
+        $result = "You were succesfully logged out";
+    }
+
     return $result;
 }

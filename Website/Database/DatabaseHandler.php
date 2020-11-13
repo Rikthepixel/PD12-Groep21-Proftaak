@@ -1,6 +1,6 @@
 <?php
 
-    $Logindbservername = "192.168.44.186";
+    $Logindbservername = "192.168.162.186";
     $logindbname = "Users";
     $logindbusername = "Login";
     $logindbpassword = "LoginUser";
@@ -12,7 +12,7 @@
 
 
 
-    $Prodsdbservername = "192.168.44.186";
+    $Prodsdbservername = "192.168.162.186";
     $prodsdbname = "Medical";
     $prodsdbusername = "producten";
     $prodsdbpassword = "Doemaarwat1";
@@ -31,3 +31,4 @@
     //if (!$conn){
        // die("Connection failed: " . mysqli_connect_error());
     //}
+?>
