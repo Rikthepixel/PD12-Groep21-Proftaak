@@ -1,5 +1,5 @@
 <?php
-include_once './Header.Inc.php';
+include_once 'Header.inc.php';
 ?>
 
 <!--Rik werkt aan dit document-->
@@ -12,10 +12,6 @@ include_once './Header.Inc.php';
 
     <title>App-otheek</title>
 </head>
-
-<Header id="Main-header">
-    <h1>App-Otheek</h1>
-</Header>
 
 <!--invoer-->
 <form action="./Users/Login/LoginMain.php" method="post" id="LoginForm">
@@ -45,6 +41,16 @@ include_once './Header.Inc.php';
         if(isset($_SESSION['error'])) {
             include_once './Users/Login/LoginFunctions.php';
             echo ErrorMessage($_SESSION['error']);
+        }
+    ?>
+</p>
+
+<p>
+    <?php
+        //if the error variable is set, then get the appropriate ErrorMessage
+
+        if(isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
         }
     ?>
 </p>

@@ -1,8 +1,5 @@
 <?php
 include_once './Header.inc.php';
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -13,24 +10,6 @@ include_once './Header.inc.php';
     <title>Document</title>
 </head>
 <body>
-    <p> 
-        <?php 
-
-        if(isset($_SESSION['Voornaam'])) {
-            echo ($_SESSION['Voornaam']);
-        }
-        ?>
-    </p>
-
-    <p> 
-        <?php 
-
-        if(isset($_SESSION['Achternaam'])) {
-            echo ($_SESSION['Achternaam']);
-        }
-        ?>
-    </p>
-
 
 </body>
 </html>

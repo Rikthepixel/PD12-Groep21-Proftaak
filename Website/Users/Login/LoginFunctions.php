@@ -59,5 +59,9 @@ function ErrorMessage($Error){
     if ($Error == "invalidsession"){
         $result = "Session was invalid or has expired. Please Login again";
     }
+    if ($Error == "SuccesLogout"){
+        $result = "You were succesfully logged out";
+    }
+
     return $result;
 }
