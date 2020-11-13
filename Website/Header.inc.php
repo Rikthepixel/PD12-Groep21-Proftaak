@@ -37,12 +37,17 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     
     * {box-sizing: border-box;}
 
+    #Logo{
+        height: ;
+        width: ;
+    }
+
     body { 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     }
 
-    .header {
+    .header  {
     overflow: hidden;
     background-color: #187757;
     padding: 40px 20px;
@@ -118,11 +123,36 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
         float: none;
     }
     }
+
+    .img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    }
+
+    div > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    }
+
+
 </style>
 </head>
 <body>
 
     <div class="header">
+        <div class="img-wrap">
+            <img src="/Styles/Logo.png" alt="App-Otheek"/>       
+        </div>
+
 
         <div class="header-right">
 
