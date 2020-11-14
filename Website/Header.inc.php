@@ -6,6 +6,7 @@ if(!VerifySession()){
     $LoginOrLogoutDirectory = './index.php';
     $LoginOrLogout = "Login";
     $Currentfilename = basename($_SERVER['PHP_SELF']);
+
     if($Currentfilename != "index.php" && $Currentfilename != "LoginMain.php" && $Currentfilename != "LoginFunctions.php"){
         $_SESSION['error'] = "LoginRequired";
         header("Location: index.php");
@@ -20,6 +21,7 @@ if(VerifySession()){
     $Achternaam = $_SESSION['Achternaam'];
     $Voornaam = $_SESSION['Voornaam'];
     $DisplayName = "$Voornaam $Achternaam";
+    $_SESSION['error'] = "AlreadyLoggedin";
 }
 
 function DeterminActive($LinkTarget){
@@ -43,11 +45,6 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     
     * {box-sizing: border-box;}
 
-    #Logo{
-        height: ;
-        width: ;
-    }
-
     body { 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -56,7 +53,7 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     .header  {
     overflow: hidden;
     background-color: #187757;
-    padding: 40px 20px;
+
     }
 
     .header a {
@@ -77,7 +74,7 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     }
 
     .header a:hover {
-    background-color: #ddd;
+    background-color: #1aad7c;
     color: black;
     }
 
@@ -89,16 +86,25 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     .header-right {
     float: right;
     }
+    .header-left {
+    float: left;
+    }
 
     .header-right a{
-    background-color:#1f8563;
+        background-color:#1f8563;
+        margin: 0em;
+        margin-left: 0.1em;
+        margin-right: 0.1em;
     }
 
     .header-nametag {
-    float: inline-start;
+    float: right;
     }
+    
     .header-nametag p{
     margin: 0em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
     position: relative;
     top: -50%;
 
@@ -110,43 +116,70 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     line-height: 25px;
     border-radius: 4px;
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 238, 238);
     color: black;
     }
 
-    @media screen and (max-width: 500px) {
+    #MHC-Mar{
+        margin-top:40px;
+        margin-bottom:40px;
+        margin-left:0;
+        margin-right:20px;
+    }
+    #US-ExM{
+        margin-left:0.8em;
+    }
+    #FH-LEF{
+    }
+    
+    @media screen and (max-width: 760px) {
     .header a {
         float: none;
         display: block;
         text-align: left;
     }
-    
+    .header-right a{
+        margin: 0em;
+    }
     .header-right {
         float: none;
     }
+    .header-left {
+        float: none;
+
+    }
+    .header-left img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-right a{
+        margin: 0em;
+        margin-top: 0.2em;
+        margin-bottom:0.2em;
+    }
 
     .header-nametag {
+        margin:auto;
         float: none;
     }
+    .header-nametag p{
+        float: none;
+        margin: 0em;
+        margin-top: 0.2em;
+        margin-bottom:0.2em;
     }
-
-    .img-wrap {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    margin: 0;
+    #US-ExM {
+        margin: 0em;
+        margin-bottom:1em;
     }
-
-    div > img {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-height: 100%;
-    max-width: 100%;
-    transform: translate(-50%, -50%);
+    #MHC-Mar{
+        margin-top:40px;
+        margin-bottom:40px;
+        margin-left:20px;
+        margin-right:20px;
+    }
     }
 
 
@@ -155,36 +188,52 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
 <body>
 
     <div class="header">
-        <div class="img-wrap">
-            <img src="/Styles/Logo.png" alt="App-Otheek"/>       
+         
+        <div class="header-left" id="FH-LEF">
+        <img src="/Styles/Logo.png" alt="App-Otheek" style="max-height:128px;max-width:200px;"/> 
         </div>
+  
+        <div class="header-right" id="MHC-Mar">
+
+            <!--UserSpecific-->
+            <div class="header-right" id="US-ExM">
+                <div class="header-right">
+                    <!--Login/Out -->
+                    <a href="<?= $LoginOrLogoutDirectory ?>"><?= $LoginOrLogout ?></a>  
+                </div>
+
+                <!--Nametag -->
+                <?php 
+                    if(VerifySession()){;
+                        echo '<div class="header-nametag">';
+                        echo "<p style='font-weight: bold;'> $DisplayName </p>";
+                        echo '</div>';
+                    }
+                ?>
+            </div>
+            <!--Tabs-->
+            <div class="header-right">
+
+                <!--Tabs -->
+                <?php 
+                    if(VerifySession()){
+                        $ProdOver = DeterminActive('Productpage.php');
+                        $hrefProdOver = "Productpage.php";
+                        $Bestel = DeterminActive('Bestellen.php');
+                        $hrefBestel = "Bestellen.php";
+                        //$ZoekF = DeterminActive('Zoekfunctie.php');
+                        //$hrefZoekF = "Producten/Zoekfunctie.php";
 
 
-        <div class="header-right">
-
-            <!--Tabs -->
-            <?php 
-                if(VerifySession()){
-                    $ProdOver = DeterminActive('Productpage.php');
-                    $hrefProdOver = "Producten/Productpage.php";
-                    $ZoekF = DeterminActive('Zoekfunctie.php');
-                    $hrefZoekF = "Producten/Zoekfunctie.php";
-                    $Bestel = DeterminActive('Bestellingen.php');
-                    $hrefBestel = "Producten/Bestellingen.php";
-
-                    echo "<a $ProdOver href=$hrefProdOver>Product Overzicht</a>";
-                    echo "<a $ZoekF href=$hrefZoekF>Zoeken</a>";
-                    echo "<a $Bestel href=$hrefBestel>Bestellen</a>";
-                    echo '<div class="header-nametag">';
-                    echo "<p style='font-weight: bold;'> $DisplayName </p>";
-                    echo '</div>';
-                }
-            ?>
-
-            <!--Login/Out -->
-            <a href="<?= $LoginOrLogoutDirectory ?>"><?= $LoginOrLogout ?></a>
-            
+                        echo "<a $ProdOver href=$hrefProdOver>Product Overzicht</a>";
+                        echo "<a $Bestel href=$hrefBestel>Bestellen</a>";
+                        //echo "<a $ZoekF href=$hrefZoekF>Zoeken</a>";
+                    }
+                ?>
+                
+            </div>
         </div>
+        
     </div>
 
 </body>

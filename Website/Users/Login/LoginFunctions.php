@@ -68,5 +68,8 @@ function ErrorMessage($Error){
     if ($Error == "A"){
         $result = "";
     }
+    if ($Error == "AlreadyLoggedin"){
+        $result = "You are already logged-in";
+    }
     return $result;
 }

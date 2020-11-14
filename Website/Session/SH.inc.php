@@ -65,12 +65,16 @@ $result = true;
 function VerifySession(){
     $result = true;
 
+    //If any of the following errors are already applied, then ignore the invalid session
     if (isset($_SESSION['error'])){
         if ($_SESSION['error'] == "SuccesLogout"){
             $result = false;
         }
 
         if ($_SESSION['error'] == "LoginRequired"){
+            $result = false;
+        }
+        if ($_SESSION['error'] == "invaliddetails"){
             $result = false;
         }
         if ($_SESSION['error'] == "A"){

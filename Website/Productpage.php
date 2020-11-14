@@ -9,7 +9,7 @@ include_once 'Producten/productOverzicht.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/LoginStyle.css">
+    <link rel="stylesheet" href="./Styles/DefaultStyle.css">
 
     <title>App-otheek</title>
 </head>
