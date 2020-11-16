@@ -1,5 +1,5 @@
 <?php
-include_once '../../Header.inc.php';
+include_once 'SH.inc.php';
 
 unset($_SESSION['Loggedin']);
 unset($_SESSION['Voornaam']);

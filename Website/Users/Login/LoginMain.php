@@ -1,7 +1,7 @@
 <?php
-include_once '../../Header.inc.php';
+include_once "SH.inc.php";
+include_once "DatabaseHandler.php";
 
-$returnpage = "location: ../../index.php";
 $_SESSION['error'] = 'A';
 if (isset($_POST['Login'])) {
 
@@ -19,7 +19,7 @@ if (isset($_POST['Login'])) {
         //If the login details are empty send the user back to the starting page
         if(emptyLogin($Email, $Pass)){
             $_SESSION['error'] = 'emptylogin';
-            header("$returnpage");
+            header("location:../../index.php");
             exit();
         } 
         
@@ -28,12 +28,12 @@ if (isset($_POST['Login'])) {
 
     } else {
         $_SESSION['error'] = 'badsubmit';
-        header("$returnpage");
+        header("location:../../index.php");
         exit();
     }
 } 
 else {
     $_SESSION['error'] = 'badsubmit';
-    header("$returnpage");
+    header("location:../../index.php");
     exit();
 }

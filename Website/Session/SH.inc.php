@@ -55,7 +55,7 @@ $result = true;
 
 
     if($result == false){
-        header("location: $ReturnLocation"); // ../index.php
+        header("location:$ReturnLocation"); // ../index.php
         exit();  
     } else {
         return $result;
