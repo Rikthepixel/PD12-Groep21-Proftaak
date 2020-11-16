@@ -20,5 +20,6 @@ $ExpiryDate = date("$ExpiryYear-$ExpiryMonth-d");
 $Query = "INSERT INTO $Medicijn(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) 
 VALUES('$Toename', '$Gewicht', '$CurrentDate', '$ExpiryDate')";
 $Prodsconn -> query($Query);
-echo $Query;
+
+header("Location: Productpage.php");
 ?>
