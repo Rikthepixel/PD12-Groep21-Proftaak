@@ -61,8 +61,8 @@
                 $DatumU = $row['Uiterste_datum'];
 
                 
-                //Creates a New table with an invisable head, only to destroy the table later on to make way for
-                //The collapsible panel. This is very inefficient, but the only bit seems to be the only way
+                //Creates a New table with an invisable head, only to destroy the table later to make way for
+                //The collapsible panel. This is very inefficient, but it seems to be the only way
                 //So I do not care at this point as it is 1:28am in the morning and I've got to get some sleep!
                 if($AddHead == true){
                     echo '<table id="myTable">';
@@ -74,20 +74,19 @@
                     echo '<th style="width:100px;">Datum ontvangen</th>';
                     echo '<th style="width:150px;">Uiterste gebruiksdatum</th>';
                     echo '<th style="width:48px;height:48px;background-color:#58c4a0;border-radius:0px;"></th>';
+                    echo '</tr> </table>';
                     $AddHead = false;
-                } else{
-                    echo '<table id="InvisTable">';
-                    echo '<tr class="InvisHead">';
-                    echo '<th class="InvisHead" style="width:100px;"></th>';
-                    echo '<th class="InvisHead" style="width:100px;"></th>';
-                    echo '<th class="InvisHead" style="width:80px;"></th>';
-                    echo '<th class="InvisHead" style="width:70px;"></th>';
-                    echo '<th class="InvisHead" style="width:100px;"></th>';
-                    echo '<th class="InvisHead" style="width:150px;"></th>';
-                    echo '<th class="InvisHead" style="width:48px;"></th>';
+                    
                 }
-
-
+                echo '<table class="InvisTable">';
+                echo '<tr class="InvisHead">';
+                echo '<th class="InvisHead" style="width:100px;"></th>';
+                echo '<th class="InvisHead" style="width:100px;"></th>';
+                echo '<th class="InvisHead" style="width:80px;"></th>';
+                echo '<th class="InvisHead" style="width:70px;"></th>';
+                echo '<th class="InvisHead" style="width:100px;"></th>';
+                echo '<th class="InvisHead" style="width:150px;"></th>';
+                echo '<th class="InvisHead" style="width:48px;"></th>';
                 echo "</tr>";
                 echo '<tbody> <tr>';
                 echo "<td> $ID </td>";
