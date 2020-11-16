@@ -59,7 +59,6 @@
                 $Gewicht = $row['Gewicht'];
                 $DatumO = $row['Datum_ontvangen'];
                 $DatumU = $row['Uiterste_datum'];
-
                 
                 //Creates a New table with an invisable head, only to destroy the table later on to make way for
                 //The collapsible panel. This is very inefficient, but the only bit seems to be the only way
@@ -98,7 +97,14 @@
                 echo "<td> $DatumU </td>";
                 echo '<td class="BTN-CONT" style="padding:0px;height:48px;width:48px;background-color:#58c4a0"> <div style:"background-color:#58c4a0"> <button id="ColBut" type="button" style="height:48px;width:48px;z-index: 1;"> + </button> </div> </td> </tr>';
                 echo '</tbody> </table>'; //Escape out of the whole table and create a div
-                echo '<div class="HideContent" style:"width:100%"> MORE DATA!!!</div>';
+                echo "<div class='HideContent' style:'width:100%'>";
+                echo "<form action='../Bestellen.php' method='post'>";
+                echo '<button type="submit"';
+                echo "value='";
+                echo "$row2[0]";
+                echo "' name='Product'>Bestellen</button>";
+                echo "</form>";
+                echo "</div>";
             }
         }
             
