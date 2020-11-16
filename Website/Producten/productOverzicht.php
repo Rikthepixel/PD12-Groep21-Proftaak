@@ -16,6 +16,10 @@
     border: 1px solid #ddd;
     margin-bottom: 12px;
   }
+
+  #Searchbarcont{
+    width:50%;
+  }
   /*mytable*/
     #myTable {
       border-color:#58c4a0;
@@ -65,7 +69,7 @@
   /**/
 
   /*InvisTable*/
-    #InvisTable {
+    .InvisTable {
       border-color:#58c4a0;
       border-collapse: collapse;
       width: 100%;
@@ -73,11 +77,11 @@
       font-size: 14px;
     }
 
-    #InvisTable th{
+    .InvisTable th{
       text-align: left;
       padding: 0px;
     }
-    #InvisTable td{
+    .InvisTable td{
 
       padding: 5px;
       border: 2px solid #58c4a0;
@@ -86,11 +90,11 @@
       border-right: 3px solid #58c4a0;
     }
 
-    #InvisTable tr {
+    .InvisTable tr {
       border-bottom: 2px solid #58c4a0;
     }
 
-    #InvisTable tr.header, #InvisTable tr:hover {
+    .InvisTable tr.header, .InvisTable tr:hover {
       background-color: #f1f1f1;
     }
   /**/
@@ -134,7 +138,10 @@
 </head>
 <body>
 
+<div>
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+</div>
+
 
   <!--<table id="myTable">
     <tr id="MainTableHead">
