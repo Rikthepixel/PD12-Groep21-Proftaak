@@ -1,5 +1,5 @@
 <?php
-include_once 'Header.inc.php';
+include_once 'Header.Inc.php';
 include_once 'Producten/productOverzicht.php';
 ?>
 
