@@ -69,7 +69,7 @@
                     echo '<th style="width:100px;">Barcode</th>';
                     echo '<th style="width:100px;">Naam</th>';
                     echo '<th style="width:80px;">Aantal</th>';
-                    echo '<th style="width:70px;">Gewicht</th>';
+                    echo '<th style="width:70px;">Gewicht (per product)</th>';
                     echo '<th style="width:100px;">Datum ontvangen</th>';
                     echo '<th style="width:150px;">Uiterste gebruiksdatum</th>';
                     echo '<th style="width:48px;height:48px;background-color:#58c4a0;border-radius:0px;"></th>';
