@@ -12,7 +12,7 @@ include_once 'Database/DatabaseHandler.php';
     <br><br>
 
     <label>Medicijn</label>
-    <input placeholder="Medicijn naam" type="text" name="MDC" value=" <?php if(isset($_POST['Product'])){echo $_POST['Product'];} ?> " required> </input>
+    <input placeholder="Medicijn naam" type="text" name="MDC" value="<?phpif(isset($_POST['Product'])){echo $_POST['Product'];}?>" required> </input>
     <!--Login button-->
     <button type="submit" value="AUserWantsToBestel" name="Bestel">Bestellen</button>
 </form>
