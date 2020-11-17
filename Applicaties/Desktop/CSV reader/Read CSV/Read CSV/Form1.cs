@@ -41,7 +41,11 @@ namespace Read_CSV
 
         private void Form1_Load(object sender, EventArgs e)
         {
+<<<<<<< Website
             ArduinoPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+=======
+            ArduinoPort = new SerialPort("COM5", 9600, Parity.None, 8, StopBits.One);
+>>>>>>> [Addition] CSV reader (technology)
 
             string ExecutableLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); //Gets the .exe file location
             string CSVPath = Path.Combine(ExecutableLocation, "data.csv"); //Get CSV data file path
@@ -102,6 +106,7 @@ namespace Read_CSV
         {
             if (SearchbarActive)
             {
+<<<<<<< Website
                 string ArduinoInput = ArduinoPort.ReadLine().ToString();
                 if(ArduinoInput != String.Empty)
                 {
@@ -115,16 +120,30 @@ namespace Read_CSV
                     InitiateSearch();
                 }
  
+=======
+                string ArduinoInput = ArduinoPort.ReadLine();
+
+                if (InvokeRequired)
+                {
+                    this.Invoke(new Action<object,SerialDataReceivedEventArgs>(DataRecieved), new object[] { sender, e });
+                    return;
+                }
+
+                searchbar.Text += ArduinoInput;
+>>>>>>> [Addition] CSV reader (technology)
 
             }
         }
         private void searchbar_KeyUp(object sender, KeyEventArgs e)
         {
+<<<<<<< Website
             InitiateSearch();
         }
 
         private void InitiateSearch()
         {
+=======
+>>>>>>> [Addition] CSV reader (technology)
             string ZoekOpStr;
             switch (ZoekOp)
             {
@@ -139,6 +158,7 @@ namespace Read_CSV
                     break;
                 default:
                     ZoekOpStr = data.Columns[0].ColumnName;
+<<<<<<< Website
                     break;
             }
             string thingy = Convert.ToString(0087714817);
@@ -151,6 +171,21 @@ namespace Read_CSV
                 data.DefaultView.RowFilter = $"{ZoekOpStr} LIKE '%{searchbar.Text}%'";
             }
         }
+=======
+                    break; 
+            }
+            string thingy = Convert.ToString(0087714817);
+            if(searchbar.Text.Length == 0)
+            {
+                data.DefaultView.RowFilter = String.Empty;
+            } else
+            {
+                data.DefaultView.RowFilter = $"{ZoekOpStr} LIKE '%{searchbar.Text}%'";
+            }
+
+        }
+
+>>>>>>> [Addition] CSV reader (technology)
         #region Radio buttons
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {

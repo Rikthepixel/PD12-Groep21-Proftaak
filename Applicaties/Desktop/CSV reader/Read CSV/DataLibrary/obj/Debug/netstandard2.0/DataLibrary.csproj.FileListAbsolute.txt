@@ -1,0 +1,5 @@
+C:\Users\rikde\source\repos\BlazorApp1\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.deps.json
+C:\Users\rikde\source\repos\BlazorApp1\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.dll
+C:\Users\rikde\source\repos\BlazorApp1\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.csprojAssemblyReference.cache
+C:\Users\rikde\source\repos\BlazorApp1\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\rikde\source\repos\BlazorApp1\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfo.cs
