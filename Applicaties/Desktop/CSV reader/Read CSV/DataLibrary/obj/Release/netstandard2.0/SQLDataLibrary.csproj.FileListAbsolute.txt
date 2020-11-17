@@ -1,0 +1,9 @@
+C:\Users\rikde\source\repos\DataLibrary\bin\Release\netstandard2.0\SQLDataLibrary.deps.json
+C:\Users\rikde\source\repos\DataLibrary\bin\Release\netstandard2.0\SQLDataLibrary.dll
+C:\Users\rikde\source\repos\DataLibrary\bin\Release\netstandard2.0\SQLDataLibrary.pdb
+C:\Users\rikde\source\repos\DataLibrary\obj\Release\netstandard2.0\SQLDataLibrary.csprojAssemblyReference.cache
+C:\Users\rikde\source\repos\DataLibrary\obj\Release\netstandard2.0\SQLDataLibrary.AssemblyInfoInputs.cache
+C:\Users\rikde\source\repos\DataLibrary\obj\Release\netstandard2.0\SQLDataLibrary.AssemblyInfo.cs
+C:\Users\rikde\source\repos\DataLibrary\obj\Release\netstandard2.0\SQLDataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\rikde\source\repos\DataLibrary\obj\Release\netstandard2.0\SQLDataLibrary.dll
+C:\Users\rikde\source\repos\DataLibrary\obj\Release\netstandard2.0\SQLDataLibrary.pdb
