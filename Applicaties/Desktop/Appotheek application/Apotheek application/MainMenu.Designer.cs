@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(958, 502);
             this.MinimumSize = new System.Drawing.Size(976, 549);
             this.Name = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
 
         }

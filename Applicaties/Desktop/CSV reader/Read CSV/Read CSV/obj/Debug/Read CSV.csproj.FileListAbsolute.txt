@@ -1,0 +1,194 @@
+D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
+D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.exe
+D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.pdb
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read CSV.csprojAssemblyReference.cache
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read_CSV.Form1.resources
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read_CSV.Properties.Resources.resources
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.GenerateResource.cache
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read CSV.exe
+D:\Visual Studio Projects\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Read CSV.exe
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Read CSV.pdb
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read CSV.csprojAssemblyReference.cache
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read_CSV.Form1.resources
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read_CSV.Properties.Resources.resources
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.GenerateResource.cache
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CoreCompileInputs.cache
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read CSV.exe
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\ClosedXML.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\ClosedXML.pdb
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\ClosedXML.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CopyComplete
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Dapper.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Google.Protobuf.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\MySql.Data.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Renci.SshNet.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Buffers.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Memory.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Zstandard.Net.dll
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Dapper.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Google.Protobuf.pdb
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Google.Protobuf.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\MySql.Data.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\Renci.SshNet.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Buffers.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Memory.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\STEAM\Downloads\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Read CSV.exe
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Read CSV.pdb
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\BouncyCastle.Crypto.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ClosedXML.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Dapper.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Google.Protobuf.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\MySql.Data.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Renci.SshNet.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Buffers.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Memory.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Ubiety.Dns.Core.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Zstandard.Net.dll
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ClosedXML.pdb
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ClosedXML.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Dapper.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Google.Protobuf.pdb
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Google.Protobuf.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\MySql.Data.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Renci.SshNet.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Buffers.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Memory.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csprojAssemblyReference.cache
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read_CSV.Form1.resources
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read_CSV.Properties.Resources.resources
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.GenerateResource.cache
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CopyComplete
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.exe
+D:\Visual Studio Projects\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Read CSV.exe
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Read CSV.pdb
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\BouncyCastle.Crypto.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ClosedXML.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Dapper.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Google.Protobuf.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\MySql.Data.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Renci.SshNet.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Buffers.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Memory.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Ubiety.Dns.Core.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Zstandard.Net.dll
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ClosedXML.pdb
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ClosedXML.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Dapper.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Google.Protobuf.pdb
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Google.Protobuf.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\MySql.Data.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\Renci.SshNet.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Buffers.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Memory.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csprojAssemblyReference.cache
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read_CSV.Form1.resources
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read_CSV.Properties.Resources.resources
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.GenerateResource.cache
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CoreCompileInputs.cache
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CopyComplete
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.exe
+D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Read CSV.exe
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Read CSV.pdb
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\ClosedXML.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Dapper.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Google.Protobuf.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\MySql.Data.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Renci.SshNet.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Buffers.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Memory.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Zstandard.Net.dll
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\ClosedXML.pdb
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\ClosedXML.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Dapper.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Google.Protobuf.pdb
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Google.Protobuf.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\MySql.Data.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\Renci.SshNet.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Buffers.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.IO.Packaging.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Memory.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.csprojAssemblyReference.cache
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read_CSV.Form1.resources
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read_CSV.Properties.Resources.resources
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.GenerateResource.cache
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CoreCompileInputs.cache
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CopyComplete
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.exe
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
