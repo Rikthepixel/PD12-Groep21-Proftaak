@@ -76,7 +76,7 @@
                 echo "<td> $Gewicht mg </td>";
                 echo "<td> $DatumO </td>";
                 echo "<td> $DatumU </td>";
-                echo '<td class="BTN-CONT" style="border-radius:4px;height:48px;width:48px;"> <div> <button id="ColBut" type="button" style="height:48px;width:48px;z-index: 1;"> + </button> </div> </td> </tr>';
+                echo '<td class="BTN-CONT" style="height:48px;width:48px;"> <div> <button id="ColBut" type="button" style="height:48px;width:48px;z-index: 1;"> + </button> </div> </td> </tr>';
                 echo '</tbody> </table>'; //Escape out of the whole table and create a div
                 echo "<div class='HideContent' id='Collapsible' style='width:100%'>";
                 echo "<form action='../Bestellen.php' method='post'>";
@@ -95,23 +95,17 @@
     <script>
         document.body.addEventListener("click", event => {
             if (event.target.nodeName == "BUTTON") {
-                var Button = event.target;
-                var ButtonTD = event.target.parentNode.parentNode;
-                var table = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
-                var Collap = table.nextElementSibling;
+                var Button, Collap; 
+                Button = event.target;
+                Collap = Button.parentNode.parentNode.parentNode.parentNode.parentNode.nextElementSibling;
 
                 if (Collap.className == "ShowContent"){
-                    //min
-
-                    ButtonTD.style.borderTopLeftRadius = "4px";
-                    ButtonTD.style.borderBottomLeftRadius = "4px";
-                    ButtonTD.style.borderTopRightRadius = "0px";
-                    ButtonTD.style.borderBottomLeftRadius = "0px";
+                    //plus
                     Collap.className = "HideContent";
                     Button.className = ""; 
                     Button.innerHTML = "+";
                 } else {
-                    //plus
+                    //min
                     Collap.className = "ShowContent";
                     Button.className = "ButtonActive"; 
                     Button.innerHTML = "-";

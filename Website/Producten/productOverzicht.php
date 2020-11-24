@@ -131,6 +131,8 @@
     border-radius: 0px;
     background-color:unset;
     border-radius:4px;
+
+    text-align:right;
   }
 
   .HideContent{
@@ -181,7 +183,7 @@
  }
  #TopItem{
   background-color:rgb(238, 238, 238);
-  width: 95%;
+  width: 94%;
   display: inline-block;
  }
 
