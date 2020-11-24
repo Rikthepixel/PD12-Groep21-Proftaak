@@ -37,23 +37,58 @@ include_once 'Header.Inc.php';
 
             #BestelCont{
                 width:50%;
-                text-align: center;
+                /*text-align: center;*/
                 margin-left:25%;
+                font-family: Arial, Helvetica, sans-serif;
             }
-            
+
+            #Inputs{
+                /*float:left;*/
+                display: inline-block;
+                text-align: right;
+            }
+            #InputText{
+                width:100%;
+            }
     </style>
 </head>
 <body>
     <form action="BestellingUpdate.php" method="post" id="LoginForm">
         <div id="BestelCont">
             <!--Bestelling-->
-            <label>Bestelling</label>
-            <input placeholder="25" type="number" name="TNM" required>
+            <div>
+                <div id="Inputs">
+                <label>Aantal</label>
+                <br><br>
+                <label>Medicijn type</label>
+                </div>
+                <div id="Inputs">
+                <input id="InputText" placeholder="Aantal medicijnen..." type="number" name="TNM" required>
+                <br><br>
+                <select id="InputText" placeholder="Medicijn naam..." name="MDC" required>
+                    <option value="" disabled selected> Medicijn naam </option>
+                    <!--<option value="<?php //if(isset($_POST['Product'])){echo $_POST['Product'];}?>" <?php //echo ""?>></option>-->
+                    <?php
+                        $QueryTables = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
+                        $Tableresults = $Prodsconn -> query($QueryTables);
 
-            <br><br>
-
-            <label>Medicijn</label>
-            <input placeholder="Medicijn naam" type="text" name="MDC" value="<?php if(isset($_POST['Product'])){echo $_POST['Product'];}?>" required> </input>
+                        while($row2 = $Tableresults -> fetch_array())
+                        {
+                            echo '<option value=';
+                            echo "$row2[0]'";
+                            if(isset($_POST["product"])){
+                                if(row2[0] == $_POST["product"]){
+                                    echo 'selected';
+                                }
+                            }
+                            echo ">";
+                            echo "$row2[0]";
+                            echo '</option>';
+                        }
+                    ?>
+                </select>
+                </div>
+            </div>
             <!--Bestel button-->
             <button id="BestelBTN" type="submit" value="AUserWantsToBestel" name="Bestel">Bestellen</button>
         </div>
