@@ -81,10 +81,10 @@
     }
 
     #MHC-Mar{
+        position: relative;
         margin-bottom:40px;
         margin-left:0;
         margin-right:20px;
-
         display: block;
     }
 
@@ -98,11 +98,26 @@
     }
     #Help-From{
         position: absolute;
-        top: 0px;
-        right : 0;
+        top: 20px;
+        right : 3px;
         display:block;
         float :right;
     }
+    #Help-btn{
+        background-color: #1f8563;
+        border: 0;
+        border-radius: 2px;
+        
+        padding: 4px 31.7px;
+
+        font-weight: bold;
+        font-size: 100%;
+    }
+    #Help-btn:hover{
+        background-color: #1aad7c;
+        color:#4f4f4f;
+    }
+
     @media screen and (max-width: 760px) {
         .header {
             height:unset;

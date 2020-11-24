@@ -7,11 +7,15 @@ include_once 'Header.Inc.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./Styles/DefaultStyle.css">
+    <style>
+    #text-container{
+        margin-left: 20px
+    }
+    </style>
 </head>
 <body>
-
+<div id = "text-container">
 <h1>Appotheek Support</h1>
 
 <h2>Product Overzicht</h2>
@@ -22,6 +26,6 @@ include_once 'Header.Inc.php';
 
 <h2>Uitloggen</h2>
 <p>Als er op de Uitloggen knop word gedrukt dan log je uit met het acount die op dat moment in gebruikt is.</p>
-
+</div>
 </body>
 </html>

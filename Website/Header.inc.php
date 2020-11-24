@@ -57,13 +57,15 @@
 
         <div class="header-right" id="MHC-Mar">
             <!--UserSpecific-->
-            <div id = "Help-From">
-                <form action="./Help.php" method="post">    
-
-                <button type="submit">Help</button>
-
-                </form>
-            </div>
+            <?php
+                if(VerifySession()){
+                    echo '<div id = "Help-From">';
+                    echo '<form action="./Help.php" method="post">';   
+                    echo '<button id = "Help-btn" type="submit">Help</button>';
+                    echo '</form>';
+                    echo '</div>';
+                }
+            ?>
             <div class="header-right" id="Lower-Right-Block">
                 <!--UserSpecific-->
                 <div class="header-right" id="US-ExM">
@@ -90,6 +92,7 @@
                             $hrefBestel = "Bestellen.php";
                             echo "<a $ProdOver href=$hrefProdOver>Product Overzicht</a>";
                             echo "<a $Bestel href=$hrefBestel>Bestellen</a>";
+
                         }
                     ?>
                 </div>
