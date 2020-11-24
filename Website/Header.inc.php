@@ -126,10 +126,10 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     }
 
     #MHC-Mar{
+        position: relative;
         margin-bottom:40px;
         margin-left:0;
         margin-right:20px;
-
         display: block;
     }
 
@@ -143,7 +143,7 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
     }
     #Help-From{
         position: absolute;
-        top: 0px;
+        top: 20px;
         right : 0;
         display:block;
         float :right;
@@ -220,6 +220,7 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
         </div>
 
         <div class="header-right" id="MHC-Mar">
+            <!--UserSpecific-->
             <div id = "Help-From">
                 <form action="./Help.php" method="post">    
 
