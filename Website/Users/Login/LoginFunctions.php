@@ -22,7 +22,7 @@ function loginUser($conn, $Email, $Password){
         
         Unset($_SESSION['error']);
 
-        header("location:../../Succes.php");
+        header("location:../../Producten.php");
         exit();
         
     } else {

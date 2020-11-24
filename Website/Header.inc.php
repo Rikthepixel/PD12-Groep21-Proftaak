@@ -138,9 +138,16 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
         margin-left:18px;
     }
     #Lower-Right-Block{
+        display:block;
         margin-top:50.5px;
     }
-
+    #Help-From{
+        position: absolute;
+        top: 0px;
+        right : 0;
+        display:block;
+        float :right;
+    }
     @media screen and (max-width: 760px) {
         .header {
             height:unset;
@@ -212,8 +219,14 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
 
-
         <div class="header-right" id="MHC-Mar">
+            <div id = "Help-From">
+                <form action="./Help.php" method="post">    
+
+                <button type="submit">Help</button>
+
+                </form>
+            </div>
             <div class="header-right" id="Lower-Right-Block">
                 <!--UserSpecific-->
                 <div class="header-right" id="US-ExM">
@@ -234,8 +247,8 @@ $Currentfilename = basename($_SERVER['PHP_SELF']);
                     <!--Tabs -->
                     <?php 
                         if(VerifySession()){
-                            $ProdOver = DeterminActive('Productpage.php');
-                            $hrefProdOver = "Productpage.php";
+                            $ProdOver = DeterminActive('Producten.php');
+                            $hrefProdOver = "Producten.php";
                             $Bestel = DeterminActive('Bestellen.php');
                             $hrefBestel = "Bestellen.php";
                             //$ZoekF = DeterminActive('Zoekfunctie.php');
