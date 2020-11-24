@@ -1,14 +1,12 @@
 <?php
-include_once "SH.inc.php";
-include_once "DatabaseHandler.php";
+include_once "../../Include/SH.inc.php";
+include_once "../../Include/DatabaseHandler.php";
 
 $_SESSION['error'] = 'A';
 if (isset($_POST['Login'])) {
 
     if($_POST['Login'] == "AUserWantsToLogin"){
-
         include_once 'LoginFunctions.php';
-
         $Email = mysqli_real_escape_string($Loginconn, $_POST['EML']);     
         $Email = stripslashes($Email);
         

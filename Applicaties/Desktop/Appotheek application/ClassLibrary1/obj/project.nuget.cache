@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "01xmo7ByYFoLvWRco6I2AIfmtCl15/pP48Fol+xwlcC65qKZiB51jIiMjVnD6CH7pHetYAi+sRu4Z2y45gqo3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rik\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Rik\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

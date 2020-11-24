@@ -53,7 +53,7 @@ include_once 'Header.Inc.php';
     </style>
 </head>
 <body>
-    <form action="BestellingUpdate.php" method="post" id="LoginForm">
+    <form action="Producten/BestellingUpdate.php" method="post" id="LoginForm">
         <div id="BestelCont">
             <!--Bestelling-->
             <div>

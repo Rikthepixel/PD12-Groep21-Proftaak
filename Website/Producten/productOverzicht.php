@@ -7,17 +7,36 @@
     box-sizing: border-box;
     }
 
-  #myInput {
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
+
+  #myInput{
+    width:100%;  
+    padding-left: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+                
+    background-color:#ebebeb;
+
+    font-size: 140%;
+    font-weight: bold;
+
+    border-radius: 4px;
+    border: 4px solid #0e4a36;
+
+    color: black;
   }
 
+  #myInput:hover{
+    border-color:#21755a;
+    background-color:#f5f5f5;
+  }
+  #myInput:focus{
+    border-color:#21755a;
+    background-color:white;
+  }
+  
+
   #Searchbarcont{
+    padding: 10px;
     width:50%;
   }
   /*mytable*/
@@ -138,8 +157,8 @@
 </head>
 <body>
 
-<div>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<div id = "Searchbarcont">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Barcode..." title="Type in a name">
 </div>
 
 
