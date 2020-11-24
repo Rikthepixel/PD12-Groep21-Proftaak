@@ -139,7 +139,7 @@
 <body>
 
 <div>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Zoek op ID" title="Searchbar">
 </div>
 
 
