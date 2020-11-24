@@ -6,43 +6,43 @@
     <title>Document</title>
 
     <style>
-      .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    }
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
 
-    .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f1f1f1;
-    }
-    .collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-    }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        .collapsible:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
 
-    .InvisHead{
-        visibility: visible;
-    }
+        .InvisHead{
+            visibility: visible;
+        }
 
-    .activeA:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-    }
+        .activeA:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
     </style>
 </head>
     <?php
-        include_once 'DatabaseHandler.php';
+        //include_once '../Database/DatabaseHandler.php';
         $QueryTables = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
         $Tableresults = $Prodsconn -> query($QueryTables);
         $AddHead = true;
@@ -78,6 +78,7 @@
                     $AddHead = false;
                     
                 }
+                echo '<div class="TableCont">';
                 echo '<table class="InvisTable">';
                 echo '<tr class="InvisHead">';
                 echo '<th class="InvisHead" style="width:100px;"></th>';
@@ -104,6 +105,7 @@
                 echo "$row2[0]";
                 echo "' name='Product'>Bestellen</button>";
                 echo "</form>";
+                echo "</div>";
                 echo "</div>";
             }
         }
