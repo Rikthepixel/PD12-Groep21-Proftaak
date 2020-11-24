@@ -1,6 +1,6 @@
 <?php
-    include_once 'Session/SH.inc.php';
-    include_once 'Database/DatabaseHandler.php';
+    include_once 'Include/SH.inc.php';
+    include_once 'Include/DatabaseHandler.php';
 
     if(!VerifySession()){
         $LoginOrLogoutDirectory = './index.php';
@@ -16,7 +16,7 @@
         }
     }
 
-    if(VerifySession()){
+    if($SessionValid = VerifySession()){
         $LoginOrLogoutDirectory = './Users/Logout/Logout.php';
         $LoginOrLogout = "Uitloggen";
     
@@ -50,15 +50,13 @@
     <div class="header" id="MainHeader">
          
         <div class="header-left" id="Logo-Container">
-            <div>
-                <img style="height:150px;margin:0px;padding:0px" src="/Styles/Logo.png" alt="App-Otheek"/> 
-            </div>
+            <img style="height:150px;margin:0px;padding:0px" src="/Styles/Logo.png" alt="App-Otheek"/> 
         </div>
 
         <div class="header-right" id="MHC-Mar">
             <!--UserSpecific-->
             <?php
-                if(VerifySession()){
+                if($SessionValid){
                     echo '<div id = "Help-From">';
                     echo '<form action="./Help.php" method="post">';   
                     echo '<button id = "Help-btn" type="submit">Help</button>';
@@ -76,7 +74,7 @@
                 
                     <!--Nametag -->
                     <?php 
-                        if(VerifySession()){
+                        if($SessionValid){
                             echo "<div class='header-nametag'> <p style='font-weight:bold'>$DisplayName</p></div>";
                         }
                     ?>
@@ -85,7 +83,7 @@
                 <div class="header-right">
                     <!--Tabs -->
                     <?php 
-                        if(VerifySession()){
+                        if($SessionValid){
                             $ProdOver = DeterminActive('Producten.php');
                             $hrefProdOver = "Producten.php";
                             $Bestel = DeterminActive('Bestellen.php');

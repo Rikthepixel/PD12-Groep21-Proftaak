@@ -42,7 +42,6 @@
     </style>
 </head>
     <?php
-        //include_once '../Database/DatabaseHandler.php';
         $QueryTables = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
         $Tableresults = $Prodsconn -> query($QueryTables);
         $AddHead = true;
