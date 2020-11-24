@@ -26,6 +26,33 @@
         $_SESSION['error'] = "AlreadyLoggedin";
     }
 
+    function GetBrowser(){
+        $arr_browsers = ["Opera", "Edg", "Chrome", "Safari", "Firefox", "MSIE", "Trident"];
+        $agent = $_SERVER['HTTP_USER_AGENT'];
+        $user_browser = '';
+
+        foreach ($arr_browsers as $browser) {
+            if (strpos($agent, $browser) !== false) {
+                $user_browser = $browser;
+                break;
+            }   
+        }
+
+        switch ($user_browser) {
+            case 'MSIE':
+                $user_browser = 'Internet Explorer';
+                break;   
+            case 'Trident':
+                $user_browser = 'Internet Explorer';
+                break;
+            case 'Edg':
+                $user_browser = 'Microsoft Edge';
+                break;
+        }
+
+        return $user_browser;
+    }   
+
     function DeterminActive($LinkTarget){
     $Currentfilename = basename($_SERVER['PHP_SELF']);
         if ($Currentfilename == $LinkTarget){
@@ -43,7 +70,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="Styles/HeaderStyle.css" >
+<style>
+    #Help-btn{
 
+        <?php if($Browser = GetBrowser() == "Firefox") {
+            echo "padding: 4px 31.7px;";
+        } else {
+            echo "padding: 4px 32.7px;";
+        }?>
+
+    }
+</style>
 </head>
 <body>
 

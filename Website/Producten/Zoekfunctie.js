@@ -1,6 +1,6 @@
 // JavaScript code 
 function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
+    var input, filter, table, TableContainers, tr, td, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
 

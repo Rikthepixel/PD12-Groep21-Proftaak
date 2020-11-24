@@ -1,14 +1,16 @@
 * {box-sizing: border-box;}
 
     body { 
-    margin:0px;
-    font-family: Arial, Helvetica, sans-serif;
+      margin:0px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .header {
-    overflow: hidden;
-    background-color: #187757;
-    height:150px;
+      position:sticky;
+      top:0px;
+      overflow: hidden;
+      background-color: #187757;
+      height:150px;
     }
 
     .header a {
@@ -106,9 +108,9 @@
     #Help-btn{
         background-color: #1f8563;
         border: 0;
-        border-radius: 2px;
+        border-radius: 4px;
         
-        padding: 4px 31.7px;
+        padding: 4px 32.7px;
 
         font-weight: bold;
         font-size: 100%;
@@ -118,9 +120,12 @@
         color:#4f4f4f;
     }
 
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 800px) {
         .header {
-            height:unset;
+          height:unset;
+          position:static;
+          top: unset;
+          display: block;
         }
         .header a {
             float: none;
@@ -175,5 +180,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        #Help-From{
+          position: static;
+          top: unset;
+          right : unset;
+          display:block;
+          float :none;
+        }
+
+        #Help-btn{
+          width:100%;
+          text-align:left;
+          font-weight:normal;
+          padding-left:12px !important;
         }
     }
