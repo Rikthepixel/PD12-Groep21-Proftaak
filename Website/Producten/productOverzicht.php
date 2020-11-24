@@ -10,28 +10,29 @@
 
   #myInput{
     width:100%;  
-                padding-left: 1%;
-                padding-top: 2%;
-                padding-bottom: 2%;
+    padding-left: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
                 
-                 background-color:#ebebeb;
+    background-color:#ebebeb;
 
-                font-size: 140%;
-                font-weight: bold;
+    font-size: 140%;
+    font-weight: bold;
 
-                border-radius: 4px;
-                border: 4px solid #0e4a36;
+    border-radius: 4px;
+    border: 4px solid #0e4a36;
 
-                color: black;
-            }
-            #myInput:hover{
-                border-color:#21755a;
-                background-color:#f5f5f5;
-            }
-            #myInput:focus{
-                border-color:#21755a;
-                background-color:white;
-            }
+    color: black;
+  }
+
+  #myInput:hover{
+    border-color:#21755a;
+    background-color:#f5f5f5;
+  }
+  #myInput:focus{
+    border-color:#21755a;
+    background-color:white;
+  }
   
 
   #Searchbarcont{

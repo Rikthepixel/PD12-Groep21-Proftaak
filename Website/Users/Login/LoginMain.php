@@ -1,6 +1,6 @@
 <?php
-include_once "../../Session/SH.inc.php";
-include_once "../../Database/DatabaseHandler.php";
+include_once "../../Include/SH.inc.php";
+include_once "../../Include/DatabaseHandler.php";
 
 $_SESSION['error'] = 'A';
 if (isset($_POST['Login'])) {
