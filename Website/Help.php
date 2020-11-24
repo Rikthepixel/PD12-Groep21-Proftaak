@@ -10,12 +10,18 @@ include_once 'Header.Inc.php';
     <link rel="stylesheet" href="./Styles/DefaultStyle.css">
     <style>
     #text-container{
-        margin-left: 20px
+        text-align: center;
+        color: white;
     }
-    </style>
+    .Background-color{
+      border: 3px #58c4a0 solid;
+      background-color: #58c4a0;
+      display: block;         
+    }   
+</style>
 </head>
 <body>
-<div id = "text-container">
+<div id = "text-container" class="Background-color">
 <h1>Appotheek Support</h1>
 
 <h2>Product Overzicht</h2>
