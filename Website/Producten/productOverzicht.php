@@ -37,15 +37,17 @@
 
   #Searchbarcont{
     padding: 10px;
+    padding-left: 0px;
     width:50%;
   }
   /*mytable*/
     #myTable {
-      border-color:#58c4a0;
+      color:  #187757;
       border-collapse: collapse;
       width: 100%;
-      border: 2px solid #58c4a0;
       font-size: 14px;
+      text-align: center;
+      margin-bottom: 6px;
     }
     #myTable th{
       height:50px;
@@ -54,14 +56,12 @@
 
       border: 8px solid #58c4a0;
       border-bottom: 8px solid #58c4a0;
-      border-left: 3px solid #58c4a0;
-      border-right: 3px solid #58c4a0;
-      
+      border-left: 0px solid #58c4a0;
+      border-right: 0px solid #58c4a0;
     }
 
     #myTable th {
-      text-align: left;
-
+      text-align: center;
       padding: 5px;
     }
 
@@ -70,15 +70,11 @@
       padding: 5px;
       border: 2px solid #58c4a0;
       border-bottom: 4px solid #58c4a0;
-      border-left: 3px solid #58c4a0;
-      border-right: 3px solid #58c4a0;
+      border-left: 0px solid #58c4a0;
+      border-right: 0px solid #58c4a0;
     }
     #myTable tr {
       border-bottom: 1px solid #58c4a0;
-    }
-
-    #myTable tr.header, #myTable tr:hover {
-      background-color: #f1f1f1;
     }
 
     #MainTableHead{
@@ -89,35 +85,40 @@
 
   /*InvisTable*/
     .InvisTable {
-      border-color:#58c4a0;
+      border-radius: 8px;
+      border: 2px solid black;
       border-collapse: collapse;
       width: 100%;
-      border: 2px solid #58c4a0;
       font-size: 14px;
+      text-align: center;
+      margin: 0px;
     }
 
     .InvisTable th{
-      text-align: left;
+      text-align: center;
       padding: 0px;
     }
     .InvisTable td{
 
       padding: 5px;
-      border: 2px solid #58c4a0;
-      border-bottom: 4px solid #58c4a0;
-      border-left: 3px solid #58c4a0;
-      border-right: 3px solid #58c4a0;
+      border: 0px solid #58c4a0;
     }
 
     .InvisTable tr {
-      border-bottom: 2px solid #58c4a0;
-    }
 
+    }
+/*
     .InvisTable tr.header, .InvisTable tr:hover {
       background-color: #f1f1f1;
     }
   /**/
-  
+    
+  .TableCont{
+    border-radius: 8px;
+    border: 2px solid black;
+    margin: 0px;
+    margin-bottom: 3px;
+  }
   .BTN-CONT{
     padding: 0px;
     height:48px;
@@ -151,15 +152,23 @@
     color: white;
     border-color:#21755a;
   }
+ 
+ 
+ #ProductenLijst {
+    width: 90%;
+    display: inline-block;
+   
+ }
 
+ #ProdLijstCont {
+   text-align: center;
+ }
 
 </style>
 </head>
 <body>
 
-<div id = "Searchbarcont">
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Barcode..." title="Type in a name">
-</div>
+
 
 
   <!--<table id="myTable">
@@ -174,8 +183,14 @@
     </tr>
     
   </table>-->
-  <?php include_once 'Fetchprodinfo.php';?>
-
+  <div id="ProdLijstCont">
+    <div id="ProductenLijst">
+      <div id = "Searchbarcont">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Barcode..." title="Type in a name">
+      </div>
+     <?php include_once 'Fetchprodinfo.php';?>
+    </div>
+  </div>
 
   <script src="Producten/Zoekfunctie.js"></script> 
 

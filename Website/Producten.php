@@ -13,7 +13,6 @@ include_once 'Producten/productOverzicht.php';
 
     <title>App-otheek</title>
 </head>
-
 </html>
 
 
