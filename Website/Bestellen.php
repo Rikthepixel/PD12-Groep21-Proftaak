@@ -74,7 +74,7 @@ include_once 'Header.Inc.php';
             #InputText:focus{
                 border-color:#21755a;
                 background-color:white;
-        }
+            }
     </style>
 </head>
 <body>
