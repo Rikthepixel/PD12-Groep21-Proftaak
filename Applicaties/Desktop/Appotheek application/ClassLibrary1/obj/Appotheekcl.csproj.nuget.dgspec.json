@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\ClassLibrary1.csproj": {}
+    "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {}
   },
   "projects": {
-    "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\ClassLibrary1.csproj": {
+    "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\ClassLibrary1.csproj",
-        "projectName": "ClassLibrary1",
-        "projectPath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectUniqueName": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "projectName": "Appotheekcl",
+        "projectPath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
         "packagesPath": "C:\\Users\\STEAM\\.nuget\\packages\\",
         "outputPath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
