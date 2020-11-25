@@ -1,0 +1,9 @@
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.deps.json
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.dll
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.pdb
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csprojAssemblyReference.cache
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.AssemblyInfoInputs.cache
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.AssemblyInfo.cs
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CoreCompileInputs.cache
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.dll
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb
