@@ -161,7 +161,7 @@
                 echo '<button type="submit"';
                 echo "value='";
                 echo "$row2[0]";
-                echo "' name='Product'>Bestellen</button>";
+                echo "'name='Product'>Bestellen</button>";
                 echo "</form>";
                 echo "</div>";
                 echo "</div>";

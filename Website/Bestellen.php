@@ -74,16 +74,16 @@ include_once 'Header.Inc.php';
 
                         while($row2 = $Tableresults -> fetch_array())
                         {
-                            echo '<option value=';
-                            echo "$row2[0]'";
-                            if(isset($_POST["product"])){
-                                if(row2[0] == $_POST["product"]){
-                                    echo 'selected';
+                            echo "<option value='$row2[0]'";
+
+                            if(isset($_POST["Product"])){
+                                if($row2[0] == $_POST["Product"]){
+                                    echo 'selected=""';
                                 }
                             }
-                            echo ">";
-                            echo "$row2[0]";
-                            echo '</option>';
+
+                            echo ">$row2[0]";
+                            echo "</option>";
                         }
                     ?>
                 </select>
