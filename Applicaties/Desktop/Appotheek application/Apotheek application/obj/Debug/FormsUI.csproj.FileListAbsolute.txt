@@ -1,0 +1,11 @@
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe.config
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.pdb
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csprojAssemblyReference.cache
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.MainMenu.resources
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Properties.Resources.resources
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.GenerateResource.cache
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.CoreCompileInputs.cache
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.exe
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.pdb
+E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Login.resources

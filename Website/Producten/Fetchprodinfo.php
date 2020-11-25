@@ -175,11 +175,11 @@
     function openInfo(evt, prodInfo) {
 
         // Declare all variables
-        var i, tabcontent, tablinks, SibDiv;
-        SibDiv = evt.target.parentNode.nextElementSibling; //Gets Sibling Div
-
+        var i, tabcontent, tablinks, SibDiv, Button;
+        Button = evt.target;
+        SibDiv = Button.parentNode.nextElementSibling; //Gets Sibling Div
         tabcontent = SibDiv.getElementsByClassName('tabcontent'); //Gets Sibling Div Children with class tabcontent
-        tablinks = evt.target.parentNode.childNodes;
+        tablinks = Button.parentNode.childNodes;
         
         for (i = 0; i < tabcontent.length; i++) { //Hide all tabContent elements
             tabcontent[i].style.display = "none";
@@ -195,7 +195,12 @@
         for (k = 0; k < DisplayTarget.length; k++){
             DisplayTarget[k].style.display="block";
         }
-        evt.target.className = "active";
+        Button.className = Button.className + "active";
+    }
+
+    var DefaultOpen = document.getElementsByClassName("defaultOpen");
+    for (j = 0; j < DefaultOpen.length; j++){
+        DefaultOpen[j].click();
     }
 
     document.body.addEventListener("click", event => {
@@ -218,10 +223,8 @@
         }
     });
 
-    var DefaultOpen = document.getElementsByClassName("defaultOpen");
-    for (j = 0; j < DefaultOpen.length; j++){
-        DefaultOpen[j].click();
-    }
+
+    
     </script>
 </tbody>
 </html>

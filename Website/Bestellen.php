@@ -46,9 +46,34 @@ include_once 'Header.Inc.php';
                 /*float:left;*/
                 display: inline-block;
                 text-align: right;
+
+                padding-left: 1%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+
+                font-size:110%;
+                font-weight:bold;
+
+                color:#187757;
             }
+            
             #InputText{
                 width:100%;
+
+                background-color:#ebebeb;
+                color:black;
+
+                border-radius:3px;
+                border:3px solid #0e4a36;
+            }
+
+            #InputText:hover{
+                border-color:#21755a;
+                background-color:#f5f5f5;
+            }
+            #InputText:focus{
+                border-color:#21755a;
+                background-color:white;
             }
     </style>
 </head>

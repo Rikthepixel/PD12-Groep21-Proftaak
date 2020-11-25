@@ -21,5 +21,27 @@ namespace Apotheek_application
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Help_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Uitloggen_btn_Click(object sender, EventArgs e)
+        {
+            var m = new Login();
+            m.Show();
+            this.Hide();
+        }
     }
 }
