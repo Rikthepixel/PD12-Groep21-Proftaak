@@ -192,42 +192,43 @@
  }
  
   @media screen and (max-width: 800px) {
-    #TopItemCont{
+      #TopItemCont{
+          position:static;
+          top:unset;
+        }
+
+      #TopItem{
+      background-color:unset;
+      }
+
+      #myInput{
+          font-size: 100%;
+      }
+  }
+  
+  @media screen and (max-width: 1000px) {
+      #TopItemCont{
         position:static;
         top:unset;
       }
 
-    #TopItem{
-    background-color:unset;
-    }
+      #TopItem{
+      background-color:unset;
+      }
 
-    #myInput{
+      #myInput{
         font-size: 100%;
-    }
+      }
+
+      #myTable th{
+        padding: 2px;
+
+        border: 3px solid #58c4a0;
+        border-left: 0px solid #58c4a0;
+        border-right: 0px solid #58c4a0;
+        border-radius: 0px;
+      }
   }
-@media screen and (max-width: 1000px) {
-    #TopItemCont{
-      position:static;
-      top:unset;
-    }
-
-    #TopItem{
-    background-color:unset;
-    }
-
-    #myInput{
-      font-size: 100%;
-    }
-
-    #myTable th{
-      padding: 2px;
-
-      border: 3px solid #58c4a0;
-      border-left: 0px solid #58c4a0;
-      border-right: 0px solid #58c4a0;
-      border-radius: 0px;
-    }
-}
 
 </style>
 </head>

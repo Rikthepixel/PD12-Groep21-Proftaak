@@ -2,10 +2,11 @@
     include_once 'Include/SH.inc.php';
     include_once 'Include/DatabaseHandler.php';
 
+    $Currentfilename = basename($_SERVER['PHP_SELF']);
+    
     if(!VerifySession()){
         $LoginOrLogoutDirectory = './index.php';
         $LoginOrLogout = "Login";
-        $Currentfilename = basename($_SERVER['PHP_SELF']);
 
         if($Currentfilename != "index.php" && $Currentfilename != "LoginFunctions.php"){
             if($Currentfilename != "LoginMain.php"){
@@ -66,7 +67,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>App-Otheek</title>
+<title>App-Otheek - <?php
+
+    $CurrentPageName = rtrim($Currentfilename, "php");
+    $CurrentPageName = rtrim($CurrentPageName, ".");
+
+    if($CurrentPageName == "index"){
+        echo "Login";
+        } else {
+        echo $CurrentPageName;
+    }
+    ?>
+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="Styles/HeaderStyle.css" >
