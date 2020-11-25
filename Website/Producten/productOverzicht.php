@@ -205,7 +205,7 @@
           font-size: 100%;
       }
   }
-  
+
   @media screen and (max-width: 1000px) {
       #TopItemCont{
         position:static;
@@ -230,33 +230,67 @@
       }
   }
 
-    #myTable th{
-      padding: 2px;
 
-      border: 3px solid #58c4a0;
-      border-left: 0px solid #58c4a0;
-      border-right: 0px solid #58c4a0;
-      border-radius: 0px;
+
+  .tablinks{
+    background-color:#1f8563;
+    font-size: 140%;
+    font-weight: bold;
+    border: 4px solid #0e4a36;
+    width: 20%;
+    padding: 2px;
     }
 
-}
-    .tablinks{
-            background-color:#1f8563;
-            font-size: 180%;
-            font-weight: bold;
-            border: 2px solid #0e4a36;
-            width: 20%;
-        }
-
-    .tablinks.ButtonActive{
+  .tablinks.ButtonActive{
     background-color: #0D5B41;
     color: white;
     border-color:#21755a;
   }
-    .tablinks:hover{
+  .tablinks.ButtonActive:hover{
+    background-color: #096e4c;
+    color: #8a8a8a;
+    border-color:#126147;
+  }
+
+  .tablinks:hover{
     background-color:#1aad7c;
     color:#4f4f4f;
     border-color:#21755a;
+  }
+
+  .InfoButtonsContainer{
+    border: 4px solid #21755a;
+  }
+
+  .ExtraInfoContainer{
+    border-bottom: 6px solid #21755a;
+    border-left: 4px solid #21755a;
+    border-right: 4px solid #21755a;
+  }
+
+  .InfoCont{
+    padding-top: 10px;
+  }
+
+  .InfoCont h3{
+    margin-top: 0px;
+  }
+
+  .BestelBTN{
+    background-color: #1f8563;
+    border: 0;
+    border-radius: 0px 0px 4px 4px;
+        
+    padding: 4px 32.7px;
+
+    font-weight: bold;
+    font-size: 100%;
+
+    width:100%;
+  }
+  .BestelBTN:hover{
+      background-color: #1aad7c;
+      color:#4f4f4f;
   }
 </style>
 </head>

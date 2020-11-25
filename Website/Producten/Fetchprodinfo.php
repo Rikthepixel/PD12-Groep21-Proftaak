@@ -104,12 +104,14 @@
                 echo "<td> $Gewicht mg </td>";
                 echo "<td> $DatumO </td>";
                 echo "<td> $DatumU </td>";
-                echo '<td class="BTN-CONT" style="height:48px;width:48px;"> <div> <button id="ColBut" type="button" style="height:48px;width:48px;z-index: 1;"> + </button> </div> </td> </tr>';
+                echo '<td class="BTN-CONT" style="height:48px;width:48px;"> <div> <button id="ColBut" type="button"  onclick="';
+                echo 'Collapse(event)"';
+                echo 'style="height:48px;width:48px;z-index: 1;"> + </button> </div> </td> </tr>';
                 echo '</tbody> </table>'; //Escape out of the whole table and create a div
                 echo "<div class='HideContent' id='Collapsible' style='width:100%'>";
                 echo '<div>
-                        <div class="tab">
-                            <button class="tablinks defaultOpen" onclick="';
+                        <div class="InfoButtonsContainer">
+                            <button class="tablinks ButtonActive" onclick="';
                             echo "openInfo(event, 'Merk')"; 
                             echo '">Merk</button>';
 
@@ -131,39 +133,51 @@
 
                         echo "</div>
                         
-                        <div>
-                            <div class='tabcontent Merk'>
-                            <h3>Merk</h3>
-                            <p>$row2[0]</p>
+                        <div class='ExtraInfoContainer'>
+                            <div class='tabcontent Merk' style='display:block'>
+                                <div class='InfoCont'>
+                                    <h3>Merk</h3>
+                                    <p>$row2[0]</p>
+                                </div>
                             </div>
                     
-                            <div class='tabcontent Totaal-Gewicht'>
-                            <h3>Totaal Gewicht</h3>
-                            <p> $TotaalGewicht mg</p>
+                            <div class='tabcontent Totaal-Gewicht' style='display:none'>
+                                <div class='InfoCont'>
+                                    <h3>Totaal Gewicht</h3>
+                                    <p> $TotaalGewicht mg</p>
+                                </div>
                             </div>
                     
-                            <div class='tabcontent Type'>
-                            <h3>Type</h3>
-                            <p>$RandomType</p>
+                            <div class='tabcontent Type' style='display:none'>
+                                <div class='InfoCont'> 
+                                    <h3>Type</h3>
+                                    <p>$RandomType</p>
+                                </div>
                             </div>
                     
-                            <div class='tabcontent Leverancier'>
-                            <h3>Leverancier</h3>
-                            <p>$RandomLever</p>
+                            <div class='tabcontent Leverancier' style='display:none'>
+                                <div class='InfoCont'>
+                                    <h3>Leverancier</h3>
+                                    <p>$RandomLever</p>
+                                </div>
                             </div>
                     
-                            <div class='tabcontent Eerste-Levering'>
-                            <h3>Eerste Levering</h3>
-                            <p>$EersteLever</p>
+                            <div class='tabcontent Eerste-Levering' style='display:none'>
+                                <div class='InfoCont'>
+                                    <h3>Eerste Levering</h3>
+                                    <p>$EersteLever</p>
+                                </div>
                             </div>
                         </div>
                     </div>";
-                echo "<form action='../Bestellen.php' method='post'>";
-                echo '<button type="submit"';
+                echo '<div>';
+                echo "<form class='BestelForm' action='../Bestellen.php' method='post'>";
+                echo '<button class="BestelBTN" type="submit"';
                 echo "value='";
                 echo "$row2[0]";
                 echo "'name='Product'>Bestellen</button>";
                 echo "</form>";
+                echo "</div>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -176,6 +190,7 @@
 
         // Declare all variables
         var i, tabcontent, tablinks, SibDiv, Button;
+
         Button = evt.target;
         SibDiv = Button.parentNode.nextElementSibling; //Gets Sibling Div
         tabcontent = SibDiv.getElementsByClassName('tabcontent'); //Gets Sibling Div Children with class tabcontent
@@ -187,7 +202,7 @@
 
         // Get all elements with class="tablinks" and remove the class "active"
         for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = " ";
+            tablinks[i].className = "tablinks";
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
@@ -195,15 +210,10 @@
         for (k = 0; k < DisplayTarget.length; k++){
             DisplayTarget[k].style.display="block";
         }
-        Button.className = Button.className + "active";
+        Button.className = "tablinks ButtonActive";
     }
-
-    var DefaultOpen = document.getElementsByClassName("defaultOpen");
-    for (j = 0; j < DefaultOpen.length; j++){
-        DefaultOpen[j].click();
-    }
-
-    document.body.addEventListener("click", event => {
+    
+    function Collapse(event){
         if (event.target.nodeName == "BUTTON") {
             var Button, Collap; 
             Button = event.target;
@@ -221,9 +231,12 @@
                 Button.innerHTML = "-";
             }
         }
-    });
+    }
 
-
+    var DefaultOpen = document.getElementsByClassName("defaultOpen");
+    for (j = 0; j < DefaultOpen.length; j++){
+        DefaultOpen[j].click();
+    }
     
     </script>
 </tbody>
