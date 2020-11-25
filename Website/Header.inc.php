@@ -3,7 +3,7 @@
     include_once 'Include/DatabaseHandler.php';
 
     $Currentfilename = basename($_SERVER['PHP_SELF']);
-    
+
     if(!VerifySession()){
         $LoginOrLogoutDirectory = './index.php';
         $LoginOrLogout = "Login";
@@ -67,6 +67,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" href="Styles/WebLogo.svg" sizes="32x32" type="image/svg"> 
 <title>App-Otheek - <?php
 
     $CurrentPageName = rtrim($Currentfilename, "php");
@@ -90,7 +91,6 @@
         } else {
             echo "padding: 4px 32.7px;";
         }?>
-
     }
 </style>
 </head>
