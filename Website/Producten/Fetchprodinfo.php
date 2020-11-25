@@ -35,6 +35,7 @@
         .activeA:after {
             content: "\2796"; /* Unicode character for "minus" sign (-) */
         }
+
     </style>
 </head>
 

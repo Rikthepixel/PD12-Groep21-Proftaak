@@ -227,8 +227,26 @@
       border-right: 0px solid #58c4a0;
       border-radius: 0px;
     }
-}
 
+}
+    .tablinks{
+            background-color:#1f8563;
+            font-size: 180%;
+            font-weight: bold;
+            border: 2px solid #0e4a36;
+            width: 20%;
+        }
+
+    .tablinks.ButtonActive{
+    background-color: #0D5B41;
+    color: white;
+    border-color:#21755a;
+  }
+    .tablinks:hover{
+    background-color:#1aad7c;
+    color:#4f4f4f;
+    border-color:#21755a;
+  }
 </style>
 </head>
 <body>
