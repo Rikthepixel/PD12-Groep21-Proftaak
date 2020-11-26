@@ -124,6 +124,12 @@
     margin: 0px;
     margin-bottom: 3px;
   }
+
+  .TableCont.Hidden{
+    display: none;
+    border: 0;
+    margin: 0;
+  }
   .BTN-CONT{
     padding: 0px;
     height:48px;
@@ -230,8 +236,6 @@
       }
   }
 
-
-
   .tablinks{
     background-color:#1f8563;
     font-size: 140%;
@@ -239,7 +243,7 @@
     border: 4px solid #0e4a36;
     width: 20%;
     padding: 2px;
-    }
+  }
 
   .tablinks.ButtonActive{
     background-color: #0D5B41;
@@ -279,10 +283,8 @@
   .BestelBTN{
     background-color: #1f8563;
     border: 0;
-    border-radius: 0px 0px 4px 4px;
-        
+    border-radius: 0px 0px 4px 4px;  
     padding: 4px 32.7px;
-
     font-weight: bold;
     font-size: 100%;
 
