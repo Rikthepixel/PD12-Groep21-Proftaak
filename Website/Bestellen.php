@@ -54,7 +54,7 @@ include_once 'Header.Inc.php';
                 font-size:110%;
                 font-weight:bold;
 
-                color:#187757;
+                color:white;
             }
             
             #InputText{
@@ -75,10 +75,20 @@ include_once 'Header.Inc.php';
                 border-color:#21755a;
                 background-color:white;
             }
+
+            .backgroundColor{
+                background-color:#58c4a0;
+                padding-bottom:50px;
+            }
+            .formMargin{
+                padding-top:50px;
+                text-align:center;
+            }
     </style>
 </head>
 <body>
-    <form action="Producten/BestellingUpdate.php" method="post" id="LoginForm">
+    <div class = "backgroundColor">
+    <form action="Producten/BestellingUpdate.php" method="post" class="formMargin">
         <div id="BestelCont">
             <!--Bestelling-->
             <div>
@@ -88,7 +98,7 @@ include_once 'Header.Inc.php';
                 <label>Medicijn type</label>
                 </div>
                 <div id="Inputs">
-                <input id="InputText" placeholder="Aantal medicijnen..." type="number" name="TNM" required>
+                <input id="InputText" placeholder="Aantal medicijnen..." type="number" min="1" name="TNM" required>
                 <br><br>
                 <select id="InputText" placeholder="Medicijn naam..." name="MDC" required>
                     <option value="" disabled selected> Medicijn naam </option>
@@ -118,6 +128,7 @@ include_once 'Header.Inc.php';
             <button id="BestelBTN" type="submit" value="AUserWantsToBestel" name="Bestel">Bestellen</button>
         </div>
     </form>
+    </div>
 </body>
 </html>
 
