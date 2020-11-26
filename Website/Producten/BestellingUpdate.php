@@ -1,5 +1,5 @@
 <?php
-include_once "Include/DatabaseHandler.php";
+include_once "../Include/DatabaseHandler.php";
 $Medicijn = $_POST["MDC"];
 $Toename = $_POST["TNM"];
 $GewichtQuery = "SELECT Gewicht FROM $Medicijn WHERE ID = '1'";
