@@ -27,12 +27,6 @@ namespace Apotheek_application
 
         }
 
-        private void Login_btn_Click(object sender, EventArgs e)
-        {
-            var m = new MainMenu();
-            m.Show();
-            this.Hide();
-        }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {

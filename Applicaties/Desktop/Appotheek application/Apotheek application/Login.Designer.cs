@@ -43,16 +43,17 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.Wacht_vergeten_Link_Label);
             this.panel1.Controls.Add(this.Login_btn);
             this.panel1.Controls.Add(this.Wachtwoord_txt);
             this.panel1.Controls.Add(this.Email_txt);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.MinimumSize = new System.Drawing.Size(280, 576);
+            this.panel1.MinimumSize = new System.Drawing.Size(210, 468);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 576);
+            this.panel1.Size = new System.Drawing.Size(1012, 468);
             this.panel1.TabIndex = 1;
             // 
             // Wacht_vergeten_Link_Label
@@ -60,10 +61,9 @@
             this.Wacht_vergeten_Link_Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Wacht_vergeten_Link_Label.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(199)))), ((int)(((byte)(117)))));
-            this.Wacht_vergeten_Link_Label.Location = new System.Drawing.Point(59, 298);
-            this.Wacht_vergeten_Link_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Wacht_vergeten_Link_Label.Location = new System.Drawing.Point(44, 242);
             this.Wacht_vergeten_Link_Label.Name = "Wacht_vergeten_Link_Label";
-            this.Wacht_vergeten_Link_Label.Size = new System.Drawing.Size(159, 16);
+            this.Wacht_vergeten_Link_Label.Size = new System.Drawing.Size(921, 13);
             this.Wacht_vergeten_Link_Label.TabIndex = 7;
             this.Wacht_vergeten_Link_Label.TabStop = true;
             this.Wacht_vergeten_Link_Label.Text = "Wachtwoord vergeten?";
@@ -75,25 +75,30 @@
             this.Login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Login_btn.Location = new System.Drawing.Point(80, 341);
-            this.Login_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Login_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.Login_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Login_btn.FlatAppearance.BorderSize = 3;
+            this.Login_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(130)))), ((int)(((byte)(90)))));
+            this.Login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_btn.Location = new System.Drawing.Point(368, 258);
             this.Login_btn.Name = "Login_btn";
-            this.Login_btn.Size = new System.Drawing.Size(100, 28);
+            this.Login_btn.Size = new System.Drawing.Size(285, 38);
             this.Login_btn.TabIndex = 5;
             this.Login_btn.Text = "Login";
-            this.Login_btn.UseVisualStyleBackColor = true;
-            this.Login_btn.Click += new System.EventHandler(this.Login_btn_Click);
+            this.Login_btn.UseVisualStyleBackColor = false;
             // 
             // Wachtwoord_txt
             // 
             this.Wachtwoord_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Wachtwoord_txt.BackColor = System.Drawing.Color.White;
             this.Wachtwoord_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Wachtwoord_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Wachtwoord_txt.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Wachtwoord_txt.Location = new System.Drawing.Point(63, 256);
-            this.Wachtwoord_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Wachtwoord_txt.Location = new System.Drawing.Point(425, 197);
             this.Wachtwoord_txt.Name = "Wachtwoord_txt";
-            this.Wachtwoord_txt.Size = new System.Drawing.Size(133, 22);
+            this.Wachtwoord_txt.Size = new System.Drawing.Size(182, 20);
             this.Wachtwoord_txt.TabIndex = 4;
             this.Wachtwoord_txt.Text = "Wachtwoord...";
             // 
@@ -103,10 +108,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Email_txt.BackColor = System.Drawing.SystemColors.Window;
             this.Email_txt.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Email_txt.Location = new System.Drawing.Point(63, 210);
-            this.Email_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email_txt.Location = new System.Drawing.Point(425, 171);
             this.Email_txt.Name = "Email_txt";
-            this.Email_txt.Size = new System.Drawing.Size(132, 22);
+            this.Email_txt.Size = new System.Drawing.Size(182, 20);
             this.Email_txt.TabIndex = 3;
             this.Email_txt.Text = "E-mail address...";
             // 
@@ -114,11 +118,11 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-820, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 159);
+            this.pictureBox1.Size = new System.Drawing.Size(1832, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -126,13 +130,12 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.ClientSize = new System.Drawing.Size(259, 528);
+            this.ClientSize = new System.Drawing.Size(1012, 427);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(274, 565);
+            this.MinimumSize = new System.Drawing.Size(210, 466);
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
