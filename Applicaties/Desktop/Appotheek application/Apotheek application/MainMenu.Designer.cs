@@ -34,8 +34,8 @@
             this.Help_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Uitloggen_btn = new System.Windows.Forms.Button();
             this.User_label = new System.Windows.Forms.Label();
+            this.Uitloggen_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,7 @@
             this.Bestellen_btn.TabIndex = 1;
             this.Bestellen_btn.Text = "Bestellen";
             this.Bestellen_btn.UseVisualStyleBackColor = false;
+            this.Bestellen_btn.Click += new System.EventHandler(this.Bestellen_btn_Click);
             // 
             // Help_btn
             // 
@@ -116,6 +117,18 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // User_label
+            // 
+            this.User_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.User_label.BackColor = System.Drawing.Color.White;
+            this.User_label.Location = new System.Drawing.Point(53, 126);
+            this.User_label.Name = "User_label";
+            this.User_label.Size = new System.Drawing.Size(84, 13);
+            this.User_label.TabIndex = 5;
+            this.User_label.Text = "Student Student";
+            this.User_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Uitloggen_btn
             // 
             this.Uitloggen_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -131,18 +144,6 @@
             this.Uitloggen_btn.UseVisualStyleBackColor = false;
             this.Uitloggen_btn.Click += new System.EventHandler(this.Uitloggen_btn_Click);
             // 
-            // User_label
-            // 
-            this.User_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.User_label.BackColor = System.Drawing.Color.White;
-            this.User_label.Location = new System.Drawing.Point(53, 126);
-            this.User_label.Name = "User_label";
-            this.User_label.Size = new System.Drawing.Size(84, 13);
-            this.User_label.TabIndex = 5;
-            this.User_label.Text = "Student Student";
-            this.User_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,7 +152,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
             this.ClientSize = new System.Drawing.Size(194, 429);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(210, 468);
             this.Name = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
