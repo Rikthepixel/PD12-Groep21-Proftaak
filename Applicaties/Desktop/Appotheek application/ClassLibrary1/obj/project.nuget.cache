@@ -1,14 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "T2/RdaDVOykS08yUqQ/NosxdekCk4h6GFJdqT6HJ0hU8WZUU8XpndFEat5azh2rgrXa5O9jB/mNynJsf+FPrhg==",
+  "dgSpecHash": "hfkJs96piSPbOFN7vTpSjlbx6QNUNOae1SJ2VFPQpSE81F/ivR69nxNms/Y8AVUC6Cdw2sXCCq/OwKcQPX7LUw==",
   "success": true,
-  "projectFilePath": "D:\\Gebruikers\\rikde\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+  "projectFilePath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rikde\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
-    "C:\\Users\\rikde\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\rikde\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\rikde\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
-    "C:\\Users\\rikde\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+    "C:\\Users\\STEAM\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\STEAM\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
