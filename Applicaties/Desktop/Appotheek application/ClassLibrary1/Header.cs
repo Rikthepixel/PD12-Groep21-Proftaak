@@ -7,14 +7,15 @@ namespace Appotheekcl
 {
     class Header
     {
-
+        DataAccess dataAccess;
         public Header()
         {
-
+            dataAccess = new DataAccess();
+            
         }
 
-        public Page ActivePage { get; set; }
-        public List<Page> pages { get; set; }
+        public IPage ActivePage { get; set; }
+        public List<IPage> pages { get; set; }
 
         public void SetActivePage()
         {
