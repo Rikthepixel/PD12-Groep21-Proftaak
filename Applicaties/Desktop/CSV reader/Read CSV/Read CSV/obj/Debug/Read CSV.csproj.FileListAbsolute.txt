@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Website
 D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
 D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.exe
@@ -194,6 +195,8 @@ C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.exe
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\CSV reader\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
 =======
+=======
+>>>>>>> Application
 D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.exe.config
 D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.exe
 D:\Visual Studio Projects\Read CSV\Read CSV\bin\Debug\Read CSV.pdb
@@ -342,4 +345,7 @@ D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\
 D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.csproj.CopyComplete
 D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.exe
 D:\Gebruikers\rikde\Downloads\New read CSV met zoek functie voor datum\Read CSV\Read CSV\obj\Debug\Read CSV.pdb
+<<<<<<< HEAD
 >>>>>>> [Addition] CSV reader (technology)
+=======
+>>>>>>> Application

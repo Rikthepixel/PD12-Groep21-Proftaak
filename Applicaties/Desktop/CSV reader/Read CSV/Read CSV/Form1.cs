@@ -41,11 +41,15 @@ namespace Read_CSV
 
         private void Form1_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< Website
             ArduinoPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
 =======
             ArduinoPort = new SerialPort("COM5", 9600, Parity.None, 8, StopBits.One);
 >>>>>>> [Addition] CSV reader (technology)
+=======
+            ArduinoPort = new SerialPort("COM5", 9600, Parity.None, 8, StopBits.One);
+>>>>>>> Application
 
             string ExecutableLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); //Gets the .exe file location
             string CSVPath = Path.Combine(ExecutableLocation, "data.csv"); //Get CSV data file path
@@ -106,6 +110,7 @@ namespace Read_CSV
         {
             if (SearchbarActive)
             {
+<<<<<<< HEAD
 <<<<<<< Website
                 string ArduinoInput = ArduinoPort.ReadLine().ToString();
                 if(ArduinoInput != String.Empty)
@@ -121,6 +126,8 @@ namespace Read_CSV
                 }
  
 =======
+=======
+>>>>>>> Application
                 string ArduinoInput = ArduinoPort.ReadLine();
 
                 if (InvokeRequired)
@@ -130,12 +137,16 @@ namespace Read_CSV
                 }
 
                 searchbar.Text += ArduinoInput;
+<<<<<<< HEAD
 >>>>>>> [Addition] CSV reader (technology)
+=======
+>>>>>>> Application
 
             }
         }
         private void searchbar_KeyUp(object sender, KeyEventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< Website
             InitiateSearch();
         }
@@ -144,6 +155,8 @@ namespace Read_CSV
         {
 =======
 >>>>>>> [Addition] CSV reader (technology)
+=======
+>>>>>>> Application
             string ZoekOpStr;
             switch (ZoekOp)
             {
@@ -158,6 +171,7 @@ namespace Read_CSV
                     break;
                 default:
                     ZoekOpStr = data.Columns[0].ColumnName;
+<<<<<<< HEAD
 <<<<<<< Website
                     break;
             }
@@ -172,6 +186,8 @@ namespace Read_CSV
             }
         }
 =======
+=======
+>>>>>>> Application
                     break; 
             }
             string thingy = Convert.ToString(0087714817);
@@ -185,7 +201,10 @@ namespace Read_CSV
 
         }
 
+<<<<<<< HEAD
 >>>>>>> [Addition] CSV reader (technology)
+=======
+>>>>>>> Application
         #region Radio buttons
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
