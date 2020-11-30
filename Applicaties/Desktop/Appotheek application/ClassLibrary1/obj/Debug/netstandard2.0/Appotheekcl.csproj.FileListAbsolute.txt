@@ -7,3 +7,24 @@ E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appothee
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CoreCompileInputs.cache
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.dll
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.deps.json
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.pdb
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Security.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Accessibility.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Security.xml
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Accessibility.xml
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csprojAssemblyReference.cache
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.AssemblyInfoInputs.cache
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.AssemblyInfo.cs
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CopyComplete
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.dll
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb

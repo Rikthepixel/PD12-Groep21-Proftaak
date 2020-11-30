@@ -7,8 +7,13 @@ namespace Appotheekcl
 {
     class Header
     {
-        public Page ActivePage { get; set; }
 
+        public Header()
+        {
+
+        }
+
+        public Page ActivePage { get; set; }
         public List<Page> pages { get; set; }
 
         public void SetActivePage()

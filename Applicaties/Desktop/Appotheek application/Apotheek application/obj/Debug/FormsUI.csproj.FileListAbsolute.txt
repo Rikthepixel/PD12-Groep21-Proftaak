@@ -9,3 +9,14 @@ E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appothee
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.exe
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.pdb
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Login.resources
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe.config
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.pdb
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csprojAssemblyReference.cache
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Login.resources
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.MainMenu.resources
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Properties.Resources.resources
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.GenerateResource.cache
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.CoreCompileInputs.cache
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.exe
+D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.pdb
