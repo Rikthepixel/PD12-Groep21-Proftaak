@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[2.0.78, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
