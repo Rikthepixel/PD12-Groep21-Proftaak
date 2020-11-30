@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Appotheekcl
 {
-    class Class1
+    class ProductList
     {
+        public List<Product> Products { get; set; }
     }
 }

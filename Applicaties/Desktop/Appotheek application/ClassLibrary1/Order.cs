@@ -7,10 +7,10 @@ namespace Appotheekcl
     class Order
     {
         public ProductList Products { get; set; }
-    }
 
-    public void InsertNewOrder()
-    {
+        public void InsertNewOrder()
+        {
 
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace Appotheekcl
 {
     class Header
     {
-        public Form ActiveForm { get; set; }
+        public Page ActivePage { get; set; }
 
         public List<Page> pages { get; set; }
 
