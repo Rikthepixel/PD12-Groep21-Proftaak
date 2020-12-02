@@ -4585,11 +4585,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+      "projectUniqueName": "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
       "projectName": "Appotheekcl",
-      "projectPath": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+      "projectPath": "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
       "packagesPath": "C:\\Users\\rensv\\.nuget\\packages\\",
-      "outputPath": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
+      "outputPath": "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rensv\\AppData\\Roaming\\NuGet\\NuGet.Config",

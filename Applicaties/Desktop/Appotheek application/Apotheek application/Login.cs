@@ -32,5 +32,10 @@ namespace Apotheek_application
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
