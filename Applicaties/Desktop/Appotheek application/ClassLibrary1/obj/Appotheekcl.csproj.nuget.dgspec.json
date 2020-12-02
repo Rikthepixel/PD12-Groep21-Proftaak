@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {}
   },
   "projects": {
@@ -15,6 +16,36 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+    "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {}
+  },
+  "projects": {
+    "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "projectName": "Appotheekcl",
+        "projectPath": "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "packagesPath": "C:\\Users\\rensv\\.nuget\\packages\\",
+        "outputPath": "C:\\School\\prof\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
+=======
+    "C:\\Users\\araml\\Documents\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\araml\\Documents\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\araml\\Documents\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "projectName": "Appotheekcl",
+        "projectPath": "C:\\Users\\araml\\Documents\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "packagesPath": "C:\\Users\\araml\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\araml\\Documents\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
+>>>>>>> Application
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\araml\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Application
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +57,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -37,6 +69,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -67,7 +100,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> Application
         }
       }
     }
