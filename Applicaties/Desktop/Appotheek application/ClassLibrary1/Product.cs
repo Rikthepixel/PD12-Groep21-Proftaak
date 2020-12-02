@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Appotheekcl
 {
-    class Product
+    public class Product
     {
         public string Name { get; set; }
         public int Weight { get; set; }
