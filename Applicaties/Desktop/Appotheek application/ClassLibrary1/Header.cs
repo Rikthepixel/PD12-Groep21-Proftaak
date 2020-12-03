@@ -11,7 +11,6 @@ namespace Appotheekcl
         public Header()
         {
             dataAccess = new DataAccess();
-            
         }
 
         public IPage ActivePage { get; set; }

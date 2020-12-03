@@ -2,7 +2,7 @@
 
 namespace Appotheekcl
 {
-    interface IPage
+    public interface IPage
     {
         bool LoginRequired { get; set; }
         Form PageForm { get; set; }

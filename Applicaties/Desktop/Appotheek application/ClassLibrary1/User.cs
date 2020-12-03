@@ -16,6 +16,7 @@ namespace Appotheekcl
         public bool loggedIn { get; set; }
 
 
+        public bool loggedIn { get; set; }
 
         //does
         public void setLoggedIn()

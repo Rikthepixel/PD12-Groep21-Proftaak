@@ -28,12 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ChildFormPanel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // ChildFormPanel
+            // 
+            this.ChildFormPanel.Location = new System.Drawing.Point(12, 144);
+            this.ChildFormPanel.Name = "ChildFormPanel";
+            this.ChildFormPanel.Size = new System.Drawing.Size(776, 294);
+            this.ChildFormPanel.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 126);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // MasterPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.ChildFormPanel);
+            this.Name = "MasterPage";
+            this.Text = "Master Page";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel ChildFormPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -16,7 +16,6 @@ namespace Appotheekcl
         {
             DataAccess dataAccess = new DataAccess();
             dataAccess.SaveData(dataAccess.ProductConnStr, $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) VALUES('{aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}')");
-
         }
     }
 }
