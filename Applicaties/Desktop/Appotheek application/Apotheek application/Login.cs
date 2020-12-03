@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Appotheekcl;
 
 namespace Apotheek_application
 {
     public partial class Login : Form
     {
+        Inlog Inlog = new Inlog();
+
         public Login()
         {
             InitializeComponent();
-        }
+    }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -37,5 +40,11 @@ namespace Apotheek_application
         {
 
         }
+
+        private void Login_btn_Click(object sender, EventArgs e)
+        {
+            User user = Inlog.loginUser(Email_txt.Text, Wachtwoord_txt.Text);
+        }
+
     }
 }

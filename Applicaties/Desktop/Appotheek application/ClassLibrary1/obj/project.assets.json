@@ -4608,19 +4608,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rik\\.nuget\\packages\\": {}
+    "C:\\Users\\rensv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+      "projectUniqueName": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
       "projectName": "Appotheekcl",
-      "projectPath": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
-      "packagesPath": "C:\\Users\\Rik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
+      "projectPath": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+      "packagesPath": "C:\\Users\\rensv\\.nuget\\packages\\",
+      "outputPath": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rensv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4669,7 +4669,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
