@@ -1470,6 +1470,7 @@
       "path": "runtime.native.system/4.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4608,25 +4609,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\rensv\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\STEAM\\.nuget\\packages\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
-      "projectName": "Appotheekcl",
-      "projectPath": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
-      "packagesPath": "C:\\Users\\rensv\\.nuget\\packages\\",
-      "outputPath": "E:\\School\\Proftaak\\6-11-2020 Proftaak (1)\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\rensv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
       "projectUniqueName": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
       "projectName": "Appotheekcl",
       "projectPath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
@@ -4635,7 +4622,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\STEAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4686,12 +4672,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-<<<<<<< Updated upstream
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
->>>>>>> Stashed changes
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -154,11 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(979, 130);
-=======
-            this.ClientSize = new System.Drawing.Size(1322, 823);
->>>>>>> Stashed changes
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainMenu";

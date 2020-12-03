@@ -20,12 +20,7 @@ namespace Appotheekcl
 
         public void InsertNewOrder(string Medicijn, string aantal, string Gewicht, string CurrentDate, string ExpiryDate)
         {
-<<<<<<< Updated upstream
-            DataAccess dataAccess = new DataAccess();
-            dataAccess.SaveData(dataAccess.ProductConnStr, $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) VALUES('{aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}')");
-=======
             string Statement = $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) VALUES('{aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}')";
-            Console.WriteLine(Statement);
             dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
         }
 
@@ -33,7 +28,6 @@ namespace Appotheekcl
         {
             Task<List<string>> Weights = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Gewicht FROM {Medicijn} WHERE ID = '1'");
             return Weights.Result;
->>>>>>> Stashed changes
         }
     }
 }
