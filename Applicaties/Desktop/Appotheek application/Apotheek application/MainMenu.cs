@@ -24,7 +24,9 @@ namespace Apotheek_application
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var m = new ProductPage();
+            m.Show();
+            this.Hide();
         }
 
         private void Help_btn_Click(object sender, EventArgs e)
