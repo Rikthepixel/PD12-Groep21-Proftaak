@@ -52,7 +52,6 @@ C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek app
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CopyComplete
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CoreCompileInputs.cache
 =======
-<<<<<<< HEAD
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.deps.json
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.dll
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.pdb
@@ -74,7 +73,6 @@ C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CopyComplete
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.dll
 C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb
-=======
 C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.deps.json
 C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.dll
 C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.pdb
@@ -98,4 +96,4 @@ C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appo
 C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb
 C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CoreCompileInputs.cache
 >>>>>>> Application
->>>>>>> Application
+C:\Users\Rik\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CoreCompileInputs.cache

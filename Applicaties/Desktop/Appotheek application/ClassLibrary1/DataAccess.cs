@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using System.Data.SqlClient;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Appotheekcl
 {
     class DataAccess
     {
-        SqlConnection Connection;
+        MySqlConnection Connection;
 
         public string LoginConnStr { get; private set; }
         public string ProductConnStr { get; private set; }
@@ -19,16 +20,16 @@ namespace Appotheekcl
         public DataAccess()
         {
             LoginConnStr = GetConnectionString("Login", "LoginUser", "Users", "192.168.162.187");
-            ProductConnStr = GetConnectionString("Producten", "Doemaarwat1", "Medical", "192.168.162.187");
+            ProductConnStr = GetConnectionString("producten", "Doemaarwat1", "Medical", "192.168.162.187");
         }
 
         private string GetConnectionString(string UserID, string Password, string Database = "", string ServerAdress = "Localhost")
         {
             string ConnectionString;
-            var builder = new SqlConnectionStringBuilder();
+            var builder = new MySqlConnectionStringBuilder();
 
             builder.UserID = UserID;
-            builder.DataSource = ServerAdress;
+            builder.Server = ServerAdress;
 
             if (Password != null)
             {
@@ -41,17 +42,17 @@ namespace Appotheekcl
 
             if (Database != null && Database.Length != 0 && Database != string.Empty)
             {
-                builder.InitialCatalog = Database;
+                builder.Database = Database;
             }
 
-            ConnectionString = builder.ToString();
+            ConnectionString = builder.ConnectionString;
 
             return ConnectionString;
         }
 
         public async Task<List<T>> LoadData<T>(string ConnectionString, string SQLstatement)
         {
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection connection = new MySqlConnection(ConnectionString))
             {
                 //Send a query to the given connection
                 var rows = connection.QueryAsync<T>(SQLstatement);
@@ -63,7 +64,7 @@ namespace Appotheekcl
         public async Task<int> SaveData(string ConnectionString, string SQLstatement)
         {
             //Make a connection to a database
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection connection = new MySqlConnection(ConnectionString))
             {
                 //Send a query to the given connection
                 return connection.ExecuteAsync(SQLstatement).Result;
@@ -72,7 +73,7 @@ namespace Appotheekcl
 
         public async Task<int> UpdateData(string ConnectionString, string SQLStatement)
         {
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection connection = new MySqlConnection(ConnectionString))
             {
                 return connection.ExecuteAsync(SQLStatement).Result;
             }

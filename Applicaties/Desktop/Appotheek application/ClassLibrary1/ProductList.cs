@@ -12,7 +12,7 @@ namespace Appotheekcl
         public ProductList()
         {
             data = new DataAccess();
-            Products = GetProduct();
+            Products = GetProduct().Result;
         }
 
 
@@ -22,18 +22,18 @@ namespace Appotheekcl
 
         public List<Product> Products { get; set; }
 
-        private List<Product> GetProduct()
+        private async Task<List<Product>> GetProduct()
         {
             List<Product> prodsResult = new List<Product>();
-            Task<List<string>> tables = data.LoadData<string>(data.ProductConnStr, "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
-            for (int i = 0; i < tables.Result.Count; i++)
+            List<string> tables = await data.LoadData<string>(data.ProductConnStr, "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
+            for (int i = 0; i < tables.Count; i++)
             {
-                string statement = $"SELECT * FROM {tables.Result[i]}";
-                Task<List<Product>> results = data.LoadData<Product>(data.ProductConnStr, statement);
+                string statement = $"SELECT * FROM {tables[i]}";
+                List<Product> results = await data.LoadData<Product>(data.ProductConnStr, statement);
 
-                for (int j = 0; j < results.Result.Count; j++)
+                for (int j = 0; j < results.Count; j++)
                 {
-                    prodsResult.Add(results.Result[j]);
+                    prodsResult.Add(results[j]);
                 }
             }
             return prodsResult;
