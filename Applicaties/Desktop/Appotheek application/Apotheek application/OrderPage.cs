@@ -60,5 +60,10 @@ namespace Apotheek_application
             Console.WriteLine(ExpiryDate);
             order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate);
         }
+
+        private void Bestel_image_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
