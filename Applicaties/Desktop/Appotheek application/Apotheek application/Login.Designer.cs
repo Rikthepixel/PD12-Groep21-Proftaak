@@ -87,7 +87,9 @@
             this.Email_txt.Name = "Email_txt";
             this.Email_txt.Size = new System.Drawing.Size(280, 28);
             this.Email_txt.TabIndex = 4;
-            this.Email_txt.Text = "Email adress...";
+            this.Email_txt.Text = "Email...";
+            this.Email_txt.GotFocus += new System.EventHandler(this.EmailRemovePlaceHolder);
+            this.Email_txt.LostFocus += new System.EventHandler(this.EmailAddPlaceHolder);
             // 
             // panel2
             // 
@@ -98,7 +100,7 @@
             this.panel2.Name = "panel2";
             this.panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel2.Size = new System.Drawing.Size(285, 31);
-            this.panel2.TabIndex = 8;
+            this.panel2.TabIndex = 9;
             // 
             // Wachtwoord_txt
             // 
@@ -116,7 +118,8 @@
             this.Wachtwoord_txt.Size = new System.Drawing.Size(280, 25);
             this.Wachtwoord_txt.TabIndex = 4;
             this.Wachtwoord_txt.Text = "Wachtwoord...";
-            this.Wachtwoord_txt.Visible = false;
+            this.Wachtwoord_txt.GotFocus += new System.EventHandler(this.WachtwoordRemovePlaceHolder);
+            this.Wachtwoord_txt.LostFocus += new System.EventHandler(this.WachtwoordAddPlaceHolder);
             // 
             // Wacht_vergeten_Link_Label
             // 
