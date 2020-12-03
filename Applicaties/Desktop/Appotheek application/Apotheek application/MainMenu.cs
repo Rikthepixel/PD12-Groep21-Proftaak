@@ -52,5 +52,10 @@ namespace Apotheek_application
             m.Show();
             this.Hide();
         }
+
+        private void Logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
