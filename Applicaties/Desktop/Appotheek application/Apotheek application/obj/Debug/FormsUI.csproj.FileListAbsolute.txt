@@ -21,6 +21,7 @@ D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\
 D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.exe
 D:\Gebruikers\rikde\Documents\Fontys\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.pdb
 E:\Fontys opdrachten\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.OrderPage.resources
+<<<<<<< HEAD
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe.config
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.pdb
@@ -37,3 +38,20 @@ C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek app
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.CopyComplete
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.exe
 C:\STACK\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.pdb
+=======
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe.config
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.exe
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Apotheek application.pdb
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csprojAssemblyReference.cache
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Login.resources
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.MainMenu.resources
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.OrderPage.resources
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek_application.Properties.Resources.resources
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.GenerateResource.cache
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.CoreCompileInputs.cache
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.exe
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\Apotheek application.pdb
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Appotheekcl.dll
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\bin\Debug\Appotheekcl.pdb
+C:\Users\araml\Documents\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\Apotheek application\obj\Debug\FormsUI.csproj.CopyComplete
+>>>>>>> Application
