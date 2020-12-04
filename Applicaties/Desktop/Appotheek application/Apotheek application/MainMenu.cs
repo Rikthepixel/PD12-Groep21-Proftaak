@@ -64,5 +64,10 @@ namespace Apotheek_application
             m.Show();
             this.Hide();
         }
+
+        private void Producten_Overzicht_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
