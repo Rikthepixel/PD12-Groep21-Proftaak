@@ -132,6 +132,7 @@
             this.Producten_Overzicht_btn.TabIndex = 0;
             this.Producten_Overzicht_btn.Text = "Producten Overzicht";
             this.Producten_Overzicht_btn.UseVisualStyleBackColor = false;
+            this.Producten_Overzicht_btn.Click += new System.EventHandler(this.Producten_Overzicht_btn_Click);
             // 
             // Bestellen_btn
             // 
@@ -147,6 +148,7 @@
             this.Bestellen_btn.TabIndex = 1;
             this.Bestellen_btn.Text = "Bestellen";
             this.Bestellen_btn.UseVisualStyleBackColor = false;
+            this.Bestellen_btn.Click += new System.EventHandler(this.Bestellen_btn_Click_1);
             // 
             // Help_btn
             // 

@@ -11,7 +11,7 @@ namespace Appotheekcl
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
 
-        public User loginUser(string Email, string Password)
+        public User generateUserLogin(string Email, string Password, dynamic ThisForm, dynamic Redirection)
         {
             User LoggedInUser;
             DataAccess LoginTest = new DataAccess();
@@ -21,17 +21,21 @@ namespace Appotheekcl
                 LoggedInUser = Users.Result[0];
                 LoggedInUser.Password = null;
                 LoggedInUser.loggedIn = true;
+                loginUser(ThisForm, Redirection);
             } else
             {
                 LoggedInUser = null;
+                setLoginError();
             }
             return LoggedInUser;
         }
 
-            public void generateUserLogin()
+        public void loginUser(dynamic ThisForm, dynamic redirection)
         {
-
+            redirection.Show();
+            ThisForm.Hide();
         }
+
         public void setLoginError() 
         {
 
@@ -41,6 +45,5 @@ namespace Appotheekcl
         {
 
         }
-
-     }
+    }
 }

@@ -43,7 +43,8 @@ namespace Apotheek_application
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            User user = Inlog.loginUser(Email_txt.Text, Wachtwoord_txt.Text);
+            MainMenu mainMenu = new MainMenu();
+            User user = Inlog.generateUserLogin(Email_txt.Text, Wachtwoord_txt.Text, this, mainMenu);
         }
         
         private void WachtwoordRemovePlaceHolder(object sender, EventArgs e)

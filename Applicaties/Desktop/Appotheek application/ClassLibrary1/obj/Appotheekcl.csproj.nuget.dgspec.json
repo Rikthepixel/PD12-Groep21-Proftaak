@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {}
+    "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {
+    "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "projectUniqueName": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
         "projectName": "Appotheekcl",
-        "projectPath": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
-        "packagesPath": "C:\\Users\\Rik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rik\\Documents\\Fontys\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
+        "projectPath": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+        "packagesPath": "C:\\Users\\jimmy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jimmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",

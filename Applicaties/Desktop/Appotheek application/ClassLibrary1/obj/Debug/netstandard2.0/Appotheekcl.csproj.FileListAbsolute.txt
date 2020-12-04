@@ -119,3 +119,25 @@ E:\School\Proftaak\6-11-2020 Proftaak (1)\PD12-Groep21-Proftaak\Applicaties\Desk
 E:\School\Proftaak\6-11-2020 Proftaak (1)\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CopyComplete
 E:\School\Proftaak\6-11-2020 Proftaak (1)\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.dll
 E:\School\Proftaak\6-11-2020 Proftaak (1)\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.deps.json
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Appotheekcl.pdb
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\Accessibility.xml
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Deployment.xml
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csprojAssemblyReference.cache
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.AssemblyInfoInputs.cache
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.AssemblyInfo.cs
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CoreCompileInputs.cache
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.csproj.CopyComplete
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.dll
+C:\Users\jimmy\OneDrive\Stuff\School\Proftaak\PD12-Groep21-Proftaak\Applicaties\Desktop\Appotheek application\ClassLibrary1\obj\Debug\netstandard2.0\Appotheekcl.pdb

@@ -57,5 +57,17 @@ namespace Apotheek_application
         {
 
         }
+
+        private void Bestellen_btn_Click_1(object sender, EventArgs e)
+        {
+            var m = new OrderPage();
+            m.Show();
+            this.Hide();
+        }
+
+        private void Producten_Overzicht_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
