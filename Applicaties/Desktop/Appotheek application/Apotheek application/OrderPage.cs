@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Appotheekcl;
+using Syncfusion.Windows.Forms;
 
 namespace Apotheek_application
 {
@@ -18,15 +19,22 @@ namespace Apotheek_application
         {
             InitializeComponent();
         }
+        static void Main()
+        {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzYxOTk1QDMxMzgyZTMzMmUzME54V2U2ZXo3R3FsTVhmVjlEOTBYanpnc2JSOGQ4UkdrWllYY1ZTdEgwYXc9");
 
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new OrderPage());
+        }
         private void OrderPage_Load(object sender, EventArgs e)
         {
             Medicijn_cB.Items.Add("Xanac");
             Medicijn_cB.Items.Add("ibuprofen");
             Medicijn_cB.Items.Add("oxazepam");
-            
-        }
 
+        }
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
         {
 
@@ -39,29 +47,57 @@ namespace Apotheek_application
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var Medicijn = Medicijn_cB.Text;
-            var Nummerof = Aantal_Medicijnen_UpDown.Value;
-            var arryWeight = order.GetWeight(Medicijn);
-            var Weight = arryWeight.Result[0];
-            string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
-            int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) +2;
-            int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
-            int Month = Convert.ToInt32(ExpiryMonth);
-            if (Month > 12)
+            const string message = "Weet u zeker dat u dit wil bestellen?";
+            const string caption = "Bestelling";
+            MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
+            MessageBoxAdv.MetroColorTable.YesButtonBackColor = Color.FromArgb(255, 255, 255);
+            MessageBoxAdv.MetroColorTable.NoButtonBackColor = Color.FromArgb(255, 255, 255);
+            MessageBoxAdv.MetroColorTable.YesButtonForeColor = Color.FromArgb(0, 0, 0);
+            MessageBoxAdv.MetroColorTable.NoButtonForeColor = Color.FromArgb(0, 0, 0);
+            MessageBoxAdv.MetroColorTable.BackColor = Color.FromArgb(88, 196, 160);
+            MessageBoxAdv.MetroColorTable.CaptionBarColor = Color.FromArgb(24, 119, 87);
+            MessageBoxAdv.MetroColorTable.CaptionForeColor = Color.Black;
+            MessageBoxAdv.MetroColorTable.ForeColor = Color.FromArgb(255, 255, 255);
+            MessageBoxAdv.MetroColorTable.BorderColor = Color.FromArgb(24, 131, 215);
+
+            var result = MessageBoxAdv.Show(message, caption,MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            // If the Yes button was pressed ...
+            if (result == DialogResult.Yes)
             {
-                ExpiryYear = ExpiryYear + 1;
-                Month = Month - 12;
+                var Medicijn = Medicijn_cB.Text;
+                var Nummerof = Aantal_Medicijnen_UpDown.Value;
+                var arryWeight = order.GetWeight(Medicijn);
+                var Weight = arryWeight.Result[0];
+                string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+                int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
+                int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
+                int Month = Convert.ToInt32(ExpiryMonth);
+                if (Month > 12)
+                {
+                    ExpiryYear = ExpiryYear + 1;
+                    Month = Month - 12;
+                }
+                string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
+                order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate);
             }
-            string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
-            Console.WriteLine(Medicijn);
-            Console.WriteLine(Nummerof);
-            Console.WriteLine(Weight);
-            Console.WriteLine(CurrentDate);
-            Console.WriteLine(ExpiryDate);
-            order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate);
         }
 
         private void Bestel_image_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Order_btn_MouseEnter(object sender, EventArgs e)
+        {
+            this.Order_btn.Image = Apotheek_application.Properties.Resources.Bestellensmalllight;
+        }
+
+        private void Order_btn_MouseLeave(object sender, EventArgs e)
+        {
+            this.Order_btn.Image = Apotheek_application.Properties.Resources.Bestellensmall;
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
