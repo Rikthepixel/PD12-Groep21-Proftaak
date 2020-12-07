@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "drbESkFjiBp1lV6UFcu8RMQG/2fTnTC38Sd31652g2qXOF1H24aMa1n0GgE3HUqGRSsh+pyR7qjoyKoqtCoxng==",
+  "dgSpecHash": "InkA2Pr+nL0k5RVhTqiR5Je0csqUEH672d3ggy9o/3Ah7BubUuv+Vs1v7WldlF442g5Izkk3f39ZDAB3WLnwvw==",
   "success": true,
   "projectFilePath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\STEAM\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\STEAM\\.nuget\\packages\\mysql.data\\8.0.22\\mysql.data.8.0.22.nupkg.sha512",
     "C:\\Users\\STEAM\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\STEAM\\.nuget\\packages\\nuget.frameworks\\5.8.0\\nuget.frameworks.5.8.0.nupkg.sha512",
     "C:\\Users\\STEAM\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Users\\STEAM\\.nuget\\packages\\runtime.native.system.security.cryptography\\4.0.0\\runtime.native.system.security.cryptography.4.0.0.nupkg.sha512",
     "C:\\Users\\STEAM\\.nuget\\packages\\ssh.net\\2016.1.0\\ssh.net.2016.1.0.nupkg.sha512",

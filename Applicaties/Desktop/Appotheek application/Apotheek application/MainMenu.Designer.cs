@@ -66,7 +66,7 @@
             this.panel3.Controls.Add(this.Help_btn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(434, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(566, 154);
             this.panel3.TabIndex = 8;
@@ -76,7 +76,7 @@
             this.panel2.Controls.Add(this.User_label);
             this.panel2.Controls.Add(this.Uitloggen_btn);
             this.panel2.Location = new System.Drawing.Point(342, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 42);
             this.panel2.TabIndex = 13;
@@ -108,13 +108,14 @@
             this.Uitloggen_btn.TabIndex = 2;
             this.Uitloggen_btn.Text = "Uitloggen";
             this.Uitloggen_btn.UseVisualStyleBackColor = false;
+            this.Uitloggen_btn.Click += new System.EventHandler(this.Uitloggen_btn_Click_1);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.Producten_Overzicht_btn);
             this.panel1.Controls.Add(this.Bestellen_btn);
             this.panel1.Location = new System.Drawing.Point(50, 47);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 42);
             this.panel1.TabIndex = 12;
@@ -167,7 +168,7 @@
             this.panel4.Controls.Add(this.Logo);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(240, 154);
             this.panel4.TabIndex = 9;
@@ -181,7 +182,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 154);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();

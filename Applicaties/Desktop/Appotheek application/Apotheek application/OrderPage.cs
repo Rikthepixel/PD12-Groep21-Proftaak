@@ -101,5 +101,29 @@ namespace Apotheek_application
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_medicijn_btn_Click(object sender, EventArgs e)
+        {
+            string New_medical = Naam_Medicijn_txt.Text;
+            string New_Aantal = Aantal_txt.Text;
+            string New_Gewicht = Gewicht_txt.Text;
+            string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
+            int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
+            int Month = Convert.ToInt32(ExpiryMonth);
+            if (Month > 12)
+            {
+                ExpiryYear = ExpiryYear + 1;
+                Month = Month - 12;
+            }
+            string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
+            order.InsertNewOrder(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
+            Console.WriteLine(order);
+        }
     }
 }

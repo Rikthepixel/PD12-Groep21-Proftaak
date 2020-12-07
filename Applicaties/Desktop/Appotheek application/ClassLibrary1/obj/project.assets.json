@@ -162,6 +162,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "NuGet.Frameworks/5.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+        }
+      },
       "runtime.native.System/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1462,6 +1471,25 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "NuGet.Frameworks/5.8.0": {
+      "sha512": "qmHdiRcRNSZS9cNMzzCyAb4veOBQnc4r/y+VKkPKpIm6cXBTYgVEoX6J7zVwTwT83xNIuRWwBrDotIUIc4nOSQ==",
+      "type": "package",
+      "path": "nuget.frameworks/5.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/NuGet.Frameworks.dll",
+        "lib/net40/NuGet.Frameworks.xml",
+        "lib/net45/NuGet.Frameworks.dll",
+        "lib/net45/NuGet.Frameworks.xml",
+        "lib/net472/NuGet.Frameworks.dll",
+        "lib/net472/NuGet.Frameworks.xml",
+        "lib/netstandard2.0/NuGet.Frameworks.dll",
+        "lib/netstandard2.0/NuGet.Frameworks.xml",
+        "nuget.frameworks.5.8.0.nupkg.sha512",
+        "nuget.frameworks.nuspec"
       ]
     },
     "runtime.native.System/4.0.0": {
@@ -4605,7 +4633,8 @@
     ".NETStandard,Version=v2.0": [
       "Dapper >= 2.0.78",
       "MySql.Data >= 8.0.22",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "NuGet.Frameworks >= 5.8.0"
     ]
   },
   "packageFolders": {
@@ -4633,6 +4662,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -4644,6 +4674,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Dapper": {
             "target": "Package",
@@ -4658,6 +4689,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "NuGet.Frameworks": {
+            "target": "Package",
+            "version": "[5.8.0, )"
           }
         },
         "imports": [

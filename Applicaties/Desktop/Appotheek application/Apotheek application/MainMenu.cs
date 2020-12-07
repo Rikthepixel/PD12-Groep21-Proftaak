@@ -67,7 +67,16 @@ namespace Apotheek_application
 
         private void Producten_Overzicht_btn_Click(object sender, EventArgs e)
         {
+            var m = new ProductPage();
+            m.Show();
+            this.Hide();
+        }
 
+        private void Uitloggen_btn_Click_1(object sender, EventArgs e)
+        {
+            var m = new Login();
+            m.Show();
+            this.Hide();
         }
     }
 }
