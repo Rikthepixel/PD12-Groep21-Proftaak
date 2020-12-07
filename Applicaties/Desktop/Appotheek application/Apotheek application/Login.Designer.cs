@@ -37,6 +37,7 @@
             this.Wacht_vergeten_Link_Label = new System.Windows.Forms.LinkLabel();
             this.Login_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,6 +49,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.Wacht_vergeten_Link_Label);
@@ -88,7 +90,7 @@
             this.Email_txt.MaxLength = 40;
             this.Email_txt.MinimumSize = new System.Drawing.Size(2, 30);
             this.Email_txt.Name = "Email_txt";
-            this.Email_txt.Size = new System.Drawing.Size(373, 30);
+            this.Email_txt.Size = new System.Drawing.Size(373, 26);
             this.Email_txt.TabIndex = 4;
             this.Email_txt.Text = "Email...";
             this.Email_txt.GotFocus += new System.EventHandler(this.EmailRemovePlaceHolder);
@@ -119,7 +121,7 @@
             this.Wachtwoord_txt.Margin = new System.Windows.Forms.Padding(4);
             this.Wachtwoord_txt.MinimumSize = new System.Drawing.Size(2, 30);
             this.Wachtwoord_txt.Name = "Wachtwoord_txt";
-            this.Wachtwoord_txt.Size = new System.Drawing.Size(373, 30);
+            this.Wachtwoord_txt.Size = new System.Drawing.Size(373, 26);
             this.Wachtwoord_txt.TabIndex = 4;
             this.Wachtwoord_txt.Text = "Wachtwoord...";
             this.Wachtwoord_txt.GotFocus += new System.EventHandler(this.WachtwoordRemovePlaceHolder);
@@ -175,6 +177,15 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(679, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(2, 18);
+            this.label1.TabIndex = 10;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,6 +198,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -205,5 +217,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox Email_txt;
+        private System.Windows.Forms.Label label1;
     }
 }

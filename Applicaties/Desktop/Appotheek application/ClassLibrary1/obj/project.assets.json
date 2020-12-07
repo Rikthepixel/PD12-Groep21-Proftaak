@@ -4638,19 +4638,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\STEAM\\.nuget\\packages\\": {}
+    "C:\\Users\\jimmy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+      "projectUniqueName": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
       "projectName": "Appotheekcl",
-      "projectPath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
-      "packagesPath": "C:\\Users\\STEAM\\.nuget\\packages\\",
-      "outputPath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
+      "projectPath": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+      "packagesPath": "C:\\Users\\jimmy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\STEAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jimmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4705,7 +4705,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

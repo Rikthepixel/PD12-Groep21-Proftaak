@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "InkA2Pr+nL0k5RVhTqiR5Je0csqUEH672d3ggy9o/3Ah7BubUuv+Vs1v7WldlF442g5Izkk3f39ZDAB3WLnwvw==",
   "success": true,
-  "projectFilePath": "E:\\Fontys opdrachten\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
+  "projectFilePath": "C:\\Users\\jimmy\\OneDrive\\Stuff\\School\\Proftaak\\PD12-Groep21-Proftaak\\Applicaties\\Desktop\\Appotheek application\\ClassLibrary1\\Appotheekcl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\STEAM\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\STEAM\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
