@@ -14,26 +14,39 @@ namespace Apotheek_application
     public partial class MasterPage : Form
     {
         public bool LoggedIn { get; set; }
-        public List<IPage> Pages { get; private set; }
+        public Form Header { get; set; }
+        public List<Form> Pages { get; private set; }
         public MasterPage()
         {
             InitializeComponent();
+            Pages = new List<Form>();
+            Login login = new Login();
+            Header = new MainMenu();
+            Pages.Add(login);
         }
 
-        private Form ActiveForm;
-        private void OpenChildForm(IPage Page)
+        private Form ActiveForm { get; set; }
+        private Form Headr { get; set; }
+
+        private void MasterPage_Load(object sender, EventArgs e)
+        {
+            OpenChildForm(Header, HeaderPanel, ActiveForm);
+            OpenChildForm(Pages[0], ChildFormPanel, Headr);
+        }
+
+        private void OpenChildForm(Form Page, dynamic InPanel, Form ActiveForm)
         {
             LoggedIn = true;
             if (ActiveForm != null)
                 ActiveForm.Close();
-            ActiveForm = Page.PageForm;
-            Page.PageForm.TopLevel = false;
-            Page.PageForm.FormBorderStyle = FormBorderStyle.None;
-            Page.PageForm.Dock = DockStyle.Fill;
-            ChildFormPanel.Controls.Add(Page.PageForm);
-            ChildFormPanel.Tag = Page.PageForm;
-            Page.PageForm.BringToFront();
-            Page.PageForm.Show();
+            ActiveForm = Page;
+            Page.TopLevel = false;
+            Page.FormBorderStyle = FormBorderStyle.None;
+            Page.Dock = DockStyle.Fill;
+            InPanel.Controls.Add(Page);
+            InPanel.Tag = Page;
+            Page.BringToFront();
+            Page.Show();
         }
 
         private bool GetLoggedIn(User CurrentUser)
