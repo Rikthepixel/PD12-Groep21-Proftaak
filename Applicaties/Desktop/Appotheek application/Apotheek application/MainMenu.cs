@@ -46,13 +46,6 @@ namespace Apotheek_application
             this.Hide();
         }
 
-        private void Bestellen_btn_Click(object sender, EventArgs e)
-        {
-            var m = new OrderPage();
-            m.Show();
-            this.Hide();
-        }
-
         private void Logo_Click(object sender, EventArgs e)
         {
 
@@ -67,7 +60,9 @@ namespace Apotheek_application
 
         private void Producten_Overzicht_btn_Click(object sender, EventArgs e)
         {
-
+            var m = new ProductPage();
+            m.Show();
+            this.Hide();
         }
     }
 }

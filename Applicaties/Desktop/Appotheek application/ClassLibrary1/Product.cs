@@ -7,6 +7,7 @@ namespace Appotheekcl
     public class Product
     {
         public string id { get; set; }
+        public string naam { get; set; }
         public int aantal { get; set; }
         public double Gewicht { get; set; }
         public string Datum_Ontvangen { get; set; }

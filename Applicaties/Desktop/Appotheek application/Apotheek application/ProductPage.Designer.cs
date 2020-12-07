@@ -62,7 +62,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AccessibleName = "dataGridView1";
+            this.dataGridView1.AccessibleName = "";
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -70,7 +70,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.productBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 193);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -125,6 +125,7 @@
             this.Controls.Add(this.tBoxExample);
             this.Name = "ProductPage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.ProductPage_load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.SearchBarPanel.ResumeLayout(false);
             this.SearchBarPanel.PerformLayout();
@@ -144,9 +145,6 @@
         private System.Windows.Forms.Panel SearchBarPanel;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource productListBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstOrderDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn finalUseDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
