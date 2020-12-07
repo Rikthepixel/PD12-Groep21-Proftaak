@@ -34,6 +34,7 @@ namespace Appotheekcl
 
                 for (int j = 0; j < results.Count; j++)
                 {
+                    results[j].naam = tables[i];
                     prodsResult.Add(results[j]);
                 }
             }

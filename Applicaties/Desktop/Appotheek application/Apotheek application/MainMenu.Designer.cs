@@ -120,6 +120,7 @@
             this.Uitloggen_btn.TabIndex = 2;
             this.Uitloggen_btn.Text = "Uitloggen";
             this.Uitloggen_btn.UseVisualStyleBackColor = false;
+            this.Uitloggen_btn.Click += new System.EventHandler(this.Uitloggen_btn_Click_1);
             // 
             // panel1
             // 

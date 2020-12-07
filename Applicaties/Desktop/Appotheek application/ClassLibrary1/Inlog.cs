@@ -25,7 +25,7 @@ namespace Appotheekcl
             } else
             {
                 LoggedInUser = null;
-                setLoginError();
+                setLoginError(Email, Password, ThisForm, Redirection);
             }
             return LoggedInUser;
         }
@@ -36,9 +36,22 @@ namespace Appotheekcl
             ThisForm.Hide();
         }
 
-        public void setLoginError() 
+        public void setLoginError(string Email, string Password, dynamic ThisForm, dynamic Redirection) 
         {
-
+            try
+            {
+                User ConnTestUser;
+                DataAccess ConnTest = new DataAccess();
+                Task<List<User>> Users = ConnTest.LoadData<User>(ConnTest.LoginConnStr, $"SELECT * FROM User WHERE LOWER(Email) = LOWER('{Email}') AND Password = '{Password}'");
+                if(Users.Result.Count == 1)
+                {
+                    generateUserLogin(Email, Password, ThisForm, Redirection);
+                }
+            }
+            catch
+            {
+                
+            }
         }
 
         public void setUserNametag()
