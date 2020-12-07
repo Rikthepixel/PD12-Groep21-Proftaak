@@ -64,5 +64,12 @@ namespace Apotheek_application
             m.Show();
             this.Hide();
         }
+
+        private void Uitloggen_btn_Click_1(object sender, EventArgs e)
+        {
+            var m = new Login();
+            m.Show();
+            this.Hide();
+        }
     }
 }

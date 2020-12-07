@@ -23,7 +23,6 @@ namespace Appotheekcl
             string Statement = $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) VALUES('{aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}')";
             dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
         }
-
         public async Task<List<string>> GetWeight(string Medicijn)
         {
             Task<List<string>> Weights = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Gewicht FROM {Medicijn} WHERE ID = '1'");
