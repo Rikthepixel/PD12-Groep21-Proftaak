@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.Logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.User_label = new System.Windows.Forms.Label();
             this.Uitloggen_btn = new System.Windows.Forms.Button();
@@ -39,11 +38,12 @@
             this.Producten_Overzicht_btn = new System.Windows.Forms.Button();
             this.Bestellen_btn = new System.Windows.Forms.Button();
             this.Help_btn = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Logo
@@ -70,16 +70,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(702, 190);
             this.panel3.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.Logo);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(263, 190);
-            this.panel4.TabIndex = 9;
             // 
             // panel2
             // 
@@ -146,6 +136,7 @@
             this.Producten_Overzicht_btn.TabIndex = 0;
             this.Producten_Overzicht_btn.Text = "Producten Overzicht";
             this.Producten_Overzicht_btn.UseVisualStyleBackColor = false;
+            this.Producten_Overzicht_btn.Click += new System.EventHandler(this.Producten_Overzicht_btn_Click);
             // 
             // Bestellen_btn
             // 
@@ -161,6 +152,7 @@
             this.Bestellen_btn.TabIndex = 1;
             this.Bestellen_btn.Text = "Bestellen";
             this.Bestellen_btn.UseVisualStyleBackColor = false;
+            this.Bestellen_btn.Click += new System.EventHandler(this.Bestellen_btn_Click_1);
             // 
             // Help_btn
             // 
@@ -176,6 +168,16 @@
             this.Help_btn.Text = "Help";
             this.Help_btn.UseVisualStyleBackColor = false;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.Logo);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(263, 190);
+            this.panel4.TabIndex = 9;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,9 +192,9 @@
             this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
