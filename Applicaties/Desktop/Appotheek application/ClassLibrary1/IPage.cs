@@ -5,6 +5,5 @@ namespace Appotheekcl
     public interface IPage
     {
         bool LoginRequired { get; set; }
-        Form PageForm { get; set; }
     }
 }

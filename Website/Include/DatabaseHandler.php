@@ -1,6 +1,6 @@
 <?php
 
-    $Logindbservername = "192.168.162.187";
+    $Logindbservername = "192.168.1.10";
     $logindbname = "Users";
     $logindbusername = "Login";
     $logindbpassword = "LoginUser";
@@ -12,7 +12,7 @@
 
 
 
-    $Prodsdbservername = "192.168.162.187";
+    $Prodsdbservername = "192.168.1.10";
     $prodsdbname = "Medical";
     $prodsdbusername = "producten";
     $prodsdbpassword = "Doemaarwat1";

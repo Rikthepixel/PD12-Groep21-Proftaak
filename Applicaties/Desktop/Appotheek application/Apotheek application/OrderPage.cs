@@ -15,6 +15,9 @@ namespace Apotheek_application
     public partial class OrderPage : Form
     {
         Order order = new Order();
+
+        public bool LoginRequired { get; private set; }
+
         public OrderPage()
         {
             InitializeComponent();
