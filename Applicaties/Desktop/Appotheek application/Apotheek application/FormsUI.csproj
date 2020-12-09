@@ -204,5 +204,11 @@
   <ItemGroup>
     <None Include="Resources\Bestellensmall.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toevoegensmalllight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teovoegensmall.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
