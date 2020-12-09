@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace Appotheekcl
 {
@@ -27,6 +31,11 @@ namespace Appotheekcl
         {
             Task<List<string>> Weights = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Gewicht FROM {Medicijn} WHERE ID = '1'");
             return Weights.Result;
+        }
+        public void InsertNewProduct(string Medicijn, string Aantal, string Gewicht, string CurrentDate, string ExpiryDate)
+        {
+            var commandStr = $"If not exists (select name from sysobjects where name = 'Customer') CREATE TABLE 'Customer' (Aantal  char(50), Gewicht char(50), Datum_ontvangen datetime, Uiterste_datum datetime)";
+            dataAccess.SaveData(dataAccess.ProductConnStr, commandStr);
         }
     }
 }
