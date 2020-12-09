@@ -41,6 +41,7 @@ namespace Apotheek_application
 
         private void OpenProductPage(object sender, EventArgs e)
         {
+
             if (masterPage.CurrentUser.IsLoginValid())
             {
                 if (productPage == null)
@@ -49,6 +50,9 @@ namespace Apotheek_application
                 }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
+            } else
+            {
+                masterPage.LoginPage.SetLoginError("LoginRequired");
             }
         }
 
@@ -62,6 +66,23 @@ namespace Apotheek_application
         private void OpenHelpPage(object sender, EventArgs e)
         {
 
+        }
+
+        private void OpenAPage(dynamic TargetPage)
+        {
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                if (TargetPage == null)
+                {
+                    TargetPage = new ProductPage();
+                }
+
+                masterPage.OpenChildForm(TargetPage, TargetPage.LoginRequired);
+            }
+            else
+            {
+
+            }
         }
     }
 }

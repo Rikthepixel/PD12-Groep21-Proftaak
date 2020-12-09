@@ -23,11 +23,6 @@ namespace Apotheek_application
             masterPage = MP;
         }
 
-        public void SetLoginError()
-        {
-
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
@@ -41,15 +36,16 @@ namespace Apotheek_application
                 if (user.IsLoginValid())
                 {
                     ProductPage RedirectionPage = new ProductPage();
+                    masterPage.CurrentUser = user;
                     masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
                 }
                 else
                 {
-                    label1.Text = Inlog.GetLoginError();
+                    SetLoginError(Inlog.GetLoginError());
                 }
             } else
             {
-                label1.Text = Inlog.GetLoginError();
+                SetLoginError(Inlog.GetLoginError());
             }
         }
         
@@ -84,6 +80,11 @@ namespace Apotheek_application
         {
             if (string.IsNullOrWhiteSpace(Email_txt.Text))
                 Email_txt.Text = "Email...";
+        }
+
+        public void SetLoginError(string ErrorMessage)
+        {
+            label1.Text = ErrorMessage;
         }
     }
 }

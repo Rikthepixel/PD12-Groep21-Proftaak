@@ -15,14 +15,15 @@ namespace Apotheek_application
     {
         public bool LoggedIn { get; set; }
         public Form Header { get; private set; }
-        public User CurrentUser { get; private set; }
+        public User CurrentUser { get; set; }
 
-        private Login LoginPage;
+        public Login LoginPage;
         public MasterPage()
         {
             InitializeComponent();
             LoginPage = new Login(this);
             Header = new HeaderBar(this);
+            CurrentUser = new User();
         }
 
         private Form ActiveForm { get; set; }

@@ -41,6 +41,11 @@ namespace Appotheekcl
 
         }
 
+        public void Login(User LoggedInUser)
+        {
+
+        }
+
 
         public void setNametag()
         {
