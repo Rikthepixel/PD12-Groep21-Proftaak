@@ -61,7 +61,7 @@ namespace Apotheek_application
             var source = new BindingSource();
             source.DataSource = productlist;
             dataGridView1.DataSource = source;
-            source.Add.[0] = "Barcode";
+            //source.Add.[0] = "Barcode";
             //dataGridView1.DataSource = productlist;
 
         }

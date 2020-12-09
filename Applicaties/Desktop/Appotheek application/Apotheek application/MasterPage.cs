@@ -21,7 +21,7 @@ namespace Apotheek_application
             InitializeComponent();
             Pages = new List<Form>();
             Login login = new Login();
-            Header = new MainMenu();
+            Header = new HeaderBar(this);
             Pages.Add(login);
         }
 
@@ -34,11 +34,15 @@ namespace Apotheek_application
             OpenChildForm(Pages[0], ChildFormPanel, Headr);
         }
 
-        private void OpenChildForm(Form Page, dynamic InPanel, Form ActiveForm)
+        public void OpenChildForm(Form Page, dynamic InPanel, Form ActiveForm)
         {
             LoggedIn = true;
+
             if (ActiveForm != null)
+            {
                 ActiveForm.Close();
+            }
+
             ActiveForm = Page;
             Page.TopLevel = false;
             Page.FormBorderStyle = FormBorderStyle.None;
@@ -47,6 +51,26 @@ namespace Apotheek_application
             InPanel.Tag = Page;
             Page.BringToFront();
             Page.Show();
+        }
+
+        public void OpenChildForm(Form Page)
+        {
+            LoggedIn = true;
+
+            if (ActiveForm != null)
+            {
+                ActiveForm.Hide();
+            }
+
+            ActiveForm = Page;
+            Page.TopLevel = false;
+            Page.FormBorderStyle = FormBorderStyle.None;
+            Page.Dock = DockStyle.Fill;
+            ChildFormPanel.Controls.Add(Page);
+            ChildFormPanel.Tag = Page;
+            Page.BringToFront();
+            Page.Show();
+            
         }
 
         private bool GetLoggedIn(User CurrentUser)
