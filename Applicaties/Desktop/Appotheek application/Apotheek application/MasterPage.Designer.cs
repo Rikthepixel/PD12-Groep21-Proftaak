@@ -40,8 +40,9 @@
             this.panel1.Controls.Add(this.HeaderPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MinimumSize = new System.Drawing.Size(1000, 640);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 553);
+            this.panel1.Size = new System.Drawing.Size(1000, 640);
             this.panel1.TabIndex = 0;
             // 
             // ChildFormPanel
@@ -49,12 +50,12 @@
             this.ChildFormPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ChildFormPanel.BackColor = System.Drawing.Color.Transparent;
-            this.ChildFormPanel.Location = new System.Drawing.Point(0, 133);
+            this.ChildFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ChildFormPanel.Location = new System.Drawing.Point(0, 190);
             this.ChildFormPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.ChildFormPanel.MinimumSize = new System.Drawing.Size(990, 420);
+            this.ChildFormPanel.MinimumSize = new System.Drawing.Size(1000, 450);
             this.ChildFormPanel.Name = "ChildFormPanel";
-            this.ChildFormPanel.Size = new System.Drawing.Size(990, 420);
+            this.ChildFormPanel.Size = new System.Drawing.Size(1000, 450);
             this.ChildFormPanel.TabIndex = 1;
             // 
             // HeaderPanel
@@ -62,22 +63,22 @@
             this.HeaderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.HeaderPanel.BackColor = System.Drawing.Color.Transparent;
+            this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.HeaderPanel.MaximumSize = new System.Drawing.Size(0, 133);
-            this.HeaderPanel.MinimumSize = new System.Drawing.Size(990, 133);
+            this.HeaderPanel.MaximumSize = new System.Drawing.Size(0, 190);
+            this.HeaderPanel.MinimumSize = new System.Drawing.Size(1000, 190);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(990, 133);
+            this.HeaderPanel.Size = new System.Drawing.Size(1000, 190);
             this.HeaderPanel.TabIndex = 2;
             // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 553);
+            this.ClientSize = new System.Drawing.Size(1000, 640);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1008, 600);
+            this.MinimumSize = new System.Drawing.Size(1018, 679);
             this.Name = "MasterPage";
             this.Text = "Master Page";
             this.Load += new System.EventHandler(this.MasterPage_Load);

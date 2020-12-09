@@ -7,20 +7,41 @@ namespace Appotheekcl
     public class User
     {
         //knows
-        public int ID { get; set; }
-        public string email { get; set; } 
-        public string Password { get; set; }
-        public string CreatedAt { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public bool loggedIn { get; set; }
+        public int ID { get; private set; }
+        public string email { get; private set; } 
+        public string Password { get; private set; }
+        public string Created_At { get; private set; }
+        public string Voornaam { get; private set; }
+        public string Achternaam { get; private set; }
+        public bool loggedIn { get; internal set; }
 
         //does
-        public void setLoggedIn()
+        public void HidePassword()
+        {
+            Password = null;
+        }
+        public bool IsLoginValid()
+        {
+            bool Result = true;
+            if (email == null || Voornaam == null || Achternaam == null)
+            {
+                Result = false;
+            }
+
+            if (loggedIn == false)
+            {
+                Result = false;
+            }
+
+            return Result;
+        }
+
+        public void Logout()
         {
 
         }
-        
+
+
         public void setNametag()
         {
 

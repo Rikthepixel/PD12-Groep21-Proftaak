@@ -15,6 +15,8 @@ namespace Apotheek_application
     {
         private ProductList productList;
 
+        public bool LoginRequired { get; private set; }
+
         public ProductPage()
         {
             productList = new ProductList();
