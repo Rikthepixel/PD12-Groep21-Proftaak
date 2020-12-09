@@ -10,9 +10,9 @@ namespace Appotheekcl
         public int ID { get; private set; }
         public string email { get; private set; } 
         public string Password { get; private set; }
-        public string CreatedAt { get; private set; }
-        public string firstName { get; private set; }
-        public string lastName { get; private set; }
+        public string Created_At { get; private set; }
+        public string Voornaam { get; private set; }
+        public string Achternaam { get; private set; }
         public bool loggedIn { get; internal set; }
 
         //does
@@ -23,7 +23,7 @@ namespace Appotheekcl
         public bool IsLoginValid()
         {
             bool Result = true;
-            if (email == null || firstName == null || lastName == null)
+            if (email == null || Voornaam == null || Achternaam == null)
             {
                 Result = false;
             }

@@ -21,7 +21,7 @@ namespace Apotheek_application
         public MasterPage()
         {
             InitializeComponent();
-            LoginPage = new Login();
+            LoginPage = new Login(this);
             Header = new HeaderBar(this);
         }
 
@@ -101,13 +101,17 @@ namespace Apotheek_application
         private bool GetLoggedIn(User CurrentUser)
         {
             string Error = null;
-            if(CurrentUser.email == null || CurrentUser.firstName == null || CurrentUser.lastName == null)
+            if(CurrentUser.email == null || CurrentUser.Voornaam == null || CurrentUser.Achternaam == null)
             {
                 Error = "InvalidCredentials";
             }
             if(CurrentUser.loggedIn == false)
             {
                 Error = "InvalidLogin";
+            }
+            if(CurrentUser.Created_At == null)
+            {
+                Error = "InvalidCreation";
             }
 
             if(Error != null)

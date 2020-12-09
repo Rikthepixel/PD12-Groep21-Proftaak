@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,25 +17,25 @@ namespace Appotheekcl
         {
             LoginError = string.Empty;
         }
-        public User generateUserLogin(string Email, string Password)
+
+        public async Task<User> generateUserLoginAsync(string Email, string Password)
         {
             User LoggedInUser = null;
-            if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
+            if (string.IsNullOrEmpty(Email) || Email == "Email..." || string.IsNullOrEmpty(Password) || Password == "Wachtwoord...")
             {
                 LoggedInUser = null;
                 setLoginError("EmptyBoxes");
             }
             else
             {
-
                 try
                 {
                     DataAccess LoginTest = new DataAccess();
-                    Task<List<User>> Users = LoginTest.LoadData<User>(LoginTest.LoginConnStr, $"SELECT * FROM User WHERE LOWER(Email) = LOWER('{Email}') AND Password = '{Password}'");
-                    if (Users.Result.Count == 1)
+                    List<User> Users = await LoginTest.LoadData<User>(LoginTest.LoginConnStr, $"SELECT * FROM User WHERE LOWER(Email) = LOWER('{Email}') AND Password = '{Password}'");
+                    if (Users.Count == 1)
                     {
-                        LoggedInUser = Users.Result[0];
-                        LoggedInUser.Password = null;
+                        LoggedInUser = Users[0];
+                        LoggedInUser.HidePassword();
                         LoggedInUser.loggedIn = true;
                         LoginError = string.Empty;
                     }
@@ -47,7 +48,6 @@ namespace Appotheekcl
                 catch (Exception e)
                 {
                     setLoginError(e);
-                    throw;
                 }
             }
             return LoggedInUser;

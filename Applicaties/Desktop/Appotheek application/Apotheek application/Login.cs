@@ -17,9 +17,10 @@ namespace Apotheek_application
         MasterPage masterPage;
         public bool LoginRequired { get; private set; }
 
-        public Login()
+        public Login(MasterPage MP)
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            masterPage = MP;
         }
 
         public void SetLoginError()
@@ -34,11 +35,21 @@ namespace Apotheek_application
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            User user = Inlog.generateUserLogin(Email_txt.Text, Wachtwoord_txt.Text);
-            if (user.IsLoginValid())
+            User user = Inlog.generateUserLoginAsync(Email_txt.Text, Wachtwoord_txt.Text).Result;
+            if(user != null)
             {
-                ProductPage RedirectionPage = new ProductPage();
-                masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
+                if (user.IsLoginValid())
+                {
+                    ProductPage RedirectionPage = new ProductPage();
+                    masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
+                }
+                else
+                {
+                    label1.Text = Inlog.GetLoginError();
+                }
+            } else
+            {
+                label1.Text = Inlog.GetLoginError();
             }
         }
         
