@@ -28,27 +28,35 @@ namespace Apotheek_application
 
         private void OpenBestelPage(object sender, EventArgs e)
         {
-            if(orderPage == null)
+            if (masterPage.CurrentUser.IsLoginValid())
             {
-                orderPage = new OrderPage();
-            }
+                if (orderPage == null)
+                {
+                    orderPage = new OrderPage();
+                }
 
-            masterPage.OpenChildForm(orderPage);
+                masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);
+            }
         }
 
         private void OpenProductPage(object sender, EventArgs e)
         {
-            if(productPage == null)
+            if (masterPage.CurrentUser.IsLoginValid())
             {
-                productPage = new ProductPage();
-            }
+                if (productPage == null)
+                {
+                    productPage = new ProductPage();
+                }
 
-            masterPage.OpenChildForm(productPage);
+                masterPage.OpenChildForm(productPage, productPage.LoginRequired);
+            }
         }
 
         private void DoLogout(object sender, EventArgs e)
         {
-
+            orderPage = null;
+            productPage = null;
+            masterPage.CurrentUser.Logout();
         }
 
         private void OpenHelpPage(object sender, EventArgs e)

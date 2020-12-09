@@ -14,15 +14,15 @@ namespace Apotheek_application
     public partial class MasterPage : Form
     {
         public bool LoggedIn { get; set; }
-        public Form Header { get; set; }
-        public List<Form> Pages { get; private set; }
+        public Form Header { get; private set; }
+        public User CurrentUser { get; private set; }
+
+        private Login LoginPage;
         public MasterPage()
         {
             InitializeComponent();
-            Pages = new List<Form>();
-            Login login = new Login();
+            LoginPage = new Login();
             Header = new HeaderBar(this);
-            Pages.Add(login);
         }
 
         private Form ActiveForm { get; set; }
@@ -30,8 +30,8 @@ namespace Apotheek_application
 
         private void MasterPage_Load(object sender, EventArgs e)
         {
-            OpenChildForm(Header, HeaderPanel, ActiveForm);
-            OpenChildForm(Pages[0], ChildFormPanel, Headr);
+            OpenChildForm(Header, HeaderPanel, Headr);
+            OpenChildForm(LoginPage, ChildFormPanel, ActiveForm);
         }
 
         public void OpenChildForm(Form Page, dynamic InPanel, Form ActiveForm)
@@ -53,24 +53,49 @@ namespace Apotheek_application
             Page.Show();
         }
 
-        public void OpenChildForm(Form Page)
+        public void OpenChildForm(Form Page, bool LoginRequired)
         {
-            LoggedIn = true;
-
-            if (ActiveForm != null)
+            bool IsLoggedIn;
+            if (LoginRequired)
             {
-                ActiveForm.Hide();
-            }
+                IsLoggedIn = CurrentUser.IsLoginValid();
+                if (IsLoggedIn)
+                {
+                    if (ActiveForm != null)
+                    {
+                        ActiveForm.Hide();
+                    }
 
-            ActiveForm = Page;
-            Page.TopLevel = false;
-            Page.FormBorderStyle = FormBorderStyle.None;
-            Page.Dock = DockStyle.Fill;
-            ChildFormPanel.Controls.Add(Page);
-            ChildFormPanel.Tag = Page;
-            Page.BringToFront();
-            Page.Show();
-            
+                    ActiveForm = Page;
+                    Page.TopLevel = false;
+                    Page.FormBorderStyle = FormBorderStyle.None;
+                    Page.Dock = DockStyle.Fill;
+                    ChildFormPanel.Controls.Add(Page);
+                    ChildFormPanel.Tag = Page;
+                    Page.BringToFront();
+                    Page.Show();
+                }
+                else
+                {
+                    
+                }
+            } 
+            else
+            {
+                if (ActiveForm != null)
+                {
+                    ActiveForm.Hide();
+                }
+
+                ActiveForm = Page;
+                Page.TopLevel = false;
+                Page.FormBorderStyle = FormBorderStyle.None;
+                Page.Dock = DockStyle.Fill;
+                ChildFormPanel.Controls.Add(Page);
+                ChildFormPanel.Tag = Page;
+                Page.BringToFront();
+                Page.Show();
+            }
         }
 
         private bool GetLoggedIn(User CurrentUser)

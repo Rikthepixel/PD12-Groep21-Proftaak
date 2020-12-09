@@ -14,13 +14,15 @@ namespace Apotheek_application
     public partial class Login : Form
     {
         Inlog Inlog = new Inlog();
+        MasterPage masterPage;
+        public bool LoginRequired { get; private set; }
 
         public Login()
         {
             InitializeComponent(); 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public void SetLoginError()
         {
 
         }
@@ -30,20 +32,14 @@ namespace Apotheek_application
 
         }
 
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Login_btn_Click(object sender, EventArgs e)
         {
             User user = Inlog.generateUserLogin(Email_txt.Text, Wachtwoord_txt.Text);
+            if (user.IsLoginValid())
+            {
+                ProductPage RedirectionPage = new ProductPage();
+                masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
+            }
         }
         
         private void WachtwoordRemovePlaceHolder(object sender, EventArgs e)
