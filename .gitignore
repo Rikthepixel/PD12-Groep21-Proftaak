@@ -361,3 +361,14 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+Applicaties/Desktop/Appotheek application/ClassLibrary1/obj/Appotheekcl.csproj.nuget.g.props
+
+Applicaties/Desktop/Appotheek application/ClassLibrary1/bin/Debug/netstandard2.0/Appotheekcl.dll
+
+Applicaties/Desktop/Appotheek application/ClassLibrary1/obj/Appotheekcl.csproj.nuget.dgspec.json
+
+Applicaties/Desktop/Appotheek application/ClassLibrary1/obj/Debug/netstandard2.0/Appotheekcl.csproj.FileListAbsolute.txt
+
+Applicaties/Desktop/Appotheek application/ClassLibrary1/obj/Debug/netstandard2.0/Appotheekcl.dll
+
+Applicaties/Desktop/Appotheek application/ClassLibrary1/obj/project.assets.json
