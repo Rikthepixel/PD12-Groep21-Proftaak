@@ -34,8 +34,10 @@ namespace Appotheekcl
         }
         public void InsertNewProduct(string Medicijn, string Aantal, string Gewicht, string CurrentDate, string ExpiryDate)
         {
-            var commandStr = $"If not exists (select name from sysobjects where name = 'Customer') CREATE TABLE 'Customer' (Aantal  char(50), Gewicht char(50), Datum_ontvangen datetime, Uiterste_datum datetime)";
+            var commandStr = $"CREATE TABLE {Medicijn}(ID INT(6) AUTO_INCREMENT PRIMARY KEY,Aantal INT(30) NOT NULL,Gewicht DOUBLE NOT NULL,Datum_ontvangen text NOT NULL, Uiterste_datum text NOT NULL)";
+            string Statement = $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) VALUES('{Aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}')";
             dataAccess.SaveData(dataAccess.ProductConnStr, commandStr);
+            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
         }
     }
 }
