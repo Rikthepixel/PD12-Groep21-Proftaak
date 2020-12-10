@@ -21,9 +21,23 @@ namespace Apotheek_application
             masterPage = MP;
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void Header_Load(object sender, EventArgs e)
         {
-
+            if(masterPage.CurrentUser != null)
+            {
+                if (masterPage.CurrentUser.IsLoginValid())
+                {
+                    Logout_btn.Text = "Uitloggen";
+                }
+                else
+                {
+                    Logout_btn.Text = "Inloggen";
+                }
+            }
+            else if (masterPage.CurrentUser == null)
+            {
+                Logout_btn.Text = "Inloggen";
+            }
         }
 
         private void OpenBestelPage(object sender, EventArgs e)
@@ -83,6 +97,42 @@ namespace Apotheek_application
             {
 
             }
+        }
+
+        private void OnLogInOutButton(object sender, EventArgs e)
+        {
+            if(Logout_btn.Text == "Uitloggen")
+            {
+                DoLogout(sender, e);
+            }
+            else if (Logout_btn.Text == "Inloggen")
+            {
+                if(masterPage.ActiveForm != masterPage.LoginPage)
+                {
+                    masterPage.OpenChildForm(masterPage.LoginPage, masterPage.LoginPage.LoginRequired);
+                }
+            }
+            else 
+            {
+                
+            }
+        }
+
+        public void UpdateHeader()
+        {
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                Logout_btn.Text = "Uitloggen";
+            }
+            else
+            {
+                Logout_btn.Text = "Inloggen";
+            }
+        }
+
+        public void SetLogInOutText(string NewButtonText)
+        {
+            Logout_btn.Text = NewButtonText;
         }
     }
 }

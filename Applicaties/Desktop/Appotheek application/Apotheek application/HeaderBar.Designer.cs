@@ -33,7 +33,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.User_label = new System.Windows.Forms.Label();
-            this.Uitloggen_btn = new System.Windows.Forms.Button();
+            this.Logout_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Producten_Overzicht_btn = new System.Windows.Forms.Button();
             this.Bestellen_btn = new System.Windows.Forms.Button();
@@ -73,7 +73,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.User_label);
-            this.panel2.Controls.Add(this.Uitloggen_btn);
+            this.panel2.Controls.Add(this.Logout_btn);
             this.panel2.Location = new System.Drawing.Point(402, 88);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -95,21 +95,21 @@
             this.User_label.Text = "Student Student";
             this.User_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Uitloggen_btn
+            // Logout_btn
             // 
-            this.Uitloggen_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Uitloggen_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
-            this.Uitloggen_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
-            this.Uitloggen_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Uitloggen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Uitloggen_btn.Location = new System.Drawing.Point(155, 0);
-            this.Uitloggen_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.Uitloggen_btn.Name = "Uitloggen_btn";
-            this.Uitloggen_btn.Size = new System.Drawing.Size(132, 52);
-            this.Uitloggen_btn.TabIndex = 2;
-            this.Uitloggen_btn.Text = "Uitloggen";
-            this.Uitloggen_btn.UseVisualStyleBackColor = false;
-            this.Uitloggen_btn.Click += new System.EventHandler(this.DoLogout);
+            this.Logout_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Logout_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Logout_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Logout_btn.Location = new System.Drawing.Point(155, 0);
+            this.Logout_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Logout_btn.Name = "Logout_btn";
+            this.Logout_btn.Size = new System.Drawing.Size(132, 52);
+            this.Logout_btn.TabIndex = 2;
+            this.Logout_btn.Text = "Uitloggen";
+            this.Logout_btn.UseVisualStyleBackColor = false;
+            this.Logout_btn.Click += new System.EventHandler(this.OnLogInOutButton);
             // 
             // panel1
             // 
@@ -190,7 +190,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HeaderBar";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
+            this.Load += new System.EventHandler(this.Header_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -207,7 +207,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label User_label;
-        private System.Windows.Forms.Button Uitloggen_btn;
+        private System.Windows.Forms.Button Logout_btn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Producten_Overzicht_btn;
         private System.Windows.Forms.Button Bestellen_btn;

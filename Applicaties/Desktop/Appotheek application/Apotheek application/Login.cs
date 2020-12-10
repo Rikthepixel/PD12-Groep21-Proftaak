@@ -47,6 +47,7 @@ namespace Apotheek_application
             {
                 SetLoginError(Inlog.GetLoginError());
             }
+            masterPage.Header.UpdateHeader();
         }
         
         private void WachtwoordRemovePlaceHolder(object sender, EventArgs e)

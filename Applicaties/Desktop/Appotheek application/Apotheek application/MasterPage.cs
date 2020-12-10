@@ -14,7 +14,7 @@ namespace Apotheek_application
     public partial class MasterPage : Form
     {
         public bool LoggedIn { get; set; }
-        public Form Header { get; private set; }
+        public HeaderBar Header { get; private set; }
         public User CurrentUser { get; set; }
 
         public Login LoginPage;
@@ -26,7 +26,7 @@ namespace Apotheek_application
             CurrentUser = new User();
         }
 
-        private Form ActiveForm { get; set; }
+        public Form ActiveForm { get; private set; }
         private Form Headr { get; set; }
 
         private void MasterPage_Load(object sender, EventArgs e)
