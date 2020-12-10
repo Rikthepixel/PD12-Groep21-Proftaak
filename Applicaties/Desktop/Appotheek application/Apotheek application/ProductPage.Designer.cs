@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,13 +52,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.productListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TotaalGewicht = new System.Windows.Forms.Label();
-            this.Naam = new System.Windows.Forms.Label();
-            this.Type = new System.Windows.Forms.Label();
-            this.Leverancier = new System.Windows.Forms.Label();
-            this.EersteLevering = new System.Windows.Forms.Label();
-            this.Bestellen = new System.Windows.Forms.Button();
             this.X = new System.Windows.Forms.Button();
+            this.Bestellen = new System.Windows.Forms.Button();
+            this.EersteLevering = new System.Windows.Forms.Label();
+            this.Leverancier = new System.Windows.Forms.Label();
+            this.Type = new System.Windows.Forms.Label();
+            this.Naam = new System.Windows.Forms.Label();
+            this.TotaalGewicht = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SearchBarPanel.SuspendLayout();
@@ -90,14 +90,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -107,28 +107,28 @@
             this.uitersteDatumDataGridViewTextBoxColumn,
             this.ExtraInfo});
             this.dataGridView1.DataSource = this.productBindingSource;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
             this.dataGridView1.Location = new System.Drawing.Point(1, 2);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(975, 324);
             this.dataGridView1.TabIndex = 1;
@@ -138,11 +138,11 @@
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
-            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
+            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
@@ -152,9 +152,9 @@
             // aantalDataGridViewTextBoxColumn
             // 
             this.aantalDataGridViewTextBoxColumn.DataPropertyName = "aantal";
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
-            this.aantalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
+            this.aantalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
             this.aantalDataGridViewTextBoxColumn.HeaderText = "aantal";
             this.aantalDataGridViewTextBoxColumn.Name = "aantalDataGridViewTextBoxColumn";
             this.aantalDataGridViewTextBoxColumn.ReadOnly = true;
@@ -162,9 +162,9 @@
             // gewichtDataGridViewTextBoxColumn
             // 
             this.gewichtDataGridViewTextBoxColumn.DataPropertyName = "Gewicht";
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
-            this.gewichtDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
+            this.gewichtDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
             this.gewichtDataGridViewTextBoxColumn.HeaderText = "Gewicht";
             this.gewichtDataGridViewTextBoxColumn.Name = "gewichtDataGridViewTextBoxColumn";
             this.gewichtDataGridViewTextBoxColumn.ReadOnly = true;
@@ -172,9 +172,9 @@
             // datumOntvangenDataGridViewTextBoxColumn
             // 
             this.datumOntvangenDataGridViewTextBoxColumn.DataPropertyName = "Datum_Ontvangen";
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
-            this.datumOntvangenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
+            this.datumOntvangenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
             this.datumOntvangenDataGridViewTextBoxColumn.HeaderText = "Datum Ontvangen";
             this.datumOntvangenDataGridViewTextBoxColumn.Name = "datumOntvangenDataGridViewTextBoxColumn";
             this.datumOntvangenDataGridViewTextBoxColumn.ReadOnly = true;
@@ -182,9 +182,9 @@
             // uitersteDatumDataGridViewTextBoxColumn
             // 
             this.uitersteDatumDataGridViewTextBoxColumn.DataPropertyName = "Uiterste_Datum";
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
-            this.uitersteDatumDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
+            this.uitersteDatumDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
             this.uitersteDatumDataGridViewTextBoxColumn.HeaderText = "Uiterste Datum";
             this.uitersteDatumDataGridViewTextBoxColumn.Name = "uitersteDatumDataGridViewTextBoxColumn";
             this.uitersteDatumDataGridViewTextBoxColumn.ReadOnly = true;
@@ -246,6 +246,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.X);
             this.panel1.Controls.Add(this.Bestellen);
@@ -254,61 +255,23 @@
             this.panel1.Controls.Add(this.Type);
             this.panel1.Controls.Add(this.Naam);
             this.panel1.Controls.Add(this.TotaalGewicht);
-            this.panel1.Location = new System.Drawing.Point(610, 12);
+            this.panel1.Location = new System.Drawing.Point(579, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(378, 105);
+            this.panel1.Size = new System.Drawing.Size(387, 105);
             this.panel1.TabIndex = 5;
             this.panel1.Visible = false;
             // 
-            // TotaalGewicht
+            // X
             // 
-            this.TotaalGewicht.AutoSize = true;
-            this.TotaalGewicht.Location = new System.Drawing.Point(21, 48);
-            this.TotaalGewicht.Name = "TotaalGewicht";
-            this.TotaalGewicht.Size = new System.Drawing.Size(103, 13);
-            this.TotaalGewicht.TabIndex = 0;
-            this.TotaalGewicht.Text = "Totaal Gewicht: 540";
-            this.TotaalGewicht.Visible = false;
-            // 
-            // Naam
-            // 
-            this.Naam.AutoSize = true;
-            this.Naam.Location = new System.Drawing.Point(21, 18);
-            this.Naam.Name = "Naam";
-            this.Naam.Size = new System.Drawing.Size(72, 13);
-            this.Naam.TabIndex = 1;
-            this.Naam.Text = "Naam: Xanac";
-            this.Naam.Visible = false;
-            // 
-            // Type
-            // 
-            this.Type.AutoSize = true;
-            this.Type.Location = new System.Drawing.Point(21, 78);
-            this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(82, 13);
-            this.Type.TabIndex = 2;
-            this.Type.Text = "Type: Tabletten";
-            this.Type.Visible = false;
-            // 
-            // Leverancier
-            // 
-            this.Leverancier.AutoSize = true;
-            this.Leverancier.Location = new System.Drawing.Point(209, 18);
-            this.Leverancier.Name = "Leverancier";
-            this.Leverancier.Size = new System.Drawing.Size(144, 13);
-            this.Leverancier.TabIndex = 3;
-            this.Leverancier.Text = "Leverancier: Mosadex Groep";
-            this.Leverancier.Visible = false;
-            // 
-            // EersteLevering
-            // 
-            this.EersteLevering.AutoSize = true;
-            this.EersteLevering.Location = new System.Drawing.Point(209, 48);
-            this.EersteLevering.Name = "EersteLevering";
-            this.EersteLevering.Size = new System.Drawing.Size(139, 13);
-            this.EersteLevering.TabIndex = 4;
-            this.EersteLevering.Text = "Eerste Levering: 10/8/2018";
-            this.EersteLevering.Visible = false;
+            this.X.BackColor = System.Drawing.Color.Red;
+            this.X.Location = new System.Drawing.Point(0, 0);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(20, 20);
+            this.X.TabIndex = 6;
+            this.X.Text = "X";
+            this.X.UseVisualStyleBackColor = false;
+            this.X.Visible = false;
+            this.X.Click += new System.EventHandler(this.X_Click);
             // 
             // Bestellen
             // 
@@ -324,17 +287,55 @@
             this.Bestellen.Visible = false;
             this.Bestellen.Click += new System.EventHandler(this.Bestellen_Click);
             // 
-            // X
+            // EersteLevering
             // 
-            this.X.BackColor = System.Drawing.Color.Red;
-            this.X.Location = new System.Drawing.Point(0, 0);
-            this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(20, 20);
-            this.X.TabIndex = 6;
-            this.X.Text = "X";
-            this.X.UseVisualStyleBackColor = false;
-            this.X.Visible = false;
-            this.X.Click += new System.EventHandler(this.X_Click);
+            this.EersteLevering.AutoSize = true;
+            this.EersteLevering.Location = new System.Drawing.Point(209, 48);
+            this.EersteLevering.Name = "EersteLevering";
+            this.EersteLevering.Size = new System.Drawing.Size(139, 13);
+            this.EersteLevering.TabIndex = 4;
+            this.EersteLevering.Text = "Eerste Levering: 10/8/2018";
+            this.EersteLevering.Visible = false;
+            // 
+            // Leverancier
+            // 
+            this.Leverancier.AutoSize = true;
+            this.Leverancier.Location = new System.Drawing.Point(209, 18);
+            this.Leverancier.Name = "Leverancier";
+            this.Leverancier.Size = new System.Drawing.Size(144, 13);
+            this.Leverancier.TabIndex = 3;
+            this.Leverancier.Text = "Leverancier: Mosadex Groep";
+            this.Leverancier.Visible = false;
+            // 
+            // Type
+            // 
+            this.Type.AutoSize = true;
+            this.Type.Location = new System.Drawing.Point(21, 78);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(82, 13);
+            this.Type.TabIndex = 2;
+            this.Type.Text = "Type: Tabletten";
+            this.Type.Visible = false;
+            // 
+            // Naam
+            // 
+            this.Naam.AutoSize = true;
+            this.Naam.Location = new System.Drawing.Point(21, 18);
+            this.Naam.Name = "Naam";
+            this.Naam.Size = new System.Drawing.Size(72, 13);
+            this.Naam.TabIndex = 1;
+            this.Naam.Text = "Naam: Xanac";
+            this.Naam.Visible = false;
+            // 
+            // TotaalGewicht
+            // 
+            this.TotaalGewicht.AutoSize = true;
+            this.TotaalGewicht.Location = new System.Drawing.Point(21, 48);
+            this.TotaalGewicht.Name = "TotaalGewicht";
+            this.TotaalGewicht.Size = new System.Drawing.Size(103, 13);
+            this.TotaalGewicht.TabIndex = 0;
+            this.TotaalGewicht.Text = "Totaal Gewicht: 540";
+            this.TotaalGewicht.Visible = false;
             // 
             // ProductPage
             // 
