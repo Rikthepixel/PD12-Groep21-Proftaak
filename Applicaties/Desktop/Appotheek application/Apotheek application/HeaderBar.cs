@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Appotheekcl;
 
 namespace Apotheek_application
 {
@@ -74,7 +75,8 @@ namespace Apotheek_application
         {
             orderPage = null;
             productPage = null;
-            masterPage.CurrentUser = null;
+            masterPage.CurrentUser = new User();
+            masterPage.OpenChildForm(masterPage.LoginPage, false);
             UpdateHeader();
         }
 
