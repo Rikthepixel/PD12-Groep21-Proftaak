@@ -36,11 +36,6 @@ namespace Appotheekcl
             return Result;
         }
 
-        public void Logout()
-        {
-
-        }
-
         public void Login(User LoggedInUser)
         {
 

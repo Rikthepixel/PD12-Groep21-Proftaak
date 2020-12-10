@@ -74,7 +74,8 @@ namespace Apotheek_application
         {
             orderPage = null;
             productPage = null;
-            masterPage.CurrentUser.Logout();
+            masterPage.CurrentUser = null;
+            UpdateHeader();
         }
 
         private void OpenHelpPage(object sender, EventArgs e)
