@@ -35,7 +35,7 @@ namespace Apotheek_application
             {
                 if (user.IsLoginValid())
                 {
-                    ProductPage RedirectionPage = new ProductPage();
+                    ProductPage RedirectionPage = new ProductPage(masterPage);
                     masterPage.CurrentUser = user;
                     masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
                 }
