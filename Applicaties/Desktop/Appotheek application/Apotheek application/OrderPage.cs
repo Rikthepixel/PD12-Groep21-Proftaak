@@ -36,40 +36,9 @@ namespace Apotheek_application
             Medicijn_cB.Items.Add("Xanac");
             Medicijn_cB.Items.Add("ibuprofen");
             Medicijn_cB.Items.Add("oxazepam");
+            Medicijn_cB.Items.Add("test");
+            Medicijn_cB.Items.Add("test2");
 
-        }
-        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void Add_medicijn_btn_Click(object sender, EventArgs e)
-        {
-            string New_medical = Naam_Medicijn_txt.Text;
-            string New_Aantal = Aantal_txt.Text;
-            string New_Gewicht = Gewicht_txt.Text;
-            string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
-            int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
-            int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
-            int Month = Convert.ToInt32(ExpiryMonth);
-            if (Month > 12)
-            {
-                ExpiryYear = ExpiryYear + 1;
-                Month = Month - 12;
-            }
-            string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
-            order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
         }
 
         private void Order_btn_MouseEnter_2(object sender, EventArgs e)
@@ -127,6 +96,29 @@ namespace Apotheek_application
                 string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
                 order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate);
             }
+        }
+
+        private void Add_medicijn_btn_Click_1(object sender, EventArgs e)
+        {
+            string New_medical = Naam_Medicijn_txt.Text;
+            string New_Aantal = Aantal_txt.Text;
+            string New_Gewicht = Gewicht_txt.Text;
+            string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
+            int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
+            int Month = Convert.ToInt32(ExpiryMonth);
+            if (Month > 12)
+            {
+                ExpiryYear = ExpiryYear + 1;
+                Month = Month - 12;
+            }
+            string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
+            Console.WriteLine(New_medical);
+            Console.WriteLine(New_Aantal);
+            Console.WriteLine(New_Gewicht);
+            Console.WriteLine(CurrentDate);
+            Console.WriteLine(ExpiryDate);
+            order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
         }
     }
 }

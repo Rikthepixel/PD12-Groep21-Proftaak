@@ -35,6 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.Naam_Medicijn_txt = new System.Windows.Forms.TextBox();
+            this.Add_medicijn_btn = new System.Windows.Forms.Button();
             this.Aantal_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Gewicht_txt = new System.Windows.Forms.TextBox();
@@ -42,16 +43,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.Order_btn = new System.Windows.Forms.Button();
             this.Medicijn_cB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Aantal_Medicijnen_UpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.Add_medicijn_btn = new System.Windows.Forms.Button();
-            this.Order_btn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -96,6 +96,20 @@
             this.Naam_Medicijn_txt.Name = "Naam_Medicijn_txt";
             this.Naam_Medicijn_txt.Size = new System.Drawing.Size(100, 20);
             this.Naam_Medicijn_txt.TabIndex = 1;
+            // 
+            // Add_medicijn_btn
+            // 
+            this.Add_medicijn_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Add_medicijn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Add_medicijn_btn.Image = ((System.Drawing.Image)(resources.GetObject("Add_medicijn_btn.Image")));
+            this.Add_medicijn_btn.Location = new System.Drawing.Point(532, 65);
+            this.Add_medicijn_btn.Name = "Add_medicijn_btn";
+            this.Add_medicijn_btn.Size = new System.Drawing.Size(185, 23);
+            this.Add_medicijn_btn.TabIndex = 13;
+            this.Add_medicijn_btn.UseVisualStyleBackColor = true;
+            this.Add_medicijn_btn.Click += new System.EventHandler(this.Add_medicijn_btn_Click_1);
+            this.Add_medicijn_btn.MouseEnter += new System.EventHandler(this.Add_medicijn_btn_MouseEnter);
+            this.Add_medicijn_btn.MouseLeave += new System.EventHandler(this.Add_medicijn_btn_MouseLeave);
             // 
             // Aantal_txt
             // 
@@ -175,6 +189,65 @@
             this.panel6.Size = new System.Drawing.Size(913, 157);
             this.panel6.TabIndex = 2;
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel5.Location = new System.Drawing.Point(22, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(175, 136);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Location = new System.Drawing.Point(55, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(796, 49);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Location = new System.Drawing.Point(688, 19);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(195, 130);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Location = new System.Drawing.Point(55, 105);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(799, 49);
+            this.panel8.TabIndex = 6;
+            // 
+            // Order_btn
+            // 
+            this.Order_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Order_btn.BackColor = System.Drawing.Color.Transparent;
+            this.Order_btn.BackgroundImage = global::Apotheek_application.Properties.Resources.Bestellensmall;
+            this.Order_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Order_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Order_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.Order_btn.FlatAppearance.BorderSize = 2;
+            this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_btn.Image = ((System.Drawing.Image)(resources.GetObject("Order_btn.Image")));
+            this.Order_btn.Location = new System.Drawing.Point(65, 19);
+            this.Order_btn.Name = "Order_btn";
+            this.Order_btn.Size = new System.Drawing.Size(756, 117);
+            this.Order_btn.TabIndex = 0;
+            this.Order_btn.UseVisualStyleBackColor = false;
+            this.Order_btn.Click += new System.EventHandler(this.Order_btn_Click);
+            this.Order_btn.MouseEnter += new System.EventHandler(this.Order_btn_MouseEnter_2);
+            this.Order_btn.MouseLeave += new System.EventHandler(this.Order_btn_MouseLeave_2);
+            // 
             // Medicijn_cB
             // 
             this.Medicijn_cB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -226,78 +299,6 @@
             this.label1.Text = "Aantal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(688, 19);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(195, 130);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Location = new System.Drawing.Point(55, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(796, 49);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel5.Location = new System.Drawing.Point(22, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(175, 136);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Location = new System.Drawing.Point(55, 105);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(799, 49);
-            this.panel8.TabIndex = 6;
-            // 
-            // Add_medicijn_btn
-            // 
-            this.Add_medicijn_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Add_medicijn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Add_medicijn_btn.Image = ((System.Drawing.Image)(resources.GetObject("Add_medicijn_btn.Image")));
-            this.Add_medicijn_btn.Location = new System.Drawing.Point(532, 65);
-            this.Add_medicijn_btn.Name = "Add_medicijn_btn";
-            this.Add_medicijn_btn.Size = new System.Drawing.Size(185, 23);
-            this.Add_medicijn_btn.TabIndex = 13;
-            this.Add_medicijn_btn.UseVisualStyleBackColor = true;
-            this.Add_medicijn_btn.MouseEnter += new System.EventHandler(this.Add_medicijn_btn_MouseEnter);
-            this.Add_medicijn_btn.MouseLeave += new System.EventHandler(this.Add_medicijn_btn_MouseLeave);
-            // 
-            // Order_btn
-            // 
-            this.Order_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_btn.BackColor = System.Drawing.Color.Transparent;
-            this.Order_btn.BackgroundImage = global::Apotheek_application.Properties.Resources.Bestellensmall;
-            this.Order_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Order_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Order_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
-            this.Order_btn.FlatAppearance.BorderSize = 2;
-            this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_btn.Image = ((System.Drawing.Image)(resources.GetObject("Order_btn.Image")));
-            this.Order_btn.Location = new System.Drawing.Point(65, 19);
-            this.Order_btn.Name = "Order_btn";
-            this.Order_btn.Size = new System.Drawing.Size(756, 117);
-            this.Order_btn.TabIndex = 0;
-            this.Order_btn.UseVisualStyleBackColor = false;
-            this.Order_btn.Click += new System.EventHandler(this.Order_btn_Click);
-            this.Order_btn.MouseEnter += new System.EventHandler(this.Order_btn_MouseEnter_2);
-            this.Order_btn.MouseLeave += new System.EventHandler(this.Order_btn_MouseLeave_2);
-            // 
             // OrderPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,6 +306,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1000, 450);
             this.Name = "OrderPage";
             this.Text = "OrderPage";
