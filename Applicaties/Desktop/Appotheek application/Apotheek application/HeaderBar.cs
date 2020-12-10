@@ -60,7 +60,7 @@ namespace Apotheek_application
             {
                 if (productPage == null)
                 {
-                    productPage = new ProductPage();
+                    productPage = new ProductPage(masterPage);
                 }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
