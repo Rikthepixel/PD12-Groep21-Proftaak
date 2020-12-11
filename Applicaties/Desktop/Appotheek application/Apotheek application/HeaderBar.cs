@@ -29,15 +29,24 @@ namespace Apotheek_application
                 if (masterPage.CurrentUser.IsLoginValid())
                 {
                     Logout_btn.Text = "Uitloggen";
+                    Producten_Overzicht_btn.Visible = true;
+                    Bestellen_btn.Visible = true;
+                    Help_btn.Visible = true;
                 }
                 else
                 {
                     Logout_btn.Text = "Inloggen";
+                    Producten_Overzicht_btn.Visible = false;
+                    Bestellen_btn.Visible = false;
+                    Help_btn.Visible = false;
                 }
             }
             else if (masterPage.CurrentUser == null)
             {
                 Logout_btn.Text = "Inloggen";
+                Producten_Overzicht_btn.Visible = false;
+                Bestellen_btn.Visible = false;
+                Help_btn.Visible = false;
             }
         }
 
@@ -126,10 +135,16 @@ namespace Apotheek_application
             if (masterPage.CurrentUser.IsLoginValid())
             {
                 Logout_btn.Text = "Uitloggen";
+                Producten_Overzicht_btn.Visible = true;
+                Bestellen_btn.Visible = true;
+                Help_btn.Visible = true;
             }
             else
             {
                 Logout_btn.Text = "Inloggen";
+                Producten_Overzicht_btn.Visible = false;
+                Bestellen_btn.Visible = false;
+                Help_btn.Visible = false;
             }
         }
 
