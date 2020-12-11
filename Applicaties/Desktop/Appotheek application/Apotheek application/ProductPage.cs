@@ -69,50 +69,50 @@ namespace Apotheek_application
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 140, 100);
 
 
-            //    //Parent table  
-            //    DataTable dtstudent = new DataTable();
-            //    // add column to datatable  
-            //    dtstudent.Columns.Add("Student_ID", typeof(int));
-            //    dtstudent.Columns.Add("Student_Name", typeof(string));
-            //    dtstudent.Columns.Add("Student_RollNo", typeof(string));
+        //    //Parent table  
+        //    DataTable dtstudent = new DataTable();
+        //    // add column to datatable  
+        //    dtstudent.Columns.Add("Student_ID", typeof(int));
+        //    dtstudent.Columns.Add("Student_Name", typeof(string));
+        //    dtstudent.Columns.Add("Student_RollNo", typeof(string));
 
-            //    //Child table  
-            //    DataTable dtstudentMarks = new DataTable();
-            //    dtstudentMarks.Columns.Add("Student_ID", typeof(int));
-            //    dtstudentMarks.Columns.Add("Subject_ID", typeof(int));
-            //    dtstudentMarks.Columns.Add("Subject_Name", typeof(string));
-            //    dtstudentMarks.Columns.Add("Marks", typeof(int));
+        //    //Child table  
+        //    DataTable dtstudentMarks = new DataTable();
+        //    dtstudentMarks.Columns.Add("Student_ID", typeof(int));
+        //    dtstudentMarks.Columns.Add("Subject_ID", typeof(int));
+        //    dtstudentMarks.Columns.Add("Subject_Name", typeof(string));
+        //    dtstudentMarks.Columns.Add("Marks", typeof(int));
 
-            //    //Adding Rows  
-            //    dtstudent.Rows.Add(111, "Devesh", "03021013014");
-            //    dtstudent.Rows.Add(222, "ROLI", "0302101444");
-            //    dtstudent.Rows.Add(333, "ROLI Ji", "030212222");
-            //    dtstudent.Rows.Add(444, "NIKHIL", "KANPUR");
+        //    //Adding Rows  
+        //    dtstudent.Rows.Add(111, "Devesh", "03021013014");
+        //    dtstudent.Rows.Add(222, "ROLI", "0302101444");
+        //    dtstudent.Rows.Add(333, "ROLI Ji", "030212222");
+        //    dtstudent.Rows.Add(444, "NIKHIL", "KANPUR");
 
-            //    // data for devesh ID=111  
-            //    dtstudentMarks.Rows.Add(111, "01", "Physics", 99);
-            //    dtstudentMarks.Rows.Add(111, "02", "Maths", 77);
-            //    dtstudentMarks.Rows.Add(111, "03", "C#", 100);
-            //    dtstudentMarks.Rows.Add(111, "01", "Physics", 99);
+        //    // data for devesh ID=111  
+        //    dtstudentMarks.Rows.Add(111, "01", "Physics", 99);
+        //    dtstudentMarks.Rows.Add(111, "02", "Maths", 77);
+        //    dtstudentMarks.Rows.Add(111, "03", "C#", 100);
+        //    dtstudentMarks.Rows.Add(111, "01", "Physics", 99);
 
 
-            //    //data for ROLI ID=222  
-            //    dtstudentMarks.Rows.Add(222, "01", "Physics", 80);
-            //    dtstudentMarks.Rows.Add(222, "02", "English", 95);
-            //    dtstudentMarks.Rows.Add(222, "03", "Commerce", 95);
-            //    dtstudentMarks.Rows.Add(222, "01", "BankPO", 99);
+        //    //data for ROLI ID=222  
+        //    dtstudentMarks.Rows.Add(222, "01", "Physics", 80);
+        //    dtstudentMarks.Rows.Add(222, "02", "English", 95);
+        //    dtstudentMarks.Rows.Add(222, "03", "Commerce", 95);
+        //    dtstudentMarks.Rows.Add(222, "01", "BankPO", 99);
 
-            //    DataSet dsDataset = new DataSet();
-            //    //Add two DataTables in Dataset  
-            //    dsDataset.Tables.Add(dtstudent);
-            //    dsDataset.Tables.Add(dtstudentMarks);
+        //    DataSet dsDataset = new DataSet();
+        //    //Add two DataTables in Dataset  
+        //    dsDataset.Tables.Add(dtstudent);
+        //    dsDataset.Tables.Add(dtstudentMarks);
 
-            //    DataRelation Datatablerelation = new DataRelation("DetailsMarks", dsDataset.Tables[0].Columns[0], dsDataset.Tables[1].Columns[0], true);
-            //    dsDataset.Relations.Add(Datatablerelation);
-            //    dataGridView1.DataSource = dsDataset.Tables[0];
-            //}
+        //    DataRelation Datatablerelation = new DataRelation("DetailsMarks", dsDataset.Tables[0].Columns[0], dsDataset.Tables[1].Columns[0], true);
+        //    dsDataset.Relations.Add(Datatablerelation);
+        //    dataGridView1.DataSource = dsDataset.Tables[0];
+        //}
 
-        }
+    }
 
         private void ExtraInfo_Click(object sender, DataGridViewCellEventArgs e)
         {
@@ -127,29 +127,81 @@ namespace Apotheek_application
         {
             if (e.ColumnIndex == 0)
             {
-                panel1.BackColor = Color.FromArgb(19, 119, 87);
-                panel1.Visible = true;
-                TotaalGewicht.Visible = true;
-                Type.Visible = true;
-                Leverancier.Visible = true;
-                Bestellen.Visible = true;
-                Naam.Visible = true;
-                EersteLevering.Visible = true;
-                X.Visible = true;
+                var RowData = productList.Products[e.RowIndex];
+                TotaalGewicht.Text = $"Gewicht: {RowData.Gewicht * RowData.aantal}";
+                Naam.Text = $"Naam: {RowData.naam}";
+                //productList.ProductExtraInfo[e.RowIndex].Leverancier;
+               // productList.ProductExtraInfo[e.RowIndex].Type;
+
+
+                if (RowData.naam == "Xanac")
+                {
+
+                    Type.Text = $"Type: Xanac";
+                }
+
+                else if (RowData.naam == "oxazepam")
+                {
+                    Type.Text = $"Type: Spuiten";
+                }
+
+                else if (RowData.naam == "ibuprofen")
+                {
+                    Type.Text = $"Type: Pillen";
+                }
+
+                if (!panel1.Visible) 
+                {
+                    ToggleExtraInfoVisability(false);
+                }
             }
+                
         }
 
         private void X_Click(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.White;
-            panel1.Visible = false;
-            TotaalGewicht.Visible = false;
-            Type.Visible = false;
-            Leverancier.Visible = false;
-            Bestellen.Visible = false;
-            Naam.Visible = false;
-            EersteLevering.Visible = false;
-            X.Visible = false;
+            ToggleExtraInfoVisability(true);
+        }
+
+        private void ToggleExtraInfoVisability(bool NeedsClosing)
+        {
+            if (!NeedsClosing)
+            {
+                if (panel1.Visible == true)
+                {
+                    panel1.Visible = false;
+                    TotaalGewicht.Visible = false;
+                    Type.Visible = false;
+                    Leverancier.Visible = false;
+                    Bestellen.Visible = false;
+                    Naam.Visible = false;
+                    EersteLevering.Visible = false;
+                    X.Visible = false;
+                }
+                else
+                {
+                    panel1.Visible = true;
+                    TotaalGewicht.Visible = true;
+                    Type.Visible = true;
+                    Leverancier.Visible = true;
+                    Bestellen.Visible = true;
+                    Naam.Visible = true;
+                    EersteLevering.Visible = true;
+                    X.Visible = true;
+                }
+            }
+            else
+            {
+                panel1.Visible = false;
+                TotaalGewicht.Visible = false;
+                Type.Visible = false;
+                Leverancier.Visible = false;
+                Bestellen.Visible = false;
+                Naam.Visible = false;
+                EersteLevering.Visible = false;
+                X.Visible = false;
+            }
+
         }
 
         private void Bestellen_Click(object sender, EventArgs e)

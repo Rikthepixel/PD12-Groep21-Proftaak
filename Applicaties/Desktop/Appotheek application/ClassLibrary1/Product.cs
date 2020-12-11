@@ -17,4 +17,10 @@ namespace Appotheekcl
         //public string Type { get; set; }
         //public string Name { get; set; }
     }
+
+    public class ExtraInfo
+    {
+        public string Type { get; set; }
+        public string Leverancier { get; set; }
+    }
 }
