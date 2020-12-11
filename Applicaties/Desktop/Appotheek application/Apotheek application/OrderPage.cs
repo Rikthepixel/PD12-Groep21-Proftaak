@@ -34,11 +34,21 @@ namespace Apotheek_application
         private void OrderPage_Load(object sender, EventArgs e)
         {
             Medicijn_cB.Items.Add("Xanac");
-            Medicijn_cB.Items.Add("ibuprofen");
-            Medicijn_cB.Items.Add("oxazepam");
             Medicijn_cB.Items.Add("test");
             Medicijn_cB.Items.Add("test2");
+            Medicijn_cB.Items.Add("test3");
 
+            Medicijn_cB.Items.Add("ibuprofen");
+            Medicijn_cB.Items.Add("oxazepam");
+
+        //    Medicijn_cB.Items.Add(order.GetName());
+
+            Type_medicijn_cb.Items.Add("Tabletten");
+            Type_medicijn_cb.Items.Add("Dragees");
+            Type_medicijn_cb.Items.Add("Capsules");
+            Type_medicijn_cb.Items.Add("Drankjes");
+            Type_medicijn_cb.Items.Add("Poeders");
+            Type_medicijn_cb.Items.Add("Spray");
         }
 
         private void Order_btn_MouseEnter_2(object sender, EventArgs e)
@@ -84,6 +94,10 @@ namespace Apotheek_application
                 var Nummerof = Aantal_Medicijnen_UpDown.Value;
                 var arryWeight = order.GetWeight(Medicijn);
                 var Weight = arryWeight.Result[0];
+                var arryType = order.GetType(Medicijn);
+                var Type = arryType.Result[0];
+                var arryLeverancier = order.GetLeverancier(Medicijn);
+                var Leverancier = arryLeverancier.Result[0];
                 string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
                 int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
                 int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
@@ -94,7 +108,7 @@ namespace Apotheek_application
                     Month = Month - 12;
                 }
                 string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
-                order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate);
+                order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate, Type, Leverancier);
             }
         }
 
@@ -104,6 +118,8 @@ namespace Apotheek_application
             string New_Aantal = Aantal_txt.Text;
             string New_Gewicht = Gewicht_txt.Text;
             string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string New_Type = Type_medicijn_cb.Text;
+            var New_Leverancier = leverancier_txt.Text;
             int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
             int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
             int Month = Convert.ToInt32(ExpiryMonth);
@@ -113,12 +129,13 @@ namespace Apotheek_application
                 Month = Month - 12;
             }
             string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
-            Console.WriteLine(New_medical);
-            Console.WriteLine(New_Aantal);
-            Console.WriteLine(New_Gewicht);
-            Console.WriteLine(CurrentDate);
-            Console.WriteLine(ExpiryDate);
-            order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
+
+            order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate, New_Type, New_Leverancier);
+        }
+
+        private void Type_medicijn_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
