@@ -16,6 +16,7 @@ namespace Apotheek_application
         MasterPage masterPage;
         ProductPage productPage;
         OrderPage orderPage;
+        HelpPage helpPage;
         public HeaderBar(MasterPage MP)
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace Apotheek_application
 
         private void Header_Load(object sender, EventArgs e)
         {
-            if(masterPage.CurrentUser != null)
+            ResetAllButtonColors();
+            if (masterPage.CurrentUser != null)
             {
                 if (masterPage.CurrentUser.IsLoginValid())
                 {
@@ -63,12 +65,12 @@ namespace Apotheek_application
                 }
 
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);
+                UpdateHeader();
             }
         }
 
-        private void OpenProductPage(object sender, EventArgs e)
+        public void OpenProductPage(object sender, EventArgs e)
         {
-
             if (masterPage.CurrentUser.IsLoginValid())
             {
                 if (productPage == null)
@@ -77,6 +79,7 @@ namespace Apotheek_application
                 }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
+                UpdateHeader();
             } else
             {
                 masterPage.LoginPage.SetLoginError("LoginRequired");
@@ -94,7 +97,20 @@ namespace Apotheek_application
 
         private void OpenHelpPage(object sender, EventArgs e)
         {
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                if (helpPage == null)
+                {
+                    helpPage = new HelpPage(masterPage);
+                }
 
+                masterPage.OpenChildForm(helpPage, helpPage.LoginRequired);
+                UpdateHeader();
+            }
+            else
+            {
+                masterPage.LoginPage.SetLoginError("LoginRequired");
+            }
         }
 
         private void OpenAPage(dynamic TargetPage)
@@ -119,6 +135,7 @@ namespace Apotheek_application
             if(Logout_btn.Text == "Uitloggen")
             {
                 DoLogout(sender, e);
+                ResetAllButtonColors();
             }
             else if (Logout_btn.Text == "Inloggen")
             {
@@ -131,6 +148,7 @@ namespace Apotheek_application
             {
                 
             }
+            UpdateHeader();
         }
 
         public void UpdateHeader()
@@ -152,6 +170,24 @@ namespace Apotheek_application
                 Help_btn.Visible = false;
                 NameTag_label.Visible = false;
             }
+
+            ResetAllButtonColors();
+            if (masterPage.ActiveForm == orderPage)
+            {
+                Bestellen_btn.BackColor = Color.FromArgb(13, 91, 65);
+            }
+            if (masterPage.ActiveForm == productPage)
+            {
+                Producten_Overzicht_btn.BackColor = Color.FromArgb(13, 91, 65);
+            }
+            if (masterPage.ActiveForm == masterPage.LoginPage)
+            {
+                Logout_btn.BackColor = Color.FromArgb(13, 91, 65);
+            }
+            if (masterPage.ActiveForm == helpPage)
+            {
+                Help_btn.BackColor = Color.FromArgb(13, 91, 65);
+            }
         }
 
         public void SetLogInOutText(string NewButtonText)
@@ -162,6 +198,14 @@ namespace Apotheek_application
         public void SetNameTag(string NewNameTag)
         {
             NameTag_label.Text = NewNameTag;
+        }
+
+        private void ResetAllButtonColors()
+        {
+            Producten_Overzicht_btn.BackColor = Color.FromArgb(31, 133, 99);
+            Bestellen_btn.BackColor = Color.FromArgb(31, 133, 99);
+            Help_btn.BackColor = Color.FromArgb(31, 133, 99);
+            Logout_btn.BackColor = Color.FromArgb(31, 133, 99);
         }
     }
 }

@@ -35,6 +35,7 @@
             this.Wachtwoord_txt = new System.Windows.Forms.TextBox();
             this.Wacht_vergeten_Link_Label = new System.Windows.Forms.LinkLabel();
             this.Login_btn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -42,9 +43,10 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Location = new System.Drawing.Point(500, 350);
+            this.label1.Location = new System.Drawing.Point(350, 353);
+            this.label1.MinimumSize = new System.Drawing.Size(300, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(2, 18);
+            this.label1.Size = new System.Drawing.Size(300, 30);
             this.label1.TabIndex = 15;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -127,6 +129,7 @@
             this.Wacht_vergeten_Link_Label.TabStop = true;
             this.Wacht_vergeten_Link_Label.Text = "Wachtwoord vergeten?";
             this.Wacht_vergeten_Link_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Wacht_vergeten_Link_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Wacht_vergeten_Link_Label_LinkClicked);
             // 
             // Login_btn
             // 
@@ -147,12 +150,23 @@
             this.Login_btn.UseVisualStyleBackColor = false;
             this.Login_btn.Click += new System.EventHandler(this.Login_btn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.panel1.Location = new System.Drawing.Point(-15, 386);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1023, 68);
+            this.panel1.TabIndex = 16;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -180,5 +194,6 @@
         private System.Windows.Forms.TextBox Wachtwoord_txt;
         private System.Windows.Forms.LinkLabel Wacht_vergeten_Link_Label;
         private System.Windows.Forms.Button Login_btn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

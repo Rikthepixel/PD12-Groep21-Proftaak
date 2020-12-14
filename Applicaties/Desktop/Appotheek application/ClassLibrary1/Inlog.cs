@@ -31,7 +31,7 @@ namespace Appotheekcl
                 try
                 {
                     DataAccess LoginTest = new DataAccess();
-                    List<User> Users = await LoginTest.LoadData<User>(LoginTest.LoginConnStr, $"SELECT * FROM User WHERE LOWER(Email) = LOWER('{Email}') AND Password = '{Password}'");
+                    List<User> Users = await LoginTest.LoadData<User>(LoginTest.LoginConnStr, $"SELECT * FROM User WHERE Password = '{Password}' AND LOWER(Email) = LOWER('{Email}')");
                     if (Users.Count == 1)
                     {
                         LoggedInUser = Users[0];
@@ -61,7 +61,7 @@ namespace Appotheekcl
                 LoginError = "NoDBConnection";
             } else
             {
-                LoginError = "UnknowError";
+                LoginError = "UnknownError";
             }
         }
         private void setLoginError(string Error)
