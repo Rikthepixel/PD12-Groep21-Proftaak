@@ -22,6 +22,7 @@ namespace Apotheek_application
         {
             InitializeComponent();
             masterPage = MP;
+            masterPage.Header.UpdateHeader();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

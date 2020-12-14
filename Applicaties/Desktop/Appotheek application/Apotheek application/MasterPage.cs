@@ -21,9 +21,9 @@ namespace Apotheek_application
         public MasterPage()
         {
             InitializeComponent();
-            LoginPage = new Login(this);
-            Header = new HeaderBar(this);
             CurrentUser = new User();
+            Header = new HeaderBar(this);
+            LoginPage = new Login(this);
         }
 
         public Form ActiveForm { get; private set; }
@@ -32,7 +32,8 @@ namespace Apotheek_application
         private void MasterPage_Load(object sender, EventArgs e)
         {
             OpenChildForm(Header, HeaderPanel, Headr);
-            OpenChildForm(LoginPage, ChildFormPanel, ActiveForm);
+            OpenChildForm(LoginPage, LoginPage.LoginRequired);
+            Header.UpdateHeader();
         }
 
         public void OpenChildForm(Form Page, dynamic InPanel, Form ActiveForm)
