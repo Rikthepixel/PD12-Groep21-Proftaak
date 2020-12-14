@@ -33,16 +33,10 @@ namespace Apotheek_application
         }
         private void OrderPage_Load(object sender, EventArgs e)
         {
-            Medicijn_cB.Items.Add("Xanac");
-            Medicijn_cB.Items.Add("test");
-            Medicijn_cB.Items.Add("test2");
-            Medicijn_cB.Items.Add("test3");
-
-            Medicijn_cB.Items.Add("ibuprofen");
-            Medicijn_cB.Items.Add("oxazepam");
-
-        //    Medicijn_cB.Items.Add(order.GetName());
-
+            foreach (var item in order.GetName().Result)
+            {
+                Medicijn_cB.Items.Add(item);
+            }
             Type_medicijn_cb.Items.Add("Tabletten");
             Type_medicijn_cb.Items.Add("Dragees");
             Type_medicijn_cb.Items.Add("Capsules");
