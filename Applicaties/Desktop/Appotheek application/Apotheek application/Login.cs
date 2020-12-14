@@ -14,7 +14,8 @@ namespace Apotheek_application
     public partial class Login : Form
     {
         Inlog Inlog = new Inlog();
-
+        Panel WachtwoordPanel;
+        Panel WachtwoordBorder;
         MasterPage masterPage;
         public bool LoginRequired { get; private set; }
 
@@ -96,6 +97,49 @@ namespace Apotheek_application
         public void SetLoginError(string ErrorMessage)
         {
             label1.Text = ErrorMessage;
+        }
+
+        bool Wachtwoord = false;
+        private void Wacht_vergeten_Link_Label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!Wachtwoord)
+            {
+                if (WachtwoordPanel == null)
+                {
+                    Size InsideSize = new Size(500, 180);
+                    int BorderSize = 4;
+                    WachtwoordBorder = new Panel();
+                    WachtwoordBorder.BackColor = Color.Blue;
+                    WachtwoordBorder.Size = new Size(InsideSize.Width + 8, InsideSize.Height + 8);
+                    Point newBorderLocation = new Point((Size.Width / 2) - (WachtwoordBorder.Size.Width / 2), (Wacht_vergeten_Link_Label.Location.Y - WachtwoordBorder.Size.Height) - 5);
+                    WachtwoordBorder.Location = newBorderLocation;
+                    Controls.Add(WachtwoordPanel);
+                    WachtwoordBorder.Anchor = AnchorStyles.Top;
+                    WachtwoordBorder.BringToFront();
+
+                    WachtwoordPanel = new Panel();
+                    WachtwoordPanel.BackColor = Color.Black;
+                    WachtwoordPanel.Size = new Size(InsideSize.Width - 8, InsideSize.Height - 8); ;
+                    Point newLocation = new Point((Size.Width / 2) - (WachtwoordPanel.Size.Width / 2), (Wacht_vergeten_Link_Label.Location.Y - WachtwoordPanel.Size.Height) - 5);
+                    WachtwoordPanel.Location = newLocation;
+                    Controls.Add(WachtwoordPanel);
+                    WachtwoordPanel.Anchor = AnchorStyles.Top;
+                    WachtwoordPanel.BringToFront();
+                }
+                else
+                {
+                    WachtwoordBorder.Visible = true;
+                    WachtwoordPanel.Visible = true;
+                }
+                Wachtwoord = true;
+            }
+            else
+            {
+                WachtwoordBorder.Visible = false;
+                WachtwoordPanel.Visible = false;
+                Wachtwoord = false;
+            }
+
         }
     }
 }

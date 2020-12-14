@@ -129,6 +129,7 @@
             this.Wacht_vergeten_Link_Label.TabStop = true;
             this.Wacht_vergeten_Link_Label.Text = "Wachtwoord vergeten?";
             this.Wacht_vergeten_Link_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Wacht_vergeten_Link_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Wacht_vergeten_Link_Label_LinkClicked);
             // 
             // Login_btn
             // 
