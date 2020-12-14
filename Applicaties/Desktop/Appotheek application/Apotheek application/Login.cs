@@ -14,6 +14,7 @@ namespace Apotheek_application
     public partial class Login : Form
     {
         Inlog Inlog = new Inlog();
+
         MasterPage masterPage;
         public bool LoginRequired { get; private set; }
 
@@ -37,6 +38,7 @@ namespace Apotheek_application
                 {
                     ProductPage RedirectionPage = new ProductPage(masterPage);
                     masterPage.CurrentUser = user;
+                    masterPage.Header.SetNameTag($"{user.Voornaam} {user.Achternaam}");
                     masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
                 }
                 else

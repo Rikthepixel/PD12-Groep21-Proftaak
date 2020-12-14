@@ -32,6 +32,7 @@ namespace Apotheek_application
                     Producten_Overzicht_btn.Visible = true;
                     Bestellen_btn.Visible = true;
                     Help_btn.Visible = true;
+                    NameTag_label.Visible = true;
                 }
                 else
                 {
@@ -39,6 +40,7 @@ namespace Apotheek_application
                     Producten_Overzicht_btn.Visible = false;
                     Bestellen_btn.Visible = false;
                     Help_btn.Visible = false;
+                    NameTag_label.Visible = false;
                 }
             }
             else if (masterPage.CurrentUser == null)
@@ -47,6 +49,7 @@ namespace Apotheek_application
                 Producten_Overzicht_btn.Visible = false;
                 Bestellen_btn.Visible = false;
                 Help_btn.Visible = false;
+                NameTag_label.Visible = false;
             }
         }
 
@@ -138,6 +141,8 @@ namespace Apotheek_application
                 Producten_Overzicht_btn.Visible = true;
                 Bestellen_btn.Visible = true;
                 Help_btn.Visible = true;
+                NameTag_label.Visible = true;
+                Logout_btn.Text = "Uitloggen";
             }
             else
             {
@@ -145,12 +150,18 @@ namespace Apotheek_application
                 Producten_Overzicht_btn.Visible = false;
                 Bestellen_btn.Visible = false;
                 Help_btn.Visible = false;
+                NameTag_label.Visible = false;
             }
         }
 
         public void SetLogInOutText(string NewButtonText)
         {
             Logout_btn.Text = NewButtonText;
+        }
+
+        public void SetNameTag(string NewNameTag)
+        {
+            NameTag_label.Text = NewNameTag;
         }
     }
 }

@@ -32,7 +32,7 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.User_label = new System.Windows.Forms.Label();
+            this.NameTag_label = new System.Windows.Forms.Label();
             this.Logout_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Producten_Overzicht_btn = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.User_label);
+            this.panel2.Controls.Add(this.NameTag_label);
             this.panel2.Controls.Add(this.Logout_btn);
             this.panel2.Location = new System.Drawing.Point(402, 88);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -80,20 +80,19 @@
             this.panel2.Size = new System.Drawing.Size(287, 52);
             this.panel2.TabIndex = 16;
             // 
-            // User_label
+            // NameTag_label
             // 
-            this.User_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.NameTag_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.User_label.BackColor = System.Drawing.Color.White;
-            this.User_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.User_label.Location = new System.Drawing.Point(-1, 1);
-            this.User_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.User_label.Name = "User_label";
-            this.User_label.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.User_label.Size = new System.Drawing.Size(147, 52);
-            this.User_label.TabIndex = 5;
-            this.User_label.Text = "Student Student";
-            this.User_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NameTag_label.BackColor = System.Drawing.Color.White;
+            this.NameTag_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.NameTag_label.Location = new System.Drawing.Point(0, 0);
+            this.NameTag_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
+            this.NameTag_label.Name = "NameTag_label";
+            this.NameTag_label.Size = new System.Drawing.Size(147, 52);
+            this.NameTag_label.TabIndex = 5;
+            this.NameTag_label.Text = "Invisable";
+            this.NameTag_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Logout_btn
             // 
@@ -206,7 +205,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label User_label;
+        private System.Windows.Forms.Label NameTag_label;
         private System.Windows.Forms.Button Logout_btn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Producten_Overzicht_btn;
