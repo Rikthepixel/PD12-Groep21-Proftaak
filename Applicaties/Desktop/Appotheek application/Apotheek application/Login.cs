@@ -50,6 +50,11 @@ namespace Apotheek_application
             {
                 SetLoginError(Inlog.GetLoginError());
             }
+            label1.Text = Inlog.GetLoginError();
+            Email_txt.Text = "";
+            Wachtwoord_txt.Text = "";
+            WachtwoordAddPlaceHolder(sender, e);
+            EmailAddPlaceHolder(sender, e);
             masterPage.Header.UpdateHeader();
         }
         
@@ -60,6 +65,7 @@ namespace Apotheek_application
                 Wachtwoord_txt.Text = "";
                 Console.WriteLine(Wachtwoord_txt.PasswordChar);
                 Wachtwoord_txt.PasswordChar = '*';
+                this.AcceptButton = Login_btn;
             }
         }
 
@@ -69,21 +75,22 @@ namespace Apotheek_application
             {
                 Wachtwoord_txt.Text = "Wachtwoord...";
                 Wachtwoord_txt.PasswordChar = '\0';
+                this.AcceptButton = null;
             }
         }
 
         private void EmailRemovePlaceHolder(object sender, EventArgs e)
         {
             if (Email_txt.Text == "Email...")
-            {
                 Email_txt.Text = "";
-            }
+            this.AcceptButton = Login_btn;
         }
 
         private void EmailAddPlaceHolder(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Email_txt.Text))
                 Email_txt.Text = "Email...";
+            this.AcceptButton = null;
         }
 
         public void SetLoginError(string ErrorMessage)
