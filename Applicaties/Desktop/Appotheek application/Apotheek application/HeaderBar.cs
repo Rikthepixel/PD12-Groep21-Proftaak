@@ -24,7 +24,8 @@ namespace Apotheek_application
 
         private void Header_Load(object sender, EventArgs e)
         {
-            if(masterPage.CurrentUser != null)
+            ResetAllButtonColors();
+            if (masterPage.CurrentUser != null)
             {
                 if (masterPage.CurrentUser.IsLoginValid())
                 {
@@ -60,6 +61,8 @@ namespace Apotheek_application
                 if (orderPage == null)
                 {
                     orderPage = new OrderPage();
+                    ResetAllButtonColors();
+                    Bestellen_btn.BackColor = Color.FromArgb(13, 91, 65);
                 }
 
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);
@@ -74,6 +77,8 @@ namespace Apotheek_application
                 if (productPage == null)
                 {
                     productPage = new ProductPage(masterPage);
+                    ResetAllButtonColors();
+                    Producten_Overzicht_btn.BackColor = Color.FromArgb(13, 91, 65);
                 }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
@@ -94,7 +99,8 @@ namespace Apotheek_application
 
         private void OpenHelpPage(object sender, EventArgs e)
         {
-
+            ResetAllButtonColors();
+            Help_btn.BackColor = Color.FromArgb(13, 91, 65);
         }
 
         private void OpenAPage(dynamic TargetPage)
@@ -162,6 +168,13 @@ namespace Apotheek_application
         public void SetNameTag(string NewNameTag)
         {
             NameTag_label.Text = NewNameTag;
+        }
+
+        private void ResetAllButtonColors()
+        {
+            Producten_Overzicht_btn.BackColor = Color.FromArgb(31, 133, 99);
+            Bestellen_btn.BackColor = Color.FromArgb(31, 133, 99);
+            Help_btn.BackColor = Color.FromArgb(31, 133, 99);
         }
     }
 }
