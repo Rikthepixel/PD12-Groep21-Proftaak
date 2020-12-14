@@ -99,6 +99,7 @@
             this.Logout_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Logout_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Logout_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Logout_btn.FlatAppearance.BorderSize = 0;
             this.Logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.Logout_btn.Location = new System.Drawing.Point(155, 0);
@@ -123,11 +124,12 @@
             // Producten_Overzicht_btn
             // 
             this.Producten_Overzicht_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Producten_Overzicht_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(91)))), ((int)(((byte)(65)))));
+            this.Producten_Overzicht_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Producten_Overzicht_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(91)))), ((int)(((byte)(65)))));
+            this.Producten_Overzicht_btn.FlatAppearance.BorderSize = 0;
             this.Producten_Overzicht_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Producten_Overzicht_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Producten_Overzicht_btn.Location = new System.Drawing.Point(-8, 0);
+            this.Producten_Overzicht_btn.Location = new System.Drawing.Point(4, 0);
             this.Producten_Overzicht_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Producten_Overzicht_btn.Name = "Producten_Overzicht_btn";
             this.Producten_Overzicht_btn.Size = new System.Drawing.Size(241, 52);
@@ -141,9 +143,10 @@
             this.Bestellen_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Bestellen_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Bestellen_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Bestellen_btn.FlatAppearance.BorderSize = 0;
             this.Bestellen_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bestellen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Bestellen_btn.Location = new System.Drawing.Point(241, 0);
+            this.Bestellen_btn.Location = new System.Drawing.Point(250, 0);
             this.Bestellen_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Bestellen_btn.Name = "Bestellen_btn";
             this.Bestellen_btn.Size = new System.Drawing.Size(132, 52);
@@ -156,6 +159,7 @@
             // 
             this.Help_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Help_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Help_btn.FlatAppearance.BorderSize = 0;
             this.Help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Help_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Help_btn.Location = new System.Drawing.Point(557, 49);

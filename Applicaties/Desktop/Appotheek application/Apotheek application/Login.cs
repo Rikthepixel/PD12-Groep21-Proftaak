@@ -36,10 +36,10 @@ namespace Apotheek_application
             {
                 if (user.IsLoginValid())
                 {
-                    ProductPage RedirectionPage = new ProductPage(masterPage);
                     masterPage.CurrentUser = user;
+                    masterPage.Header.OpenProductPage(sender, e);
                     masterPage.Header.SetNameTag($"{user.Voornaam} {user.Achternaam}");
-                    masterPage.OpenChildForm(RedirectionPage, RedirectionPage.LoginRequired);
+                    masterPage.Header.UpdateHeader();
                 }
                 else
                 {
