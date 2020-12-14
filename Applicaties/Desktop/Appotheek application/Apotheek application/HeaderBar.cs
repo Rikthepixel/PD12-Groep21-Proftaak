@@ -16,6 +16,7 @@ namespace Apotheek_application
         MasterPage masterPage;
         ProductPage productPage;
         OrderPage orderPage;
+        HelpPage helpPage;
         public HeaderBar(MasterPage MP)
         {
             InitializeComponent();
@@ -70,7 +71,6 @@ namespace Apotheek_application
 
         public void OpenProductPage(object sender, EventArgs e)
         {
-
             if (masterPage.CurrentUser.IsLoginValid())
             {
                 if (productPage == null)
@@ -97,7 +97,20 @@ namespace Apotheek_application
 
         private void OpenHelpPage(object sender, EventArgs e)
         {
-            UpdateHeader();
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                if (helpPage == null)
+                {
+                    helpPage = new HelpPage(masterPage);
+                }
+
+                masterPage.OpenChildForm(helpPage, helpPage.LoginRequired);
+                UpdateHeader();
+            }
+            else
+            {
+                masterPage.LoginPage.SetLoginError("LoginRequired");
+            }
         }
 
         private void OpenAPage(dynamic TargetPage)
@@ -171,10 +184,10 @@ namespace Apotheek_application
             {
                 Logout_btn.BackColor = Color.FromArgb(13, 91, 65);
             }
-            //if (masterPage.ActiveForm == helpPage)
-            //{
-            //Help_btn.BackColor = Color.FromArgb(13, 91, 65);
-            //}
+            if (masterPage.ActiveForm == helpPage)
+            {
+                Help_btn.BackColor = Color.FromArgb(13, 91, 65);
+            }
         }
 
         public void SetLogInOutText(string NewButtonText)
