@@ -16,7 +16,7 @@ namespace Apotheek_application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddUserPage());
+            Application.Run(new MasterPage());
         }
     }
 }
