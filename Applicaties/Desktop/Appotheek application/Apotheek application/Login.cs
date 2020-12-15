@@ -14,8 +14,17 @@ namespace Apotheek_application
     public partial class Login : Form
     {
         Inlog Inlog = new Inlog();
+
+        #region WachtWoord vergreten panel
+
         Panel WachtwoordPanel;
         Panel WachtwoordBorder;
+        Label WWVTopLine;
+        Label WWVMidLine;
+        Label TelLine;
+
+        #endregion
+
         MasterPage masterPage;
         public bool LoginRequired { get; private set; }
 
@@ -106,25 +115,78 @@ namespace Apotheek_application
             {
                 if (WachtwoordPanel == null)
                 {
-                    Size InsideSize = new Size(500, 180);
+                    Size InsideSize = new Size(450, 100);
                     int BorderSize = 4;
+                    int TextPaddingTop = 10;
+                    int TextPaddingBottom = 10;
+
+                    #region PassWord Forgotten Border
                     WachtwoordBorder = new Panel();
-                    WachtwoordBorder.BackColor = Color.Blue;
-                    WachtwoordBorder.Size = new Size(InsideSize.Width + 8, InsideSize.Height + 8);
+                    WachtwoordBorder.BackColor = Color.FromArgb(23, 115, 84);
+                    WachtwoordBorder.Size = new Size(InsideSize.Width + BorderSize * 2, InsideSize.Height + BorderSize * 2);
                     Point newBorderLocation = new Point((Size.Width / 2) - (WachtwoordBorder.Size.Width / 2), (Wacht_vergeten_Link_Label.Location.Y - WachtwoordBorder.Size.Height) - 5);
                     WachtwoordBorder.Location = newBorderLocation;
-                    Controls.Add(WachtwoordPanel);
+                    Controls.Add(WachtwoordBorder);
                     WachtwoordBorder.Anchor = AnchorStyles.Top;
                     WachtwoordBorder.BringToFront();
+                    #endregion
 
+                    #region PassWord Forgotten Panel
                     WachtwoordPanel = new Panel();
-                    WachtwoordPanel.BackColor = Color.Black;
-                    WachtwoordPanel.Size = new Size(InsideSize.Width - 8, InsideSize.Height - 8); ;
-                    Point newLocation = new Point((Size.Width / 2) - (WachtwoordPanel.Size.Width / 2), (Wacht_vergeten_Link_Label.Location.Y - WachtwoordPanel.Size.Height) - 5);
+                    WachtwoordBorder.Controls.Add(WachtwoordPanel);
+
+                    WachtwoordPanel.BackColor = Color.FromArgb(235, 235, 235);
+                    WachtwoordPanel.Size = InsideSize;
+                    Point newLocation = new Point(BorderSize, BorderSize);
                     WachtwoordPanel.Location = newLocation;
-                    Controls.Add(WachtwoordPanel);
                     WachtwoordPanel.Anchor = AnchorStyles.Top;
-                    WachtwoordPanel.BringToFront();
+                    #endregion
+
+                    #region PassWord Forgotten Text
+
+                    Font LabelFont = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+                    #region TopLine
+                    WWVTopLine = new Label();
+                    Point TopLineLocation = new Point(0, TextPaddingTop);
+                    WWVTopLine.Location = TopLineLocation;
+                    WWVTopLine.AutoSize = false;
+                    WWVTopLine.TextAlign = ContentAlignment.MiddleCenter;
+                    WWVTopLine.Size = new Size(WachtwoordPanel.Size.Width, WWVTopLine.Size.Height);
+                    WWVTopLine.Text = "Neem a.u.b. contact op met uw systeembeheer om";
+                    WWVTopLine.Font = LabelFont;
+                    #endregion
+
+                    #region MidLine
+                    WWVMidLine = new Label();
+                    Point MidLineLocation = new Point(0, TopLineLocation.Y + WWVMidLine.Size.Height);
+                    WWVMidLine.Location = MidLineLocation;
+                    WWVMidLine.AutoSize = false;
+                    WWVMidLine.TextAlign = ContentAlignment.MiddleCenter;
+                    WWVMidLine.Size = new Size(WachtwoordPanel.Size.Width, WWVMidLine.Size.Height);
+                    WWVMidLine.Text = "uw wachtwoord te veranderen";
+                    WWVMidLine.Font = LabelFont;
+                    #endregion
+
+                    #region TelLine
+                    TelLine = new Label();
+                    Point TelLineLocation = new Point(0, MidLineLocation.Y + WWVMidLine.Size.Height + 30);
+                    TelLine.Location = TelLineLocation;
+                    TelLine.AutoSize = false;
+                    TelLine.TextAlign = ContentAlignment.MiddleCenter;
+                    TelLine.Size = new Size(WachtwoordPanel.Size.Width, TelLine.Size.Height);
+                    TelLine.Text = "Tel:pl4c3h0ld3r";
+                    TelLine.Font = LabelFont;
+                    #endregion
+
+                    WachtwoordPanel.Controls.Add(WWVTopLine);
+                    WachtwoordPanel.Controls.Add(WWVMidLine);
+                    WachtwoordPanel.Controls.Add(TelLine);
+
+                    WachtwoordBorder.Location = new Point(WachtwoordBorder.Location.X, WachtwoordBorder.Location.Y - (TextPaddingBottom + TextPaddingTop));
+                    WachtwoordBorder.Size = new Size(WachtwoordBorder.Size.Width, WachtwoordBorder.Size.Height + (TextPaddingBottom + TextPaddingTop));
+                    WachtwoordPanel.Size = new Size(WachtwoordPanel.Size.Width, WachtwoordPanel.Size.Height + (TextPaddingBottom + TextPaddingTop));
+                    #endregion
                 }
                 else
                 {
