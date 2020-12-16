@@ -40,7 +40,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ExtraInfo = new System.Windows.Forms.DataGridViewButtonColumn();
             this.SearchBar = new System.Windows.Forms.Label();
             this.SearchBarPanel = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,13 +53,14 @@
             this.Naam = new System.Windows.Forms.Label();
             this.TotaalGewicht = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aantalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gewichtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumOntvangenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uitersteDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ExtraInfo = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SearchBarPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,16 +137,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1301, 391);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ExtraInfo
-            // 
-            this.ExtraInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExtraInfo.HeaderText = "Info";
-            this.ExtraInfo.MinimumWidth = 6;
-            this.ExtraInfo.Name = "ExtraInfo";
-            this.ExtraInfo.ReadOnly = true;
-            this.ExtraInfo.Text = "+";
-            this.ExtraInfo.UseColumnTextForButtonValue = true;
             // 
             // SearchBar
             // 
@@ -309,6 +299,14 @@
             this.RefreshButton.UseVisualStyleBackColor = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Appotheekcl.Product);
+            // 
+            // productListBindingSource
+            // 
+            this.productListBindingSource.DataSource = typeof(Appotheekcl.ProductList);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -330,6 +328,7 @@
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
             this.aantalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.aantalDataGridViewTextBoxColumn.FillWeight = 21.58273F;
             this.aantalDataGridViewTextBoxColumn.HeaderText = "aantal";
             this.aantalDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.aantalDataGridViewTextBoxColumn.Name = "aantalDataGridViewTextBoxColumn";
@@ -341,6 +340,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
             this.gewichtDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gewichtDataGridViewTextBoxColumn.FillWeight = 119.6043F;
             this.gewichtDataGridViewTextBoxColumn.HeaderText = "Gewicht";
             this.gewichtDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.gewichtDataGridViewTextBoxColumn.Name = "gewichtDataGridViewTextBoxColumn";
@@ -352,6 +352,7 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
             this.datumOntvangenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.datumOntvangenDataGridViewTextBoxColumn.FillWeight = 119.6043F;
             this.datumOntvangenDataGridViewTextBoxColumn.HeaderText = "Datum Ontvangen";
             this.datumOntvangenDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.datumOntvangenDataGridViewTextBoxColumn.Name = "datumOntvangenDataGridViewTextBoxColumn";
@@ -363,18 +364,22 @@
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
             this.uitersteDatumDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.uitersteDatumDataGridViewTextBoxColumn.FillWeight = 119.6043F;
             this.uitersteDatumDataGridViewTextBoxColumn.HeaderText = "Uiterste Datum";
             this.uitersteDatumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.uitersteDatumDataGridViewTextBoxColumn.Name = "uitersteDatumDataGridViewTextBoxColumn";
             this.uitersteDatumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // productBindingSource
+            // ExtraInfo
             // 
-            this.productBindingSource.DataSource = typeof(Appotheekcl.Product);
-            // 
-            // productListBindingSource
-            // 
-            this.productListBindingSource.DataSource = typeof(Appotheekcl.ProductList);
+            this.ExtraInfo.FillWeight = 119.6043F;
+            this.ExtraInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExtraInfo.HeaderText = "Info";
+            this.ExtraInfo.MinimumWidth = 6;
+            this.ExtraInfo.Name = "ExtraInfo";
+            this.ExtraInfo.ReadOnly = true;
+            this.ExtraInfo.Text = "+";
+            this.ExtraInfo.UseColumnTextForButtonValue = true;
             // 
             // ProductPage
             // 
@@ -414,12 +419,6 @@
         private System.Windows.Forms.BindingSource productListBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aantalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gewichtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datumOntvangenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uitersteDatumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn ExtraInfo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Bestellen;
         private System.Windows.Forms.Label EersteLevering;
@@ -429,5 +428,11 @@
         private System.Windows.Forms.Label TotaalGewicht;
         private System.Windows.Forms.Button X;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aantalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gewichtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumOntvangenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uitersteDatumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn ExtraInfo;
     }
 }
