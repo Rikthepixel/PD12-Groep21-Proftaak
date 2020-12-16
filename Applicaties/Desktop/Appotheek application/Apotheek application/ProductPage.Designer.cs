@@ -32,33 +32,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductPage));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aantalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gewichtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datumOntvangenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uitersteDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExtraInfo = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchBar = new System.Windows.Forms.Label();
             this.SearchBarPanel = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.productListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.X = new System.Windows.Forms.Button();
             this.Bestellen = new System.Windows.Forms.Button();
@@ -67,20 +53,29 @@
             this.Type = new System.Windows.Forms.Label();
             this.Naam = new System.Windows.Forms.Label();
             this.TotaalGewicht = new System.Windows.Forms.Label();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aantalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gewichtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumOntvangenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uitersteDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SearchBarPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productListBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(4, 9);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSearch.Location = new System.Drawing.Point(9, 9);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(388, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(382, 22);
             this.textBoxSearch.TabIndex = 0;
             // 
             // dataGridView1
@@ -90,9 +85,6 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -124,8 +116,9 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.dataGridView1.Location = new System.Drawing.Point(1, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -138,10 +131,183 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1300, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(1301, 391);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ExtraInfo
+            // 
+            this.ExtraInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExtraInfo.HeaderText = "Info";
+            this.ExtraInfo.MinimumWidth = 6;
+            this.ExtraInfo.Name = "ExtraInfo";
+            this.ExtraInfo.ReadOnly = true;
+            this.ExtraInfo.Text = "+";
+            this.ExtraInfo.UseColumnTextForButtonValue = true;
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.AutoSize = true;
+            this.SearchBar.BackColor = System.Drawing.SystemColors.Control;
+            this.SearchBar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBar.Location = new System.Drawing.Point(68, 87);
+            this.SearchBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.Size = new System.Drawing.Size(97, 20);
+            this.SearchBar.TabIndex = 2;
+            this.SearchBar.Text = "SearchBar";
+            // 
+            // SearchBarPanel
+            // 
+            this.SearchBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.SearchBarPanel.Controls.Add(this.textBoxSearch);
+            this.SearchBarPanel.Location = new System.Drawing.Point(63, 111);
+            this.SearchBarPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchBarPanel.Name = "SearchBarPanel";
+            this.SearchBarPanel.Size = new System.Drawing.Size(400, 40);
+            this.SearchBarPanel.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PageForm";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PageForm";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(16, 160);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1301, 391);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.X);
+            this.panel1.Controls.Add(this.Bestellen);
+            this.panel1.Controls.Add(this.EersteLevering);
+            this.panel1.Controls.Add(this.Leverancier);
+            this.panel1.Controls.Add(this.Type);
+            this.panel1.Controls.Add(this.Naam);
+            this.panel1.Controls.Add(this.TotaalGewicht);
+            this.panel1.Location = new System.Drawing.Point(865, 22);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(432, 129);
+            this.panel1.TabIndex = 5;
+            this.panel1.Visible = false;
+            // 
+            // X
+            // 
+            this.X.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.X.FlatAppearance.BorderSize = 0;
+            this.X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.X.Location = new System.Drawing.Point(4, 4);
+            this.X.Margin = new System.Windows.Forms.Padding(4);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(27, 25);
+            this.X.TabIndex = 6;
+            this.X.Text = "X";
+            this.X.UseVisualStyleBackColor = false;
+            this.X.Visible = false;
+            this.X.Click += new System.EventHandler(this.X_Click);
+            // 
+            // Bestellen
+            // 
+            this.Bestellen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.Bestellen.FlatAppearance.BorderSize = 0;
+            this.Bestellen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bestellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Bestellen.Location = new System.Drawing.Point(224, 91);
+            this.Bestellen.Margin = new System.Windows.Forms.Padding(4);
+            this.Bestellen.Name = "Bestellen";
+            this.Bestellen.Size = new System.Drawing.Size(181, 28);
+            this.Bestellen.TabIndex = 5;
+            this.Bestellen.Text = "Bestellen";
+            this.Bestellen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Bestellen.UseVisualStyleBackColor = false;
+            this.Bestellen.Visible = false;
+            this.Bestellen.Click += new System.EventHandler(this.Bestellen_Click);
+            // 
+            // EersteLevering
+            // 
+            this.EersteLevering.AutoSize = true;
+            this.EersteLevering.Location = new System.Drawing.Point(221, 59);
+            this.EersteLevering.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EersteLevering.Name = "EersteLevering";
+            this.EersteLevering.Size = new System.Drawing.Size(180, 17);
+            this.EersteLevering.TabIndex = 4;
+            this.EersteLevering.Text = "Eerste Levering: 10/8/2018";
+            this.EersteLevering.Visible = false;
+            // 
+            // Leverancier
+            // 
+            this.Leverancier.AutoSize = true;
+            this.Leverancier.Location = new System.Drawing.Point(221, 22);
+            this.Leverancier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Leverancier.Name = "Leverancier";
+            this.Leverancier.Size = new System.Drawing.Size(191, 17);
+            this.Leverancier.TabIndex = 3;
+            this.Leverancier.Text = "Leverancier: Mosadex Groep";
+            this.Leverancier.Visible = false;
+            // 
+            // Type
+            // 
+            this.Type.AutoSize = true;
+            this.Type.Location = new System.Drawing.Point(39, 96);
+            this.Type.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(108, 17);
+            this.Type.TabIndex = 2;
+            this.Type.Text = "Type: Tabletten";
+            this.Type.Visible = false;
+            // 
+            // Naam
+            // 
+            this.Naam.AutoSize = true;
+            this.Naam.Location = new System.Drawing.Point(39, 22);
+            this.Naam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Naam.Name = "Naam";
+            this.Naam.Size = new System.Drawing.Size(93, 17);
+            this.Naam.TabIndex = 1;
+            this.Naam.Text = "Naam: Xanac";
+            this.Naam.Visible = false;
+            // 
+            // TotaalGewicht
+            // 
+            this.TotaalGewicht.AutoSize = true;
+            this.TotaalGewicht.Location = new System.Drawing.Point(39, 59);
+            this.TotaalGewicht.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotaalGewicht.Name = "TotaalGewicht";
+            this.TotaalGewicht.Size = new System.Drawing.Size(134, 17);
+            this.TotaalGewicht.TabIndex = 0;
+            this.TotaalGewicht.Text = "Totaal Gewicht: 540";
+            this.TotaalGewicht.Visible = false;
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.RefreshButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RefreshButton.BackgroundImage")));
+            this.RefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RefreshButton.FlatAppearance.BorderSize = 0;
+            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton.Location = new System.Drawing.Point(16, 111);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(40, 40);
+            this.RefreshButton.TabIndex = 6;
+            this.RefreshButton.UseVisualStyleBackColor = false;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -202,190 +368,37 @@
             this.uitersteDatumDataGridViewTextBoxColumn.Name = "uitersteDatumDataGridViewTextBoxColumn";
             this.uitersteDatumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ExtraInfo
-            // 
-            this.ExtraInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExtraInfo.HeaderText = "Info";
-            this.ExtraInfo.MinimumWidth = 6;
-            this.ExtraInfo.Name = "ExtraInfo";
-            this.ExtraInfo.ReadOnly = true;
-            this.ExtraInfo.Text = "+";
-            this.ExtraInfo.UseColumnTextForButtonValue = true;
-            // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(Appotheekcl.Product);
             // 
-            // SearchBar
-            // 
-            this.SearchBar.AutoSize = true;
-            this.SearchBar.BackColor = System.Drawing.SystemColors.Control;
-            this.SearchBar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBar.Location = new System.Drawing.Point(20, 87);
-            this.SearchBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SearchBar.Name = "SearchBar";
-            this.SearchBar.Size = new System.Drawing.Size(97, 20);
-            this.SearchBar.TabIndex = 2;
-            this.SearchBar.Text = "SearchBar";
-            // 
-            // SearchBarPanel
-            // 
-            this.SearchBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.SearchBarPanel.Controls.Add(this.textBoxSearch);
-            this.SearchBarPanel.Location = new System.Drawing.Point(20, 111);
-            this.SearchBarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SearchBarPanel.Name = "SearchBarPanel";
-            this.SearchBarPanel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.SearchBarPanel.Size = new System.Drawing.Size(403, 42);
-            this.SearchBarPanel.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PageForm";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PageForm";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(16, 160);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1301, 391);
-            this.panel2.TabIndex = 4;
-            // 
             // productListBindingSource
             // 
             this.productListBindingSource.DataSource = typeof(Appotheekcl.ProductList);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.panel1.Controls.Add(this.X);
-            this.panel1.Controls.Add(this.Bestellen);
-            this.panel1.Controls.Add(this.EersteLevering);
-            this.panel1.Controls.Add(this.Leverancier);
-            this.panel1.Controls.Add(this.Type);
-            this.panel1.Controls.Add(this.Naam);
-            this.panel1.Controls.Add(this.TotaalGewicht);
-            this.panel1.Location = new System.Drawing.Point(772, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(516, 129);
-            this.panel1.TabIndex = 5;
-            this.panel1.Visible = false;
-            // 
-            // X
-            // 
-            this.X.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(140)))), ((int)(((byte)(100)))));
-            this.X.Location = new System.Drawing.Point(0, 0);
-            this.X.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(27, 25);
-            this.X.TabIndex = 6;
-            this.X.Text = "X";
-            this.X.UseVisualStyleBackColor = false;
-            this.X.Visible = false;
-            this.X.Click += new System.EventHandler(this.X_Click);
-            // 
-            // Bestellen
-            // 
-            this.Bestellen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(120)))), ((int)(((byte)(70)))));
-            this.Bestellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Bestellen.Location = new System.Drawing.Point(283, 82);
-            this.Bestellen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Bestellen.Name = "Bestellen";
-            this.Bestellen.Size = new System.Drawing.Size(181, 28);
-            this.Bestellen.TabIndex = 5;
-            this.Bestellen.Text = "Bestellen";
-            this.Bestellen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Bestellen.UseVisualStyleBackColor = false;
-            this.Bestellen.Visible = false;
-            this.Bestellen.Click += new System.EventHandler(this.Bestellen_Click);
-            // 
-            // EersteLevering
-            // 
-            this.EersteLevering.AutoSize = true;
-            this.EersteLevering.Location = new System.Drawing.Point(279, 59);
-            this.EersteLevering.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.EersteLevering.Name = "EersteLevering";
-            this.EersteLevering.Size = new System.Drawing.Size(180, 17);
-            this.EersteLevering.TabIndex = 4;
-            this.EersteLevering.Text = "Eerste Levering: 10/8/2018";
-            this.EersteLevering.Visible = false;
-            // 
-            // Leverancier
-            // 
-            this.Leverancier.AutoSize = true;
-            this.Leverancier.Location = new System.Drawing.Point(279, 22);
-            this.Leverancier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Leverancier.Name = "Leverancier";
-            this.Leverancier.Size = new System.Drawing.Size(191, 17);
-            this.Leverancier.TabIndex = 3;
-            this.Leverancier.Text = "Leverancier: Mosadex Groep";
-            this.Leverancier.Visible = false;
-            // 
-            // Type
-            // 
-            this.Type.AutoSize = true;
-            this.Type.Location = new System.Drawing.Point(28, 96);
-            this.Type.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(108, 17);
-            this.Type.TabIndex = 2;
-            this.Type.Text = "Type: Tabletten";
-            this.Type.Visible = false;
-            // 
-            // Naam
-            // 
-            this.Naam.AutoSize = true;
-            this.Naam.Location = new System.Drawing.Point(28, 22);
-            this.Naam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Naam.Name = "Naam";
-            this.Naam.Size = new System.Drawing.Size(93, 17);
-            this.Naam.TabIndex = 1;
-            this.Naam.Text = "Naam: Xanac";
-            this.Naam.Visible = false;
-            // 
-            // TotaalGewicht
-            // 
-            this.TotaalGewicht.AutoSize = true;
-            this.TotaalGewicht.Location = new System.Drawing.Point(28, 59);
-            this.TotaalGewicht.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.TotaalGewicht.Name = "TotaalGewicht";
-            this.TotaalGewicht.Size = new System.Drawing.Size(134, 17);
-            this.TotaalGewicht.TabIndex = 0;
-            this.TotaalGewicht.Text = "Totaal Gewicht: 540";
-            this.TotaalGewicht.Visible = false;
             // 
             // ProductPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 554);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.SearchBar);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SearchBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductPage";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ProductPage_load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.SearchBarPanel.ResumeLayout(false);
             this.SearchBarPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.productListBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +428,6 @@
         private System.Windows.Forms.Label Naam;
         private System.Windows.Forms.Label TotaalGewicht;
         private System.Windows.Forms.Button X;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
