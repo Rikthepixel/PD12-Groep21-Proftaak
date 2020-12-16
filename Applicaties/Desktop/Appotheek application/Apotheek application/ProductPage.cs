@@ -37,7 +37,7 @@ namespace Apotheek_application
             var source = new BindingSource();
             source.DataSource = productlist;
             dataGridView1.DataSource = productlist;
-
+            
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -45,7 +45,6 @@ namespace Apotheek_application
             dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
             //    //for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
             //    //{
 
