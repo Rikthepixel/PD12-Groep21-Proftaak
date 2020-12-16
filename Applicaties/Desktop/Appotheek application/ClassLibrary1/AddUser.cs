@@ -22,7 +22,7 @@ namespace Appotheekcl
         public void InsertNewUser(string Email, string Password, string Datum, string Voornaam, string Achternaam)
         {
             string Statement = $"INSERT INTO Users (Email, Password , created_at, Voornaam, Achternaam) VALUES('{Email}', '{Password}', '{Datum}', '{Voornaam}', '{Achternaam}')";
-            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
+            dataAccess.SaveData(dataAccess.LoginConnStr, Statement);
         }
     }
 }
