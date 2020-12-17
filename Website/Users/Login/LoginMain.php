@@ -2,10 +2,23 @@
 include_once "../../Include/SH.inc.php";
 include_once "../../Include/DatabaseHandler.php";
 
+//Needs:
+//Login = AUserWantsToLogin
+//IsApplication = IAMTHEAPPLICATION
+//EML = UserEmail
+//PSWD = UserPassword
+
 $_SESSION['error'] = 'A';
 if (isset($_POST['Login'])) {
-
     if($_POST['Login'] == "AUserWantsToLogin"){
+
+        if(isset($_POST['IsApplication'])){
+            if($_POST['IsApplication'] == "IAMTHEAPPLICATION"){
+                $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
+                setcookie("RequestingKey", $_SESSION['UserRequestKey']);
+            }
+        }
+
         include_once 'LoginFunctions.php';
         $Email = mysqli_real_escape_string($Loginconn, $_POST['EML']);     
         $Email = stripslashes($Email);
