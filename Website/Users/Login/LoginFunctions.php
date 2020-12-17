@@ -1,5 +1,5 @@
 <?php
-function loginUser($conn, $Email, $Password){
+function loginUser($conn, $Email, $Password, $IsApplication){
 
     $_SESSION['Email'] = $Email;
 
@@ -21,6 +21,13 @@ function loginUser($conn, $Email, $Password){
         $_SESSION['Loggedin'] = true;
         
         Unset($_SESSION['error']);
+
+        if(isset($IsApplication)){
+            if(($IsApplication == "IAMTHEAPPLICATION"){
+                $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
+                setcookie("RequestingKey", $_SESSION['UserRequestKey']);
+            }
+        }
 
         header("location:../../Producten.php");
         exit();
