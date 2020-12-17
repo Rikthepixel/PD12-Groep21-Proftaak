@@ -1,13 +1,10 @@
-﻿using System;
+﻿using Appotheekcl;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Appotheekcl;
 
 namespace Apotheek_application
 {
@@ -15,6 +12,7 @@ namespace Apotheek_application
     {
         MasterPage masterPage;
         OrderPage orderPage;
+        DataTable data;
         private ProductList productList;
 
         public bool LoginRequired { get; private set; }
@@ -36,8 +34,11 @@ namespace Apotheek_application
             var productlist = productList.Products;
             var source = new BindingSource();
             source.DataSource = productlist;
-            dataGridView1.DataSource = productlist;
-            
+            data = ConvertToDataTable<Product>(productList.Products);
+            data.DefaultView.Sort = "Naam asc";
+            dataGridView1.DataSource = data;
+
+
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -152,11 +153,37 @@ namespace Apotheek_application
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            productList = new ProductList();
-            dataGridView1.DataSource = productList.Products;
+            string searchBox = textBoxSearch.Text;
+            
+            if (textBoxSearch.Text.Length != 0)
+            {
 
+                data.DefaultView.RowFilter = $"id = '{textBoxSearch.Text}'";
+
+                dataGridView1.DataSource = data;
+            }
+            if (textBoxSearch.Text.Length == 0)
+            {
+                data.DefaultView.RowFilter = string.Empty;
+            }
+        }
+        private DataTable ConvertToDataTable<T>(IList<T> data)
+        {
+            PropertyDescriptorCollection properties =
+               TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            foreach (PropertyDescriptor prop in properties)
+                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+            foreach (T item in data)
+            {
+                DataRow row = table.NewRow();
+                foreach (PropertyDescriptor prop in properties)
+                    row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                table.Rows.Add(row);
+            }
+            return table;
         }
 
 

@@ -78,6 +78,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(280, 20);
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // dataGridView1
             // 
@@ -379,6 +380,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.SearchBar);
+            this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SearchBarPanel);
