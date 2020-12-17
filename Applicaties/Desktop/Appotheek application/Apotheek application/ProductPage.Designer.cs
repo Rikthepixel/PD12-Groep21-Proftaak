@@ -268,7 +268,7 @@
             this.panel1.Controls.Add(this.Type);
             this.panel1.Controls.Add(this.Naam);
             this.panel1.Controls.Add(this.TotaalGewicht);
-            this.panel1.Location = new System.Drawing.Point(649, 18);
+            this.panel1.Location = new System.Drawing.Point(664, 17);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 105);
             this.panel1.TabIndex = 5;
@@ -380,7 +380,6 @@
             this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.SearchBar);
-            this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SearchBarPanel);

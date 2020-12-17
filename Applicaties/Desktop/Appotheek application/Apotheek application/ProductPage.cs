@@ -31,12 +31,10 @@ namespace Apotheek_application
         public void ProductPage_load(object sender, EventArgs e)
         {
             dataGridView1.AutoGenerateColumns = true;
-            var productlist = productList.Products;
-            var source = new BindingSource();
-            source.DataSource = productlist;
-            data = ConvertToDataTable<Product>(productList.Products);
-            data.DefaultView.Sort = "Naam asc";
-            dataGridView1.DataSource = data;
+            RefreshButton_Click(sender, e);
+
+
+
 
 
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -186,7 +184,13 @@ namespace Apotheek_application
             return table;
         }
 
-
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            productList = new ProductList();
+            data = ConvertToDataTable<Product>(productList.Products);
+            data.DefaultView.Sort = "Naam asc";
+            dataGridView1.DataSource = data;
+        }
     }
 }
 
