@@ -5,7 +5,8 @@ using System.Text;
 namespace Appotheekcl
 {
     public class User
-    {
+    { 
+
         //knows
         public int ID { get; private set; }
         public string email { get; private set; } 
@@ -14,7 +15,8 @@ namespace Appotheekcl
         public string Voornaam { get; private set; }
         public string Achternaam { get; private set; }
         public bool loggedIn { get; internal set; }
-
+        public string RequestingKey { get; set; }
+        public string SessionID { get; set; }
         //does
         public void HidePassword()
         {

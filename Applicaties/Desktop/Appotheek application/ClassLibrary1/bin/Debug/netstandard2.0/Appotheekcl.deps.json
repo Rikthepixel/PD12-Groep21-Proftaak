@@ -12,7 +12,8 @@
           "Dapper": "2.0.78",
           "MySql.Data": "8.0.22",
           "NETStandard.Library": "2.0.3",
-          "NuGet.Frameworks": "5.8.0",
+          "Newtonsoft.Json": "12.0.3",
+          "NuGet.Frameworks": "5.9.0-preview.2",
           "System.Windows.Forms": "4.0.0.0"
         },
         "runtime": {
@@ -149,11 +150,19 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
-      "NuGet.Frameworks/5.8.0": {
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "NuGet.Frameworks/5.9.0-preview.2": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
-            "assemblyVersion": "5.8.0.6930",
-            "fileVersion": "5.8.0.6930"
+            "assemblyVersion": "5.9.0.6967",
+            "fileVersion": "5.9.0.6967"
           }
         }
       },
@@ -1008,12 +1017,19 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "NuGet.Frameworks/5.8.0": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qmHdiRcRNSZS9cNMzzCyAb4veOBQnc4r/y+VKkPKpIm6cXBTYgVEoX6J7zVwTwT83xNIuRWwBrDotIUIc4nOSQ==",
-      "path": "nuget.frameworks/5.8.0",
-      "hashPath": "nuget.frameworks.5.8.0.nupkg.sha512"
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "NuGet.Frameworks/5.9.0-preview.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p07jYC09fxAM+ZSczr/5zDsWXO411C6uF0jArVc6qGRMyE38LGoMA74Nr+HZPW3VRVG7n7yKGJACLuCKVfHM5A==",
+      "path": "nuget.frameworks/5.9.0-preview.2",
+      "hashPath": "nuget.frameworks.5.9.0-preview.2.nupkg.sha512"
     },
     "runtime.native.System/4.0.0": {
       "type": "package",

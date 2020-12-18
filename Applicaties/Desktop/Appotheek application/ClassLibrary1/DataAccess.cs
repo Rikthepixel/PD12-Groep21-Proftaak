@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 
 namespace Appotheekcl
 {
     class DataAccess
     {
+        HttpClient Client;
         MySqlConnection Connection;
 
         public string LoginConnStr { get; private set; }
@@ -19,6 +23,7 @@ namespace Appotheekcl
 
         public DataAccess()
         {
+            Client = new HttpClient();
             LoginConnStr = GetConnectionString("Login", "LoginUser", "Users", "192.168.162.187");
             ProductConnStr = GetConnectionString("producten", "Doemaarwat1", "Medical", "192.168.162.187");
         }
@@ -79,5 +84,24 @@ namespace Appotheekcl
             }
         }
 
+        public async Task<List<T>> SendQuery<T>(string SQLQuery, string Method, User User)
+        {
+            List<string> Cookies = new List<string>();
+            Cookies.Add($"PHPSESSID={User.SessionID}");
+            Cookies.Add($"RequestingKey={User.RequestingKey}");
+
+            List<KeyValuePair<string, string>> FormData = new List<KeyValuePair<string, string>>();
+            FormData.Add(new KeyValuePair<string, string>("Method", Method));
+            FormData.Add(new KeyValuePair<string, string>("SQLQuery", SQLQuery));
+            FormData.Add(new KeyValuePair<string, string>("DBServer", "192.168.1.10"));
+            FormData.Add(new KeyValuePair<string, string>("DBUser", "producten"));
+            FormData.Add(new KeyValuePair<string, string>("DBPassword", "Doemaarwat1"));
+            FormData.Add(new KeyValuePair<string, string>("DBName", "Medical"));
+
+            var Content = new FormUrlEncodedContent(FormData);
+            Content.Headers.Add("Cookie", Cookies);
+            HttpResponseMessage RecievedData = await Client.PostAsync("https://app-otheek.it-tutorial.info/", Content);
+            return JsonConvert.DeserializeObject<List<T>>(RecievedData.Content.ToString());
+        }
     }
 }

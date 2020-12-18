@@ -26,8 +26,19 @@ if (isset($_POST['Login'])) {
             exit();
         } 
 
-        //Log the user in
-        loginUser($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+        if(isset($IsApplication)){
+            if($IsApplication == "IAMTHEAPPLICATION"){
+                //Log the user in
+                loginApplication($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+            } else {
+                //Log the user in
+                loginUser($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+            }
+        } else{
+            //Log the user in
+            loginUser($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+        }
+
 
     } else {
         $_SESSION['error'] = 'badsubmit';

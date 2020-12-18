@@ -25,7 +25,7 @@ if(VerifySession()){
                         $Result = $Conn -> query($Query);
                         $rows = array();
                         while ($row = $Result -> fetch_assoc()){
-                          $rows[] = $Assoc;
+                          $rows[] = $row;
                         }
                         echo json_encode($rows);
                     }

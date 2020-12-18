@@ -19,16 +19,16 @@ function loginUser($conn, $Email, $Password, $IsApplication){
         
         $_SESSION['Achternaam'] = $row['Achternaam'];
         $_SESSION['Loggedin'] = true;
-        
+
         Unset($_SESSION['error']);
 
         if(isset($IsApplication)){
-            if(($IsApplication == "IAMTHEAPPLICATION"){
+            if($IsApplication == "IAMTHEAPPLICATION"){
                 $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
                 setcookie("RequestingKey", $_SESSION['UserRequestKey']);
             }
         }
-
+        unset($row['Password']);
         header("location:../../Producten.php");
         exit();
 
@@ -37,6 +37,43 @@ function loginUser($conn, $Email, $Password, $IsApplication){
         $_SESSION['error'] = "invaliddetails";
         header("location:../../index.php");
         exit();
+
+    }
+}
+
+function loginApplication($conn, $Email, $Password, $IsApplication){
+    $_SESSION['Email'] = $Email;
+
+    $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+    $LoginResult = $conn -> query($LoginQuery);
+
+    if($LoginResult->num_rows == 1){
+        $IdentityQuery = "SELECT Voornaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityResult = $conn -> query($IdentityQuery);
+        $row = $IdentityResult -> fetch_assoc();
+        
+        $_SESSION['Voornaam'] = $row['Voornaam'];
+
+        $IdentityQuery = "SELECT Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
+        $IdentityResult = $conn -> query($IdentityQuery);
+        $row = $IdentityResult -> fetch_assoc();
+        
+        $_SESSION['Achternaam'] = $row['Achternaam'];
+        $_SESSION['Loggedin'] = true;
+
+        Unset($_SESSION['error']);
+
+        $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
+        setcookie("RequestingKey", $_SESSION['UserRequestKey']);
+        
+        unset($row['Password']);
+
+        echo json_encode($row);
+
+    } else {
+
+        $row['Loggedin'] = false;
+        echo json_encode($row);
 
     }
 }
