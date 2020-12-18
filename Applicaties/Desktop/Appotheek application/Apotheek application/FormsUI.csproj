@@ -91,18 +91,6 @@
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=18.3460.0.52, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Licensing.18.3.0.52\lib\net46\Syncfusion.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfSkinManager.WPF, Version=18.3460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.SfSkinManager.WPF.18.3.0.52\lib\net46\Syncfusion.SfSkinManager.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Shared.Base, Version=18.3460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Shared.Base.18.3.0.52\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Themes.Office2016Colorful.WPF, Version=18.3460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Themes.Office2016Colorful.WPF.18.3.0.52\lib\net46\Syncfusion.Themes.Office2016Colorful.WPF.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -175,6 +163,12 @@
     <Compile Include="HeaderBar.Designer.cs">
       <DependentUpon>HeaderBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderMessageBox.Designer.cs">
+      <DependentUpon>OrderMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterPage.resx">
       <DependentUpon>MasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderMessageBox.resx">
+      <DependentUpon>OrderMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderPage.resx">
       <DependentUpon>OrderPage.cs</DependentUpon>
