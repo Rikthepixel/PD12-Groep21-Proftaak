@@ -155,10 +155,15 @@ namespace Apotheek_application
         {
             string searchBox = textBoxSearch.Text;
             
-            if (textBoxSearch.Text.Length != 0)
+            if (textBoxSearch.Text.Length != 0 && char.IsDigit(textBoxSearch.Text[0]))
             {
+                data.DefaultView.RowFilter = $"id LIKE '%{textBoxSearch.Text}%'";
 
-                data.DefaultView.RowFilter = $"id = '{textBoxSearch.Text}'";
+                dataGridView1.DataSource = data;
+            }
+            if (textBoxSearch.Text.Length != 0 && char.IsLetter(textBoxSearch.Text[0]))
+            {
+                data.DefaultView.RowFilter = $"naam LIKE '%{textBoxSearch.Text}%'";
 
                 dataGridView1.DataSource = data;
             }
