@@ -217,7 +217,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="FormsUI_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Appotheekcl.Product.datasource" />
     <None Include="Properties\DataSources\Appotheekcl.ProductList.datasource" />

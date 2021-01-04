@@ -39,6 +39,7 @@ namespace Apotheek_application
             User user = Inlog.generateUserLoginAsync(Email_txt.Text, Wachtwoord_txt.Text).Result;
             if(user != null)
             {
+         
                 if (user.IsLoginValid())
                 {
                     masterPage.CurrentUser = user;

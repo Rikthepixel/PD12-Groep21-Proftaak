@@ -8,15 +8,16 @@ namespace Appotheekcl
     { 
 
         //knows
-        public int ID { get; private set; }
-        public string email { get; private set; } 
-        public string Password { get; private set; }
-        public string Created_At { get; private set; }
-        public string Voornaam { get; private set; }
-        public string Achternaam { get; private set; }
-        public bool loggedIn { get; internal set; }
+        public int ID { get; set; }
+        public string email { get; set; } 
+        public string Password { get; set; }
+        public string Created_At { get; set; }
+        public string Voornaam { get; set; }
+        public string Achternaam { get; set; }
+        public bool loggedIn { get; set; }
         public string RequestingKey { get; set; }
         public string SessionID { get; set; }
+        public string LoginError { get; set; }
         //does
         public void HidePassword()
         {
