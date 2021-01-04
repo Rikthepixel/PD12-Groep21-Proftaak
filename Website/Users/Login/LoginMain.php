@@ -12,6 +12,13 @@ $_SESSION['error'] = 'A';
 if (isset($_POST['Login'])) {
     if($_POST['Login'] == "AUserWantsToLogin"){
         include_once 'LoginFunctions.php';
+
+        if (isset($_POST['IsApplication'])){
+            if ($_POST['IsApplication'] == "IAMTHEAPPLICATION"){
+                $IsApplication = true;
+            } 
+        }
+        
         $Email = mysqli_real_escape_string($Loginconn, $_POST['EML']);     
         $Email = stripslashes($Email);
         
@@ -27,16 +34,16 @@ if (isset($_POST['Login'])) {
         } 
 
         if(isset($IsApplication)){
-            if($IsApplication == "IAMTHEAPPLICATION"){
+            if($IsApplication == true){
                 //Log the user in
-                loginApplication($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+                loginApplication($Loginconn, $Email, $Pass, $IsApplication);
             } else {
                 //Log the user in
-                loginUser($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+                loginUser($Loginconn, $Email, $Pass, "");
             }
         } else{
             //Log the user in
-            loginUser($Loginconn, $Email, $Pass, $_POST['IsApplication']);
+            loginUser($Loginconn, $Email, $Pass, "");
         }
 
 

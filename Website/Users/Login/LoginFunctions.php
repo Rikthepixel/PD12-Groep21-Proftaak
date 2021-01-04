@@ -1,5 +1,5 @@
 <?php
-function loginUser($conn, $Email, $Password, $IsApplication){
+function loginUser($conn, $Email, $Password){
 
     $_SESSION['Email'] = $Email;
 
@@ -22,12 +22,6 @@ function loginUser($conn, $Email, $Password, $IsApplication){
 
         Unset($_SESSION['error']);
 
-        if(isset($IsApplication)){
-            if($IsApplication == "IAMTHEAPPLICATION"){
-                $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
-                setcookie("RequestingKey", $_SESSION['UserRequestKey']);
-            }
-        }
         unset($row['Password']);
         header("location:../../Producten.php");
         exit();
@@ -41,40 +35,36 @@ function loginUser($conn, $Email, $Password, $IsApplication){
     }
 }
 
-function loginApplication($conn, $Email, $Password, $IsApplication){
+function loginApplication($conn, $Email, $Password){
     $_SESSION['Email'] = $Email;
 
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
 
     if($LoginResult->num_rows == 1){
-        $IdentityQuery = "SELECT Voornaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
-        $IdentityResult = $conn -> query($IdentityQuery);
-        $row = $IdentityResult -> fetch_assoc();
+        $row = $LoginResult -> fetch_assoc();
         
         $_SESSION['Voornaam'] = $row['Voornaam'];
+        $_SESSION['Achternaam'] = $row['Achternaam'];       
+        $_SESSION['LoggedIn'] = true;
 
-        $IdentityQuery = "SELECT Achternaam FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
-        $IdentityResult = $conn -> query($IdentityQuery);
-        $row = $IdentityResult -> fetch_assoc();
-        
-        $_SESSION['Achternaam'] = $row['Achternaam'];
-        $_SESSION['Loggedin'] = true;
+        unset($_SESSION['error']);
+        unset($row['Password']);
+        unset($row['ID']);
+        unset($row['created_at']);
 
-        Unset($_SESSION['error']);
+        $row['loggedIn'] = true;
 
         $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
         setcookie("RequestingKey", $_SESSION['UserRequestKey']);
-        
-        unset($row['Password']);
-
         echo json_encode($row);
 
-    } else {
-
-        $row['Loggedin'] = false;
+    } 
+    else
+    {
+        $row['loginerror'] = ErrorMessage("invaliddetails");
+        $row['LoggedIn'] = false;
         echo json_encode($row);
-
     }
 }
 
