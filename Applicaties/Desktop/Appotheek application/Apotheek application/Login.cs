@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Appotheekcl;
+using System.Media;
 
 namespace Apotheek_application
 {
@@ -47,25 +48,30 @@ namespace Apotheek_application
             {
                 if (user.IsLoginValid())
                 {
+                    SoundPlayer Correct3 = new SoundPlayer(Properties.Resources.Correct3);
+                    Correct3.Play();
                     masterPage.CurrentUser = user;
                     masterPage.Header.OpenProductPage(sender, e);
                     masterPage.Header.SetNameTag($"{user.Voornaam} {user.Achternaam}");
                     masterPage.Header.UpdateHeader();
+                    
                 }
                 else
                 {
                     SetLoginError(Inlog.GetLoginError());
-                }
+                    }
             } else
             {
                 SetLoginError(Inlog.GetLoginError());
             }
+
             label1.Text = Inlog.GetLoginError();
             Email_txt.Text = "";
             Wachtwoord_txt.Text = "";
             WachtwoordAddPlaceHolder(sender, e);
             EmailAddPlaceHolder(sender, e);
             masterPage.Header.UpdateHeader();
+            
         }
         
         private void WachtwoordRemovePlaceHolder(object sender, EventArgs e)
@@ -106,11 +112,14 @@ namespace Apotheek_application
         public void SetLoginError(string ErrorMessage)
         {
             label1.Text = ErrorMessage;
+            SoundPlayer Incorrect = new SoundPlayer(Properties.Resources.Incorrect);
+            Incorrect.Play();
         }
 
         bool Wachtwoord = false;
         private void Wacht_vergeten_Link_Label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
             if (!Wachtwoord)
             {
                 if (WachtwoordPanel == null)
@@ -190,6 +199,7 @@ namespace Apotheek_application
                 }
                 else
                 {
+              
                     WachtwoordBorder.Visible = true;
                     WachtwoordPanel.Visible = true;
                 }

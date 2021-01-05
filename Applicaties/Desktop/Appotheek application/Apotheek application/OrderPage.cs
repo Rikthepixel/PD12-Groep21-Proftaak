@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Appotheekcl;
+using System.Media;
 
 namespace Apotheek_application
 {
@@ -59,9 +60,13 @@ namespace Apotheek_application
         {
             OrderMessageBox CustomMB = new OrderMessageBox();
             CustomMB.StartPosition = FormStartPosition.CenterParent;
+            SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
+            Popup.Play();
             CustomMB.ShowDialog();
             if (CustomMB.DialogResult == DialogResult.Yes)
             {
+                SoundPlayer correct = new SoundPlayer(Properties.Resources.correct);
+                correct.Play();
                 CustomMB.Dispose();
                 var Medicijn = Medicijn_cB.Text;
                 var Nummerof = Aantal_Medicijnen_UpDown.Value;
@@ -85,12 +90,16 @@ namespace Apotheek_application
             }
             if (CustomMB.DialogResult == DialogResult.No)
             {
+                SoundPlayer Incorrect = new SoundPlayer(Properties.Resources.Error);
+                Incorrect.Play();
                 CustomMB.Dispose();
             }
         }
 
         private void Add_medicijn_btn_Click_1(object sender, EventArgs e)
         {
+            SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
+            Popup.Play();
             string New_medical = Naam_Medicijn_txt.Text;
             string New_Aantal = Aantal_txt.Text;
             string New_Gewicht = Gewicht_txt.Text;

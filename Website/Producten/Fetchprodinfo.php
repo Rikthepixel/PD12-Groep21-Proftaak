@@ -62,15 +62,8 @@
                 $DatumO = $row['Datum_ontvangen'];
                 $DatumU = $row['Uiterste_datum'];
                 $TotaalGewicht = $Aantal * $Gewicht;
-
-                $Types = array("Smelttabletten", "BMW", "BILL NYE");
-                $Leveranciers = array("Mosadex Groep", "TRENKER", "BHI", "Reliable Medicare LTD");
-                
-                $RandomIndexType = rand(0, count($Types) - 1);
-                $RandomType = $Types[$RandomIndexType];
-                
-                $RandomIndexLever = rand(0, count($Leveranciers) - 1);
-                $RandomLever = $Leveranciers[$RandomIndexLever];
+                $Type = $row['Type'];
+                $Leverancier = $row['Leverancier'];
 
                 $CurrentYear = date("Y");
                 
@@ -151,14 +144,14 @@
                             <div class='tabcontent Type' style='display:none'>
                                 <div class='InfoCont'> 
                                     <h3>Type</h3>
-                                    <p>$RandomType</p>
+                                    <p>$Type</p>
                                 </div>
                             </div>
                     
                             <div class='tabcontent Leverancier' style='display:none'>
                                 <div class='InfoCont'>
                                     <h3>Leverancier</h3>
-                                    <p>$RandomLever</p>
+                                    <p>$Leverancier</p>
                                 </div>
                             </div>
                     

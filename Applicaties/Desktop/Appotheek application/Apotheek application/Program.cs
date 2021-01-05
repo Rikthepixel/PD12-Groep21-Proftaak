@@ -11,6 +11,7 @@ namespace Apotheek_application
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        
         [STAThread]
         static void Main()
         {

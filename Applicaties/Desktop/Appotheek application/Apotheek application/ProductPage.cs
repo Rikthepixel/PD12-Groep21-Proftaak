@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Media;
 
 namespace Apotheek_application
 {
@@ -33,26 +34,12 @@ namespace Apotheek_application
             dataGridView1.AutoGenerateColumns = true;
             RefreshButton_Click(sender, e);
 
-
-
-
-
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //    //for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
-            //    //{
-
-            //    //    int colw = dataGridView1.Columns[i].Width;
-            //    //}
-
-
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 140, 100);
             dataGridView1.DefaultCellStyle.Font = new Font("microsoft Sans Serif", 16f, FontStyle.Regular);
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(19, 119, 87);
@@ -62,7 +49,6 @@ namespace Apotheek_application
             dataGridView1.GridColor = Color.FromArgb(30, 140, 100);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 140, 100);
-            //dataGridView1.RowHeadersVisible = false;
         }
 
         private void ExtraInfo_Click(object sender, DataGridViewCellEventArgs e)
@@ -76,8 +62,12 @@ namespace Apotheek_application
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0)
+
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
             {
+
+                SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                Popup2.Play();
                 var RowData = productList.Products[e.RowIndex];
                 TotaalGewicht.Text = $"Gewicht: {RowData.Gewicht * RowData.aantal}";
                 Naam.Text = $"Naam: {RowData.naam}";
@@ -87,6 +77,7 @@ namespace Apotheek_application
                 if (!panel1.Visible) 
                 {
                     ToggleExtraInfoVisability(false);
+                    
                 }
             }
                 
@@ -94,6 +85,8 @@ namespace Apotheek_application
 
         private void X_Click(object sender, EventArgs e)
         {
+            SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+            Popup2.Play();
             ToggleExtraInfoVisability(true);
         }
 
@@ -148,6 +141,8 @@ namespace Apotheek_application
                 }
 
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);
+                SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                Popup2.Play();
             }
         }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Appotheekcl;
+using System.Media;
 
 namespace Apotheek_application
 {
@@ -61,6 +62,8 @@ namespace Apotheek_application
             {
                 if (orderPage == null)
                 {
+                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                    Popup2.Play();
                     orderPage = new OrderPage();
                 }
 
@@ -76,6 +79,8 @@ namespace Apotheek_application
                 if (productPage == null)
                 {
                     productPage = new ProductPage(masterPage);
+                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                    Popup2.Play();
                 }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
@@ -99,9 +104,12 @@ namespace Apotheek_application
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
+
                 if (helpPage == null)
                 {
                     helpPage = new HelpPage(masterPage);
+                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                    Popup2.Play();
                 }
 
                 masterPage.OpenChildForm(helpPage, helpPage.LoginRequired);
@@ -134,6 +142,8 @@ namespace Apotheek_application
         {
             if(Logout_btn.Text == "Uitloggen")
             {
+                SoundPlayer Boo = new SoundPlayer(Properties.Resources.Boo);
+                Boo.Play();
                 DoLogout(sender, e);
                 ResetAllButtonColors();
             }

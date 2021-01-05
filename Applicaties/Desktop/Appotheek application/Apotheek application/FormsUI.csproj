@@ -270,5 +270,29 @@
   <ItemGroup>
     <None Include="Resources\Image1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incorrect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Popup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Popup2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct3.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
