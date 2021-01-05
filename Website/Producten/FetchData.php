@@ -7,7 +7,6 @@ if(VerifySession()){
     //Needs:
     //Cookies: Session & RequestingKey
     //To send query:
-    //Method (Create, Insert, Select)
     //DBServer, DBUser, DBPassword, DBName
     //SQLQuery
 
@@ -20,20 +19,15 @@ if(VerifySession()){
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
-                if(isset($_POST['METHOD'])){
-                    if($_POST['METHOD'] == "SELECT"){
-                        $Result = $Conn -> query($Query);
-                        $rows = array();
-                        while ($row = $Result -> fetch_assoc()){
-                          $rows[] = $row;
-                        }
-                        echo json_encode($rows);
-                    }
-                    if($_POST['METHOD'] == "INSERT" || $_POST['METHOD'] == "CREATE"){
-                        $Conn -> query($Query);
-                    }
-                }
+                $Result = $Conn -> query($Query);
 
+                if ($Result->num_rows >= 0){
+                    $rows = array();
+                    while ($row = $Result -> fetch_assoc()){
+                      $rows[] = $row;
+                    }
+                    echo json_encode($rows);
+                }
             }
 
         } else {

@@ -39,11 +39,11 @@ if (isset($_POST['Login'])) {
                 loginApplication($Loginconn, $Email, $Pass, $IsApplication);
             } else {
                 //Log the user in
-                loginUser($Loginconn, $Email, $Pass, "");
+                loginUser($Loginconn, $Email, $Pass, false);
             }
         } else{
             //Log the user in
-            loginUser($Loginconn, $Email, $Pass, "");
+            loginUser($Loginconn, $Email, $Pass, false);
         }
 
 
