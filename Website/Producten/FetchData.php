@@ -2,7 +2,6 @@
 include_once "../Include/SH.inc.php";
 include_once "../Include/DatabaseHandler.php";
 
-echo VerifySession();
 if(VerifySession()){
     $Query;
     $ConnectionStr;
@@ -35,7 +34,7 @@ if(VerifySession()){
     }
 } else {
     //VerifySessionReturn("../../index.php", false);
-    echo "Stage1";
+    echo VerifySession();
 }
 
 ?>
