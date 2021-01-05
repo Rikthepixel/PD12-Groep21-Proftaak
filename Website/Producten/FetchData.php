@@ -4,12 +4,6 @@ include_once "../Include/DatabaseHandler.php";
 
 if(VerifySession()){
     $Query;
-    $ConnectionStr;
-
-    //Needs:
-    //Cookies: Session & RequestingKey
-    //To send query:
-    //SQLQuery
 
     if(isset($_COOKIE['RequestingKey'])){
         if($_COOKIE['RequestingKey'] == $_SESSION['UserRequestKey'] && isset($_POST['SQLQuery'])){
@@ -34,7 +28,8 @@ if(VerifySession()){
     }
 } else {
     //VerifySessionReturn("../../index.php", false);
-    echo VerifySession();
+    $R = VerifySession();
+    echo "$R";
 }
 
 ?>

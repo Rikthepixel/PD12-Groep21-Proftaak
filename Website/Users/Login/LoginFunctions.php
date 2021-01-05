@@ -30,8 +30,6 @@ function loginUser($conn, $Email, $Password){
 
 function loginApplication($conn, $Email, $Password){
 
-    
-
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
 
@@ -45,10 +43,12 @@ function loginApplication($conn, $Email, $Password){
 
         unset($_SESSION['error']);
         unset($row['Password']);
-        $row['loggedIn'] = true;
+        
 
         $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
         setcookie("RequestingKey", $_SESSION['UserRequestKey']);
+        
+        $row['Loggedin'] = true;
         echo json_encode($row);
 
     } else {
