@@ -26,12 +26,15 @@ if(VerifySession()){
             }
         } else {
             //VerifySessionReturn("../../index.php", false);
+            echo "Stage3";
         }
     } else{
         //VerifySessionReturn("../../index.php", false);
+        echo "Stage2";
     }
 } else {
     //VerifySessionReturn("../../index.php", false);
+    echo "Stage1";
 }
 
 ?>
