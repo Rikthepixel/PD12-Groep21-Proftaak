@@ -2,21 +2,20 @@
 
 function loginUser($conn, $Email, $Password){
 
-    $_SESSION['Email'] = $Email;
-
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
 
     if($LoginResult->num_rows == 1){
         $row = $LoginResult -> fetch_assoc();
-        
+
+        $_SESSION['Email'] = $Email;
         $_SESSION['Voornaam'] = $row['Voornaam'];  
         $_SESSION['Achternaam'] = $row['Achternaam'];
         $_SESSION['Loggedin'] = true;
 
-        $_SESSION['error'] = "A";
-
+        unset($_SESSION['error']);
         unset($row['Password']);
+
         header("location:../../Producten.php");
         exit();
 
@@ -31,19 +30,20 @@ function loginUser($conn, $Email, $Password){
 
 function loginApplication($conn, $Email, $Password){
 
-    $_SESSION['Email'] = $Email;
+    
 
     $LoginQuery = "SELECT * FROM User WHERE LOWER(Email) = LOWER('$Email') AND Password = '$Password'";
     $LoginResult = $conn -> query($LoginQuery);
 
     if($LoginResult->num_rows == 1){
         $row = $LoginResult -> fetch_assoc();
-        
+
+        $_SESSION['Email'] = $Email;
         $_SESSION['Voornaam'] = $row['Voornaam'];  
         $_SESSION['Achternaam'] = $row['Achternaam'];
         $_SESSION['Loggedin'] = true;
 
-        $_SESSION['error'] = "A";
+        unset($_SESSION['error']);
         unset($row['Password']);
         $row['loggedIn'] = true;
 

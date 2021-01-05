@@ -2,6 +2,7 @@
 include_once "../Include/SH.inc.php";
 include_once "../Include/DatabaseHandler.php";
 
+echo VerifySession();
 if(VerifySession()){
     $Query;
     $ConnectionStr;
