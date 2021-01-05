@@ -1,6 +1,6 @@
 <?php
-include_once "../Include/SH.inc.php";
 include_once "../Include/DatabaseHandler.php";
+include_once "../Include/SH.inc.php";
 
 if(VerifySession()){
     $Query;
@@ -19,17 +19,13 @@ if(VerifySession()){
                 echo json_encode($rows);
             }
         } else {
-            //VerifySessionReturn("../../index.php", false);
-            echo "Stage3";
+            VerifySessionReturn("../../index.php", false);
         }
     } else{
-        //VerifySessionReturn("../../index.php", false);
-        echo "Stage2";
+        VerifySessionReturn("../../index.php", false);
     }
 } else {
-    //VerifySessionReturn("../../index.php", false);
-    $R = VerifySession();
-    echo "$R";
+    VerifySessionReturn("../../index.php", false);
 }
 
 ?>

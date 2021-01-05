@@ -43,10 +43,10 @@ function loginApplication($conn, $Email, $Password){
 
         unset($_SESSION['error']);
         unset($row['Password']);
-
-        $_SESSION['UserRequestKey'] = (rand(0, 666) * rand(0, 420) * rand(0, 69));
-        setcookie("RequestingKey", $_SESSION['UserRequestKey']);
-
+        
+        $NewKey =  (rand(0, 666) * rand(0, 420) * rand(0, 69));
+        $_SESSION['UserRequestKey'] = $NewKey;
+        setcookie('RequestingKey', $NewKey);
         $row['Loggedin'] = true;
         echo json_encode($row);
 
