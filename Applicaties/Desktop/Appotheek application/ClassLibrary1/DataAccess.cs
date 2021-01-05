@@ -7,15 +7,13 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
-
+using Appotheekcl.Internal;
 namespace Appotheekcl
 {
     class DataAccess
     {
-        HttpClient Client;
         MySqlConnection Connection;
 
         public string LoginConnStr { get; private set; }
@@ -23,11 +21,11 @@ namespace Appotheekcl
 
         public DataAccess()
         {
-            Client = new HttpClient();
+            
             LoginConnStr = GetConnectionString("Login", "LoginUser", "Users", "192.168.162.187");
             ProductConnStr = GetConnectionString("producten", "Doemaarwat1", "Medical", "192.168.162.187");
         }
-
+        
         private string GetConnectionString(string UserID, string Password, string Database = "", string ServerAdress = "Localhost")
         {
             string ConnectionString;
@@ -84,24 +82,28 @@ namespace Appotheekcl
             }
         }
 
-        public async Task<List<T>> SendQuery<T>(string SQLQuery, string Method, User User)
+        public async Task<T> SendQueryAsync<T>(string SQLQuery, User User)
         {
-            List<string> Cookies = new List<string>();
-            Cookies.Add($"PHPSESSID={User.SessionID}");
-            Cookies.Add($"RequestingKey={User.RequestingKey}");
+            if (User.loggedIn)
+            {
+                List<KeyValuePair<string, string>> FormData = new List<KeyValuePair<string, string>>();
+                FormData.Add(new KeyValuePair<string, string>("SQLQuery", SQLQuery));
 
-            List<KeyValuePair<string, string>> FormData = new List<KeyValuePair<string, string>>();
-            FormData.Add(new KeyValuePair<string, string>("Method", Method));
-            FormData.Add(new KeyValuePair<string, string>("SQLQuery", SQLQuery));
-            FormData.Add(new KeyValuePair<string, string>("DBServer", "192.168.1.10"));
-            FormData.Add(new KeyValuePair<string, string>("DBUser", "producten"));
-            FormData.Add(new KeyValuePair<string, string>("DBPassword", "Doemaarwat1"));
-            FormData.Add(new KeyValuePair<string, string>("DBName", "Medical"));
-
-            var Content = new FormUrlEncodedContent(FormData);
-            Content.Headers.Add("Cookie", Cookies);
-            HttpResponseMessage RecievedData = await Client.PostAsync("https://app-otheek.it-tutorial.info/", Content);
-            return JsonConvert.DeserializeObject<List<T>>(RecievedData.Content.ToString());
+                var Content = new FormUrlEncodedContent(FormData);
+                string CookieString = "";
+                foreach (var Cookie in User.Cookies)
+                {
+                    CookieString += $"{Cookie};";
+                }
+                Content.Headers.Add("Cookie", CookieString);
+                
+                HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync("http://127.0.0.1/Producten/FetchData.php", Content);
+                return JsonConvert.DeserializeObject<T>(await RecievedData.Content.ReadAsStringAsync());
+            }
+            else
+            {
+                return default(T);
+            }
         }
     }
 }

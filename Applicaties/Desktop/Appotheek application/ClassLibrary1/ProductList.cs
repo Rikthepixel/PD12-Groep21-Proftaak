@@ -4,60 +4,94 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Appotheekcl.Models;
+
+using System.Threading;
 
 namespace Appotheekcl
 {
     public class ProductList : IPage
     {
         DataAccess data;
-        public ProductList()
+        public ProductList(User user)
         {
             data = new DataAccess();
-            Products = GetProduct().Result;
-            ProductExtraInfo = GetExtraInfo().Result;
+            FetchProductInfo(user);
         }
 
-
+        public delegate void ProductInfoFetchedEventHandler(object source, EventArgs args);
+        public event ProductInfoFetchedEventHandler ProductInfoFetched;
 
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
 
         public List<Product> Products { get; set; }
         public List<ExtraInfo> ProductExtraInfo { get; set; }
+        public List<Table> Tables { get; set; } 
 
-        private async Task<List<Product>> GetProduct()
+        private async void FetchProductInfo(User user)
         {
-            List<Product> prodsResult = new List<Product>();
-            List<string> tables = await data.LoadData<string>(data.ProductConnStr, "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
-            for (int i = 0; i < tables.Count; i++)
-            {
-                string statement = $"SELECT * FROM {tables[i]}";
-                List<Product> results = await data.LoadData<Product>(data.ProductConnStr, statement);
-
-                for (int j = 0; j < results.Count; j++)
-                {
-                    results[j].naam = tables[i];
-                    prodsResult.Add(results[j]);
-                }
-            }
-            return prodsResult;
+            Products = new List<Product>();
+            ProductExtraInfo = new List<ExtraInfo>();
+            Tables = await GetTables(user);
+            await Task.WhenAll(GetProduct(user, Tables));
+            OnProductsFetched();
         }
 
-        private async Task<List<ExtraInfo>> GetExtraInfo()
+        protected virtual void OnProductsFetched()
         {
-            List<ExtraInfo> prodsResult = new List<ExtraInfo>();
-            List<string> tables = await data.LoadData<string>(data.ProductConnStr, "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
-            for (int i = 0; i < tables.Count; i++)
-            {
-                string statement = $"SELECT * FROM {tables[i]}";
-                List<ExtraInfo> results = await data.LoadData<ExtraInfo>(data.ProductConnStr, statement);
+            if (ProductExtraInfo != null)
+                ProductInfoFetched(this, EventArgs.Empty);
+        }
 
-                for (int j = 0; j < results.Count; j++)
+        private async Task<List<Table>> GetTables(User user)
+        {
+            string TableQuery = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
+            return await data.SendQueryAsync<List<Table>>(TableQuery, user);
+        }
+        private async Task GetProduct(User user, List<Table> Tables)
+        {
+            List<Task> DataFetchTasks = new List<Task>();
+            List<Task> TaskCreators = new List<Task>();
+
+            TaskCreators.Add(Task.Run(() => {
+                for (int i = 0; i < Tables.Count; i++)
                 {
-                    prodsResult.Add(results[j]);
+                    var Table = Tables[i];
+                    DataFetchTasks.Add(Task.Run(async () =>
+                    {
+
+                        string statement = $"SELECT * FROM {Table.TABLE_NAME}";
+                        List<Product> results = await data.SendQueryAsync<List<Product>>(statement, user);
+
+                        for (int j = 0; j < results.Count; j++)
+                        {
+                            results[j].naam = Table.TABLE_NAME;
+                            Products.Add(results[j]);
+                        }
+                    }));
                 }
-            }
-            return prodsResult;
+            }));
+            TaskCreators.Add(Task.Run(() => {
+                for (int i = 0; i < Tables.Count; i++)
+                {
+                    var Table = Tables[i];
+                    DataFetchTasks.Add(Task.Run(async () =>
+                    {
+                        string statement = $"SELECT * FROM {Table.TABLE_NAME}";
+                        List<ExtraInfo> results = await data.SendQueryAsync<List<ExtraInfo>>(statement, user);
+
+                        for (int j = 0; j < results.Count; j++)
+                        {
+                            ProductExtraInfo.Add(results[j]);
+                        }
+                    }));
+                }
+            }));
+
+            await Task.WhenAll(TaskCreators);
+            await Task.WhenAll(DataFetchTasks);
         }
     }
 }

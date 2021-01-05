@@ -29,11 +29,6 @@ namespace Apotheek_application
             masterPage.Header.UpdateHeader();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void Login_btn_Click(object sender, EventArgs e)
         {
             User user = Inlog.generateUserLoginAsync(Email_txt.Text, Wachtwoord_txt.Text).Result;

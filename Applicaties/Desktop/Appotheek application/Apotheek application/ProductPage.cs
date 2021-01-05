@@ -6,6 +6,7 @@ using System.Data;
 using System.Collections.Generic;
 using System.ComponentModel;
 
+
 namespace Apotheek_application
 {
     public partial class ProductPage : Form
@@ -19,9 +20,9 @@ namespace Apotheek_application
 
         public ProductPage(MasterPage  MP)
         {
-            productList = new ProductList();
             InitializeComponent();
             masterPage = MP;
+            //productList = new ProductList(masterPage.CurrentUser);
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -32,10 +33,6 @@ namespace Apotheek_application
         {
             dataGridView1.AutoGenerateColumns = true;
             RefreshButton_Click(sender, e);
-
-
-
-
 
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -191,7 +188,12 @@ namespace Apotheek_application
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-            productList = new ProductList();
+            productList = new ProductList(masterPage.CurrentUser);
+            productList.ProductInfoFetched += OnProductsRecieved;
+        }
+
+        private void OnProductsRecieved(object source, EventArgs e)
+        {
             data = ConvertToDataTable<Product>(productList.Products);
             data.DefaultView.Sort = "Naam asc";
             dataGridView1.DataSource = data;
