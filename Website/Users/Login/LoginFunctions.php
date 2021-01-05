@@ -14,7 +14,7 @@ function loginUser($conn, $Email, $Password){
         $_SESSION['Achternaam'] = $row['Achternaam'];
         $_SESSION['Loggedin'] = true;
 
-        Unset($_SESSION['error']);
+        $_SESSION['error'] = "A";
 
         unset($row['Password']);
         header("location:../../Producten.php");
@@ -43,7 +43,7 @@ function loginApplication($conn, $Email, $Password){
         $_SESSION['Achternaam'] = $row['Achternaam'];
         $_SESSION['Loggedin'] = true;
 
-        unset($_SESSION['error']);
+        $_SESSION['error'] = "A";
         unset($row['Password']);
         $row['loggedIn'] = true;
 

@@ -25,13 +25,13 @@ if(VerifySession()){
                 echo json_encode($rows);
             }
         } else {
-            VerifySessionReturn("../../index.php", false);
+            //VerifySessionReturn("../../index.php", false);
         }
     } else{
-        VerifySessionReturn("../../index.php", false);
+        //VerifySessionReturn("../../index.php", false);
     }
 } else {
-    VerifySessionReturn("../../index.php", false);
+    //VerifySessionReturn("../../index.php", false);
 }
 
 ?>
