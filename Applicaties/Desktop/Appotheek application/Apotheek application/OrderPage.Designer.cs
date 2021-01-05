@@ -38,18 +38,18 @@
             this.leverancier_txt = new System.Windows.Forms.TextBox();
             this.Type_medicijn_cb = new System.Windows.Forms.ComboBox();
             this.Naam_Medicijn_txt = new System.Windows.Forms.TextBox();
-            this.Add_medicijn_btn = new System.Windows.Forms.Button();
             this.Aantal_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Gewicht_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Order_btn = new System.Windows.Forms.Button();
             this.Medicijn_cB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Aantal_Medicijnen_UpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.Add_medicijn_btn = new System.Windows.Forms.Button();
+            this.Order_btn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -126,20 +126,6 @@
             this.Naam_Medicijn_txt.Size = new System.Drawing.Size(100, 20);
             this.Naam_Medicijn_txt.TabIndex = 1;
             // 
-            // Add_medicijn_btn
-            // 
-            this.Add_medicijn_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Add_medicijn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Add_medicijn_btn.Image = ((System.Drawing.Image)(resources.GetObject("Add_medicijn_btn.Image")));
-            this.Add_medicijn_btn.Location = new System.Drawing.Point(273, 89);
-            this.Add_medicijn_btn.Name = "Add_medicijn_btn";
-            this.Add_medicijn_btn.Size = new System.Drawing.Size(185, 23);
-            this.Add_medicijn_btn.TabIndex = 13;
-            this.Add_medicijn_btn.UseVisualStyleBackColor = true;
-            this.Add_medicijn_btn.Click += new System.EventHandler(this.Add_medicijn_btn_Click_1);
-            this.Add_medicijn_btn.MouseEnter += new System.EventHandler(this.Add_medicijn_btn_MouseEnter);
-            this.Add_medicijn_btn.MouseLeave += new System.EventHandler(this.Add_medicijn_btn_MouseLeave);
-            // 
             // Aantal_txt
             // 
             this.Aantal_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -201,27 +187,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 253);
             this.panel2.TabIndex = 15;
-            // 
-            // Order_btn
-            // 
-            this.Order_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Order_btn.BackColor = System.Drawing.Color.Transparent;
-            this.Order_btn.BackgroundImage = global::Apotheek_application.Properties.Resources.Bestellensmall;
-            this.Order_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Order_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Order_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
-            this.Order_btn.FlatAppearance.BorderSize = 2;
-            this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_btn.Image = ((System.Drawing.Image)(resources.GetObject("Order_btn.Image")));
-            this.Order_btn.Location = new System.Drawing.Point(194, 129);
-            this.Order_btn.Name = "Order_btn";
-            this.Order_btn.Size = new System.Drawing.Size(364, 41);
-            this.Order_btn.TabIndex = 0;
-            this.Order_btn.UseVisualStyleBackColor = false;
-            this.Order_btn.Click += new System.EventHandler(this.Order_btn_Click);
-            this.Order_btn.MouseEnter += new System.EventHandler(this.Order_btn_MouseEnter_2);
-            this.Order_btn.MouseLeave += new System.EventHandler(this.Order_btn_MouseLeave_2);
             // 
             // Medicijn_cB
             // 
@@ -288,6 +253,41 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Aantal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Add_medicijn_btn
+            // 
+            this.Add_medicijn_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Add_medicijn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Add_medicijn_btn.Image = ((System.Drawing.Image)(resources.GetObject("Add_medicijn_btn.Image")));
+            this.Add_medicijn_btn.Location = new System.Drawing.Point(273, 89);
+            this.Add_medicijn_btn.Name = "Add_medicijn_btn";
+            this.Add_medicijn_btn.Size = new System.Drawing.Size(185, 23);
+            this.Add_medicijn_btn.TabIndex = 13;
+            this.Add_medicijn_btn.UseVisualStyleBackColor = true;
+            this.Add_medicijn_btn.Click += new System.EventHandler(this.Add_medicijn_btn_Click_1);
+            this.Add_medicijn_btn.MouseEnter += new System.EventHandler(this.Add_medicijn_btn_MouseEnter);
+            this.Add_medicijn_btn.MouseLeave += new System.EventHandler(this.Add_medicijn_btn_MouseLeave);
+            // 
+            // Order_btn
+            // 
+            this.Order_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Order_btn.BackColor = System.Drawing.Color.Transparent;
+            this.Order_btn.BackgroundImage = global::Apotheek_application.Properties.Resources.Bestellensmall;
+            this.Order_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Order_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Order_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.Order_btn.FlatAppearance.BorderSize = 2;
+            this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_btn.Image = ((System.Drawing.Image)(resources.GetObject("Order_btn.Image")));
+            this.Order_btn.Location = new System.Drawing.Point(194, 129);
+            this.Order_btn.Name = "Order_btn";
+            this.Order_btn.Size = new System.Drawing.Size(364, 41);
+            this.Order_btn.TabIndex = 0;
+            this.Order_btn.UseVisualStyleBackColor = false;
+            this.Order_btn.Click += new System.EventHandler(this.Order_btn_Click);
+            this.Order_btn.MouseEnter += new System.EventHandler(this.Order_btn_MouseEnter_2);
+            this.Order_btn.MouseLeave += new System.EventHandler(this.Order_btn_MouseLeave_2);
             // 
             // OrderPage
             // 

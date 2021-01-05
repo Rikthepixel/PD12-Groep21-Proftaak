@@ -52,6 +52,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Verwijderen_btn = new System.Windows.Forms.Button();
             this.X = new System.Windows.Forms.Button();
             this.Bestellen = new System.Windows.Forms.Button();
             this.EersteLevering = new System.Windows.Forms.Label();
@@ -261,6 +262,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.Verwijderen_btn);
             this.panel1.Controls.Add(this.X);
             this.panel1.Controls.Add(this.Bestellen);
             this.panel1.Controls.Add(this.EersteLevering);
@@ -273,6 +275,22 @@
             this.panel1.Size = new System.Drawing.Size(324, 105);
             this.panel1.TabIndex = 5;
             this.panel1.Visible = false;
+            // 
+            // Verwijderen_btn
+            // 
+            this.Verwijderen_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.Verwijderen_btn.FlatAppearance.BorderSize = 0;
+            this.Verwijderen_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Verwijderen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Verwijderen_btn.Location = new System.Drawing.Point(220, 74);
+            this.Verwijderen_btn.Name = "Verwijderen_btn";
+            this.Verwijderen_btn.Size = new System.Drawing.Size(101, 23);
+            this.Verwijderen_btn.TabIndex = 8;
+            this.Verwijderen_btn.Text = "Verwijderen";
+            this.Verwijderen_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Verwijderen_btn.UseVisualStyleBackColor = false;
+            this.Verwijderen_btn.Visible = false;
+            this.Verwijderen_btn.Click += new System.EventHandler(this.Verwijderen_btn_Click);
             // 
             // X
             // 
@@ -294,9 +312,9 @@
             this.Bestellen.FlatAppearance.BorderSize = 0;
             this.Bestellen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bestellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Bestellen.Location = new System.Drawing.Point(168, 74);
+            this.Bestellen.Location = new System.Drawing.Point(117, 74);
             this.Bestellen.Name = "Bestellen";
-            this.Bestellen.Size = new System.Drawing.Size(136, 23);
+            this.Bestellen.Size = new System.Drawing.Size(97, 23);
             this.Bestellen.TabIndex = 5;
             this.Bestellen.Text = "Bestellen";
             this.Bestellen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -425,5 +443,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datumOntvangenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uitersteDatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn ExtraInfo;
+        private System.Windows.Forms.Button Verwijderen_btn;
     }
 }

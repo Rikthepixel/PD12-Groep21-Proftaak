@@ -183,6 +183,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveMessageBox.Designer.cs">
+      <DependentUpon>RemoveMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemovePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemovePage.Designer.cs">
+      <DependentUpon>RemovePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegenMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToevoegenMessageBox.Designer.cs">
+      <DependentUpon>ToevoegenMessageBox.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddUserPage.resx">
       <DependentUpon>AddUserPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +232,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemoveMessageBox.resx">
+      <DependentUpon>RemoveMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemovePage.resx">
+      <DependentUpon>RemovePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToevoegenMessageBox.resx">
+      <DependentUpon>ToevoegenMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FormsUI_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Appotheekcl.Product.datasource" />

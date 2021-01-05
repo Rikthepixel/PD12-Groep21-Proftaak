@@ -32,9 +32,24 @@ namespace Appotheekcl
             dataAccess.SaveData(dataAccess.ProductConnStr, commandStr);
             dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
         }
+        public void UpdateOrder(string Medicijn, string aantal, string ID)
+        {
+            string Statement = $"UPDATE {Medicijn} SET Aantal = '{aantal}' WHERE ID = '{ID}'";
+            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
+        }
+        public void DeleteOrder(string Medicijn,string ID)
+        {
+            string Statement = $"DELETE FROM {Medicijn} WHERE ID = '{ID}'";
+            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
+        }
         public async Task<List<string>> GetName()
         {
             List<string> tables = await dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
+            return tables;
+        }
+        public async Task<List<string>> GetID(string Medicijn)
+        {
+            List<string> tables = await dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT ID FROM {Medicijn} WHERE ID > '0'");
             return tables;
         }
         public async Task<List<string>> GetWeight(string Medicijn)
@@ -51,6 +66,11 @@ namespace Appotheekcl
         {
             Task<List<string>> Leverancier = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Leverancier FROM {Medicijn} WHERE ID = '1'");
             return Leverancier.Result;
+        }
+        public async Task<List<string>> GetAantal(string Medicijn, string ID)
+        {
+            Task<List<string>> Aantal = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Aantal FROM {Medicijn} WHERE ID = '{ID}'");
+            return Aantal.Result;
         }
     }
 }

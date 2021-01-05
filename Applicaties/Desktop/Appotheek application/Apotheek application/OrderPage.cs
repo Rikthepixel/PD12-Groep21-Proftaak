@@ -100,23 +100,35 @@ namespace Apotheek_application
         {
             SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
             Popup.Play();
-            string New_medical = Naam_Medicijn_txt.Text;
-            string New_Aantal = Aantal_txt.Text;
-            string New_Gewicht = Gewicht_txt.Text;
-            string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
-            string New_Type = Type_medicijn_cb.Text;
-            var New_Leverancier = leverancier_txt.Text;
-            int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
-            int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
-            int Month = Convert.ToInt32(ExpiryMonth);
-            if (Month > 12)
+            ToevoegenMessageBox CustomMB = new ToevoegenMessageBox();
+            CustomMB.StartPosition = FormStartPosition.CenterParent;
+            CustomMB.ShowDialog();
+            if (CustomMB.DialogResult == DialogResult.Yes)
             {
-                ExpiryYear = ExpiryYear + 1;
-                Month = Month - 12;
-            }
-            string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
+                CustomMB.Dispose();
+                string New_medical = Naam_Medicijn_txt.Text;
+                string New_Aantal = Aantal_txt.Text;
+                string New_Gewicht = Gewicht_txt.Text;
+                string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+                string New_Type = Type_medicijn_cb.Text;
+                var New_Leverancier = leverancier_txt.Text;
+                int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
+                int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
+                int Month = Convert.ToInt32(ExpiryMonth);
+                if (Month > 12)
+                {
+                    ExpiryYear = ExpiryYear + 1;
+                    Month = Month - 12;
+                }
+                string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
 
-            order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate, New_Type, New_Leverancier);
+                order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate, New_Type, New_Leverancier);
+                Medicijn_cB.Items.Clear();
+                foreach (var item in order.GetName().Result)
+                {
+                    Medicijn_cB.Items.Add(item);
+                }
+            }
         }
 
         private void Type_medicijn_cb_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,9 +136,5 @@ namespace Apotheek_application
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

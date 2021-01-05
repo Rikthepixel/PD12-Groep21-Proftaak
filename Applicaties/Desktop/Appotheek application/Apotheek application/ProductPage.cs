@@ -13,6 +13,7 @@ namespace Apotheek_application
     {
         MasterPage masterPage;
         OrderPage orderPage;
+        RemovePage removePage;
         DataTable data;
         private ProductList productList;
 
@@ -101,6 +102,7 @@ namespace Apotheek_application
                     Type.Visible = false;
                     Leverancier.Visible = false;
                     Bestellen.Visible = false;
+                    Verwijderen_btn.Visible = false;
                     Naam.Visible = false;
                     EersteLevering.Visible = false;
                     X.Visible = false;
@@ -112,6 +114,7 @@ namespace Apotheek_application
                     Type.Visible = true;
                     Leverancier.Visible = true;
                     Bestellen.Visible = true;
+                    Verwijderen_btn.Visible = true;
                     Naam.Visible = true;
                     EersteLevering.Visible = true;
                     X.Visible = true;
@@ -124,6 +127,7 @@ namespace Apotheek_application
                 Type.Visible = false;
                 Leverancier.Visible = false;
                 Bestellen.Visible = false;
+                Verwijderen_btn.Visible = false;
                 Naam.Visible = false;
                 EersteLevering.Visible = false;
                 X.Visible = false;
@@ -190,6 +194,19 @@ namespace Apotheek_application
             data = ConvertToDataTable<Product>(productList.Products);
             data.DefaultView.Sort = "Naam asc";
             dataGridView1.DataSource = data;
+        }
+
+        private void Verwijderen_btn_Click(object sender, EventArgs e)
+        {
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                if (removePage == null)
+                {
+                    removePage = new RemovePage();
+                }
+
+                masterPage.OpenChildForm(removePage, removePage.LoginRequired);
+            }
         }
     }
 }
