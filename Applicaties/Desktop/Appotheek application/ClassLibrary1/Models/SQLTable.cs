@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Appotheekcl.Models
 {
-    public class Table
+    public class SQLTable
     {
         public string TABLE_NAME { get; set; }
     }

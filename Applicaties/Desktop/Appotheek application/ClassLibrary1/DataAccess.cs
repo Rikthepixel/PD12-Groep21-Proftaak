@@ -82,6 +82,30 @@ namespace Appotheekcl
             }
         }
 
+        public async Task<HttpStatusCode> SendSaveQueryAsync(string SQLQuery, User User)
+        {
+            if (User.loggedIn)
+            {
+                List<KeyValuePair<string, string>> FormData = new List<KeyValuePair<string, string>>();
+                FormData.Add(new KeyValuePair<string, string>("SQLQuery", SQLQuery));
+
+                var Content = new FormUrlEncodedContent(FormData);
+                string CookieString = "";
+                foreach (var Cookie in User.Cookies)
+                {
+                    CookieString += $"{Cookie};";
+                }
+                Content.Headers.Add("Cookie", CookieString);
+
+                HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync(WebsiteLocations.QueryPage, Content);
+                return RecievedData.StatusCode;
+            }
+            else
+            {
+                return HttpStatusCode.Unauthorized;
+            }
+        }
+
         public async Task<T> SendQueryAsync<T>(string SQLQuery, User User)
         {
             if (User.loggedIn)
@@ -97,8 +121,16 @@ namespace Appotheekcl
                 }
                 Content.Headers.Add("Cookie", CookieString);
                 
-                HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync("http://127.0.0.1/Producten/FetchData.php", Content);
-                return JsonConvert.DeserializeObject<T>(await RecievedData.Content.ReadAsStringAsync());
+                HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync(WebsiteLocations.QueryPage, Content);
+                string RecievedDataString = await RecievedData.Content.ReadAsStringAsync();
+                if (RecievedDataString.Length != 0)
+                {
+                    return JsonConvert.DeserializeObject<T>(RecievedDataString);
+                }
+                else
+                {
+                    return default(T);
+                }
             }
             else
             {

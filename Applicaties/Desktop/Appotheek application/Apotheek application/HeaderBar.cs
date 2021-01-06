@@ -61,7 +61,7 @@ namespace Apotheek_application
             {
                 if (orderPage == null)
                 {
-                    orderPage = new OrderPage();
+                    orderPage = new OrderPage(masterPage);
                 }
 
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);

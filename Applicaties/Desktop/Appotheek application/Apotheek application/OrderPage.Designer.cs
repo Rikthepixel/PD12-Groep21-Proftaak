@@ -66,8 +66,9 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 366);
+            this.panel1.Size = new System.Drawing.Size(1000, 450);
             this.panel1.TabIndex = 0;
             // 
             // panel7
@@ -84,27 +85,30 @@
             this.panel7.Controls.Add(this.Gewicht_txt);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(0, 251);
+            this.panel7.Location = new System.Drawing.Point(0, 309);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(750, 115);
+            this.panel7.Size = new System.Drawing.Size(1000, 142);
             this.panel7.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(297, 48);
+            this.label4.Location = new System.Drawing.Point(396, 59);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(83, 17);
             this.label4.TabIndex = 18;
             this.label4.Text = "Leverancier";
             // 
             // leverancier_txt
             // 
             this.leverancier_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.leverancier_txt.Location = new System.Drawing.Point(299, 65);
+            this.leverancier_txt.Location = new System.Drawing.Point(399, 80);
+            this.leverancier_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.leverancier_txt.Name = "leverancier_txt";
-            this.leverancier_txt.Size = new System.Drawing.Size(113, 20);
+            this.leverancier_txt.Size = new System.Drawing.Size(149, 22);
             this.leverancier_txt.TabIndex = 17;
             // 
             // Type_medicijn_cb
@@ -112,18 +116,20 @@
             this.Type_medicijn_cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Type_medicijn_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Type_medicijn_cb.FormattingEnabled = true;
-            this.Type_medicijn_cb.Location = new System.Drawing.Point(417, 63);
+            this.Type_medicijn_cb.Location = new System.Drawing.Point(556, 78);
+            this.Type_medicijn_cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Type_medicijn_cb.Name = "Type_medicijn_cb";
-            this.Type_medicijn_cb.Size = new System.Drawing.Size(113, 21);
+            this.Type_medicijn_cb.Size = new System.Drawing.Size(149, 24);
             this.Type_medicijn_cb.TabIndex = 16;
             this.Type_medicijn_cb.SelectedIndexChanged += new System.EventHandler(this.Type_medicijn_cb_SelectedIndexChanged);
             // 
             // Naam_Medicijn_txt
             // 
             this.Naam_Medicijn_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Naam_Medicijn_txt.Location = new System.Drawing.Point(89, 27);
+            this.Naam_Medicijn_txt.Location = new System.Drawing.Point(119, 33);
+            this.Naam_Medicijn_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Naam_Medicijn_txt.Name = "Naam_Medicijn_txt";
-            this.Naam_Medicijn_txt.Size = new System.Drawing.Size(100, 20);
+            this.Naam_Medicijn_txt.Size = new System.Drawing.Size(132, 22);
             this.Naam_Medicijn_txt.TabIndex = 1;
             // 
             // Add_medicijn_btn
@@ -131,9 +137,10 @@
             this.Add_medicijn_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Add_medicijn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add_medicijn_btn.Image = ((System.Drawing.Image)(resources.GetObject("Add_medicijn_btn.Image")));
-            this.Add_medicijn_btn.Location = new System.Drawing.Point(273, 89);
+            this.Add_medicijn_btn.Location = new System.Drawing.Point(364, 110);
+            this.Add_medicijn_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Add_medicijn_btn.Name = "Add_medicijn_btn";
-            this.Add_medicijn_btn.Size = new System.Drawing.Size(185, 23);
+            this.Add_medicijn_btn.Size = new System.Drawing.Size(247, 28);
             this.Add_medicijn_btn.TabIndex = 13;
             this.Add_medicijn_btn.UseVisualStyleBackColor = true;
             this.Add_medicijn_btn.Click += new System.EventHandler(this.Add_medicijn_btn_Click_1);
@@ -143,36 +150,40 @@
             // Aantal_txt
             // 
             this.Aantal_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Aantal_txt.Location = new System.Drawing.Point(89, 63);
+            this.Aantal_txt.Location = new System.Drawing.Point(119, 78);
+            this.Aantal_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Aantal_txt.Name = "Aantal_txt";
-            this.Aantal_txt.Size = new System.Drawing.Size(100, 20);
+            this.Aantal_txt.Size = new System.Drawing.Size(132, 22);
             this.Aantal_txt.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(192, 48);
+            this.label6.Location = new System.Drawing.Point(256, 59);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Gewicht";
             // 
             // Gewicht_txt
             // 
             this.Gewicht_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Gewicht_txt.Location = new System.Drawing.Point(194, 65);
+            this.Gewicht_txt.Location = new System.Drawing.Point(259, 80);
+            this.Gewicht_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Gewicht_txt.Name = "Gewicht_txt";
-            this.Gewicht_txt.Size = new System.Drawing.Size(100, 20);
+            this.Gewicht_txt.Size = new System.Drawing.Size(132, 22);
             this.Gewicht_txt.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(87, 48);
+            this.label5.Location = new System.Drawing.Point(116, 59);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Aantal";
             // 
@@ -180,9 +191,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(87, 10);
+            this.label3.Location = new System.Drawing.Point(116, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Medicijn naam";
             // 
@@ -198,8 +210,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 253);
+            this.panel2.Size = new System.Drawing.Size(1000, 311);
             this.panel2.TabIndex = 15;
             // 
             // Order_btn
@@ -214,9 +227,10 @@
             this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Order_btn.Image = ((System.Drawing.Image)(resources.GetObject("Order_btn.Image")));
-            this.Order_btn.Location = new System.Drawing.Point(194, 129);
+            this.Order_btn.Location = new System.Drawing.Point(259, 159);
+            this.Order_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Order_btn.Name = "Order_btn";
-            this.Order_btn.Size = new System.Drawing.Size(364, 41);
+            this.Order_btn.Size = new System.Drawing.Size(485, 50);
             this.Order_btn.TabIndex = 0;
             this.Order_btn.UseVisualStyleBackColor = false;
             this.Order_btn.Click += new System.EventHandler(this.Order_btn_Click);
@@ -230,9 +244,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Medicijn_cB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Medicijn_cB.FormattingEnabled = true;
-            this.Medicijn_cB.Location = new System.Drawing.Point(320, 52);
+            this.Medicijn_cB.Location = new System.Drawing.Point(427, 64);
+            this.Medicijn_cB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Medicijn_cB.Name = "Medicijn_cB";
-            this.Medicijn_cB.Size = new System.Drawing.Size(120, 21);
+            this.Medicijn_cB.Size = new System.Drawing.Size(159, 25);
             this.Medicijn_cB.TabIndex = 5;
             // 
             // label2
@@ -242,9 +257,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(232, 52);
+            this.label2.Location = new System.Drawing.Point(309, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 14);
+            this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Medicijn name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -255,7 +271,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Aantal_Medicijnen_UpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aantal_Medicijnen_UpDown.Location = new System.Drawing.Point(320, 24);
+            this.Aantal_Medicijnen_UpDown.Location = new System.Drawing.Point(427, 30);
+            this.Aantal_Medicijnen_UpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Aantal_Medicijnen_UpDown.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -267,7 +284,7 @@
             0,
             0});
             this.Aantal_Medicijnen_UpDown.Name = "Aantal_Medicijnen_UpDown";
-            this.Aantal_Medicijnen_UpDown.Size = new System.Drawing.Size(118, 20);
+            this.Aantal_Medicijnen_UpDown.Size = new System.Drawing.Size(157, 23);
             this.Aantal_Medicijnen_UpDown.TabIndex = 3;
             this.Aantal_Medicijnen_UpDown.Value = new decimal(new int[] {
             1,
@@ -282,22 +299,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(271, 26);
+            this.label1.Location = new System.Drawing.Point(361, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 14);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Aantal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // OrderPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(750, 366);
+            this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(750, 366);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1000, 450);
             this.Name = "OrderPage";
             this.Text = "OrderPage";
             this.Load += new System.EventHandler(this.OrderPage_Load);

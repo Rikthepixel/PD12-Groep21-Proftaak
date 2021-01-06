@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dapper;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
+using Appotheekcl.Models;
 
 namespace Appotheekcl
 {
@@ -20,37 +17,51 @@ namespace Appotheekcl
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
 
-        public void InsertNewOrder(string Medicijn, string aantal, string Gewicht, string CurrentDate, string ExpiryDate, string Type, string Leverancier)
+        public delegate void TableEventHandler(object source, TablesRecievedEventArgs args);
+        public event TableEventHandler TablesRecieved;
+
+        public async Task InsertNewOrderAsync(Product productInfo, ExtraInfo extraInfo, User user)
         {
-            string Statement = $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}', '{Type}', '{Leverancier}')";
-            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
+            string Statement = $"INSERT INTO {productInfo.naam}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
+            await dataAccess.SendSaveQueryAsync(Statement, user);
+            
         }
-        public void InsertNewProduct(string Medicijn, string Aantal, string Gewicht, string CurrentDate, string ExpiryDate, string Type, string Leverancier)
+        public async Task InsertNewProductAsync(Product productInfo, ExtraInfo extraInfo, User user)
         {
-            var commandStr = $"CREATE TABLE {Medicijn}(ID INT(6) AUTO_INCREMENT PRIMARY KEY,Aantal INT(30) NOT NULL,Gewicht DOUBLE NOT NULL,Datum_ontvangen text NOT NULL, Uiterste_datum text NOT NULL, Type text NOT NULL, Leverancier text NOT NULL)";
-            string Statement = $"INSERT INTO {Medicijn}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{Aantal}', '{Gewicht}', '{CurrentDate}', '{ExpiryDate}', '{Type}', '{Leverancier}')";
-            dataAccess.SaveData(dataAccess.ProductConnStr, commandStr);
-            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
+            var commandStr = $"CREATE TABLE {productInfo.naam}(ID INT(6) AUTO_INCREMENT PRIMARY KEY,Aantal INT(30) NOT NULL,Gewicht DOUBLE NOT NULL,Datum_ontvangen text NOT NULL, Uiterste_datum text NOT NULL, Type text NOT NULL, Leverancier text NOT NULL)";
+            string Statement = $"INSERT INTO {productInfo.naam}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
+
+            await dataAccess.SendSaveQueryAsync(commandStr, user);
+            Console.WriteLine(commandStr);
+            await dataAccess.SendSaveQueryAsync(Statement, user);
+            Console.WriteLine(Statement);
         }
-        public async Task<List<string>> GetName()
+        public async Task GetTablesAsync(User user)
         {
-            List<string> tables = await dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
-            return tables;
+            var tables = dataAccess.SendQueryAsync<List<SQLTable>>($"SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';", user);
+            OnTablesRecieved(await tables);
         }
-        public async Task<List<string>> GetWeight(string Medicijn)
+
+        protected virtual void OnTablesRecieved(List<SQLTable> RecievedTables)
         {
-            Task<List<string>> Weights = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Gewicht FROM {Medicijn} WHERE ID = '1'");
-            return Weights.Result;
+            if (TablesRecieved != null)
+                TablesRecieved(this, new TablesRecievedEventArgs(RecievedTables));
         }
-        public async Task<List<string>> GetType(string Medicijn)
+            public async Task<Tuple<Product, ExtraInfo>> GetProductByIDAsync(string Medicijn, int ID, User user)
         {
-            Task<List<string>> Type = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Type FROM {Medicijn} WHERE ID = '1'");
-            return Type.Result;
+            var Product = dataAccess.SendQueryAsync<Product>($"SELECT Gewicht FROM {Medicijn} WHERE ID = '{ID}'", user);
+            var ExtraInfo = dataAccess.SendQueryAsync<ExtraInfo>($"SELECT Gewicht FROM {Medicijn} WHERE ID = '{ID}'", user);
+            
+            return Tuple.Create<Product, ExtraInfo>(await Product, await ExtraInfo);
         }
-        public async Task<List<string>> GetLeverancier(string Medicijn)
+    }
+
+    public class TablesRecievedEventArgs : EventArgs
+    {
+        public TablesRecievedEventArgs(List<SQLTable> RecievedTables)
         {
-            Task<List<string>> Leverancier = dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT Leverancier FROM {Medicijn} WHERE ID = '1'");
-            return Leverancier.Result;
+            Tables = RecievedTables;
         }
+        public List<SQLTable> Tables { get; set; }
     }
 }

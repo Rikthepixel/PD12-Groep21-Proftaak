@@ -60,15 +60,15 @@ namespace Apotheek_application
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 140, 100);
             //dataGridView1.RowHeadersVisible = false;
+
+
         }
 
         private void ExtraInfo_Click(object sender, DataGridViewCellEventArgs e)
         {
-               
                panel1.BackColor = Color.FromArgb(19, 119, 87);
                panel1.Size = new Size(100, 100);
                panel1.Visible = true;
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -141,9 +141,8 @@ namespace Apotheek_application
             {
                 if (orderPage == null)
                 {
-                    orderPage = new OrderPage();
+                    orderPage = new OrderPage(masterPage);
                 }
-
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);
             }
         }
@@ -194,7 +193,7 @@ namespace Apotheek_application
 
         private void OnProductsRecieved(object source, EventArgs e)
         {
-            data = ConvertToDataTable<Product>(productList.Products);
+            data = ConvertToDataTable(productList.Products);
             data.DefaultView.Sort = "Naam asc";
             dataGridView1.DataSource = data;
         }

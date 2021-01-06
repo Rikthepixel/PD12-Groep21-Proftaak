@@ -14,25 +14,33 @@ namespace Apotheek_application
     public partial class OrderPage : Form
     {
         Order order = new Order();
-
+        MasterPage masterPage;
         public bool LoginRequired { get; private set; }
 
-        public OrderPage()
+        public OrderPage(MasterPage mp)
         {
+            masterPage = mp;
             InitializeComponent();
         }
         private void OrderPage_Load(object sender, EventArgs e)
         {
-            foreach (var item in order.GetName().Result)
-            {
-                Medicijn_cB.Items.Add(item);
-            }
+            order.TablesRecieved += Order_TablesRecieved;
+            order.GetTablesAsync(masterPage.CurrentUser);
+
             Type_medicijn_cb.Items.Add("Tabletten");
             Type_medicijn_cb.Items.Add("Dragees");
             Type_medicijn_cb.Items.Add("Capsules");
             Type_medicijn_cb.Items.Add("Drankjes");
             Type_medicijn_cb.Items.Add("Poeders");
             Type_medicijn_cb.Items.Add("Spray");
+        }
+
+        private void Order_TablesRecieved(object source, TablesRecievedEventArgs args)
+        {
+            foreach (var item in args.Tables)
+            {
+                Medicijn_cB.Items.Add(item.TABLE_NAME);
+            }
         }
 
         private void Order_btn_MouseEnter_2(object sender, EventArgs e)
@@ -65,12 +73,12 @@ namespace Apotheek_application
                 CustomMB.Dispose();
                 var Medicijn = Medicijn_cB.Text;
                 var Nummerof = Aantal_Medicijnen_UpDown.Value;
-                var arryWeight = order.GetWeight(Medicijn);
-                var Weight = arryWeight.Result[0];
-                var arryType = order.GetType(Medicijn);
-                var Type = arryType.Result[0];
-                var arryLeverancier = order.GetLeverancier(Medicijn);
-                var Leverancier = arryLeverancier.Result[0];
+
+                var ProductInfo = order.GetProductByIDAsync(Medicijn, 1, masterPage.CurrentUser);
+                var product = ProductInfo.Result.Item1;
+                var extraInfo = ProductInfo.Result.Item2;
+
+                #region TimeCalculations
                 string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
                 int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
                 int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
@@ -81,7 +89,10 @@ namespace Apotheek_application
                     Month = Month - 12;
                 }
                 string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
-                order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate, Type, Leverancier);
+                #endregion
+
+                var NewProduct = new Product(Medicijn, Convert.ToInt32(Math.Ceiling(Nummerof)), product.Gewicht, CurrentDate, ExpiryDate);
+                _ = order.InsertNewOrderAsync(NewProduct, extraInfo, masterPage.CurrentUser);
             }
             if (CustomMB.DialogResult == DialogResult.No)
             {
@@ -92,8 +103,8 @@ namespace Apotheek_application
         private void Add_medicijn_btn_Click_1(object sender, EventArgs e)
         {
             string New_medical = Naam_Medicijn_txt.Text;
-            string New_Aantal = Aantal_txt.Text;
-            string New_Gewicht = Gewicht_txt.Text;
+            int New_Aantal = Convert.ToInt32(Aantal_txt.Text);
+            double New_Gewicht = Convert.ToDouble(Gewicht_txt.Text);
             string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
             string New_Type = Type_medicijn_cb.Text;
             var New_Leverancier = leverancier_txt.Text;
@@ -107,7 +118,10 @@ namespace Apotheek_application
             }
             string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
 
-            order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate, New_Type, New_Leverancier);
+            var NewProduct = new Product(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
+            var NewExtraInfo = new ExtraInfo(New_Type, New_Leverancier);
+
+            _ = order.InsertNewProductAsync(NewProduct, NewExtraInfo, masterPage.CurrentUser);
         }
 
         private void Type_medicijn_cb_SelectedIndexChanged(object sender, EventArgs e)

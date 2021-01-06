@@ -28,15 +28,15 @@ namespace Appotheekcl
 
         public List<Product> Products { get; set; }
         public List<ExtraInfo> ProductExtraInfo { get; set; }
-        public List<Table> Tables { get; set; } 
+        public List<SQLTable> Tables { get; set; } 
 
         private async void FetchProductInfo(User user)
         {
             Products = new List<Product>();
             ProductExtraInfo = new List<ExtraInfo>();
             Tables = await GetTables(user);
-            await Task.WhenAll(GetProduct(user, Tables));
-            OnProductsFetched();
+            _ = GetProduct(user, Tables);
+            
         }
 
         protected virtual void OnProductsFetched()
@@ -45,12 +45,12 @@ namespace Appotheekcl
                 ProductInfoFetched(this, EventArgs.Empty);
         }
 
-        private async Task<List<Table>> GetTables(User user)
+        private async Task<List<SQLTable>> GetTables(User user)
         {
             string TableQuery = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
-            return await data.SendQueryAsync<List<Table>>(TableQuery, user);
+            return await data.SendQueryAsync<List<SQLTable>>(TableQuery, user);
         }
-        private async Task GetProduct(User user, List<Table> Tables)
+        private async Task GetProduct(User user, List<SQLTable> Tables)
         {
             List<Task> DataFetchTasks = new List<Task>();
             List<Task> TaskCreators = new List<Task>();
@@ -92,6 +92,7 @@ namespace Appotheekcl
 
             await Task.WhenAll(TaskCreators);
             await Task.WhenAll(DataFetchTasks);
+            OnProductsFetched();
         }
     }
 }

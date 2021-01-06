@@ -43,58 +43,17 @@ namespace Appotheekcl
                     Data.Add(new KeyValuePair<string, string>("IsApplication", "IAMTHEAPPLICATION"));
                     var Content = new FormUrlEncodedContent(Data);
 
-                    HttpResponseMessage LoginResponse = await CentralClient.HttpClient.PostAsync("http://127.0.0.1/Users/Login/LoginMain.php", Content).ConfigureAwait(false); //
+                    HttpResponseMessage LoginResponse = await CentralClient.HttpClient.PostAsync(WebsiteLocations.LoginPage, Content).ConfigureAwait(false); //
                     var Prince = LoginResponse.Headers.ToList();
                     string JSONData = await LoginResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    Console.WriteLine(JSONData);
                     LoggedInUser = JsonConvert.DeserializeObject<User>(JSONData);
                     if (LoggedInUser.loggedIn == true)
                     {
                         foreach (var item in Prince)
                         {
-                            
                             if (item.Key == "Set-Cookie")
                             {
-                                var Cookies = item.Value.ToList<string>();
-                                //foreach (var Bescuit in Cookies)
-                                //{
-                                //    string Name, Value, Path = string.Empty, Domain = string.Empty;
-
-                                //    Name = Bescuit.Substring(0, Bescuit.IndexOf('='));
-
-                                //    if (Bescuit.IndexOf(';') != -1)
-                                //    {
-                                //        Value = Bescuit.Substring(Bescuit.IndexOf('=') + 1, Bescuit.IndexOf(';'));
-                                //    }
-                                //    else
-                                //    {
-                                //        Value = Bescuit.Substring(Bescuit.IndexOf('=') + 1, Bescuit.Length);
-                                //    }
-
-                                //    if (Bescuit.Contains("path"))
-                                //    {
-                                //        int BeginIndex, EndIndex;
-                                //        BeginIndex = Bescuit.IndexOf('=', Bescuit.IndexOf("path")) + 1;
-                                //        if (Bescuit.IndexOf(';', Bescuit.IndexOf("path")) != -1)
-                                //        {
-                                //            EndIndex = Bescuit.IndexOf(';', Bescuit.IndexOf("path"));
-                                //        }
-                                //        else
-                                //        {
-                                //            EndIndex = Bescuit.Length;
-                                //        }
-
-                                //        Path = Bescuit.Substring(BeginIndex, EndIndex - BeginIndex);
-                                //    }
-                                    
-                                //    Cookie Oreo = new Cookie(Name, Value);
-                                //    if (Path != string.Empty)
-                                //        Oreo.Path = Path;
-                                //    Uri BaseAdress = new Uri(LoginResponse.RequestMessage.RequestUri.Host);
-                                //    CentralClient.HttpHandler.CookieContainer.Add(BaseAdress, Oreo);
-                                //}
-                                LoggedInUser.Cookies = Cookies;
-                                break;
+                                LoggedInUser.Cookies = item.Value.ToList<string>();
                             }
                         }
 
