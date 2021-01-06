@@ -21,7 +21,6 @@ namespace Apotheek_application
 
         public ProductPage(MasterPage  MP)
         {
-            productList = new ProductList();
             InitializeComponent();
             masterPage = MP;
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
@@ -49,7 +48,6 @@ namespace Apotheek_application
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.FromArgb(30, 140, 100);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 140, 100);
         }
 
         private void ExtraInfo_Click(object sender, DataGridViewCellEventArgs e)
@@ -191,9 +189,22 @@ namespace Apotheek_application
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             productList = new ProductList();
-            data = ConvertToDataTable<Product>(productList.Products);
-            data.DefaultView.Sort = "Naam asc";
+            data = ConvertToDataTable<Product>(productList.Products);      
             dataGridView1.DataSource = data;
+
+            foreach (var Index in productList.OnDateIndexes)
+            {
+                Console.WriteLine("Loop1");
+                //dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
+                for (int i = 0; i < dataGridView1.Rows[Index].Cells.Count; i++)
+                {
+                    Console.WriteLine("Loop2");
+                    Console.WriteLine(dataGridView1.Rows[Index].DefaultCellStyle.BackColor);
+                    dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
+                    Console.WriteLine(dataGridView1.Rows[Index].DefaultCellStyle.BackColor);
+                }
+            }
+            dataGridView1.Sort(dataGridView1.Columns["Naam"], ListSortDirection.Ascending);
         }
 
         private void Verwijderen_btn_Click(object sender, EventArgs e)
