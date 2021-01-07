@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,15 +27,20 @@ namespace Apotheek_application
             {
                 Name_cb.Items.Add(item);
             }
+            Aantal_Medicijnen_Verwijderen.Text = null;
         }
 
         private void Order_btn_Click(object sender, EventArgs e)
         {
             RemoveMessageBox CustomMB = new RemoveMessageBox();
             CustomMB.StartPosition = FormStartPosition.CenterParent;
+            SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
+            Popup.Play();
             CustomMB.ShowDialog();
             if (CustomMB.DialogResult == DialogResult.Yes)
             {
+                SoundPlayer correct = new SoundPlayer(Properties.Resources.correct);
+                correct.Play();
                 CustomMB.Dispose();
                 string Name_medical = Name_cb.Text;
                 string Change_to_id = ID_cb.Text;
@@ -47,22 +53,39 @@ namespace Apotheek_application
                 if (Convert.ToInt32(New_Aantal) < 1)
                 {
                     order.DeleteOrder(Name_medical, Change_to_id);
-                    ID_cb.Items.Clear();
-                    foreach (var item in order.GetID(Name_medical).Result)
+                    int count = ID_cb.Items.Count;
+                    if (count == 0)
                     {
-                        ID_cb.Items.Add(item);
+                        order.Drop_tabel_Order(Name_medical);
                     }
                 }
+                Name_cb.SelectedIndex = -1;
+                ID_cb.SelectedIndex = -1;
+                Aantal_Medicijnen_Verwijderen.Value = 1;
+                Aantal_Medicijnen_Verwijderen.Text = null;
+            }
+            if (CustomMB.DialogResult == DialogResult.No)
+            {
+                SoundPlayer Incorrect = new SoundPlayer(Properties.Resources.Error);
+                Incorrect.Play();
+                CustomMB.Dispose();
             }
         }
 
         private void ID_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
             ID_cb.Items.Clear();
-            string Change_medical = Name_cb.Text;
-            foreach (var item in order.GetID(Change_medical).Result)
+            if (String.IsNullOrEmpty(Name_cb.Text))
             {
-                ID_cb.Items.Add(item);
+
+            }
+            else
+            {
+                string Change_medical = Name_cb.Text;
+                foreach (var item in order.GetID(Change_medical).Result)
+                {
+                    ID_cb.Items.Add(item);
+                }
             }
         }
     }

@@ -27,14 +27,12 @@ namespace Apotheek_application
             var Password = Password_txt.Text;
             var Voornaam = Voornaam_txt.Text;
             var Achternaam = Achternaam_txt.Text;
-            string Datum = DateTime.Now.ToString("yyyy-MM-dd");
             Console.WriteLine(Email);
             Console.WriteLine(Password);
             Console.WriteLine(Voornaam);
             Console.WriteLine(Achternaam);
-            Console.WriteLine(Datum);
 
-            adduser.InsertNewUser(Email, Password, Datum, Voornaam, Achternaam);
+            adduser.InsertNewUser(Email, Password, Voornaam, Achternaam);
         }
     }
 }

@@ -93,9 +93,9 @@ namespace Apotheek_application
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(294, 51);
+            this.label3.Location = new System.Drawing.Point(348, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 14);
             this.label3.TabIndex = 23;
@@ -107,9 +107,11 @@ namespace Apotheek_application
             this.Name_cb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Name_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Name_cb.FormattingEnabled = true;
-            this.Name_cb.Location = new System.Drawing.Point(320, 23);
+            this.Name_cb.Location = new System.Drawing.Point(371, 23);
+            this.Name_cb.MaxDropDownItems = 100;
             this.Name_cb.Name = "Name_cb";
             this.Name_cb.Size = new System.Drawing.Size(120, 21);
             this.Name_cb.TabIndex = 22;
@@ -124,7 +126,7 @@ namespace Apotheek_application
             this.Order_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
             this.Order_btn.FlatAppearance.BorderSize = 2;
             this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_btn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.Order_btn.Location = new System.Drawing.Point(194, 129);
             this.Order_btn.Name = "Order_btn";
             this.Order_btn.Size = new System.Drawing.Size(364, 41);
@@ -138,9 +140,11 @@ namespace Apotheek_application
             this.ID_cb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ID_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ID_cb.FormattingEnabled = true;
-            this.ID_cb.Location = new System.Drawing.Point(320, 48);
+            this.ID_cb.Location = new System.Drawing.Point(371, 48);
+            this.ID_cb.MaxDropDownItems = 100;
             this.ID_cb.Name = "ID_cb";
             this.ID_cb.Size = new System.Drawing.Size(120, 21);
             this.ID_cb.TabIndex = 5;
@@ -150,9 +154,9 @@ namespace Apotheek_application
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(227, 26);
+            this.label2.Location = new System.Drawing.Point(278, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 14);
             this.label2.TabIndex = 2;
@@ -164,8 +168,9 @@ namespace Apotheek_application
             this.Aantal_Medicijnen_Verwijderen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Aantal_Medicijnen_Verwijderen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Aantal_Medicijnen_Verwijderen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aantal_Medicijnen_Verwijderen.Location = new System.Drawing.Point(320, 73);
+            this.Aantal_Medicijnen_Verwijderen.Location = new System.Drawing.Point(371, 73);
             this.Aantal_Medicijnen_Verwijderen.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -190,9 +195,9 @@ namespace Apotheek_application
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(273, 75);
+            this.label1.Location = new System.Drawing.Point(324, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 14);
             this.label1.TabIndex = 1;

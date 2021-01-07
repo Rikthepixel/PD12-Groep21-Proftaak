@@ -19,9 +19,9 @@ namespace Appotheekcl
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
 
-        public void InsertNewUser(string Email, string Password, string Datum, string Voornaam, string Achternaam)
+        public void InsertNewUser(string Email, string Password, string Voornaam, string Achternaam)
         {
-            string Statement = $"INSERT INTO Users (Email, Password , created_at, Voornaam, Achternaam) VALUES('{Email}', '{Password}', '{Datum}', '{Voornaam}', '{Achternaam}')";
+            string Statement = $"INSERT INTO Users (Email, Password, Voornaam, Achternaam) VALUES('{Email}', '{Password}', '{Voornaam}', '{Achternaam}')";
             dataAccess.SaveData(dataAccess.LoginConnStr, Statement);
         }
     }

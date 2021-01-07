@@ -42,6 +42,11 @@ namespace Appotheekcl
             string Statement = $"DELETE FROM {Medicijn} WHERE ID = '{ID}'";
             dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
         }
+        public void Drop_tabel_Order(string Medicijn)
+        {
+            string Statement = $"DROP TABLE {Medicijn}";
+            dataAccess.SaveData(dataAccess.ProductConnStr, Statement);
+        }
         public async Task<List<string>> GetName()
         {
             List<string> tables = await dataAccess.LoadData<string>(dataAccess.ProductConnStr, $"SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");

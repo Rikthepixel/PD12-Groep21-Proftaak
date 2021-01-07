@@ -22,7 +22,7 @@ namespace Apotheek_application.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Apotheek_application.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Apotheek_application.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Apotheek_application.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,39 +61,9 @@ namespace Apotheek_application.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bestellen {
-            get {
-                object obj = ResourceManager.GetObject("Bestellen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bestellensmall {
-            get {
-                object obj = ResourceManager.GetObject("Bestellensmall", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bestellensmalllight {
-            get {
-                object obj = ResourceManager.GetObject("Bestellensmalllight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Boo {
+        public static System.IO.UnmanagedMemoryStream Boo {
             get {
                 return ResourceManager.GetStream("Boo", resourceCulture);
             }
@@ -102,7 +72,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream correct {
+        public static System.IO.UnmanagedMemoryStream correct {
             get {
                 return ResourceManager.GetStream("correct", resourceCulture);
             }
@@ -111,7 +81,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Correct2 {
+        public static System.IO.UnmanagedMemoryStream Correct2 {
             get {
                 return ResourceManager.GetStream("Correct2", resourceCulture);
             }
@@ -120,7 +90,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Correct3 {
+        public static System.IO.UnmanagedMemoryStream Correct3 {
             get {
                 return ResourceManager.GetStream("Correct3", resourceCulture);
             }
@@ -129,7 +99,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Error {
+        public static System.IO.UnmanagedMemoryStream Error {
             get {
                 return ResourceManager.GetStream("Error", resourceCulture);
             }
@@ -138,7 +108,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Incorrect {
+        public static System.IO.UnmanagedMemoryStream Incorrect {
             get {
                 return ResourceManager.GetStream("Incorrect", resourceCulture);
             }
@@ -147,7 +117,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Popup {
+        public static System.IO.UnmanagedMemoryStream Popup {
             get {
                 return ResourceManager.GetStream("Popup", resourceCulture);
             }
@@ -156,29 +126,9 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Popup2 {
+        public static System.IO.UnmanagedMemoryStream Popup2 {
             get {
                 return ResourceManager.GetStream("Popup2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Teovoegensmall {
-            get {
-                object obj = ResourceManager.GetObject("Teovoegensmall", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Toevoegensmalllight {
-            get {
-                object obj = ResourceManager.GetObject("Toevoegensmalllight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

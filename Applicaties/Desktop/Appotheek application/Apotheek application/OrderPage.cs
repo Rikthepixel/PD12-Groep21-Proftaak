@@ -34,26 +34,7 @@ namespace Apotheek_application
             Type_medicijn_cb.Items.Add("Drankjes");
             Type_medicijn_cb.Items.Add("Poeders");
             Type_medicijn_cb.Items.Add("Spray");
-        }
-
-        private void Order_btn_MouseEnter_2(object sender, EventArgs e)
-        {
-            this.Order_btn.Image = Apotheek_application.Properties.Resources.Bestellensmalllight;
-        }
-
-        private void Order_btn_MouseLeave_2(object sender, EventArgs e)
-        {
-            this.Order_btn.Image = Apotheek_application.Properties.Resources.Bestellensmall;
-        }
-
-        private void Add_medicijn_btn_MouseEnter(object sender, EventArgs e)
-        {
-            this.Add_medicijn_btn.Image = Apotheek_application.Properties.Resources.Toevoegensmalllight;
-        }
-
-        private void Add_medicijn_btn_MouseLeave(object sender, EventArgs e)
-        {
-            this.Add_medicijn_btn.Image = Apotheek_application.Properties.Resources.Teovoegensmall;
+            Aantal_Medicijnen_UpDown.Text = null;
         }
 
         private void Order_btn_Click(object sender, EventArgs e)
@@ -87,6 +68,9 @@ namespace Apotheek_application
                 }
                 string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
                 order.InsertNewOrder(Medicijn, Convert.ToString(Nummerof), Weight, CurrentDate, ExpiryDate, Type, Leverancier);
+                Medicijn_cB.SelectedIndex = -1;
+                Aantal_Medicijnen_UpDown.Value = 0;
+                Aantal_Medicijnen_UpDown.Text = null;
             }
             if (CustomMB.DialogResult == DialogResult.No)
             {
@@ -128,6 +112,17 @@ namespace Apotheek_application
                 {
                     Medicijn_cB.Items.Add(item);
                 }
+                Naam_Medicijn_txt.Text = " ";
+                Aantal_txt.Text = " ";
+                Gewicht_txt.Text = " ";
+                Type_medicijn_cb.SelectedIndex = -1;
+                leverancier_txt.Text = " ";
+            }
+            if (CustomMB.DialogResult == DialogResult.No)
+            {
+                SoundPlayer Incorrect = new SoundPlayer(Properties.Resources.Error);
+                Incorrect.Play();
+                CustomMB.Dispose();
             }
         }
 
@@ -136,5 +131,27 @@ namespace Apotheek_application
 
         }
 
+        private void Gewicht_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+             (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Aantal_Medicijnen_UpDown_ValueChanged(object sender, EventArgs e)
+        {
+            int No_zero = Convert.ToInt32(Aantal_Medicijnen_UpDown.Value);
+            if (No_zero == 0)
+            {
+                Aantal_Medicijnen_UpDown.Value = 1;
+            }
+        }
     }
 }
