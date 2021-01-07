@@ -194,14 +194,15 @@ namespace Apotheek_application
 
             foreach (var Index in productList.OnDateIndexes)
             {
-                Console.WriteLine("Loop1");
-                //dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
+                DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+                dataGridViewCellStyle1.BackColor = Color.Yellow;
+                dataGridViewCellStyle1.ForeColor = Color.Yellow;
+                dataGridViewCellStyle1.SelectionBackColor = Color.Yellow;
+
                 for (int i = 0; i < dataGridView1.Rows[Index].Cells.Count; i++)
                 {
-                    Console.WriteLine("Loop2");
-                    Console.WriteLine(dataGridView1.Rows[Index].DefaultCellStyle.BackColor);
-                    dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
-                    Console.WriteLine(dataGridView1.Rows[Index].DefaultCellStyle.BackColor);
+                    dataGridView1.Rows[Index].DefaultCellStyle = dataGridViewCellStyle1;
+                    Console.WriteLine(Index);
                 }
             }
             dataGridView1.Sort(dataGridView1.Columns["Naam"], ListSortDirection.Ascending);
