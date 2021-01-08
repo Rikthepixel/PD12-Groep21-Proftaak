@@ -41,28 +41,9 @@ namespace Apotheek_application
         {
             foreach (var item in args.Tables)
             {
+                Console.WriteLine(item.TABLE_NAME);
                 Medicijn_cB.Items.Add(item.TABLE_NAME);
             }
-        }
-
-        private void Order_btn_MouseEnter_2(object sender, EventArgs e)
-        {
-            this.Order_btn.Image = Apotheek_application.Properties.Resources.Bestellensmalllight;
-        }
-
-        private void Order_btn_MouseLeave_2(object sender, EventArgs e)
-        {
-            this.Order_btn.Image = Apotheek_application.Properties.Resources.Bestellensmall;
-        }
-
-        private void Add_medicijn_btn_MouseEnter(object sender, EventArgs e)
-        {
-            this.Add_medicijn_btn.Image = Apotheek_application.Properties.Resources.Toevoegensmalllight;
-        }
-
-        private void Add_medicijn_btn_MouseLeave(object sender, EventArgs e)
-        {
-            this.Add_medicijn_btn.Image = Apotheek_application.Properties.Resources.Teovoegensmall;
         }
 
         private void Order_btn_Click(object sender, EventArgs e)
@@ -111,7 +92,7 @@ namespace Apotheek_application
             }
         }
 
-        private void Add_medicijn_btn_Click_1(object sender, EventArgs e)
+        private async void Add_medicijn_btn_Click_1(object sender, EventArgs e)
         {
             SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
             Popup.Play();
@@ -119,27 +100,19 @@ namespace Apotheek_application
             CustomMB.StartPosition = FormStartPosition.CenterParent;
             CustomMB.ShowDialog();
             if (CustomMB.DialogResult == DialogResult.Yes)
-            string New_medical = Naam_Medicijn_txt.Text;
-            int New_Aantal = Convert.ToInt32(Aantal_txt.Text);
-            double New_Gewicht = Convert.ToDouble(Gewicht_txt.Text);
-            string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
-            string New_Type = Type_medicijn_cb.Text;
-            var New_Leverancier = leverancier_txt.Text;
-            int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
-            int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
-            int Month = Convert.ToInt32(ExpiryMonth);
-            if (Month > 12)
             {
                 CustomMB.Dispose();
+
                 string New_medical = Naam_Medicijn_txt.Text;
-                string New_Aantal = Aantal_txt.Text;
-                string New_Gewicht = Gewicht_txt.Text;
+                int New_Aantal = Convert.ToInt32(Aantal_txt.Text);
+                double New_Gewicht = Convert.ToDouble(Gewicht_txt.Text);
                 string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
                 string New_Type = Type_medicijn_cb.Text;
                 var New_Leverancier = leverancier_txt.Text;
                 int ExpiryMonth = Convert.ToInt32(DateTime.Now.ToString("MM")) + 2;
                 int ExpiryYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
                 int Month = Convert.ToInt32(ExpiryMonth);
+                
                 if (Month > 12)
                 {
                     ExpiryYear = ExpiryYear + 1;
@@ -147,24 +120,18 @@ namespace Apotheek_application
                 }
                 string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
 
-                order.InsertNewProduct(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate, New_Type, New_Leverancier);
-                Medicijn_cB.Items.Clear();
-                foreach (var item in order.GetName().Result)
-                {
-                    Medicijn_cB.Items.Add(item);
-                }
+                var NewProduct = new Product(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
+                var NewExtraInfo = new ExtraInfo(New_Type, New_Leverancier);
                 Naam_Medicijn_txt.Text = " ";
                 Aantal_txt.Text = " ";
                 Gewicht_txt.Text = " ";
                 Type_medicijn_cb.SelectedIndex = -1;
                 leverancier_txt.Text = " ";
+
+                await Task.WhenAll(order.InsertNewProductAsync(NewProduct, NewExtraInfo, masterPage.CurrentUser));
+                _ = order.GetTablesAsync(masterPage.CurrentUser);
             }
-            string ExpiryDate = DateTime.Now.ToString($"{ExpiryYear}-{Month}-dd");
-
-            var NewProduct = new Product(New_medical, New_Aantal, New_Gewicht, CurrentDate, ExpiryDate);
-            var NewExtraInfo = new ExtraInfo(New_Type, New_Leverancier);
-
-            _ = order.InsertNewProductAsync(NewProduct, NewExtraInfo, masterPage.CurrentUser);
+            
             if (CustomMB.DialogResult == DialogResult.No)
             {
                 SoundPlayer Incorrect = new SoundPlayer(Properties.Resources.Error);
