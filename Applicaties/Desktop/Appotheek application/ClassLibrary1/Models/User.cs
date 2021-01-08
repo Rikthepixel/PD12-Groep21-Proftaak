@@ -16,7 +16,7 @@ namespace Appotheekcl
         public bool loggedIn { get; set; }
            
         public List<string> Cookies { get; set; }
-        public string LoginError { get; set; }
+        public string loginerror { get; set; }
         //does
         public void HidePassword()
         {

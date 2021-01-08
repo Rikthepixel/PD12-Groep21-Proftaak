@@ -16,14 +16,17 @@ namespace Appotheekcl
     {
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
-
         private string LoginError;
+
+        public delegate void OnLoginRecievedEventHandler(object source, LoginRecievedArgs args);
+        public event OnLoginRecievedEventHandler OnLoginRecieved;
+
         public Inlog()
         {
             LoginError = string.Empty;
         }
 
-        public async Task<User> generateUserLoginAsync(string Email, string Password)
+        public async Task DoLoginUserAsync(string Email, string Password)
         {
 
             User LoggedInUser = null;
@@ -36,23 +39,32 @@ namespace Appotheekcl
             {
                 try
                 {
-                    await DoLoginAsync(Email, Password);
+                    LoggedInUser = await DoLoginAsync(Email, Password);
                 }
                 catch (Exception e)
                 {
                     setLoginError(e);
                 }
             }
-            return LoggedInUser;
+
+            LoginError = LoggedInUser.loginerror;
+            LoginRecieved(LoggedInUser);
         }
 
-        private void setLoginError(Exception e) 
+        protected virtual void LoginRecieved(User LoggedInUser)
+        {
+            if (OnLoginRecieved != null)
+                OnLoginRecieved(this, new LoginRecievedArgs(LoggedInUser));
+        }
+
+        private void setLoginError(Exception e)
         {
             Console.WriteLine(e.HResult); //-2146233088 for No connection
-            if(e.HResult == -2146233088)
+            if (e.HResult == -2146233088)
             {
                 LoginError = "Er kon geen Connectie worden gemaakt met de LoginService";
-            } else
+            }
+            else
             {
                 LoginError = "Er is een onbekende fout opgetreden";
             }
@@ -61,7 +73,7 @@ namespace Appotheekcl
         {
             LoginError = Error;
         }
-        
+
         public string GetLoginError()
         {
             return LoginError;
@@ -79,32 +91,59 @@ namespace Appotheekcl
             PostData.Add(new KeyValuePair<string, string>("EML", Email));
             PostData.Add(new KeyValuePair<string, string>("PSWD", Password));
             PostData.Add(new KeyValuePair<string, string>("Login", "AUserWantsToLogin"));
+            PostData.Add(new KeyValuePair<string, string>("Login", "AUserWantsToLogin"));
             PostData.Add(new KeyValuePair<string, string>("IsApplication", "true"));
             var PostContent = new FormUrlEncodedContent(PostData);
 
+            //TimeSpan DefaultTimeOut = CentralClient.HttpClient.Timeout;
             HttpResponseMessage LoginResponse = await CentralClient.HttpClient.PostAsync(WebsiteLocations.LoginPage, PostContent).ConfigureAwait(false);
             // ^ sends a LoginRequest to the website
 
+            User LoggedInUser = null;
             //Reads the response which the website gave to us and puts that response into a new User class instance
-            var LoggedInUser = JsonConvert.DeserializeObject<User>(await LoginResponse.Content.ReadAsStringAsync().ConfigureAwait(false));
-
-            //This loop gets the cookies which the website gave as a response and saves that into the new User instance
-            if (LoggedInUser.loggedIn == true)
+            try
             {
-                var Prince = LoginResponse.Headers.ToList();
-                foreach (var item in Prince)
+                string JSONData = await LoginResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                Console.WriteLine(JSONData);
+                LoggedInUser = JsonConvert.DeserializeObject<User>(JSONData);
+                
+                //This loop gets the cookies which the website gave as a response and saves that into the new User instance
+                if (LoggedInUser.loggedIn == true)
                 {
-                    _ = Task.Run(() =>
+                    var Prince = LoginResponse.Headers.ToList();
+                    foreach (var item in Prince)
                     {
-                        if (item.Key == "Set-Cookie")
+                        _ = Task.Run(() =>
                         {
-                            LoggedInUser.Cookies = item.Value.ToList<string>();
-                        }
-                    });
+                            if (item.Key == "Set-Cookie")
+                            {
+                                LoggedInUser.Cookies = item.Value.ToList<string>();
+                            }
+                        });
 
+                    }
                 }
+                
             }
+            catch (Exception e)
+            {
+
+                if (e is TaskCanceledException)
+                    LoginError = "Er kon geen verbinding gemaakt worden met de website want ";
+                else
+                    LoginError = "Er kon geen verbinding gemaakt worden met de website voor onbekende redenen";
+            }
+
             return LoggedInUser;
         }
+    }
+
+    public class LoginRecievedArgs : EventArgs
+    {
+        public LoginRecievedArgs(User LoggedinUser)
+        {
+            LoggedInUser = LoggedinUser;
+        }
+        public User LoggedInUser { get; set; }
     }
 }

@@ -26,15 +26,20 @@ namespace Apotheek_application
         {
             InitializeComponent();
             masterPage = MP;
+            Inlog.OnLoginRecieved += OnLoginRecieved;
             masterPage.Header.UpdateHeader();
         }
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            User user = Inlog.generateUserLoginAsync(Email_txt.Text, Wachtwoord_txt.Text).Result;
-            if(user != null)
+            _ = Inlog.DoLoginUserAsync(Email_txt.Text, Wachtwoord_txt.Text);
+        }
+        
+        private void OnLoginRecieved(object sender, LoginRecievedArgs e)
+        {
+            var user = e.LoggedInUser;
+            if (user != null)
             {
-         
                 if (user.IsLoginValid())
                 {
                     masterPage.CurrentUser = user;
@@ -46,7 +51,8 @@ namespace Apotheek_application
                 {
                     SetLoginError(Inlog.GetLoginError());
                 }
-            } else
+            }
+            else
             {
                 SetLoginError(Inlog.GetLoginError());
             }
@@ -57,7 +63,6 @@ namespace Apotheek_application
             EmailAddPlaceHolder(sender, e);
             masterPage.Header.UpdateHeader();
         }
-        
         private void WachtwoordRemovePlaceHolder(object sender, EventArgs e)
         {
             if (Wachtwoord_txt.Text == "Wachtwoord...")

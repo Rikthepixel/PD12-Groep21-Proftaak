@@ -22,17 +22,20 @@ namespace Appotheekcl
 
         public async Task InsertNewOrderAsync(Product productInfo, ExtraInfo extraInfo, User user)
         {
-            string Statement = $"INSERT INTO {productInfo.naam}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
+            string ProductName = productInfo.naam.Replace(' ', '_');
+            string Statement = $"INSERT INTO {ProductName}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
             await dataAccess.SendSaveQueryAsync(Statement, user);
             
         }
         public async Task InsertNewProductAsync(Product productInfo, ExtraInfo extraInfo, User user)
         {
-            var commandStr = $"CREATE TABLE {productInfo.naam}(ID INT(6) AUTO_INCREMENT PRIMARY KEY,Aantal INT(30) NOT NULL,Gewicht DOUBLE NOT NULL,Datum_ontvangen text NOT NULL, Uiterste_datum text NOT NULL, Type text NOT NULL, Leverancier text NOT NULL)";
-            string Statement = $"INSERT INTO {productInfo.naam}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
+            string ProductName = productInfo.naam.Replace(' ', '_');
+            var commandStr = $"CREATE TABLE {ProductName}(ID INT(6) AUTO_INCREMENT PRIMARY KEY,Aantal INT(30) NOT NULL,Gewicht DOUBLE NOT NULL,Datum_ontvangen text NOT NULL, Uiterste_datum text NOT NULL, Type text NOT NULL, Leverancier text NOT NULL)";
+            string Statement = $"INSERT INTO {ProductName}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
 
             await dataAccess.SendSaveQueryAsync(commandStr, user);
             await dataAccess.SendSaveQueryAsync(Statement, user);
+
         }
         public async Task GetTablesAsync(User user)
         {

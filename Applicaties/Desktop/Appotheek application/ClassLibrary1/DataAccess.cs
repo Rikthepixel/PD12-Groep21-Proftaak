@@ -82,7 +82,7 @@ namespace Appotheekcl
             }
         }
 
-        public async Task<HttpStatusCode> SendSaveQueryAsync(string SQLQuery, User User)
+        public async Task<KeyValuePair<string, bool>> SendSaveQueryAsync(string SQLQuery, User User)
         {
             if (User.loggedIn)
             {
@@ -98,11 +98,25 @@ namespace Appotheekcl
                 Content.Headers.Add("Cookie", CookieString);
 
                 HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync(WebsiteLocations.QueryPage, Content);
-                return RecievedData.StatusCode;
+                string RecievedDataString = await RecievedData.Content.ReadAsStringAsync();
+                if (RecievedDataString.Length != 0)
+                {
+                    var Awnser = JsonConvert.DeserializeObject<QueryResponse>(RecievedDataString);
+                    if (Awnser.succesful == "Query was succefully executed")
+                        return new KeyValuePair<string, bool>("succesful", true);
+                    else if (Awnser.succesful == "Unable to execute query")
+                        return new KeyValuePair<string, bool>("succesful", false);
+                    else
+                        return new KeyValuePair<string, bool>("succesful", false);
+                }
+                else
+                {
+                    return new KeyValuePair<string, bool>("succesful", false);
+                }
             }
             else
             {
-                return HttpStatusCode.Unauthorized;
+                return new KeyValuePair<string, bool>("succesful", false);
             }
         }
 
@@ -136,6 +150,11 @@ namespace Appotheekcl
             {
                 return default(T);
             }
+        }
+
+        internal class QueryResponse
+        {
+            public string succesful { get; set; }
         }
     }
 }

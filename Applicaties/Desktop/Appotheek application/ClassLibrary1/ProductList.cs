@@ -66,7 +66,8 @@ namespace Appotheekcl
 
                         for (int j = 0; j < results.Count; j++)
                         {
-                            results[j].naam = Table.TABLE_NAME;
+
+                            results[j].naam = Table.TABLE_NAME.Replace('_', ' ');
                             Products.Add(results[j]);
                         }
                     }));
