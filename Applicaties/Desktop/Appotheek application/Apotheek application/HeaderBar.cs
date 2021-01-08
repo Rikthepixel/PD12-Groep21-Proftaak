@@ -244,11 +244,11 @@ namespace Apotheek_application
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
-                if (orderPage == null)
+                if (removePage == null)
                 {
                     SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
                     Popup2.Play();
-                    removePage = new RemovePage();
+                    removePage = new RemovePage(masterPage);
                 }
 
                 masterPage.OpenChildForm(removePage, removePage.LoginRequired);
