@@ -8,12 +8,17 @@ if(VerifySession()){
             $Query = $_POST['SQLQuery'];
                 
             if($Result = $Prodsconn -> query($Query)){
-                if ($Result->num_rows >= 0){
-                    $returnData = array();
-                    while ($row = $Result -> fetch_assoc()){
-                      $returnData[] = $row;
+                if (is_object($Result)){
+                    if ($Result->num_rows >= 0){
+                        $returnData = array();
+                        while ($row = $Result -> fetch_assoc()){
+                          $returnData[] = $row;
+                        }
+                        echo json_encode($returnData);
+                    } else{
+                        $returnData['succesful'] = "Query was succefully executed";
+                        echo json_encode($returnData);
                     }
-                    echo json_encode($returnData);
                 }
                 else{
                     $returnData['succesful'] = "Query was succefully executed";
