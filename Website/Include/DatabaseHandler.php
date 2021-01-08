@@ -7,7 +7,7 @@
 
     $Loginconn = mysqli_connect($Logindbservername, $logindbusername, $logindbpassword, $logindbname);
     if (!$Loginconn) {
-        die("Connection to the database fialed");
+        die("Connection to the database failed");
     }
 
 
@@ -19,7 +19,7 @@
 
     $Prodsconn = mysqli_connect($Prodsdbservername, $prodsdbusername, $prodsdbpassword, $prodsdbname);
     if (!$Prodsconn) {
-        die("Connection to the database fialed");
+        die("Connection to the database failed");
     }
 
     //$dbservername = "192.168.44.186"; <-- de server
