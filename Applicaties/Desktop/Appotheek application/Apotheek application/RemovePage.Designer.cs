@@ -176,19 +176,10 @@ namespace Apotheek_application
             0,
             0,
             0});
-            this.Aantal_Medicijnen_Verwijderen.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.Aantal_Medicijnen_Verwijderen.Name = "Aantal_Medicijnen_Verwijderen";
             this.Aantal_Medicijnen_Verwijderen.Size = new System.Drawing.Size(120, 20);
             this.Aantal_Medicijnen_Verwijderen.TabIndex = 3;
-            this.Aantal_Medicijnen_Verwijderen.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.Aantal_Medicijnen_Verwijderen.ValueChanged += new System.EventHandler(this.Aantal_Medicijnen_Verwijderen_ValueChanged);
             // 
             // label1
             // 

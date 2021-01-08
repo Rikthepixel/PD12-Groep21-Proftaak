@@ -18,6 +18,8 @@ namespace Apotheek_application
         ProductPage productPage;
         OrderPage orderPage;
         HelpPage helpPage;
+        AddUserPage addUserPage;
+        RemovePage removePage;
         public HeaderBar(MasterPage MP)
         {
             InitializeComponent();
@@ -170,6 +172,8 @@ namespace Apotheek_application
                 Bestellen_btn.Visible = true;
                 Help_btn.Visible = true;
                 NameTag_label.Visible = true;
+                Add_new_user_btn.Visible = true;
+                Remove_btn.Visible = true;
                 Logout_btn.Text = "Uitloggen";
             }
             else
@@ -179,6 +183,8 @@ namespace Apotheek_application
                 Bestellen_btn.Visible = false;
                 Help_btn.Visible = false;
                 NameTag_label.Visible = false;
+                Add_new_user_btn.Visible = false;
+                Remove_btn.Visible = false;
             }
 
             ResetAllButtonColors();
@@ -216,6 +222,38 @@ namespace Apotheek_application
             Bestellen_btn.BackColor = Color.FromArgb(31, 133, 99);
             Help_btn.BackColor = Color.FromArgb(31, 133, 99);
             Logout_btn.BackColor = Color.FromArgb(31, 133, 99);
+        }
+
+        private void Add_new_user_btn_Click(object sender, EventArgs e)
+        {
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                if (addUserPage == null)
+                {
+                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                    Popup2.Play();
+                    addUserPage = new AddUserPage();
+                }
+
+                masterPage.OpenChildForm(addUserPage, addUserPage.LoginRequired);
+                UpdateHeader();
+            }
+        }
+
+        private void Remove_btn_Click(object sender, EventArgs e)
+        {
+            if (masterPage.CurrentUser.IsLoginValid())
+            {
+                if (orderPage == null)
+                {
+                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                    Popup2.Play();
+                    removePage = new RemovePage();
+                }
+
+                masterPage.OpenChildForm(removePage, removePage.LoginRequired);
+                UpdateHeader();
+            }
         }
     }
 }

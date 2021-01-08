@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeaderBar));
             this.Logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Add_new_user_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.NameTag_label = new System.Windows.Forms.Label();
             this.Logout_btn = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.Bestellen_btn = new System.Windows.Forms.Button();
             this.Help_btn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Remove_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,22 +62,41 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.Remove_btn);
+            this.panel3.Controls.Add(this.Add_new_user_btn);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.Help_btn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(198, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(526, 154);
             this.panel3.TabIndex = 8;
+            // 
+            // Add_new_user_btn
+            // 
+            this.Add_new_user_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Add_new_user_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Add_new_user_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Add_new_user_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Add_new_user_btn.FlatAppearance.BorderSize = 0;
+            this.Add_new_user_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_new_user_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Add_new_user_btn.Location = new System.Drawing.Point(10, 24);
+            this.Add_new_user_btn.Name = "Add_new_user_btn";
+            this.Add_new_user_btn.Size = new System.Drawing.Size(184, 42);
+            this.Add_new_user_btn.TabIndex = 2;
+            this.Add_new_user_btn.Text = "Add new user";
+            this.Add_new_user_btn.UseVisualStyleBackColor = false;
+            this.Add_new_user_btn.Click += new System.EventHandler(this.Add_new_user_btn_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.NameTag_label);
             this.panel2.Controls.Add(this.Logout_btn);
             this.panel2.Location = new System.Drawing.Point(302, 72);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 42);
             this.panel2.TabIndex = 16;
@@ -98,6 +119,7 @@
             // 
             this.Logout_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Logout_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Logout_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Logout_btn.FlatAppearance.BorderSize = 0;
             this.Logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,7 +137,7 @@
             this.panel1.Controls.Add(this.Producten_Overzicht_btn);
             this.panel1.Controls.Add(this.Bestellen_btn);
             this.panel1.Location = new System.Drawing.Point(10, 72);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 42);
             this.panel1.TabIndex = 15;
@@ -124,6 +146,7 @@
             // 
             this.Producten_Overzicht_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Producten_Overzicht_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Producten_Overzicht_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Producten_Overzicht_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(91)))), ((int)(((byte)(65)))));
             this.Producten_Overzicht_btn.FlatAppearance.BorderSize = 0;
             this.Producten_Overzicht_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,6 +163,7 @@
             // 
             this.Bestellen_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Bestellen_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Bestellen_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Bestellen_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Bestellen_btn.FlatAppearance.BorderSize = 0;
             this.Bestellen_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,6 +179,7 @@
             // Help_btn
             // 
             this.Help_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Help_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
             this.Help_btn.FlatAppearance.BorderSize = 0;
             this.Help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -172,10 +197,27 @@
             this.panel4.Controls.Add(this.Logo);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(197, 154);
             this.panel4.TabIndex = 9;
+            // 
+            // Remove_btn
+            // 
+            this.Remove_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Remove_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Remove_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Remove_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.Remove_btn.FlatAppearance.BorderSize = 0;
+            this.Remove_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Remove_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Remove_btn.Location = new System.Drawing.Point(198, 25);
+            this.Remove_btn.Name = "Remove_btn";
+            this.Remove_btn.Size = new System.Drawing.Size(98, 41);
+            this.Remove_btn.TabIndex = 2;
+            this.Remove_btn.Text = "Remove";
+            this.Remove_btn.UseVisualStyleBackColor = false;
+            this.Remove_btn.Click += new System.EventHandler(this.Remove_btn_Click);
             // 
             // HeaderBar
             // 
@@ -187,7 +229,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HeaderBar";
             this.Load += new System.EventHandler(this.Header_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
@@ -211,6 +253,8 @@
         private System.Windows.Forms.Button Producten_Overzicht_btn;
         private System.Windows.Forms.Button Bestellen_btn;
         private System.Windows.Forms.Button Help_btn;
+        private System.Windows.Forms.Button Add_new_user_btn;
+        private System.Windows.Forms.Button Remove_btn;
     }
 }
 

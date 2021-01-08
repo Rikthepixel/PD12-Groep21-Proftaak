@@ -279,6 +279,7 @@
             // Verwijderen_btn
             // 
             this.Verwijderen_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.Verwijderen_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Verwijderen_btn.FlatAppearance.BorderSize = 0;
             this.Verwijderen_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Verwijderen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -295,6 +296,7 @@
             // X
             // 
             this.X.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.X.Cursor = System.Windows.Forms.Cursors.Hand;
             this.X.FlatAppearance.BorderSize = 0;
             this.X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.X.Location = new System.Drawing.Point(3, 3);
@@ -309,6 +311,7 @@
             // Bestellen
             // 
             this.Bestellen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.Bestellen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Bestellen.FlatAppearance.BorderSize = 0;
             this.Bestellen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bestellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -377,6 +380,7 @@
             this.RefreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
             this.RefreshButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RefreshButton.BackgroundImage")));
             this.RefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RefreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RefreshButton.FlatAppearance.BorderSize = 0;
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton.Location = new System.Drawing.Point(12, 90);

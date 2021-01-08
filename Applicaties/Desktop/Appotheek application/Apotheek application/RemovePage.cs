@@ -68,7 +68,7 @@ namespace Apotheek_application
                 }
                 Name_cb.SelectedIndex = -1;
                 ID_cb.SelectedIndex = -1;
-                Aantal_Medicijnen_Verwijderen.Value = 1;
+                Aantal_Medicijnen_Verwijderen.Value = 0;
                 Aantal_Medicijnen_Verwijderen.Text = null;
             }
             if (CustomMB.DialogResult == DialogResult.No)
@@ -93,6 +93,15 @@ namespace Apotheek_application
                 {
                     ID_cb.Items.Add(item.id);
                 }
+            }
+        }
+
+        private void Aantal_Medicijnen_Verwijderen_ValueChanged(object sender, EventArgs e)
+        {
+            int No_zero = Convert.ToInt32(Aantal_Medicijnen_Verwijderen.Value);
+            if (No_zero == 0)
+            {
+                Aantal_Medicijnen_Verwijderen.Value = 1;
             }
         }
     }
