@@ -1,4 +1,3 @@
-<!--Rik werkt hier-->
 <?php
 session_start(); // Starts a session
 

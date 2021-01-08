@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Appotheekcl;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Appotheekcl;
 using System.Media;
 
 namespace Apotheek_application
@@ -33,18 +27,19 @@ namespace Apotheek_application
         {
             InitializeComponent();
             masterPage = MP;
+            Inlog.OnLoginRecieved += OnLoginRecieved;
             masterPage.Header.UpdateHeader();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            User user = Inlog.generateUserLoginAsync(Email_txt.Text, Wachtwoord_txt.Text).Result;
-            if(user != null)
+            _ = Inlog.DoLoginUserAsync(Email_txt.Text, Wachtwoord_txt.Text);
+        }
+        
+        private void OnLoginRecieved(object sender, LoginRecievedArgs e)
+        {
+            var user = e.LoggedInUser;
+            if (user != null)
             {
                 if (user.IsLoginValid())
                 {
@@ -59,8 +54,9 @@ namespace Apotheek_application
                 else
                 {
                     SetLoginError(Inlog.GetLoginError());
-                    }
-            } else
+                }
+            }
+            else
             {
                 SetLoginError(Inlog.GetLoginError());
             }
@@ -73,7 +69,6 @@ namespace Apotheek_application
             masterPage.Header.UpdateHeader();
             
         }
-        
         private void WachtwoordRemovePlaceHolder(object sender, EventArgs e)
         {
             if (Wachtwoord_txt.Text == "Wachtwoord...")

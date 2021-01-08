@@ -66,8 +66,9 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 366);
+            this.panel1.Size = new System.Drawing.Size(1000, 450);
             this.panel1.TabIndex = 0;
             // 
             // panel7
@@ -85,9 +86,10 @@
             this.panel7.Controls.Add(this.Gewicht_txt);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(0, 251);
+            this.panel7.Location = new System.Drawing.Point(0, 309);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(750, 115);
+            this.panel7.Size = new System.Drawing.Size(1000, 142);
             this.panel7.TabIndex = 16;
             // 
             // label7
@@ -96,7 +98,7 @@
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(491, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 14);
+            this.label7.Size = new System.Drawing.Size(104, 16);
             this.label7.TabIndex = 19;
             this.label7.Text = "Type Medicijn";
             // 
@@ -107,7 +109,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(372, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 14);
+            this.label4.Size = new System.Drawing.Size(93, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "Leverancier";
             // 
@@ -116,7 +118,7 @@
             this.leverancier_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.leverancier_txt.Location = new System.Drawing.Point(375, 66);
             this.leverancier_txt.Name = "leverancier_txt";
-            this.leverancier_txt.Size = new System.Drawing.Size(113, 20);
+            this.leverancier_txt.Size = new System.Drawing.Size(149, 22);
             this.leverancier_txt.TabIndex = 17;
             // 
             // Type_medicijn_cb
@@ -128,7 +130,7 @@
             this.Type_medicijn_cb.Location = new System.Drawing.Point(494, 65);
             this.Type_medicijn_cb.MaxDropDownItems = 100;
             this.Type_medicijn_cb.Name = "Type_medicijn_cb";
-            this.Type_medicijn_cb.Size = new System.Drawing.Size(113, 21);
+            this.Type_medicijn_cb.Size = new System.Drawing.Size(149, 24);
             this.Type_medicijn_cb.TabIndex = 16;
             this.Type_medicijn_cb.SelectedIndexChanged += new System.EventHandler(this.Type_medicijn_cb_SelectedIndexChanged);
             // 
@@ -137,7 +139,7 @@
             this.Naam_Medicijn_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Naam_Medicijn_txt.Location = new System.Drawing.Point(163, 27);
             this.Naam_Medicijn_txt.Name = "Naam_Medicijn_txt";
-            this.Naam_Medicijn_txt.Size = new System.Drawing.Size(100, 20);
+            this.Naam_Medicijn_txt.Size = new System.Drawing.Size(132, 22);
             this.Naam_Medicijn_txt.TabIndex = 1;
             // 
             // Add_medicijn_btn
@@ -149,7 +151,7 @@
             this.Add_medicijn_btn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.Add_medicijn_btn.Location = new System.Drawing.Point(284, 89);
             this.Add_medicijn_btn.Name = "Add_medicijn_btn";
-            this.Add_medicijn_btn.Size = new System.Drawing.Size(185, 23);
+            this.Add_medicijn_btn.Size = new System.Drawing.Size(247, 28);
             this.Add_medicijn_btn.TabIndex = 13;
             this.Add_medicijn_btn.Text = "Toevoegen";
             this.Add_medicijn_btn.UseVisualStyleBackColor = false;
@@ -160,7 +162,7 @@
             this.Aantal_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Aantal_txt.Location = new System.Drawing.Point(163, 65);
             this.Aantal_txt.Name = "Aantal_txt";
-            this.Aantal_txt.Size = new System.Drawing.Size(100, 20);
+            this.Aantal_txt.Size = new System.Drawing.Size(132, 22);
             this.Aantal_txt.TabIndex = 3;
             // 
             // label6
@@ -170,7 +172,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(266, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 14);
+            this.label6.Size = new System.Drawing.Size(117, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Gewicht (in mg)";
             // 
@@ -179,7 +181,7 @@
             this.Gewicht_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Gewicht_txt.Location = new System.Drawing.Point(269, 65);
             this.Gewicht_txt.Name = "Gewicht_txt";
-            this.Gewicht_txt.Size = new System.Drawing.Size(100, 20);
+            this.Gewicht_txt.Size = new System.Drawing.Size(132, 22);
             this.Gewicht_txt.TabIndex = 4;
             this.Gewicht_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Gewicht_txt_KeyPress);
             // 
@@ -190,7 +192,7 @@
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(160, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 14);
+            this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Aantal";
             // 
@@ -201,7 +203,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(160, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 14);
+            this.label3.Size = new System.Drawing.Size(109, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Medicijn naam";
             // 
@@ -217,8 +219,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 253);
+            this.panel2.Size = new System.Drawing.Size(1000, 311);
             this.panel2.TabIndex = 15;
             // 
             // Order_btn
@@ -233,7 +236,7 @@
             this.Order_btn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.Order_btn.Location = new System.Drawing.Point(209, 127);
             this.Order_btn.Name = "Order_btn";
-            this.Order_btn.Size = new System.Drawing.Size(364, 41);
+            this.Order_btn.Size = new System.Drawing.Size(485, 50);
             this.Order_btn.TabIndex = 0;
             this.Order_btn.Text = "Bestellen";
             this.Order_btn.UseVisualStyleBackColor = false;
@@ -247,10 +250,10 @@
             this.Medicijn_cB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Medicijn_cB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Medicijn_cB.FormattingEnabled = true;
-            this.Medicijn_cB.Location = new System.Drawing.Point(325, 52);
+            this.Medicijn_cB.Location = new System.Drawing.Point(484, 60);
             this.Medicijn_cB.MaxDropDownItems = 100;
             this.Medicijn_cB.Name = "Medicijn_cB";
-            this.Medicijn_cB.Size = new System.Drawing.Size(120, 21);
+            this.Medicijn_cB.Size = new System.Drawing.Size(159, 25);
             this.Medicijn_cB.TabIndex = 5;
             // 
             // label2
@@ -260,9 +263,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(232, 52);
+            this.label2.Location = new System.Drawing.Point(309, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 14);
+            this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Medicijn name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -274,14 +278,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Aantal_Medicijnen_UpDown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Aantal_Medicijnen_UpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aantal_Medicijnen_UpDown.Location = new System.Drawing.Point(327, 24);
+            this.Aantal_Medicijnen_UpDown.Location = new System.Drawing.Point(486, 29);
             this.Aantal_Medicijnen_UpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.Aantal_Medicijnen_UpDown.Name = "Aantal_Medicijnen_UpDown";
-            this.Aantal_Medicijnen_UpDown.Size = new System.Drawing.Size(118, 20);
+            this.Aantal_Medicijnen_UpDown.Size = new System.Drawing.Size(157, 23);
             this.Aantal_Medicijnen_UpDown.TabIndex = 3;
             this.Aantal_Medicijnen_UpDown.ValueChanged += new System.EventHandler(this.Aantal_Medicijnen_UpDown_ValueChanged);
             // 
@@ -292,22 +296,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(271, 26);
+            this.label1.Location = new System.Drawing.Point(361, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 14);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Aantal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // OrderPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(750, 366);
+            this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(750, 366);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1000, 450);
             this.Name = "OrderPage";
             this.Text = "OrderPage";
             this.Load += new System.EventHandler(this.OrderPage_Load);

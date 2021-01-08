@@ -5,22 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using Newtonsoft.Json;
+using Appotheekcl.Models;
+using System.Threading;
 
 namespace Appotheekcl
 {
     public class ProductList : IPage
     {
         DataAccess data;
-        public ProductList()
+        public ProductList(User user)
         {
             OnDateIndexes = new List<int>();
             OverDateIndexes = new List<int>();
             data = new DataAccess();
-            Products = GetProduct().Result;
-            ProductExtraInfo = GetExtraInfo().Result;
+            FetchProductInfo(user);
         }
 
-
+        public delegate void ProductInfoFetchedEventHandler(object source, EventArgs args);
+        public event ProductInfoFetchedEventHandler ProductInfoFetched;
 
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
@@ -30,53 +33,72 @@ namespace Appotheekcl
 
         public List<Product> Products { get; set; }
         public List<ExtraInfo> ProductExtraInfo { get; set; }
+        public List<SQLTable> Tables { get; set; } 
 
-        private async Task<List<Product>> GetProduct()
+        private async void FetchProductInfo(User user)
         {
-            List<Product> prodsResult = new List<Product>();
-            List<string> tables = await data.LoadData<string>(data.ProductConnStr, "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
-            for (int i = 0; i < tables.Count; i++)
-            {
-                string statement = $"SELECT * FROM {tables[i]}";
-                List<Product> results = await data.LoadData<Product>(data.ProductConnStr, statement);
-
-                for (int j = 0; j < results.Count; j++)
-                {
-                    results[j].naam = tables[i];
-                    prodsResult.Add(results[j]);
-
-                    /*string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd")*/;
-                    string CurrentDate = "2021-2-16";
-                    Console.WriteLine(CurrentDate == results[j].Uiterste_Datum);
-                    if (CurrentDate == results[j].Uiterste_Datum)
-                    {
-                        OnDateIndexes.Add(j);
-                        //dataGridView1.Row(j).DefaultCellStyle.BackColor = Color.Yellow;
-                    }
-                    ////void dataCheck()
-                    //{
-
-                    //}
-                }
-            }
-            return prodsResult;
+            Products = new List<Product>();
+            ProductExtraInfo = new List<ExtraInfo>();
+            Tables = await GetTables(user);
+            _ = GetProducts(user, Tables);
         }
 
-        private async Task<List<ExtraInfo>> GetExtraInfo()
+        protected virtual void OnProductsFetched()
         {
-            List<ExtraInfo> prodsResult = new List<ExtraInfo>();
-            List<string> tables = await data.LoadData<string>(data.ProductConnStr, "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';");
-            for (int i = 0; i < tables.Count; i++)
-            {
-                string statement = $"SELECT * FROM {tables[i]}";
-                List<ExtraInfo> results = await data.LoadData<ExtraInfo>(data.ProductConnStr, statement);
+            if (ProductInfoFetched != null)
+                ProductInfoFetched(this, EventArgs.Empty);
+        }
 
-                for (int j = 0; j < results.Count; j++)
+        private async Task<List<SQLTable>> GetTables(User user)
+        {
+            string TableQuery = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
+            return await data.SendQueryAsync<List<SQLTable>>(TableQuery, user);
+        }
+
+        private async Task GetProducts(User user, List<SQLTable> Tables)
+        {
+            List<Task> DataFetchTasks = new List<Task>();
+            List<Task> TaskCreators = new List<Task>();
+
+            TaskCreators.Add(Task.Run(() => {
+                for (int i = 0; i < Tables.Count; i++)
                 {
-                    prodsResult.Add(results[j]);
+                    var Table = Tables[i];
+                    DataFetchTasks.Add(Task.Run(async () =>
+                    {
+
+                        string statement = $"SELECT * FROM {Table.TABLE_NAME}";
+                        List<Product> results = await data.SendQueryAsync<List<Product>>(statement, user);
+
+                        for (int j = 0; j < results.Count; j++)
+                        {
+
+                            results[j].naam = Table.TABLE_NAME.Replace('_', ' ');
+                            Products.Add(results[j]);
+                        }
+                    }));
                 }
-            }
-            return prodsResult;
+            }));
+            TaskCreators.Add(Task.Run(() => {
+                for (int i = 0; i < Tables.Count; i++)
+                {
+                    var Table = Tables[i];
+                    DataFetchTasks.Add(Task.Run(async () =>
+                    {
+                        string statement = $"SELECT * FROM {Table.TABLE_NAME}";
+                        List<ExtraInfo> results = await data.SendQueryAsync<List<ExtraInfo>>(statement, user);
+
+                        for (int j = 0; j < results.Count; j++)
+                        {
+                            ProductExtraInfo.Add(results[j]);
+                        }
+                    }));
+                }
+            }));
+
+            await Task.WhenAll(TaskCreators);
+            await Task.WhenAll(DataFetchTasks);
+            OnProductsFetched();
         }
     }
 }

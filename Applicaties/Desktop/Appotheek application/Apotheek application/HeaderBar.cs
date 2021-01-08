@@ -64,7 +64,7 @@ namespace Apotheek_application
                 {
                     SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
                     Popup2.Play();
-                    orderPage = new OrderPage();
+                    orderPage = new OrderPage(masterPage);
                 }
 
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);

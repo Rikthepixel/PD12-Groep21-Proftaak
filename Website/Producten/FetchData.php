@@ -1,49 +1,45 @@
 <?php
+include_once "../Include/DatabaseHandler.php";
 include_once "../Include/SH.inc.php";
+
 if(VerifySession()){
-    $Query;
-    $ConnectionStr;
-
-    //Needs:
-    //Cookies: Session & RequestingKey
-    //To send query:
-    //Method (Create, Insert, Select)
-    //DBServer, DBUser, DBPassword, DBName
-    //SQLQuery
-
     if(isset($_COOKIE['RequestingKey'])){
-        if($_COOKIE['RequestingKey'] == $_SESSION['UserRequestKey'] && isset($_POST['SQLQuery'])){      
-            if(isset($_POST['DBServer']) && isset($_POST['DBUser']) && isset($_POST['DBPassword']) && isset($_POST['DBName'])){
-                $Query = $_POST['SQLQuery'];
-                $Conn = mysqli_connect($_POST['DBServer'], $_POST['DBUser'], $_POST['DBPassword'], $_POST['DBName']);
-                if (!$Conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+        if($_COOKIE['RequestingKey'] == $_SESSION['UserRequestKey'] && isset($_POST['SQLQuery'])){
+            $Query = $_POST['SQLQuery'];
                 
-                if(isset($_POST['METHOD'])){
-                    if($_POST['METHOD'] == "SELECT"){
-                        $Result = $Conn -> query($Query);
-                        $rows = array();
+            if($Result = $Prodsconn -> query($Query)){
+                if (is_object($Result)){
+                    if ($Result->num_rows >= 0){
+                        $returnData = array();
                         while ($row = $Result -> fetch_assoc()){
-                          $rows[] = $Assoc;
+                          $returnData[] = $row;
                         }
-                        echo json_encode($rows);
-                    }
-                    if($_POST['METHOD'] == "INSERT" || $_POST['METHOD'] == "CREATE"){
-                        $Conn -> query($Query);
+                        echo json_encode($returnData);
+                    } else{
+                        $returnData['succesful'] = "Query was succefully executed";
+                        echo json_encode($returnData);
                     }
                 }
-
+                else{
+                    $returnData['succesful'] = "Query was succefully executed";
+                    echo json_encode($returnData);
+                }
             }
-
+            else{
+                $returnData['succesful'] = "Unable to execute query";
+                echo json_encode($returnData);
+            }
         } else {
-            VerifySessionReturn("../../index.php", false);
+            ReturnToLogin();
         }
     } else{
-        VerifySessionReturn("../../index.php", false);
+        ReturnToLogin();
     }
 } else {
-    VerifySessionReturn("../../index.php", false);
+    ReturnToLogin();
 }
 
+function ReturnToLogin(){
+    VerifySessionReturn("../../index.php", false);
+}
 ?>

@@ -15,22 +15,29 @@ namespace Apotheek_application
     public partial class RemovePage : Form
     {
         Order order = new Order();
-
+        MasterPage masterpage;
         public bool LoginRequired { get; private set; }
-        public RemovePage()
+        public RemovePage(MasterPage mp)
         {
+            masterpage = mp;
             InitializeComponent();
         }
         private void RemovePage_Load(object sender, EventArgs e)
         {
-            foreach (var item in order.GetName().Result)
+            order.TablesRecieved += OnTablesRecieved;
+            _ = order.GetTablesAsync(masterpage.CurrentUser);
+        }
+
+        private void OnTablesRecieved(object source, TablesRecievedEventArgs args)
+        {
+            foreach (var item in args.Tables)
             {
-                Name_cb.Items.Add(item);
+                Name_cb.Items.Add(item.TABLE_NAME);
             }
             Aantal_Medicijnen_Verwijderen.Text = null;
         }
 
-        private void Order_btn_Click(object sender, EventArgs e)
+        private async void Order_btn_Click(object sender, EventArgs e)
         {
             RemoveMessageBox CustomMB = new RemoveMessageBox();
             CustomMB.StartPosition = FormStartPosition.CenterParent;
@@ -45,18 +52,18 @@ namespace Apotheek_application
                 string Name_medical = Name_cb.Text;
                 string Change_to_id = ID_cb.Text;
                 var Remove_amount = Aantal_Medicijnen_Verwijderen.Value;
-                var arryAantal = order.GetAantal(Name_medical, Change_to_id);
-                var Aantal = arryAantal.Result[0];
+                var ProductInfo = await order.GetProductByIDAsync(Name_medical, Convert.ToInt32(Change_to_id), masterpage.CurrentUser);
+                var Aantal = ProductInfo.Item1.aantal;
                 var New_Aantal = Convert.ToInt32(Aantal) - Remove_amount;
 
-                order.UpdateOrder(Name_medical, Convert.ToString(New_Aantal), Change_to_id);
+                order.UpdateOrder(Name_medical, Convert.ToString(New_Aantal), Change_to_id, masterpage.CurrentUser);
                 if (Convert.ToInt32(New_Aantal) < 1)
                 {
-                    order.DeleteOrder(Name_medical, Change_to_id);
+                    order.DeleteOrder(Name_medical, Change_to_id, masterpage.CurrentUser);
                     int count = ID_cb.Items.Count;
                     if (count == 0)
                     {
-                        order.Drop_tabel_Order(Name_medical);
+                        order.Drop_tabel_Order(Name_medical, masterpage.CurrentUser);
                     }
                 }
                 Name_cb.SelectedIndex = -1;
@@ -72,7 +79,7 @@ namespace Apotheek_application
             }
         }
 
-        private void ID_cb_SelectedIndexChanged(object sender, EventArgs e)
+        private async void ID_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
             ID_cb.Items.Clear();
             if (String.IsNullOrEmpty(Name_cb.Text))
@@ -82,9 +89,9 @@ namespace Apotheek_application
             else
             {
                 string Change_medical = Name_cb.Text;
-                foreach (var item in order.GetID(Change_medical).Result)
+                foreach (var item in await order.GetIDsAsync(Change_medical, masterpage.CurrentUser))
                 {
-                    ID_cb.Items.Add(item);
+                    ID_cb.Items.Add(item.id);
                 }
             }
         }
