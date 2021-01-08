@@ -32,9 +32,7 @@ namespace Appotheekcl
             string Statement = $"INSERT INTO {productInfo.naam}(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('{productInfo.aantal}', '{productInfo.Gewicht}', '{productInfo.Datum_Ontvangen}', '{productInfo.Uiterste_Datum}', '{extraInfo.Type}', '{extraInfo.Leverancier}')";
 
             await dataAccess.SendSaveQueryAsync(commandStr, user);
-            Console.WriteLine(commandStr);
             await dataAccess.SendSaveQueryAsync(Statement, user);
-            Console.WriteLine(Statement);
         }
         public async Task GetTablesAsync(User user)
         {

@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using Appotheekcl.Internal;
 namespace Appotheekcl
 {
-    class DataAccess
+    public class DataAccess
     {
         MySqlConnection Connection;
 

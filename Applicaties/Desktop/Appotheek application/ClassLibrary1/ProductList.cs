@@ -35,8 +35,7 @@ namespace Appotheekcl
             Products = new List<Product>();
             ProductExtraInfo = new List<ExtraInfo>();
             Tables = await GetTables(user);
-            _ = GetProduct(user, Tables);
-            
+            _ = GetProducts(user, Tables);
         }
 
         protected virtual void OnProductsFetched()
@@ -50,7 +49,7 @@ namespace Appotheekcl
             string TableQuery = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'Medical';";
             return await data.SendQueryAsync<List<SQLTable>>(TableQuery, user);
         }
-        private async Task GetProduct(User user, List<SQLTable> Tables)
+        private async Task GetProducts(User user, List<SQLTable> Tables)
         {
             List<Task> DataFetchTasks = new List<Task>();
             List<Task> TaskCreators = new List<Task>();
