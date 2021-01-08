@@ -75,6 +75,15 @@ namespace Appotheekcl
 
                             results[j].naam = Table.TABLE_NAME.Replace('_', ' ');
                             Products.Add(results[j]);
+
+                            /*string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd")*/
+                            string CurrentDate = "2021-2-16";
+                            Console.WriteLine(CurrentDate == results[j].Uiterste_Datum);
+                            if (CurrentDate == results[j].Uiterste_Datum)
+                            {
+                                OnDateIndexes.Add(Products.Count - 1);
+                                //dataGridView1.Row(j).DefaultCellStyle.BackColor = Color.Yellow;
+                            }
                         }
                     }));
                 }

@@ -197,15 +197,15 @@ namespace Apotheek_application
             data.DefaultView.Sort = "Naam asc";
             dataGridView1.DataSource = data;
 
-            foreach (var Index in productList.OnDateIndexes)
+            foreach (int Index in productList.OnDateIndexes)
             {
-                DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-                dataGridViewCellStyle1.BackColor = Color.Yellow;
-
+                Console.WriteLine(Index);
+                DataGridViewCellStyle Style = new DataGridViewCellStyle();
+                Style.BackColor = Color.Yellow;
+                dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
                 for (int i = 0; i < dataGridView1.Rows[Index].Cells.Count; i++)
                 {
-                    dataGridView1.Rows[Index].DefaultCellStyle = dataGridViewCellStyle1;
-                    Console.WriteLine(Index);
+                    dataGridView1.Rows[Index].DefaultCellStyle = Style;
                 }
             }
             dataGridView1.Sort(dataGridView1.Columns["Naam"], ListSortDirection.Ascending);
