@@ -1,25 +1,25 @@
 <?php
 
-    $Logindbservername = "192.168.1.10";
+    $Logindbservername = "192.168.162.187";
     $logindbname = "Users";
     $logindbusername = "Login";
     $logindbpassword = "LoginUser";
 
     $Loginconn = mysqli_connect($Logindbservername, $logindbusername, $logindbpassword, $logindbname);
     if (!$Loginconn) {
-        die("Connection failed: " . mysqli_connect_error());
+        die("Connection to the database fialed");
     }
 
 
 
-    $Prodsdbservername = "192.168.1.10";
+    $Prodsdbservername = "192.168.162.187";
     $prodsdbname = "Medical";
     $prodsdbusername = "producten";
     $prodsdbpassword = "Doemaarwat1";
 
     $Prodsconn = mysqli_connect($Prodsdbservername, $prodsdbusername, $prodsdbpassword, $prodsdbname);
     if (!$Prodsconn) {
-        die("Connection failed: " . mysqli_connect_error());
+        die("Connection to the database fialed");
     }
 
     //$dbservername = "192.168.44.186"; <-- de server

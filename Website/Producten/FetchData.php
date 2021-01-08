@@ -3,41 +3,38 @@ include_once "../Include/DatabaseHandler.php";
 include_once "../Include/SH.inc.php";
 
 if(VerifySession()){
-    $Query;
-
-    if ($conn->connect_error){
-        die("Connection to the database fialed")
-    }
-
     if(isset($_COOKIE['RequestingKey'])){
         if($_COOKIE['RequestingKey'] == $_SESSION['UserRequestKey'] && isset($_POST['SQLQuery'])){
             $Query = $_POST['SQLQuery'];
                 
-            if($Result = $Prodsconn -> query($Query) === true){
+            if($Result = $Prodsconn -> query($Query)){
                 if ($Result->num_rows >= 0){
-                    $rows = array();
+                    $returnData = array();
                     while ($row = $Result -> fetch_assoc()){
-                      $rows[] = $row;
+                      $returnData[] = $row;
                     }
-                    echo json_encode($rows);
+                    echo json_encode($returnData);
                 }
                 else{
-                    $row['succesful'] = "Query was succefully executed"
-                    echo json_encode()
+                    $returnData['succesful'] = "Query was succefully executed";
+                    echo json_encode($returnData);
                 }
             }
             else{
-                $row['succesful'] = "Unable to execute query"
-                echo json_encode()
+                $returnData['succesful'] = "Unable to execute query";
+                echo json_encode($returnData);
             }
         } else {
-            VerifySessionReturn("../../index.php", false);
+            ReturnToLogin();
         }
     } else{
-        VerifySessionReturn("../../index.php", false);
+        ReturnToLogin();
     }
 } else {
-    VerifySessionReturn("../../index.php", false);
+    ReturnToLogin();
 }
 
+function ReturnToLogin(){
+    VerifySessionReturn("../../index.php", false);
+}
 ?>

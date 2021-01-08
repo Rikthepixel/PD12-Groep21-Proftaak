@@ -4,7 +4,7 @@ include_once "../../Include/DatabaseHandler.php";
 
 //Needs:
 //Login = AUserWantsToLogin
-//IsApplication = IAMTHEAPPLICATION
+//IsApplication = true
 //EML = UserEmail
 //PSWD = UserPassword
 
@@ -14,7 +14,7 @@ if (isset($_POST['Login'])) {
         include_once 'LoginFunctions.php';
 
         if (isset($_POST['IsApplication'])){
-            if ($_POST['IsApplication'] == "IAMTHEAPPLICATION"){
+            if ($_POST['IsApplication'] == "true"){
                 $IsApplication = true;
             } 
         }
