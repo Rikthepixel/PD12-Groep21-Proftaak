@@ -26,7 +26,7 @@ namespace Apotheek_application
         private void OrderPage_Load(object sender, EventArgs e)
         {
             order.TablesRecieved += Order_TablesRecieved;
-            order.GetTablesAsync(masterPage.CurrentUser);
+            _ = order.GetTablesAsync(masterPage.CurrentUser);
 
             Type_medicijn_cb.Items.Add("Tabletten");
             Type_medicijn_cb.Items.Add("Dragees");

@@ -14,10 +14,12 @@ namespace Apotheek_application
     public partial class AddUserPage : Form
     {
         AddUser adduser = new AddUser();
+        MasterPage masterpage;
         public bool LoginRequired { get; private set; }
 
-        public AddUserPage()
+        public AddUserPage(MasterPage masterPage)
         {
+            masterpage = masterPage;
             InitializeComponent();
         }
 
@@ -28,7 +30,7 @@ namespace Apotheek_application
             var Voornaam = Voornaam_txt.Text;
             var Achternaam = Achternaam_txt.Text;
 
-            adduser.InsertNewUser(Email, Password, Voornaam, Achternaam);
+            adduser.InsertNewUser(Email, Password, Voornaam, Achternaam, masterpage.CurrentUser);
             Email_txt.Text = "";
             Password_txt.Text = "";
             Voornaam_txt.Text = "";

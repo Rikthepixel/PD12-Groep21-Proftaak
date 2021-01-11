@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using Dapper;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
 
 namespace Appotheekcl
 {
@@ -19,10 +15,10 @@ namespace Appotheekcl
         public bool LoginRequired { get; set; }
         public Form PageForm { get; set; }
 
-        public void InsertNewUser(string Email, string Password, string Voornaam, string Achternaam)
+        public void InsertNewUser(string Email, string Password, string Voornaam, string Achternaam, User CurrentUser)
         {
             string Statement = $"INSERT INTO User (Email, Password, Voornaam, Achternaam) VALUES('{Email}', '{Password}', '{Voornaam}', '{Achternaam}')";
-            dataAccess.SaveData(dataAccess.LoginConnStr, Statement);
+            _ = dataAccess.SendSaveQueryAsync(Statement, CurrentUser);
         }
     }
 }
