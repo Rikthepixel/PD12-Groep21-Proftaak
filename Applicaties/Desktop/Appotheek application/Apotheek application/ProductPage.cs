@@ -64,22 +64,31 @@ namespace Apotheek_application
 
             if (e.ColumnIndex == 0 && e.RowIndex >= 0)
             {
-
                 SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
                 Popup2.Play();
                 var RowData = productList.Products[e.RowIndex];
-                TotaalGewicht.Text = $"Gewicht: {RowData.Gewicht * RowData.aantal}";
+
+                TotaalGewicht.Text = $"Totaal gewicht: {RowData.Gewicht * RowData.aantal}";
                 Naam.Text = $"Naam: {RowData.naam}";
                 Type.Text = $"Type: {productList.ProductExtraInfo[e.RowIndex].Type}";
                 Leverancier.Text = $"Leverancier: {productList.ProductExtraInfo[e.RowIndex].Leverancier}";
 
-                if (!panel1.Visible) 
+                string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+                //string CurrentDate = "2024-01-01";
+                //int MonthZero = int.Parse(Convert.ToString(CurrentDate[5]));
+                //if (MonthZero == 0) CurrentDate = CurrentDate.Remove(5, 1);
+
+                int Result = DateTime.Compare(DateTime.Parse(CurrentDate), DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString()));
+                //int Result2 = DateTime.Compare(DateTime.Now, DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString()));
+
+                if (Result == 0) panel1.BackColor = Color.FromArgb(138, 153, 24);
+                if (Result > 0) panel1.BackColor = Color.FromArgb(153, 24, 24);
+
+                if (!panel1.Visible)
                 {
                     ToggleExtraInfoVisability(false);
-                    
                 }
-            }
-                
+            }      
         }
 
         private void X_Click(object sender, EventArgs e)
@@ -199,17 +208,26 @@ namespace Apotheek_application
             data.DefaultView.Sort = "Naam asc";
             dataGridView1.DataSource = data;
 
-            foreach (int Index in productList.OnDateIndexes)
-            {
-                Console.WriteLine(Index);
-                DataGridViewCellStyle Style = new DataGridViewCellStyle();
-                Style.BackColor = Color.Yellow;
-                dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
-                for (int i = 0; i < dataGridView1.Rows[Index].Cells.Count; i++)
-                {
-                    dataGridView1.Rows[Index].DefaultCellStyle = Style;
-                }
-            }
+            // Deze code was bedoelt als waarschuwing dat iets over de datum is
+            //DataGridViewCellStyle Style = new DataGridViewCellStyle();
+
+            //foreach(DataGridViewRow row in dataGridView1.Rows)
+            //{
+            //    Console.WriteLine("Test");
+            //    foreach (int Index in productList.OnDateIndexes)
+            //    {
+            //        //Console.WriteLine(Index);
+            //        Console.WriteLine("test");
+            //        Style.BackColor = Color.Yellow;
+            //        dataGridView1.Rows[Index].DefaultCellStyle.BackColor = Color.Yellow;
+
+            //        if (Convert.ToInt32(row) == Index)
+            //        {
+            //            row.DefaultCellStyle = Style;
+            //        }
+            //    }
+            //}
+
             dataGridView1.Sort(dataGridView1.Columns["Naam"], ListSortDirection.Ascending);
         }
 
