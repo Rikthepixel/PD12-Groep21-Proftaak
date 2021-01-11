@@ -233,7 +233,7 @@ namespace Apotheek_application
                 {
                     SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
                     Popup2.Play();
-                    addUserPage = new AddUserPage();
+                    addUserPage = new AddUserPage(masterPage);
                 }
 
                 masterPage.OpenChildForm(addUserPage, addUserPage.LoginRequired);
