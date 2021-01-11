@@ -44,10 +44,8 @@ namespace Apotheek_application
             // 
             // Voornaam_txt
             // 
-            this.Voornaam_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Voornaam_txt.Location = new System.Drawing.Point(336, 12);
+            this.Voornaam_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Voornaam_txt.Location = new System.Drawing.Point(213, 49);
             this.Voornaam_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Voornaam_txt.Name = "Voornaam_txt";
             this.Voornaam_txt.Size = new System.Drawing.Size(76, 20);
@@ -55,10 +53,8 @@ namespace Apotheek_application
             // 
             // Achternaam_txt
             // 
-            this.Achternaam_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Achternaam_txt.Location = new System.Drawing.Point(336, 36);
+            this.Achternaam_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Achternaam_txt.Location = new System.Drawing.Point(293, 49);
             this.Achternaam_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Achternaam_txt.Name = "Achternaam_txt";
             this.Achternaam_txt.Size = new System.Drawing.Size(76, 20);
@@ -66,10 +62,8 @@ namespace Apotheek_application
             // 
             // Email_txt
             // 
-            this.Email_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email_txt.Location = new System.Drawing.Point(336, 60);
+            this.Email_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Email_txt.Location = new System.Drawing.Point(373, 49);
             this.Email_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Email_txt.Name = "Email_txt";
             this.Email_txt.Size = new System.Drawing.Size(76, 20);
@@ -77,11 +71,10 @@ namespace Apotheek_application
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(267, 14);
+            this.label1.Location = new System.Drawing.Point(210, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 15);
@@ -90,11 +83,10 @@ namespace Apotheek_application
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(255, 38);
+            this.label2.Location = new System.Drawing.Point(289, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 15);
@@ -103,11 +95,10 @@ namespace Apotheek_application
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(294, 62);
+            this.label3.Location = new System.Drawing.Point(370, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
@@ -116,11 +107,10 @@ namespace Apotheek_application
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(267, 86);
+            this.label4.Location = new System.Drawing.Point(450, 32);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 15);
@@ -131,13 +121,14 @@ namespace Apotheek_application
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(228, 108);
+            this.button1.Location = new System.Drawing.Point(188, 103);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(285, 35);
+            this.button1.Size = new System.Drawing.Size(364, 41);
             this.button1.TabIndex = 8;
             this.button1.Text = "Add new user";
             this.button1.UseVisualStyleBackColor = false;
@@ -145,8 +136,7 @@ namespace Apotheek_application
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
             this.panel1.Controls.Add(this.Password_txt);
@@ -158,18 +148,16 @@ namespace Apotheek_application
             this.panel1.Controls.Add(this.Email_txt);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(751, 189);
+            this.panel1.Size = new System.Drawing.Size(750, 253);
             this.panel1.TabIndex = 9;
             // 
             // Password_txt
             // 
-            this.Password_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Password_txt.Location = new System.Drawing.Point(336, 84);
+            this.Password_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Password_txt.Location = new System.Drawing.Point(453, 49);
             this.Password_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Password_txt.Name = "Password_txt";
             this.Password_txt.Size = new System.Drawing.Size(76, 20);

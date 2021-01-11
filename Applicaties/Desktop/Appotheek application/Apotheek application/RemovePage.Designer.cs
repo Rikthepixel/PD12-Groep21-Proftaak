@@ -63,7 +63,7 @@ namespace Apotheek_application
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Location = new System.Drawing.Point(0, 251);
             this.panel7.Name = "panel7";
@@ -90,8 +90,7 @@ namespace Apotheek_application
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
@@ -104,9 +103,7 @@ namespace Apotheek_application
             // 
             // Name_cb
             // 
-            this.Name_cb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Name_cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Name_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Name_cb.FormattingEnabled = true;
@@ -127,7 +124,8 @@ namespace Apotheek_application
             this.Order_btn.FlatAppearance.BorderSize = 2;
             this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Order_btn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.Order_btn.Location = new System.Drawing.Point(194, 129);
+            this.Order_btn.Location = new System.Drawing.Point(188, 103);
+            this.Order_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Order_btn.Name = "Order_btn";
             this.Order_btn.Size = new System.Drawing.Size(364, 41);
             this.Order_btn.TabIndex = 0;
@@ -137,9 +135,7 @@ namespace Apotheek_application
             // 
             // ID_cb
             // 
-            this.ID_cb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ID_cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ID_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ID_cb.FormattingEnabled = true;
@@ -151,8 +147,7 @@ namespace Apotheek_application
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -165,9 +160,7 @@ namespace Apotheek_application
             // 
             // Aantal_Medicijnen_Verwijderen
             // 
-            this.Aantal_Medicijnen_Verwijderen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Aantal_Medicijnen_Verwijderen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Aantal_Medicijnen_Verwijderen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Aantal_Medicijnen_Verwijderen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aantal_Medicijnen_Verwijderen.Location = new System.Drawing.Point(371, 73);
@@ -183,8 +176,7 @@ namespace Apotheek_application
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Transparent;

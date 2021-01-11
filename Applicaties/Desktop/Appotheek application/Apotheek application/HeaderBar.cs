@@ -162,8 +162,8 @@ namespace Apotheek_application
                 Bestellen_btn.Visible = true;
                 Help_btn.Visible = true;
                 NameTag_label.Visible = true;
-                Add_new_user_btn.Visible = true;
-                Remove_btn.Visible = true;
+                Add_user_btn.Visible = true;
+                Verwijderen_btn.Visible = true;
                 Logout_btn.Text = "Uitloggen";
             }
             else
@@ -174,8 +174,8 @@ namespace Apotheek_application
                 Bestellen_btn.Visible = false;
                 Help_btn.Visible = false;
                 NameTag_label.Visible = false;
-                Add_new_user_btn.Visible = false;
-                Remove_btn.Visible = false;
+                Add_user_btn.Visible = false;
+                Verwijderen_btn.Visible = false;
             }
 
             ResetAllButtonColors();
@@ -225,7 +225,7 @@ namespace Apotheek_application
                 ThemeSwitcherBtnClicked(this, EventArgs.Empty);
         }
 
-        private void Add_new_user_btn_Click(object sender, EventArgs e)
+        private void Add_user_btn_Click(object sender, EventArgs e)
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
@@ -238,10 +238,11 @@ namespace Apotheek_application
 
                 masterPage.OpenChildForm(addUserPage, addUserPage.LoginRequired);
                 UpdateHeader();
+
             }
         }
 
-        private void Remove_btn_Click(object sender, EventArgs e)
+        private void Verwijderen_btn_Click(object sender, EventArgs e)
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
