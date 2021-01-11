@@ -46,7 +46,7 @@ namespace Apotheek_application
             }
         }
 
-        private void Order_btn_Click(object sender, EventArgs e)
+        private async void Order_btn_Click(object sender, EventArgs e)
         {
             OrderMessageBox CustomMB = new OrderMessageBox();
             CustomMB.StartPosition = FormStartPosition.CenterParent;
@@ -61,9 +61,9 @@ namespace Apotheek_application
                 var Medicijn = Medicijn_cB.Text;
                 var Nummerof = Aantal_Medicijnen_UpDown.Value;
 
-                var ProductInfo = order.GetProductByIDAsync(Medicijn, 1, masterPage.CurrentUser);
-                var product = ProductInfo.Result.Item1;
-                var extraInfo = ProductInfo.Result.Item2;
+                var ProductInfo = await order.GetProductByIDAsync(Medicijn, 1, masterPage.CurrentUser);
+                var product = ProductInfo.Item1;
+                var extraInfo = ProductInfo.Item2;
 
                 #region TimeCalculations
                 string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");

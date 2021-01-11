@@ -52,10 +52,13 @@ namespace Appotheekcl
 
         public async Task<Tuple<Product, ExtraInfo>> GetProductByIDAsync(string Medicijn, int ID, User user)
         {
-            var Product = dataAccess.SendQueryAsync<Product>($"SELECT Gewicht FROM {Medicijn} WHERE ID = '{ID}'", user);
-            var ExtraInfo = dataAccess.SendQueryAsync<ExtraInfo>($"SELECT Gewicht FROM {Medicijn} WHERE ID = '{ID}'", user);
-            
-            return Tuple.Create<Product, ExtraInfo>(await Product, await ExtraInfo);
+            List<Task> Tasks = new List<Task>();
+            var Product = dataAccess.SendQueryAsync<List<Product>> ($"SELECT * FROM {Medicijn} WHERE ID = '{ID}'", user);
+            Tasks.Add(Product);
+            var ExtraInfo = dataAccess.SendQueryAsync<List<ExtraInfo>>($"SELECT * FROM {Medicijn} WHERE ID = '{ID}'", user);
+            Tasks.Add(ExtraInfo);
+            await Task.WhenAll(Tasks);
+            return Tuple.Create(Product.Result[0], ExtraInfo.Result[0]);
         }
 
 
