@@ -126,7 +126,15 @@ namespace Apotheek_application
 
                     #region PassWord Forgotten Border
                     WachtwoordBorder = new Panel();
-                    WachtwoordBorder.BackColor = Color.FromArgb(23, 115, 84);
+                    WachtwoordBorder.Name = "WWVBorder";
+                    if (masterPage.IsLightmode == true)
+                    {
+                        WachtwoordBorder.BackColor = Color.FromArgb(88, 196, 160);
+                    }
+                    else
+                    {
+                        WachtwoordBorder.BackColor = Color.LightGray;
+                    }
                     WachtwoordBorder.Size = new Size(InsideSize.Width + BorderSize * 2, InsideSize.Height + BorderSize * 2);
                     Point newBorderLocation = new Point((Size.Width / 2) - (WachtwoordBorder.Size.Width / 2), (Wacht_vergeten_Link_Label.Location.Y - WachtwoordBorder.Size.Height) - 5);
                     WachtwoordBorder.Location = newBorderLocation;
@@ -137,15 +145,30 @@ namespace Apotheek_application
 
                     #region PassWord Forgotten Panel
                     WachtwoordPanel = new Panel();
+                    WachtwoordPanel.Name = "WWVInside";
+                    if (masterPage.IsLightmode == true)
+                    {
+                        WachtwoordPanel.BackColor = Color.FromArgb(240, 240, 240);
+                        WachtwoordPanel.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        WachtwoordPanel.BackColor = Color.DarkGray;
+                        WachtwoordPanel.ForeColor = Color.Black;
+                    }
                     WachtwoordBorder.Controls.Add(WachtwoordPanel);
-
-                    WachtwoordPanel.BackColor = Color.FromArgb(235, 235, 235);
+                    //if (masterPage.IsLightmode == true)
+                    //{
+                    //    WachtwoordPanel.BackColor = Color.FromArgb(235, 235, 235);
+                    //}
+                    //else
+                    //WachtwoordPanel.BackColor = Color.LightGray;
                     WachtwoordPanel.Size = InsideSize;
                     Point newLocation = new Point(BorderSize, BorderSize);
                     WachtwoordPanel.Location = newLocation;
                     WachtwoordPanel.Anchor = AnchorStyles.Top;
                     #endregion
-
+                    
                     #region PassWord Forgotten Text
 
                     Font LabelFont = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,6 +182,7 @@ namespace Apotheek_application
                     WWVTopLine.Size = new Size(WachtwoordPanel.Size.Width, WWVTopLine.Size.Height);
                     WWVTopLine.Text = "Neem a.u.b. contact op met uw systeembeheer om";
                     WWVTopLine.Font = LabelFont;
+
                     #endregion
 
                     #region MidLine
@@ -170,6 +194,7 @@ namespace Apotheek_application
                     WWVMidLine.Size = new Size(WachtwoordPanel.Size.Width, WWVMidLine.Size.Height);
                     WWVMidLine.Text = "uw wachtwoord te veranderen";
                     WWVMidLine.Font = LabelFont;
+
                     #endregion
 
                     #region TelLine
@@ -179,8 +204,9 @@ namespace Apotheek_application
                     TelLine.AutoSize = false;
                     TelLine.TextAlign = ContentAlignment.MiddleCenter;
                     TelLine.Size = new Size(WachtwoordPanel.Size.Width, TelLine.Size.Height);
-                    TelLine.Text = "Tel:pl4c3h0ld3r";
+                    TelLine.Text = "Tel:0413479532";
                     TelLine.Font = LabelFont;
+                    
                     #endregion
 
                     WachtwoordPanel.Controls.Add(WWVTopLine);

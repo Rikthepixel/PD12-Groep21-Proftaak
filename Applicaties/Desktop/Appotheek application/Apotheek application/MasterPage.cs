@@ -12,11 +12,11 @@ using Appotheekcl;
 namespace Apotheek_application
 {
     public partial class MasterPage : Form
-    {
+    { 
+        public bool IsLightmode { get; set; }
         public bool LoggedIn { get; set; }
         public HeaderBar Header { get; private set; }
         public User CurrentUser { get; set; }
-
         public Login LoginPage;
         public MasterPage()
         {
@@ -24,6 +24,8 @@ namespace Apotheek_application
             CurrentUser = new User();
             Header = new HeaderBar(this);
             LoginPage = new Login(this);
+            IsLightmode = true;
+            Header.ThemeSwitcherBtnClicked += OnColorSwitch;
         }
 
         public Form ActiveForm { get; private set; }
@@ -124,6 +126,19 @@ namespace Apotheek_application
             } else
             {
                 return false;
+            }
+        }
+
+        private void OnColorSwitch(object source, EventArgs args)
+        {
+            ThemeSwitcher.ChangeTheme(this.Controls, IsLightmode);
+            if (IsLightmode == true)
+            {
+                IsLightmode = false;
+            }
+            else
+            {
+                IsLightmode = true;
             }
         }
     }

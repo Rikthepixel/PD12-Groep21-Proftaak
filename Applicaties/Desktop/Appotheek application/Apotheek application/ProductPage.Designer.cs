@@ -48,7 +48,7 @@
             this.ExtraInfo = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchBar = new System.Windows.Forms.Label();
-            this.SearchBarPanel = new System.Windows.Forms.Panel();
+            this.BorderColor = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,7 +64,7 @@
             this.productListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            this.SearchBarPanel.SuspendLayout();
+            this.BorderColor.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productListBindingSource)).BeginInit();
@@ -230,14 +230,14 @@
             this.SearchBar.TabIndex = 2;
             this.SearchBar.Text = "SearchBar";
             // 
-            // SearchBarPanel
+            // BorderColor
             // 
-            this.SearchBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.SearchBarPanel.Controls.Add(this.textBoxSearch);
-            this.SearchBarPanel.Location = new System.Drawing.Point(47, 90);
-            this.SearchBarPanel.Name = "SearchBarPanel";
-            this.SearchBarPanel.Size = new System.Drawing.Size(295, 32);
-            this.SearchBarPanel.TabIndex = 3;
+            this.BorderColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.BorderColor.Controls.Add(this.textBoxSearch);
+            this.BorderColor.Location = new System.Drawing.Point(47, 90);
+            this.BorderColor.Name = "BorderColor";
+            this.BorderColor.Size = new System.Drawing.Size(295, 32);
+            this.BorderColor.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -404,15 +404,15 @@
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.SearchBarPanel);
+            this.Controls.Add(this.BorderColor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductPage";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ProductPage_load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            this.SearchBarPanel.ResumeLayout(false);
-            this.SearchBarPanel.PerformLayout();
+            this.BorderColor.ResumeLayout(false);
+            this.BorderColor.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -427,7 +427,7 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label SearchBar;
-        private System.Windows.Forms.Panel SearchBarPanel;
+        private System.Windows.Forms.Panel BorderColor;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource productListBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

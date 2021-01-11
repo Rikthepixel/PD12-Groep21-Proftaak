@@ -26,6 +26,8 @@ namespace Apotheek_application
             masterPage = MP;
         }
 
+        public delegate void SwitchColorEventHandler(object Source, EventArgs args);
+        public event SwitchColorEventHandler ThemeSwitcherBtnClicked;
         private void Header_Load(object sender, EventArgs e)
         {
             ResetAllButtonColors();
@@ -62,14 +64,15 @@ namespace Apotheek_application
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
+                SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                Popup2.Play();
                 if (orderPage == null)
                 {
-                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-                    Popup2.Play();
                     orderPage = new OrderPage(masterPage);
                 }
 
                 masterPage.OpenChildForm(orderPage, orderPage.LoginRequired);
+                ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 UpdateHeader();
             }
         }
@@ -81,12 +84,13 @@ namespace Apotheek_application
                 if (productPage == null)
                 {
                     productPage = new ProductPage(masterPage);
-                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-                    Popup2.Play();
                 }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
+                ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 UpdateHeader();
+                SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                Popup2.Play();
             } else
             {
                 masterPage.LoginPage.SetLoginError("LoginRequired");
@@ -99,6 +103,7 @@ namespace Apotheek_application
             productPage = null;
             masterPage.CurrentUser = new User();
             masterPage.OpenChildForm(masterPage.LoginPage, false);
+            ThemeSwitcher.ChangeTheme(masterPage.ActiveForm.Controls, !masterPage.IsLightmode);
             UpdateHeader();
         }
 
@@ -106,37 +111,20 @@ namespace Apotheek_application
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
-
+                SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                Popup2.Play();
                 if (helpPage == null)
                 {
                     helpPage = new HelpPage(masterPage);
-                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-                    Popup2.Play();
                 }
 
                 masterPage.OpenChildForm(helpPage, helpPage.LoginRequired);
+                ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 UpdateHeader();
             }
             else
             {
                 masterPage.LoginPage.SetLoginError("LoginRequired");
-            }
-        }
-
-        private void OpenAPage(dynamic TargetPage)
-        {
-            if (masterPage.CurrentUser.IsLoginValid())
-            {
-                if (TargetPage == null)
-                {
-                    TargetPage = new ProductPage(masterPage);
-                }
-
-                masterPage.OpenChildForm(TargetPage, TargetPage.LoginRequired);
-            }
-            else
-            {
-
             }
         }
 
@@ -154,6 +142,7 @@ namespace Apotheek_application
                 if(masterPage.ActiveForm != masterPage.LoginPage)
                 {
                     masterPage.OpenChildForm(masterPage.LoginPage, masterPage.LoginPage.LoginRequired);
+                    ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 }
             }
             else 
@@ -167,6 +156,7 @@ namespace Apotheek_application
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
+                Logout_btn.Visible = true;
                 Logout_btn.Text = "Uitloggen";
                 Producten_Overzicht_btn.Visible = true;
                 Bestellen_btn.Visible = true;
@@ -178,6 +168,7 @@ namespace Apotheek_application
             }
             else
             {
+                Logout_btn.Visible = false;
                 Logout_btn.Text = "Inloggen";
                 Producten_Overzicht_btn.Visible = false;
                 Bestellen_btn.Visible = false;
@@ -222,6 +213,16 @@ namespace Apotheek_application
             Bestellen_btn.BackColor = Color.FromArgb(31, 133, 99);
             Help_btn.BackColor = Color.FromArgb(31, 133, 99);
             Logout_btn.BackColor = Color.FromArgb(31, 133, 99);
+        }
+
+        private void ThemeSwitcher_btn_Click(object sender, EventArgs e)
+        {
+            OnThemeSwitched();
+        }
+        protected virtual void OnThemeSwitched()
+        {
+            if (ThemeSwitcherBtnClicked != null)
+                ThemeSwitcherBtnClicked(this, EventArgs.Empty);
         }
 
         private void Add_new_user_btn_Click(object sender, EventArgs e)

@@ -28,52 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeaderBar));
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.HeaderPanelBackColor = new System.Windows.Forms.Panel();
+            this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.ThemeSwitcher_btn = new System.Windows.Forms.Button();
+            this.HeaderPanel2 = new System.Windows.Forms.Panel();
             this.Add_new_user_btn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.NameTag_label = new System.Windows.Forms.Label();
             this.Logout_btn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.HeaderPanel1 = new System.Windows.Forms.Panel();
             this.Producten_Overzicht_btn = new System.Windows.Forms.Button();
             this.Bestellen_btn = new System.Windows.Forms.Button();
             this.Help_btn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.HeaderPanelBackColor.SuspendLayout();
+            this.HeaderPanel.SuspendLayout();
+            this.HeaderPanel2.SuspendLayout();
+            this.HeaderPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.Remove_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Logo
+            // HeaderPanelBackColor
             // 
-            this.Logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(-6, 0);
-            this.Logo.Margin = new System.Windows.Forms.Padding(0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(203, 154);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 2;
-            this.Logo.TabStop = false;
+            this.HeaderPanelBackColor.Controls.Add(this.HeaderPanel);
+            this.HeaderPanelBackColor.Controls.Add(this.panel4);
+            this.HeaderPanelBackColor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HeaderPanelBackColor.Location = new System.Drawing.Point(0, 0);
+            this.HeaderPanelBackColor.Name = "HeaderPanelBackColor";
+            this.HeaderPanelBackColor.Size = new System.Drawing.Size(764, 161);
+            this.HeaderPanelBackColor.TabIndex = 0;
             // 
-            // panel3
+            // HeaderPanel
             // 
-            this.panel3.Controls.Add(this.Remove_btn);
-            this.panel3.Controls.Add(this.Add_new_user_btn);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.Help_btn);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(198, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 154);
-            this.panel3.TabIndex = 8;
+            this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.HeaderPanel.Controls.Add(this.ThemeSwitcher_btn);
+            this.HeaderPanel.Controls.Add(this.HeaderPanel2);
+            this.HeaderPanel.Controls.Add(this.HeaderPanel1);
+            this.HeaderPanel.Controls.Add(this.Help_btn);
+            this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.HeaderPanel.Location = new System.Drawing.Point(240, 0);
+            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.HeaderPanel.Name = "HeaderPanel";
+            this.HeaderPanel.Size = new System.Drawing.Size(524, 161);
+            this.HeaderPanel.TabIndex = 10;
             // 
+            // ThemeSwitcher_btn
             // Add_new_user_btn
             // 
             this.Add_new_user_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -93,13 +94,28 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.NameTag_label);
-            this.panel2.Controls.Add(this.Logout_btn);
-            this.panel2.Location = new System.Drawing.Point(302, 72);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 42);
-            this.panel2.TabIndex = 16;
+            this.ThemeSwitcher_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.ThemeSwitcher_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(133)))), ((int)(((byte)(99)))));
+            this.ThemeSwitcher_btn.FlatAppearance.BorderSize = 0;
+            this.ThemeSwitcher_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ThemeSwitcher_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemeSwitcher_btn.Location = new System.Drawing.Point(418, 8);
+            this.ThemeSwitcher_btn.Name = "ThemeSwitcher_btn";
+            this.ThemeSwitcher_btn.Size = new System.Drawing.Size(99, 26);
+            this.ThemeSwitcher_btn.TabIndex = 17;
+            this.ThemeSwitcher_btn.Text = "Dark Mode";
+            this.ThemeSwitcher_btn.UseVisualStyleBackColor = false;
+            this.ThemeSwitcher_btn.Click += new System.EventHandler(this.ThemeSwitcher_btn_Click);
+            // 
+            // HeaderPanel2
+            // 
+            this.HeaderPanel2.Controls.Add(this.NameTag_label);
+            this.HeaderPanel2.Controls.Add(this.Logout_btn);
+            this.HeaderPanel2.Location = new System.Drawing.Point(302, 72);
+            this.HeaderPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.HeaderPanel2.Name = "HeaderPanel2";
+            this.HeaderPanel2.Size = new System.Drawing.Size(215, 42);
+            this.HeaderPanel2.TabIndex = 16;
             // 
             // NameTag_label
             // 
@@ -130,17 +146,17 @@
             this.Logout_btn.TabIndex = 2;
             this.Logout_btn.Text = "Uitloggen";
             this.Logout_btn.UseVisualStyleBackColor = false;
-            this.Logout_btn.Click += new System.EventHandler(this.OnLogInOutButton);
+            this.Logout_btn.Click += new System.EventHandler(this.DoLogout);
             // 
-            // panel1
+            // HeaderPanel1
             // 
-            this.panel1.Controls.Add(this.Producten_Overzicht_btn);
-            this.panel1.Controls.Add(this.Bestellen_btn);
-            this.panel1.Location = new System.Drawing.Point(10, 72);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(286, 42);
-            this.panel1.TabIndex = 15;
+            this.HeaderPanel1.Controls.Add(this.Producten_Overzicht_btn);
+            this.HeaderPanel1.Controls.Add(this.Bestellen_btn);
+            this.HeaderPanel1.Location = new System.Drawing.Point(10, 72);
+            this.HeaderPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.HeaderPanel1.Name = "HeaderPanel1";
+            this.HeaderPanel1.Size = new System.Drawing.Size(286, 42);
+            this.HeaderPanel1.TabIndex = 15;
             // 
             // Producten_Overzicht_btn
             // 
@@ -199,8 +215,21 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(197, 154);
-            this.panel4.TabIndex = 9;
+            this.panel4.Size = new System.Drawing.Size(197, 161);
+            this.panel4.TabIndex = 11;
+            // 
+            // Logo
+            // 
+            this.Logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.Logo.Image = global::Apotheek_application.Properties.Resources.LightModeHeaderLogo;
+            this.Logo.Location = new System.Drawing.Point(-6, 0);
+            this.Logo.Margin = new System.Windows.Forms.Padding(0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(203, 161);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 2;
+            this.Logo.TabStop = false;
             // 
             // Remove_btn
             // 
@@ -225,36 +254,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.ClientSize = new System.Drawing.Size(724, 154);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(764, 161);
+            this.Controls.Add(this.HeaderPanelBackColor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HeaderBar";
             this.Load += new System.EventHandler(this.Header_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.HeaderPanelBackColor.ResumeLayout(false);
+            this.HeaderPanel.ResumeLayout(false);
+            this.HeaderPanel2.ResumeLayout(false);
+            this.HeaderPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox Logo;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel HeaderPanelBackColor;
+        private System.Windows.Forms.Panel HeaderPanel;
+        private System.Windows.Forms.Button ThemeSwitcher_btn;
+        private System.Windows.Forms.Panel HeaderPanel2;
         private System.Windows.Forms.Label NameTag_label;
         private System.Windows.Forms.Button Logout_btn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel HeaderPanel1;
         private System.Windows.Forms.Button Producten_Overzicht_btn;
         private System.Windows.Forms.Button Bestellen_btn;
         private System.Windows.Forms.Button Help_btn;
-        private System.Windows.Forms.Button Add_new_user_btn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Button Remove_btn;
+        private System.Windows.Forms.Button Add_new_user_btn;
     }
 }
 

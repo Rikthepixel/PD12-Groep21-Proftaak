@@ -84,8 +84,8 @@ namespace Apotheek_application
 
         private void X_Click(object sender, EventArgs e)
         {
-            SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-            Popup2.Play();
+            SoundPlayer Popup = new SoundPlayer(Properties.Resources.Error);
+            Popup.Play();
             ToggleExtraInfoVisability(true);
         }
 
@@ -187,6 +187,8 @@ namespace Apotheek_application
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+            Popup2.Play();
             productList = new ProductList(masterPage.CurrentUser);
             productList.ProductInfoFetched += OnProductsRecieved;
         }

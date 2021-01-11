@@ -97,6 +97,16 @@ namespace Apotheek_application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DarkModeHeaderLogo {
+            get {
+                object obj = ResourceManager.GetObject("DarkModeHeaderLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream Error {
@@ -111,6 +121,16 @@ namespace Apotheek_application.Properties {
         public static System.IO.UnmanagedMemoryStream Incorrect {
             get {
                 return ResourceManager.GetStream("Incorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LightModeHeaderLogo {
+            get {
+                object obj = ResourceManager.GetObject("LightModeHeaderLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

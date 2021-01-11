@@ -142,6 +142,7 @@
     <Compile Include="AddUserPage.Designer.cs">
       <DependentUpon>AddUserPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ColorScheme.cs" />
     <Compile Include="HelpPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +210,7 @@
     <Compile Include="ToevoegenMessageBox.Designer.cs">
       <DependentUpon>ToevoegenMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeSwitcher.cs" />
     <EmbeddedResource Include="AddUserPage.resx">
       <DependentUpon>AddUserPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +330,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Correct3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkModeHeaderLogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoDarkmode.Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
