@@ -69,22 +69,24 @@ namespace Appotheekcl
 
                         string statement = $"SELECT * FROM {Table.TABLE_NAME}";
                         List<Product> results = await data.SendQueryAsync<List<Product>>(statement, user);
-
+                        
+                        // Deze code was bedoelt als waarschuwing dat iets over de datum is
                         for (int j = 0; j < results.Count; j++)
                         {
-
+                        //    Console.WriteLine(results.Count);
                             results[j].naam = Table.TABLE_NAME.Replace('_', ' ');
                             Products.Add(results[j]);
 
-                            /*string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd")*/
-                            string CurrentDate = "2021-2-16";
-                            Console.WriteLine(CurrentDate == results[j].Uiterste_Datum);
-                            if (CurrentDate == results[j].Uiterste_Datum)
-                            {
-                                OnDateIndexes.Add(Products.Count - 1);
-                                //dataGridView1.Row(j).DefaultCellStyle.BackColor = Color.Yellow;
-                            }
+                        //    /*string CurrentDate = DateTime.Now.ToString("yyyy-MM-dd")*/
+                        //    string CurrentDate = "2021-3-08";
+                        //    //Console.WriteLine(CurrentDate == results[j].Uiterste_Datum);
+                        //    if (CurrentDate == results[j].Uiterste_Datum)
+                        //    {
+                        //        OnDateIndexes.Add(Products.Count - 1);
+                        //        //dataGridView1.Row(j).DefaultCellStyle.BackColor = Color.Yellow;
+                        //    }
                         }
+
                     }));
                 }
             }));
