@@ -179,22 +179,47 @@ namespace Apotheek_application
             }
 
             ResetAllButtonColors();
-            if (masterPage.ActiveForm == orderPage)
+            if (masterPage.IsLightmode)
             {
-                Bestellen_btn.BackColor = Color.FromArgb(13, 91, 65);
+                if (masterPage.ActiveForm == orderPage)
+                {
+                    Bestellen_btn.BackColor = Color.FromArgb(13, 91, 65);
+                }
+                if (masterPage.ActiveForm == productPage)
+                {
+                    Producten_Overzicht_btn.BackColor = Color.FromArgb(13, 91, 65);
+                }
+                if (masterPage.ActiveForm == masterPage.LoginPage)
+                {
+                    Logout_btn.BackColor = Color.FromArgb(13, 91, 65);
+                }
+                if (masterPage.ActiveForm == helpPage)
+                {
+                    Help_btn.BackColor = Color.FromArgb(13, 91, 65);
+                }
+                ThemeSwitcher_btn.Text = "Dark Mode";
             }
-            if (masterPage.ActiveForm == productPage)
+            else
             {
-                Producten_Overzicht_btn.BackColor = Color.FromArgb(13, 91, 65);
+                if (masterPage.ActiveForm == orderPage)
+                {
+                    Bestellen_btn.BackColor = Color.FromArgb(84, 88, 94);
+                }
+                if (masterPage.ActiveForm == productPage)
+                {
+                    Producten_Overzicht_btn.BackColor = Color.FromArgb(84, 88, 94);
+                }
+                if (masterPage.ActiveForm == masterPage.LoginPage)
+                {
+                    Logout_btn.BackColor = Color.FromArgb(84, 88, 94);
+                }
+                if (masterPage.ActiveForm == helpPage)
+                {
+                    Help_btn.BackColor = Color.FromArgb(84, 88, 94);
+                }
+                ThemeSwitcher_btn.Text = "Light Mode";
             }
-            if (masterPage.ActiveForm == masterPage.LoginPage)
-            {
-                Logout_btn.BackColor = Color.FromArgb(13, 91, 65);
-            }
-            if (masterPage.ActiveForm == helpPage)
-            {
-                Help_btn.BackColor = Color.FromArgb(13, 91, 65);
-            }
+
         }
 
         public void SetLogInOutText(string NewButtonText)
@@ -209,10 +234,22 @@ namespace Apotheek_application
 
         private void ResetAllButtonColors()
         {
-            Producten_Overzicht_btn.BackColor = Color.FromArgb(31, 133, 99);
-            Bestellen_btn.BackColor = Color.FromArgb(31, 133, 99);
-            Help_btn.BackColor = Color.FromArgb(31, 133, 99);
-            Logout_btn.BackColor = Color.FromArgb(31, 133, 99);
+            if (masterPage.IsLightmode)
+            {
+                Producten_Overzicht_btn.BackColor = Color.FromArgb(70, 170, 120);
+                Bestellen_btn.BackColor = Color.FromArgb(70, 170, 120);
+                Help_btn.BackColor = Color.FromArgb(70, 170, 120);
+                Logout_btn.BackColor = Color.FromArgb(70, 170, 120);
+
+            }
+            else
+            {
+                Producten_Overzicht_btn.BackColor = Color.DarkGray;
+                Bestellen_btn.BackColor = Color.DarkGray;
+                Help_btn.BackColor = Color.DarkGray;
+                Logout_btn.BackColor = Color.DarkGray;
+            }
+
         }
 
         private void ThemeSwitcher_btn_Click(object sender, EventArgs e)

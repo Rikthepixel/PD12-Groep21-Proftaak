@@ -169,6 +169,9 @@
     <EmbeddedResource Include="AddUserPage.resx">
       <DependentUpon>AddUserPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelpPage.resx">
+      <DependentUpon>HelpPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +288,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoDarkmode.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkModeWarning.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertDark %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertDark %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

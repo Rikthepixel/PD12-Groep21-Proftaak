@@ -61,6 +61,16 @@ namespace Apotheek_application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AlertDark3 {
+            get {
+                object obj = ResourceManager.GetObject("AlertDark3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream Boo {
@@ -99,7 +109,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DarkModeHeaderLogo {
+        public static System.Drawing.Bitmap DarkModeHeaderLogo {
             get {
                 object obj = ResourceManager.GetObject("DarkModeHeaderLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -127,7 +137,7 @@ namespace Apotheek_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LightModeHeaderLogo {
+        public static System.Drawing.Bitmap LightModeHeaderLogo {
             get {
                 object obj = ResourceManager.GetObject("LightModeHeaderLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

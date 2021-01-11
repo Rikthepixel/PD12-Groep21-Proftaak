@@ -120,11 +120,23 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAALtJREFUSEvtlcERgzAMBFMGnSWd0A7FpC8yepjBx0q2IJM88M0sH063Tz9e72Vt
-        Mc3PFLShhGIazUCbBVdMQ2egbQPFNHAFchzEdPgN1FOJ6YDQUIfYuzYxFT001PGoxFSI0FAn4r9i+vEL
-        hrgLDXVaDHEXGuq0GOIuNNRpcUPx/V4n+2TlGup4FN8mzsg11CH2rkps0IGioY6inoPYoMMrkAPFBg2c
-        gbYNV2zQUAbaLITiAo1G0EbNsn4A3cS/Bv8dd0IAAAAASUVORK5CYII=
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAeAB4DASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwA1zXPJ3Wlo37zpJIP4fYe/8vr0z/D3h698VanLaWk0KzLEZma4
+        ZgCMgHkAnOWFY7MzsWZizMckk5JNdN4E0i81rW5ray1afTJFtmkM0OcsAyjbwy8cg9e1B81RgnNRtcxZ
+        0utF1W4thNtntpWhdoycEq2D9RkdxXV6Tq0epQ4OEuFHzp/Ue38q5TWLeS01u/tpZ2uJIbmSN5n6yEMQ
+        WPJ5PXqaqxTSwNuhleNiMEoxBxQROOrQ64ge2uJIJBh0bB9/f6V3Xwh/5Gy6/wCvF/8A0OOoNW0mPUoc
+        jCXCj5H/AKH2/lXNadq2peGtSnk0+5ENwA0LuEVwRkZHzA91FBpQqKE1J9B3if8A5GzWf+v6f/0M1V0/
+        Tp9SldIdo2Lks+cfTgdf8Kmt4LnXtVmkkmXzpWaaWRhjJLfMQBxnJ6cV2NpaQ2VusEC4UdT3J9T70Gc5
+        ato//9k=
 </value>
   </data>
 </root>

@@ -235,9 +235,17 @@ namespace Apotheek_application
         {
             if (masterPage.CurrentUser.IsLoginValid())
             {
+                //if (!masterPage.IsLightmode)
+                //{
+                //    CustomMB.ForeColor = Color.White;
+                //    CustomMB.BackColor = Color.FromArgb(75, 79, 78);
+                //    CustomMB.SetButtonColors(Color.White, Color.FromArgb(75, 79, 78), Color.FromArgb(55, 58, 64));
+                //    CustomMB.SetWarningLabel(Properties.Resources.AlertDark3);
+                //}
                 if (removePage == null)
                 {
                     removePage = new RemovePage(masterPage);
+
                 }
 
                 masterPage.OpenChildForm(removePage, removePage.LoginRequired);

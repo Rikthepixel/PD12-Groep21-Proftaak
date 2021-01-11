@@ -49,10 +49,18 @@ namespace Apotheek_application
         private async void Order_btn_Click(object sender, EventArgs e)
         {
             OrderMessageBox CustomMB = new OrderMessageBox();
+            if (!masterPage.IsLightmode)
+            {
+                CustomMB.ForeColor = Color.White;
+                CustomMB.BackColor = Color.FromArgb(75, 79, 78);
+                CustomMB.SetButtonColors(Color.White, Color.FromArgb(75, 79, 78), Color.FromArgb(55, 58, 64));
+                CustomMB.SetWarningLabel(Properties.Resources.AlertDark3);
+            }
             CustomMB.StartPosition = FormStartPosition.CenterParent;
             SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
             Popup.Play();
             CustomMB.ShowDialog();
+
             if (CustomMB.DialogResult == DialogResult.Yes)
             {
                 SoundPlayer correct = new SoundPlayer(Properties.Resources.correct);
@@ -97,6 +105,13 @@ namespace Apotheek_application
             SoundPlayer Popup = new SoundPlayer(Properties.Resources.Popup);
             Popup.Play();
             ToevoegenMessageBox CustomMB = new ToevoegenMessageBox();
+            if (!masterPage.IsLightmode)
+            {
+                CustomMB.ForeColor = Color.White;
+                CustomMB.BackColor = Color.FromArgb(75, 79, 78);
+                CustomMB.SetButtonColors(Color.White, Color.FromArgb(75, 79, 78), Color.FromArgb(55, 58, 64));
+                CustomMB.SetWarningLabel(Properties.Resources.AlertDark3);
+            }
             CustomMB.StartPosition = FormStartPosition.CenterParent;
             CustomMB.ShowDialog();
             if (CustomMB.DialogResult == DialogResult.Yes)

@@ -132,6 +132,7 @@ namespace Apotheek_application
         private void OnColorSwitch(object source, EventArgs args)
         {
             ThemeSwitcher.ChangeTheme(this.Controls, IsLightmode);
+            
             if (IsLightmode == true)
             {
                 IsLightmode = false;
@@ -140,6 +141,7 @@ namespace Apotheek_application
             {
                 IsLightmode = true;
             }
+            Header.UpdateHeader();
         }
     }
 }

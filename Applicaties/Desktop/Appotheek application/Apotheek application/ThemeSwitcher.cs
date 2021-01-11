@@ -29,7 +29,8 @@ namespace Apotheek_application
             HeaderBar = Color.FromArgb(24, 119, 87),
             ButtonHover = Color.FromArgb(20, 130, 90),
             LogoImage = Properties.Resources.LightModeHeaderLogo,
-            DataGridViewColor = Color.FromArgb(24, 229, 87),
+            DataGridViewColor = Color.FromArgb(255, 255, 255),
+            Fiets = Color.White,
 
         };
 
@@ -38,7 +39,7 @@ namespace Apotheek_application
             PanelBG = Color.FromArgb(84, 88, 94),
             PanelFG = Color.FromArgb(84, 88, 94),
             ButtonBG = Color.DarkGray,
-            ButtonFG = Color.Gray,
+            ButtonFG = Color.White,
             ButtonBC = Color.FromArgb(55, 58, 64),
             LoginFG = Color.FromArgb(95, 97, 98),
             LoginBG = Color.FromArgb(95, 97, 98),
@@ -51,7 +52,8 @@ namespace Apotheek_application
             HeaderBar = Color.FromArgb(15, 77, 56),
             ButtonHover = Color.FromArgb(84, 88, 94),
             LogoImage = Properties.Resources.DarkModeHeaderLogo,
-            DataGridViewColor = Color.FromArgb(40, 42, 46)
+            DataGridViewColor = Color.FromArgb(95, 97, 98),
+            Fiets = Color.FromArgb(57, 128, 104),
 
         };
 
@@ -94,10 +96,16 @@ namespace Apotheek_application
                         component.ForeColor = scheme.ButtonFG;
                 }
                 if (component is Panel && component.Name == "WWVBorder")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.ButtonBC;
+                }
                 if (component is Panel && component.Name == "WWVInside")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.ButtonBG;
-                component.ForeColor = scheme.ButtonFG;
+                    component.ForeColor = scheme.ButtonFG;
+                }
                 if (component.Name == "HeaderPanel")
                 {
                     ChangeTheme(component.Controls, IsLightMode);
@@ -110,6 +118,11 @@ namespace Apotheek_application
                     ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.BottomPanel;
                     component.BackColor = scheme.BottomPanel;
+                }
+                if (component.Name == "Fiets")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.BackColor = scheme.Fiets;
                 }
                 if (component.Name.Contains("BorderColor"))
                 {
@@ -154,8 +167,19 @@ namespace Apotheek_application
 
                 }
                 if (component is DataGridView)
-                    (component as DataGridView).GridColor = scheme.DataGridViewColor;
+                {
+                    (component as DataGridView).BackgroundColor = scheme.DataGridViewColor;
+                    //(component as DataGridView).ForeColor = scheme.ButtonFG;
+                    (component as DataGridView).GridColor = Color.Purple;
+
                     ChangeTheme(component.Controls, IsLightMode);
+                }
+                if(component is Label && component.Name == "SearchBar")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.ForeColor = scheme.ButtonFG;
+                    component.BackColor = scheme.LoginBG;
+                }
             }
         }
     }

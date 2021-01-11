@@ -84,6 +84,7 @@ namespace Apotheek_application
             this.pictureBox1.Size = new System.Drawing.Size(33, 30);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
             // 
             // OrderMessageBox
             // 
@@ -99,6 +100,7 @@ namespace Apotheek_application
             this.MinimumSize = new System.Drawing.Size(500, 225);
             this.Name = "OrderMessageBox";
             this.Text = "OrderMessageBox";
+            this.TransparencyKey = System.Drawing.Color.White;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
