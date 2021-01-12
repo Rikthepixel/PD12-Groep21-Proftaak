@@ -85,12 +85,15 @@ namespace Apotheek_application
                 {
                     productPage = new ProductPage(masterPage);
                 }
+                else
+                {
+                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+                    Popup2.Play();
+                }
 
                 masterPage.OpenChildForm(productPage, productPage.LoginRequired);
                 ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 UpdateHeader();
-                SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-                Popup2.Play();
             } else
             {
                 masterPage.LoginPage.SetLoginError("LoginRequired");
@@ -237,12 +240,12 @@ namespace Apotheek_application
 
         private void Add_user_btn_Click(object sender, EventArgs e)
         {
+            SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+            Popup2.Play();
             if (masterPage.CurrentUser.IsLoginValid())
             {
                 if (addUserPage == null)
                 {
-                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-                    Popup2.Play();
                     addUserPage = new AddUserPage(masterPage);
                 }
 
@@ -254,12 +257,12 @@ namespace Apotheek_application
 
         private void Verwijderen_btn_Click(object sender, EventArgs e)
         {
+            SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
+            Popup2.Play();
             if (masterPage.CurrentUser.IsLoginValid())
             {
                 if (removePage == null)
                 {
-                    SoundPlayer Popup2 = new SoundPlayer(Properties.Resources.Popup2);
-                    Popup2.Play();
                     removePage = new RemovePage(masterPage);
                 }
 
