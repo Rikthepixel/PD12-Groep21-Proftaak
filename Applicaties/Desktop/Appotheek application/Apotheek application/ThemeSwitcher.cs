@@ -23,7 +23,7 @@ namespace Apotheek_application
             TextboxFG = Color.DarkGray,
             TextboxBG = Color.White,
             Form = Color.White,
-            BottomPanel = Color.FromArgb(88, 196, 160),
+            BottomPanel = Color.White, //Color.FromArgb(88, 196, 160),
             HeaderPanel = Color.FromArgb(24, 119, 87),
             TextBorder = Color.FromArgb(88, 196, 160),
             HeaderBar = Color.FromArgb(24, 119, 87),
@@ -31,6 +31,7 @@ namespace Apotheek_application
             LogoImage = Properties.Resources.LightModeHeaderLogo,
             DataGridViewColor = Color.FromArgb(255, 255, 255),
             Fiets = Color.White,
+            LoginBottomPanel = Color.FromArgb(88, 196, 160),
 
         };
 
@@ -42,7 +43,7 @@ namespace Apotheek_application
             ButtonFG = Color.White,
             ButtonBC = Color.FromArgb(55, 58, 64),
             LoginFG = Color.FromArgb(95, 97, 98),
-            LoginBG = Color.FromArgb(95, 97, 98),
+            LoginBG = Color.FromArgb(95, 97, 98), //Color.FromArgb(95, 97, 98),
             TextboxFG = Color.White,
             TextboxBG = Color.DarkGray,
             Form = Color.FromArgb(84, 88, 94),
@@ -54,6 +55,7 @@ namespace Apotheek_application
             LogoImage = Properties.Resources.DarkModeHeaderLogo,
             DataGridViewColor = Color.FromArgb(95, 97, 98),
             Fiets = Color.FromArgb(57, 128, 104),
+            LoginBottomPanel = Color.FromArgb(57, 128, 104),
 
         };
 
@@ -170,7 +172,7 @@ namespace Apotheek_application
                 {
                     (component as DataGridView).BackgroundColor = scheme.DataGridViewColor;
                     //(component as DataGridView).ForeColor = scheme.ButtonFG;
-                    (component as DataGridView).GridColor = Color.Purple;
+                    //(component as DataGridView).GridColor = Color.Purple;
 
                     ChangeTheme(component.Controls, IsLightMode);
                 }
@@ -179,6 +181,36 @@ namespace Apotheek_application
                     ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.ButtonFG;
                     component.BackColor = scheme.LoginBG;
+                }
+                if(component is Form && component.Name == "AddUserPage")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.ForeColor = scheme.LoginFG;
+                    component.BackColor = scheme.LoginBG;
+                }
+                if (component is Form && component.Name == "RemovePage")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.ForeColor = scheme.LoginFG;
+                    component.BackColor = scheme.LoginBG;
+                }
+                if (component is Panel && component.Name == "LoginBottomPanel")
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.ForeColor = scheme.LoginBottomPanel;
+                    component.BackColor = scheme.LoginBottomPanel;
+                }
+                if (component is NumericUpDown)
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.BackColor = scheme.TextboxBG;
+                    component.ForeColor = scheme.TextboxFG;
+                }
+                if (component is ComboBox)
+                {
+                    ChangeTheme(component.Controls, IsLightMode);
+                    component.BackColor = scheme.TextboxBG;
+                    component.ForeColor = scheme.TextboxFG;
                 }
             }
         }

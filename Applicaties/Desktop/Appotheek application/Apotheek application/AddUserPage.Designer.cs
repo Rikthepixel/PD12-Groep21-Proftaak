@@ -39,6 +39,7 @@ namespace Apotheek_application
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Password_txt = new System.Windows.Forms.TextBox();
+            this.BottomPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +152,7 @@ namespace Apotheek_application
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 253);
+            this.panel1.Size = new System.Drawing.Size(750, 297);
             this.panel1.TabIndex = 9;
             // 
             // Password_txt
@@ -163,11 +164,22 @@ namespace Apotheek_application
             this.Password_txt.Size = new System.Drawing.Size(76, 20);
             this.Password_txt.TabIndex = 9;
             // 
+            // BottomPanel
+            // 
+            this.BottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BottomPanel.Location = new System.Drawing.Point(0, 294);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(750, 73);
+            this.BottomPanel.TabIndex = 10;
+            // 
             // AddUserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 366);
+            this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -192,5 +204,6 @@ namespace Apotheek_application
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox Password_txt;
+        private System.Windows.Forms.Panel BottomPanel;
     }
 }

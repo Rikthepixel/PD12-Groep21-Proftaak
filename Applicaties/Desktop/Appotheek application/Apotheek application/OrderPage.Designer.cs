@@ -126,6 +126,7 @@
             // Type_medicijn_cb
             // 
             this.Type_medicijn_cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Type_medicijn_cb.BackColor = System.Drawing.Color.White;
             this.Type_medicijn_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Type_medicijn_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Type_medicijn_cb.FormattingEnabled = true;

@@ -35,7 +35,7 @@
             this.Wachtwoord_txt = new System.Windows.Forms.TextBox();
             this.Wacht_vergeten_Link_Label = new System.Windows.Forms.LinkLabel();
             this.Login_btn = new System.Windows.Forms.Button();
-            this.BottomPanel = new System.Windows.Forms.Panel();
+            this.LoginBottomPanel = new System.Windows.Forms.Panel();
             this.BorderColor1.SuspendLayout();
             this.BorderColor2.SuspendLayout();
             this.SuspendLayout();
@@ -149,16 +149,16 @@
             this.Login_btn.UseVisualStyleBackColor = false;
             this.Login_btn.Click += new System.EventHandler(this.Login_btn_Click);
             // 
-            // BottomPanel
+            // LoginBottomPanel
             // 
-            this.BottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.LoginBottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
-            this.BottomPanel.Location = new System.Drawing.Point(-11, 314);
-            this.BottomPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(767, 55);
-            this.BottomPanel.TabIndex = 16;
+            this.LoginBottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
+            this.LoginBottomPanel.Location = new System.Drawing.Point(-11, 314);
+            this.LoginBottomPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginBottomPanel.Name = "LoginBottomPanel";
+            this.LoginBottomPanel.Size = new System.Drawing.Size(767, 55);
+            this.LoginBottomPanel.TabIndex = 16;
             // 
             // Login
             // 
@@ -166,7 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(750, 366);
-            this.Controls.Add(this.BottomPanel);
+            this.Controls.Add(this.LoginBottomPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BorderColor1);
             this.Controls.Add(this.BorderColor2);
@@ -193,6 +193,6 @@
         private System.Windows.Forms.TextBox Wachtwoord_txt;
         private System.Windows.Forms.LinkLabel Wacht_vergeten_Link_Label;
         private System.Windows.Forms.Button Login_btn;
-        private System.Windows.Forms.Panel BottomPanel;
+        private System.Windows.Forms.Panel LoginBottomPanel;
     }
 }

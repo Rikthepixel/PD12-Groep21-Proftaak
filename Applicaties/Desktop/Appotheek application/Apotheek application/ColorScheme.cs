@@ -31,5 +31,6 @@ namespace Apotheek_application
         public Image LogoImage { get; set; }
         public Color DataGridViewColor { get; set; }
         public Color Fiets { get; set; }
+        public Color LoginBottomPanel { get; set; }
     }
 }

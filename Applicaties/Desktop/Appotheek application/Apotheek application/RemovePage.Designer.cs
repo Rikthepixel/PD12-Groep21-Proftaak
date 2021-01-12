@@ -34,7 +34,6 @@ namespace Apotheek_application
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.Name_cb = new System.Windows.Forms.ComboBox();
@@ -43,6 +42,7 @@ namespace Apotheek_application
             this.label2 = new System.Windows.Forms.Label();
             this.Aantal_Medicijnen_Verwijderen = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.BottomPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,21 +54,12 @@ namespace Apotheek_application
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.BottomPanel);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 366);
             this.panel1.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Location = new System.Drawing.Point(0, 251);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(750, 115);
-            this.panel7.TabIndex = 16;
             // 
             // panel2
             // 
@@ -85,7 +76,7 @@ namespace Apotheek_application
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 253);
+            this.panel2.Size = new System.Drawing.Size(750, 324);
             this.panel2.TabIndex = 15;
             // 
             // label3
@@ -187,6 +178,16 @@ namespace Apotheek_application
             this.label1.Text = "Aantal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // BottomPanel
+            // 
+            this.BottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BottomPanel.Location = new System.Drawing.Point(0, 319);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(750, 47);
+            this.BottomPanel.TabIndex = 16;
+            // 
             // RemovePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +214,6 @@ namespace Apotheek_application
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox Name_cb;
         private System.Windows.Forms.Button Order_btn;
@@ -222,5 +222,6 @@ namespace Apotheek_application
         private System.Windows.Forms.NumericUpDown Aantal_Medicijnen_Verwijderen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel BottomPanel;
     }
 }
