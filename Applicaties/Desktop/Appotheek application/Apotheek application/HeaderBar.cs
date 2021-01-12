@@ -183,11 +183,11 @@ namespace Apotheek_application
 
             ResetAllButtonColors();
             Color ActiveColor = Color.FromArgb(13, 91, 65);
-            ThemeSwitcher_btn.Text = "Light Mode";
+            ThemeSwitcher_btn.Text = "Donker Modus";
             if (!masterPage.IsLightmode)
             {
                 ActiveColor = Color.FromArgb(84, 88, 94);
-                ThemeSwitcher_btn.Text = "Dark Mode";
+                ThemeSwitcher_btn.Text = "Lichte Modus";
             }
 
             if (masterPage.ActiveForm == orderPage) Bestellen_btn.BackColor = ActiveColor;
