@@ -250,6 +250,7 @@ namespace Apotheek_application
                 }
 
                 masterPage.OpenChildForm(addUserPage, addUserPage.LoginRequired);
+                ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 UpdateHeader();
 
             }
@@ -267,6 +268,7 @@ namespace Apotheek_application
                 }
 
                 masterPage.OpenChildForm(removePage, removePage.LoginRequired);
+                ThemeSwitcher.ChangeTheme(masterPage.Controls, !masterPage.IsLightmode);
                 UpdateHeader();
             }
         }
