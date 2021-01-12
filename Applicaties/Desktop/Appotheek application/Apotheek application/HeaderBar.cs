@@ -179,47 +179,20 @@ namespace Apotheek_application
             }
 
             ResetAllButtonColors();
-            if (masterPage.IsLightmode)
+            Color ActiveColor = Color.FromArgb(13, 91, 65);
+            ThemeSwitcher_btn.Text = "Light Mode";
+            if (!masterPage.IsLightmode)
             {
-                if (masterPage.ActiveForm == orderPage)
-                {
-                    Bestellen_btn.BackColor = Color.FromArgb(13, 91, 65);
-                }
-                if (masterPage.ActiveForm == productPage)
-                {
-                    Producten_Overzicht_btn.BackColor = Color.FromArgb(13, 91, 65);
-                }
-                if (masterPage.ActiveForm == masterPage.LoginPage)
-                {
-                    Logout_btn.BackColor = Color.FromArgb(13, 91, 65);
-                }
-                if (masterPage.ActiveForm == helpPage)
-                {
-                    Help_btn.BackColor = Color.FromArgb(13, 91, 65);
-                }
+                ActiveColor = Color.FromArgb(84, 88, 94);
                 ThemeSwitcher_btn.Text = "Dark Mode";
             }
-            else
-            {
-                if (masterPage.ActiveForm == orderPage)
-                {
-                    Bestellen_btn.BackColor = Color.FromArgb(84, 88, 94);
-                }
-                if (masterPage.ActiveForm == productPage)
-                {
-                    Producten_Overzicht_btn.BackColor = Color.FromArgb(84, 88, 94);
-                }
-                if (masterPage.ActiveForm == masterPage.LoginPage)
-                {
-                    Logout_btn.BackColor = Color.FromArgb(84, 88, 94);
-                }
-                if (masterPage.ActiveForm == helpPage)
-                {
-                    Help_btn.BackColor = Color.FromArgb(84, 88, 94);
-                }
-                ThemeSwitcher_btn.Text = "Light Mode";
-            }
 
+            if (masterPage.ActiveForm == orderPage) Bestellen_btn.BackColor = ActiveColor;
+            else if (masterPage.ActiveForm == productPage) Producten_Overzicht_btn.BackColor = ActiveColor;
+            else if (masterPage.ActiveForm == masterPage.LoginPage) Logout_btn.BackColor = ActiveColor;
+            else if (masterPage.ActiveForm == helpPage) Help_btn.BackColor = ActiveColor;
+            else if (masterPage.ActiveForm == addUserPage) Add_user_btn.BackColor = ActiveColor;
+            else if (masterPage.ActiveForm == removePage) Verwijderen_btn.BackColor = ActiveColor;
         }
 
         public void SetLogInOutText(string NewButtonText)
