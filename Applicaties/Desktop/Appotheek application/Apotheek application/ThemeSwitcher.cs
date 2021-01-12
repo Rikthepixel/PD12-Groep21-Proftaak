@@ -59,158 +59,149 @@ namespace Apotheek_application
 
         };
 
+
         public static void ChangeTheme(Control.ControlCollection container, bool IsLightMode)
         {
             if (IsLightMode == false)
             {
-                SetTheme(LightMode, container, IsLightMode);
+                SetTheme(LightMode, container);
             }
             else if (IsLightMode == true)
             {
-                SetTheme(DarkMode, container, IsLightMode);
+                SetTheme(DarkMode, container);
             }
 
         }
 
-        private static void SetTheme(ColorScheme scheme, Control.ControlCollection container, bool IsLightMode)
+        private static void SetTheme(ColorScheme scheme, Control.ControlCollection container)
         {
             foreach (Control component in container)
             {
-                //Change to DarkMode
+                //Change to a different
                 if (component is Form)
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.LoginBG;
                     component.ForeColor = scheme.LoginFG;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is LinkLabel)
                 {
-                    (component as LinkLabel).LinkColor = scheme.ButtonBC;
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.ButtonFG;
+                    (component as LinkLabel).LinkColor = scheme.ButtonBC;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is Panel)
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     if (component.BackColor != Color.Transparent)
                         component.BackColor = scheme.PanelBG;
                     if (component.ForeColor != Color.Transparent)
                         component.ForeColor = scheme.ButtonFG;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is Panel && component.Name == "WWVBorder")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.ButtonBC;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is Panel && component.Name == "WWVInside")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.ButtonBG;
                     component.ForeColor = scheme.ButtonFG;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component.Name == "HeaderPanel")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.HeaderPanel;
                     component.ForeColor = scheme.HeaderPanel;
-
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component.Name == "BottomPanel")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.BottomPanel;
                     component.BackColor = scheme.BottomPanel;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component.Name == "Fiets")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.Fiets;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component.Name.Contains("BorderColor"))
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.TextBorder;
                     component.ForeColor = scheme.TextBorder;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is Button)
                 {
-                    (component as Button).FlatAppearance.BorderColor = scheme.ButtonBC;
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.ButtonBG;
                     component.ForeColor = scheme.ButtonFG;
                     (component as Button).FlatAppearance.MouseOverBackColor = scheme.ButtonHover;
+                    (component as Button).FlatAppearance.BorderColor = scheme.ButtonBC;
+                    SetTheme(scheme, component.Controls);
                 }
 
                 if (component is TextBox)
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.TextboxBG;
                     component.ForeColor = scheme.TextboxFG;
+                    SetTheme(scheme, component.Controls);
                 }
-                //if (component is Form && component.Name == ")
-                //{
-                //    ChangeTheme(component.Controls, IsLightMode);
-                //    component.BackColor = DarkMode.HeaderBar;
-                //    component.ForeColor = DarkMode.HeaderBar;
-                //}
+
                 if (component is Panel && component.Name.Contains("HeaderPanel"))
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.HeaderPanel;
                     component.ForeColor = scheme.HeaderPanel;
+                    SetTheme(scheme, component.Controls);
                 }
 
 
                 if (component is PictureBox && component.Name == "Logo")
                 {
-                    (component as PictureBox).Image = scheme.LogoImage;
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackgroundImage = scheme.LogoImage;
-
+                    (component as PictureBox).Image = scheme.LogoImage;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is DataGridView)
                 {
                     (component as DataGridView).BackgroundColor = scheme.DataGridViewColor;
-                    //(component as DataGridView).ForeColor = scheme.ButtonFG;
-                    //(component as DataGridView).GridColor = Color.Purple;
-
-                    ChangeTheme(component.Controls, IsLightMode);
+                    SetTheme(scheme, component.Controls);
                 }
-                if(component is Label && component.Name == "SearchBar")
+                if (component is Label && component.Name == "SearchBar")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.ButtonFG;
                     component.BackColor = scheme.LoginBG;
+                    SetTheme(scheme, component.Controls);
                 }
-                if(component is Form && component.Name == "AddUserPage")
+                if (component is Form && component.Name == "AddUserPage")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.LoginFG;
                     component.BackColor = scheme.LoginBG;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is Form && component.Name == "RemovePage")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.LoginFG;
                     component.BackColor = scheme.LoginBG;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is Panel && component.Name == "LoginBottomPanel")
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.ForeColor = scheme.LoginBottomPanel;
                     component.BackColor = scheme.LoginBottomPanel;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is NumericUpDown)
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.TextboxBG;
                     component.ForeColor = scheme.TextboxFG;
+                    SetTheme(scheme, component.Controls);
                 }
                 if (component is ComboBox)
                 {
-                    ChangeTheme(component.Controls, IsLightMode);
                     component.BackColor = scheme.TextboxBG;
                     component.ForeColor = scheme.TextboxFG;
+                    SetTheme(scheme, component.Controls);
                 }
             }
         }
