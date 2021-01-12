@@ -17,8 +17,10 @@ namespace Appotheekcl
 
         public void InsertNewUser(string Email, string Password, string Voornaam, string Achternaam, User CurrentUser)
         {
+            var PostData = new List<KeyValuePair<string, string>>();
+            PostData.Add(new KeyValuePair<string, string>("REGISTER", "RegisterNewUser"));
             string Statement = $"INSERT INTO User (Email, Password, Voornaam, Achternaam) VALUES('{Email}', '{Password}', '{Voornaam}', '{Achternaam}')";
-            _ = dataAccess.SendSaveQueryAsync(Statement, CurrentUser);
+            _ = dataAccess.SendSaveQueryAsync(Statement, CurrentUser, PostData);
         }
     }
 }
