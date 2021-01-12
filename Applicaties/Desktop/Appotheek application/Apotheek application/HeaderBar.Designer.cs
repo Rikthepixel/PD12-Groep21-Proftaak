@@ -285,8 +285,6 @@
         private System.Windows.Forms.Button Help_btn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox Logo;
-        private System.Windows.Forms.Button Remove_btn;
-        private System.Windows.Forms.Button Add_new_user_btn;
         private System.Windows.Forms.Button Verwijderen_btn;
         private System.Windows.Forms.Button Add_user_btn;
     }
