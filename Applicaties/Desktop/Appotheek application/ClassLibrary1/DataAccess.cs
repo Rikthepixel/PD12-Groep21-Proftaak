@@ -19,7 +19,6 @@ namespace Appotheekcl
         {
             
         }
-
         public async Task<KeyValuePair<string, bool>> SendSaveQueryAsync(string SQLQuery, User User)
         {
             if (User.loggedIn)
@@ -90,6 +89,73 @@ namespace Appotheekcl
             }
         }
 
+        public async Task<KeyValuePair<string, bool>> SendSaveQueryAsync(string SQLQuery, User User, List<KeyValuePair<string, string>> PostData)
+        {
+            if (User.loggedIn)
+            {
+                PostData.Add(new KeyValuePair<string, string>("SQLQuery", SQLQuery));
+
+                var Content = new FormUrlEncodedContent(PostData);
+                string CookieString = "";
+                foreach (var Cookie in User.Cookies)
+                {
+                    CookieString += $"{Cookie};";
+                }
+                Content.Headers.Add("Cookie", CookieString);
+
+                HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync(WebsiteLocations.QueryPage, Content);
+                string RecievedDataString = await RecievedData.Content.ReadAsStringAsync();
+                if (RecievedDataString.Length != 0)
+                {
+                    var Awnser = JsonConvert.DeserializeObject<QueryResponse>(RecievedDataString);
+                    if (Awnser.succesful == "Query was succefully executed")
+                        return new KeyValuePair<string, bool>("succesful", true);
+                    else if (Awnser.succesful == "Unable to execute query")
+                        return new KeyValuePair<string, bool>("succesful", false);
+                    else
+                        return new KeyValuePair<string, bool>("succesful", false);
+                }
+                else
+                {
+                    return new KeyValuePair<string, bool>("succesful", false);
+                }
+            }
+            else
+            {
+                return new KeyValuePair<string, bool>("succesful", false);
+            }
+        }
+
+        public async Task<T> SendQueryAsync<T>(string SQLQuery, User User, List<KeyValuePair<string, string>> PostData)
+        {
+            if (User.loggedIn)
+            {
+                PostData.Add(new KeyValuePair<string, string>("SQLQuery", SQLQuery));
+
+                var Content = new FormUrlEncodedContent(PostData);
+                string CookieString = "";
+                foreach (var Cookie in User.Cookies)
+                {
+                    CookieString += $"{Cookie};";
+                }
+                Content.Headers.Add("Cookie", CookieString);
+
+                HttpResponseMessage RecievedData = await CentralClient.HttpClient.PostAsync(WebsiteLocations.QueryPage, Content);
+                string RecievedDataString = await RecievedData.Content.ReadAsStringAsync();
+                if (RecievedDataString.Length != 0)
+                {
+                    return JsonConvert.DeserializeObject<T>(RecievedDataString);
+                }
+                else
+                {
+                    return default(T);
+                }
+            }
+            else
+            {
+                return default(T);
+            }
+        }
         internal class QueryResponse
         {
             public string succesful { get; set; }
