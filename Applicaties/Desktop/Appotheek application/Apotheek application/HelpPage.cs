@@ -18,5 +18,6 @@ namespace Apotheek_application
             InitializeComponent();
             LoginRequired = true;
         }
+
     }
 }
