@@ -26,7 +26,7 @@ if(VerifySession()){
     
     header("Location: ../../Bestellen.php");
 } else {
-    VerifySessionReturn("../../index.php", false)
+    VerifySessionReturn("../../index.php", false);
 }
 
 ?>
