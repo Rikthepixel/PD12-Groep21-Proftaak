@@ -39,9 +39,9 @@ namespace Apotheek_application
 
         private void Order_TablesRecieved(object source, TablesRecievedEventArgs args)
         {
+            Medicijn_cB.Items.Clear();
             foreach (var item in args.Tables)
             {
-                Console.WriteLine(item.TABLE_NAME);
                 Medicijn_cB.Items.Add(item.TABLE_NAME);
             }
         }
