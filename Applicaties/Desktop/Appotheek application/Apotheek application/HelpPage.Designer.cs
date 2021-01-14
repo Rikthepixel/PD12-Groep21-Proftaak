@@ -54,7 +54,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InformationTextContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(196)))), ((int)(((byte)(160)))));
             this.InformationTextContainer.Controls.Add(this.panel1);
-            this.InformationTextContainer.Controls.Add(this.Fiets);
             this.InformationTextContainer.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.InformationTextContainer.Location = new System.Drawing.Point(0, 0);
             this.InformationTextContainer.Margin = new System.Windows.Forms.Padding(2);
@@ -177,9 +176,9 @@
             this.Fiets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fiets.Location = new System.Drawing.Point(0, 558);
+            this.Fiets.Location = new System.Drawing.Point(0, 453);
             this.Fiets.Name = "Fiets";
-            this.Fiets.Size = new System.Drawing.Size(750, 0);
+            this.Fiets.Size = new System.Drawing.Size(750, 32);
             this.Fiets.TabIndex = 1;
             // 
             // label4
@@ -222,7 +221,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(225, 25);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Dark Modus";
+            this.label6.Text = "Donker Modus";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -275,6 +274,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(750, 485);
             this.Controls.Add(this.InformationTextContainer);
+            this.Controls.Add(this.Fiets);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(750, 366);
