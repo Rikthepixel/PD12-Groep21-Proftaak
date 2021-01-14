@@ -5,11 +5,13 @@ include_once "../Include/SH.inc.php";
 if(VerifySession()){
     $Medicijn = $_POST["MDC"];
     $Toename = $_POST["TNM"];
-    $GewichtQuery = "SELECT Gewicht FROM $Medicijn WHERE ID = '1'";
+    $SameProdQuery = "SELECT * FROM $Medicijn WHERE ID = '1'";
     
-    $GewichtResult = $Prodsconn -> query($GewichtQuery);
-    $GewichtArr = $GewichtResult -> fetch_array();
-    $Gewicht = $GewichtArr[0];
+    $SameProdResult = $Prodsconn -> query($SameProdQuery);
+    $SameProdResultArr = $SameProdResult -> fetch_array();
+    $Gewicht = $SameProdResultArr['Gewicht'];
+    $Leverancier = $SameProdResultArr['Leverancier'];
+    $Tpe = $SameProdResultArr['Type'];
     $CurrentDate = date('Y-m-d');
     $ExpiryMonth = date('m') + 2;
     $ExpiryYear = date('Y');
@@ -20,8 +22,7 @@ if(VerifySession()){
     }
     $ExpiryDate = date("$ExpiryYear-$ExpiryMonth-d");
     
-    $Query = "INSERT INTO $Medicijn(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum) 
-    VALUES('$Toename', '$Gewicht', '$CurrentDate', '$ExpiryDate')";
+    $Query = "INSERT INTO $Medicijn(Aantal, Gewicht, Datum_ontvangen, Uiterste_datum, Type, Leverancier) VALUES('$Toename', '$Gewicht', '$CurrentDate', '$ExpiryDate', '$Tpe', '$Leverancier')";
     $Prodsconn -> query($Query);
     
     header("Location: ../../Bestellen.php");
